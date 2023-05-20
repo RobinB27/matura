@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from WebScraping.YahooFinance.Parser import parseHTML
-from WebScraping.YahooFinance.HeadlineClass import Headline
+from WebScraping.YahooFinance.Headline import Headline
 
 
 class YahooWebScraper:

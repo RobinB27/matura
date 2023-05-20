@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from WebScraping.YahooFinance.HeadlineClass import Headline
+from WebScraping.YahooFinance.Headline import Headline
 
 
 def parseHTML(pageSource) -> list[Headline]:

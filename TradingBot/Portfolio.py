@@ -1,6 +1,4 @@
-import sys
-sys.path.append('/path/to/TradingBot')
-from TradingBot.StockClass import Stock
+from TradingBot.Stock import Stock
 class Portfolio:
     """
     defines the portfolio class
@@ -29,8 +27,3 @@ class Portfolio:
         if self.amountOfStock - amount >= 0:
             self.amountOfStock -= amount    
         
-p1 = Portfolio(1000)
-
-
-
-            
