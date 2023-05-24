@@ -26,4 +26,8 @@ class Portfolio:
     def sellStock(self, amount: int):
         if self.amountOfStock - amount >= 0:
             self.amountOfStock -= amount    
+    
+    def showStocksHeld(self):
+        for i in self.stocksHeld:
+            print(f"{self.stocksHeld[i]}")
         

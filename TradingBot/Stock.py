@@ -6,12 +6,29 @@ class Stock:
     """
     
     def __init__(self, name):
-        self.ticker = yf.Ticker(name)
+        
+        self.name = name
+            
         self.amountOfStock = 0
-        self.infoTicker = self.ticker.info
-        self.market_price = self.infoTicker['regularMarketPrice']
-        self.previous_close_price = self.infoTicker['regularMarketPreviousClose']
+    
+        try: 
+            self.tickerInfo = yf.Ticker(name).info
+        except KeyError:
+            raise ValueError("Unrecongnised ticker")
+    
+    def getCurrentStockPrice(self):
+        placeholder = yf.Ticker(self.name).info
+        stockPrice = placeholder.get("currentPrice")
+        return stockPrice
+        
         
     def displayStockAmount(self):
         
-        print(f"Number of {self.ticker} owned: {self.amountOfStock}")
+        print(f"Number of {self.ame} owned: {self.amountOfStock}")
+        
+    def increaseStockAmount(self, amount):
+        self.amountOfStock += amount
+        
+    def decreaseStockAmount(self, amount):
+        if self.amountOfStock - amount != 0:
+            self.amountOfStock -= amount
