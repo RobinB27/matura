@@ -3,29 +3,39 @@ class Portfolio:
     """
     defines the portfolio class
     """
-    def __init__(self, amount):
-        self.funds = amount
-        self.stocksHeld = []
+    def __init__(self, fundsAmount):
+        self.funds = fundsAmount
+        self.stockIdentifier = 0
+        self.stocksHeld = {}
     
    
     def addStock(self, ticker):
         """
-        adds a stock to the portfolio
+        adds a stock to the portfolio identifying them in order that they were added with 1,2,3 etc
         """
-        self.stocksHeld.append(Stock(ticker))
+        try:
+            
+            
+            self.stocksHeld [self.stockIdentifier] = Stock(ticker)
+            self.stockIdentifier += 1
+            
+        except KeyError:
+            raise ValueError("Unrecongnised ticker")
     
-    def buyStock(self, amount: int):
+    def buyStock(self, amount: int, nameOfTicker):
         """
             buys the stock if the funds are available
-        """
-        if self.funds - (self.market_price * amount) >= 0:
-            self.amountOfStock += amount
-            self.Funds -= amount * self.market_price
+        """ 
+        try:
+            for i in self.stocksHeld:
+                if i == nameOfTicker:
+                    self.stocksHeld[i].getC
+                 pass       
+        except KeyError:
+            raise ValueError("Unrecongnised ticker")
         
-    
-    def sellStock(self, amount: int):
-        if self.amountOfStock - amount >= 0:
-            self.amountOfStock -= amount    
+    def sellStock(self):
+        pass
     
     def showStocksHeld(self):
         for i in self.stocksHeld:

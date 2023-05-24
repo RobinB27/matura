@@ -24,7 +24,7 @@ class Stock:
         
     def displayStockAmount(self):
         
-        print(f"Number of {self.ame} owned: {self.amountOfStock}")
+        print(f"Number of {self.name} owned: {self.amountOfStock}")
         
     def increaseStockAmount(self, amount):
         self.amountOfStock += amount
@@ -32,3 +32,5 @@ class Stock:
     def decreaseStockAmount(self, amount):
         if self.amountOfStock - amount != 0:
             self.amountOfStock -= amount
+        else:
+            return 0
