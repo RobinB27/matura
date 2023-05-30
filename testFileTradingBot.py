@@ -1,9 +1,12 @@
 from TradingBot.Portfolio import Portfolio
 from TradingBot.Stock import Stock
 
-p1 = Portfolio(1000)
+p1 = Portfolio(1000, "first")
 
 p1.addStock("TSLA")
+p1.showStocksHeld()
+p1.showFundsAvailable()
 p1.buyStock(2, "TSLA")
-print(p1.funds)
-print(p1.stocksHeld.get["0"])
+p1.showFundsAvailable()
+p1.sellStock(2, "TSLA")
+p1.showFundsAvailable()

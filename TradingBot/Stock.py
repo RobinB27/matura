@@ -33,4 +33,4 @@ class Stock:
         if self.amountOfStock - amount != 0:
             self.amountOfStock -= amount
         else:
-            return 0
+            print("Insufficient amount of stock to sell.")
