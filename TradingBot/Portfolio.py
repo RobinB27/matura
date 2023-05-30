@@ -22,15 +22,15 @@ class Portfolio:
         except KeyError:
             raise ValueError("Unrecongnised ticker")
     
-    def buyStock(self, amount: int, nameOfTicker):
+    def buyStock(self, amount: int, nameOfTicker: Stock):
         """
             buys the stock if the funds are available
         """ 
         try:
             for i in self.stocksHeld:
                 if i == nameOfTicker:
-                    self.stocksHeld[i].getC
-                 pass       
+                    self.stocksHeld[i].getCurrentStockPrice()
+                
         except KeyError:
             raise ValueError("Unrecongnised ticker")
         
