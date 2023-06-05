@@ -64,6 +64,8 @@ class Portfolio:
                     if stock.amountOfStock >= amount:
                         self.funds += totalPrice
                         stock.decreaseStockAmount(amount)
+                        print(f"Sold {amount} shares of {nameOfTicker} at ${currentPrice} per share.")
+
                 
             
         except KeyError:

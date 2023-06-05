@@ -22,15 +22,14 @@ class Stock:
         return stockPrice
         
         
-    def displayStockAmount(self):
-        
+    def displayStockAmount(self):      
         print(f"Number of {self.name} owned: {self.amountOfStock}")
         
-    def increaseStockAmount(self, amount):
+    def increaseStockAmount(self, amount):     
         self.amountOfStock += amount
         
-    def decreaseStockAmount(self, amount):
-        if self.amountOfStock - amount != 0:
+    def decreaseStockAmount(self, amount):   
+        if self.amountOfStock - amount >= 0:
             self.amountOfStock -= amount
         else:
             print("Insufficient amount of stock to sell.")
