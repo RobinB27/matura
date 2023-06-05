@@ -34,7 +34,7 @@ class Portfolio:
             for stock in self.stocksHeld:
                 #checks if the given stock is a stock held by the portfolio
                 if stock.name == nameOfTicker:
-                    currentPrice = stock.getCurrentStockPrice()
+                    currentPrice = stock.getStockPrice()
                     totalCost = currentPrice * amount
                 
                     #checks if there are enough funds to buy the stock & buys it
@@ -57,7 +57,7 @@ class Portfolio:
             for stock in self.stocksHeld:
                 #checks if the given stock is a stock held by the portfolio
                 if stock.name == nameOfTicker:
-                    currentPrice = stock.getCurrentStockPrice()
+                    currentPrice = stock.getStockPrice()
                     totalPrice = currentPrice * amount
                     
                     #checks if there is enough of a given stock to sell & sells it
@@ -65,8 +65,8 @@ class Portfolio:
                         self.funds += totalPrice
                         stock.decreaseStockAmount(amount)
                         print(f"Sold {amount} shares of {nameOfTicker} at ${currentPrice} per share.")
-
-                
+                    else:
+                        print("Insufficient shares to sell the stock.")
             
         except KeyError:
             raise ValueError("Unrecongnised ticker")
@@ -78,6 +78,7 @@ class Portfolio:
     def showFundsAvailable(self):
         print(f"Funds inside portfolio: \"{self.name}\" are ${self.funds}")
     
+    # doesnt work
     def findStock(self, nameOfTicker: str):
         for stock in self.stocksHeld:
             if stock.name == nameOfTicker:
