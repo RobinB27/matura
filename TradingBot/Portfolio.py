@@ -15,6 +15,7 @@ class Portfolio:
     def addStock(self, ticker: str):
         """
         adds a stock to the portfolio identifying them in order that they were added with 1,2,3 etc
+        params: ticker
         """
         try:
             
@@ -26,15 +27,17 @@ class Portfolio:
                  
     def buyStock(self, amount: int, nameOfTicker: str):
         """
-            buys the stock if the funds are available
+        buys the stock if the funds are available
+        params: amount, nameOfTicker
         """ 
         try:
             for stock in self.stocksHeld:
+                #checks if the given stock is a stock held by the portfolio
                 if stock.name == nameOfTicker:
                     currentPrice = stock.getCurrentStockPrice()
                     totalCost = currentPrice * amount
                 
-                
+                    #checks if there are enough funds to buy the stock & buys it
                     if totalCost <= self.funds:
                         self.funds -= totalCost
                         stock.increaseStockAmount(amount)
@@ -46,13 +49,18 @@ class Portfolio:
             raise ValueError("Unrecongnised ticker")
         
     def sellStock(self, amount: int, nameOfTicker: str):
+        """
+        sells the stock if the shares are available
+        params: amount, nameOfTicker
+        """ 
         try:
             for stock in self.stocksHeld:
+                #checks if the given stock is a stock held by the portfolio
                 if stock.name == nameOfTicker:
                     currentPrice = stock.getCurrentStockPrice()
                     totalPrice = currentPrice * amount
-                    print(f"Bought {amount} shares of {nameOfTicker} at ${currentPrice} per share."
                     
+                    #checks if there is enough of a given stock to sell & sells it
                     if stock.amountOfStock >= amount:
                         self.funds += totalPrice
                         stock.decreaseStockAmount(amount)
