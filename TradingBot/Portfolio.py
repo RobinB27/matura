@@ -27,7 +27,8 @@ class Portfolio:
         except KeyError:
             raise ValueError("Unrecongnised ticker")
                 
-                 
+    
+    #try except clause could be optimised by putting it outside the mode checks
     def buyStock(self, amount: int, nameOfTicker: str, mode: int = 0, date='0'):
         """
         buys the stock if the funds are available, default mode is with live prices,
@@ -55,6 +56,7 @@ class Portfolio:
         
         elif mode == -1:
             try:
+                #gets historical price if ticker in portfolio
                 for stock in self.stocksHeld:
                     if stock.name == nameOfTicker:
                         placeholderEndDate = self.createPlaceholderEndDate(date)
@@ -63,6 +65,7 @@ class Portfolio:
                         historicalStockPrice = stock.getStockPrice(-1, date, placeholderEndDate)
                         totalCost = historicalStockPrice * amount
                         
+                        #sells the amount of shares given if enough funds are available
                         if totalCost <= self.funds:
                             self.funds -= totalCost
                             stock.increaseStockAmount(amount)
@@ -82,7 +85,7 @@ class Portfolio:
         if mode == 0:
             try:
                 for stock in self.stocksHeld:
-                    #checks if the given stock is a stock held by the portfolio
+                    #gets current price of ticker if in portfolio
                     if stock.name == nameOfTicker:
                         currentPrice = stock.getStockPrice()
                         totalPrice = currentPrice * amount
@@ -99,14 +102,16 @@ class Portfolio:
                 raise ValueError("Unrecongnised ticker")
         elif mode == -1:
             try:
+                #gets historical price of ticker if in portfolio
                 for stock in self.stocksHeld:
                     if stock.name == nameOfTicker:
                         
                         placeholderEndDate = self.createPlaceholderEndDate(date)
-                        #Returns Open, High, Low, Close, Adj Close, Volume to the
+                        #Returns historical closing price 
                         historicalStockPrice = stock.getStockPrice(-1, date, placeholderEndDate)
                         totalPrice = historicalStockPrice * amount
                         
+                        #sells the amount of shares given
                         if stock.amountOfStock >= amount:
                             self.funds += totalPrice
                             stock.increaseStockAmount(amount)

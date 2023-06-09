@@ -46,7 +46,3 @@ class Stock:
         else:
             print("Insufficient amount of stock to sell.")
             
-            
-    def test(self):
-        data = yf.download('AAPL','2016-01-01','2019-08-01')
-        print(data)
