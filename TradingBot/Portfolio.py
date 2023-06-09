@@ -74,28 +74,49 @@ class Portfolio:
                 raise ValueError("Unrecongnised ticker")
         
         
-    def sellStock(self, amount: int, nameOfTicker: str):
+    def sellStock(self, amount: int, nameOfTicker: str, mode: int = 0, date='0'):
         """
         sells the stock if the shares are available
         params: amount, nameOfTicker
         """ 
-        try:
-            for stock in self.stocksHeld:
-                #checks if the given stock is a stock held by the portfolio
-                if stock.name == nameOfTicker:
-                    currentPrice = stock.getStockPrice()
-                    totalPrice = currentPrice * amount
+        if mode == 0:
+            try:
+                for stock in self.stocksHeld:
+                    #checks if the given stock is a stock held by the portfolio
+                    if stock.name == nameOfTicker:
+                        currentPrice = stock.getStockPrice()
+                        totalPrice = currentPrice * amount
                     
                     #checks if there is enough of a given stock to sell & sells it
-                    if stock.amountOfStock >= amount:
-                        self.funds += totalPrice
-                        stock.decreaseStockAmount(amount)
-                        print(f"Sold {amount} shares of {nameOfTicker} at ${currentPrice} per share.")
-                    else:
-                        print("Insufficient shares to sell the stock.")
+                        if stock.amountOfStock >= amount:
+                            self.funds += totalPrice
+                            stock.decreaseStockAmount(amount)
+                            print(f"Sold {amount} shares of {nameOfTicker} at ${currentPrice} per share.")
+                        else:
+                            print("Insufficient shares to sell the stock.")
             
-        except KeyError:
-            raise ValueError("Unrecongnised ticker")
+            except KeyError:
+                raise ValueError("Unrecongnised ticker")
+        elif mode == -1:
+            try:
+                for stock in self.stocksHeld:
+                    if stock.name == nameOfTicker:
+                        
+                        placeholderEndDate = self.createPlaceholderEndDate(date)
+                        #Returns Open, High, Low, Close, Adj Close, Volume to the
+                        historicalStockPrice = stock.getStockPrice(-1, date, placeholderEndDate)
+                        totalPrice = historicalStockPrice * amount
+                        
+                        if stock.amountOfStock >= amount:
+                            self.funds += totalPrice
+                            stock.increaseStockAmount(amount)
+                            print(f"Sold {amount} shares of {nameOfTicker} at ${historicalStockPrice} per share.")
+                        else:
+                            print("Insufficient shares to sell the stock.")
+                
+            except KeyError:
+                raise ValueError("Unrecongnised ticker")
+            
     
     def showStocksHeld(self):
         for stock in self.stocksHeld:
