@@ -12,6 +12,7 @@ class Portfolio:
         self.name = name
         self.funds = fundsAmount
         self.stocksHeld = [] #could be optimised with a dict
+        
        
     
    
