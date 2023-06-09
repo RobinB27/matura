@@ -5,4 +5,4 @@ from TradingBot.Bot import Bot
 p1 = Portfolio(1000, "first")
 s1 = Stock("AAPL")
 
-s1.getStockPrice(-1,'2016-01-01','2019-08-01')
+s1.getStockPrice(-1,'2016-01-04','2016-01-05')

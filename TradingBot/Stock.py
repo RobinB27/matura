@@ -17,7 +17,7 @@ class Stock:
             raise ValueError("Unrecongnised ticker")
         
     
-    def getStockPrice(self, mode: int==0, dateStart='0', dateEnd='0'):
+    def getStockPrice(self, mode: int = 0, dateStart='0', dateEnd='0'):
         """
         fetches stock prices, default mode is live prices, past mode (daily intevals)
         Args: mode (-1 for past mode), start date('year-month-day'), end date
@@ -26,7 +26,7 @@ class Stock:
             placeholder = yf.Ticker(self.name).info
             stockPrice = placeholder.get("currentPrice")
             return stockPrice
-        if mode == -1:
+        elif mode == -1:
             stock_historical = yf.download(self.name, start=dateStart, end=dateEnd)
             print(stock_historical)
        

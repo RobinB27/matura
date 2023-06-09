@@ -25,28 +25,42 @@ class Portfolio:
             raise ValueError("Unrecongnised ticker")
                 
                  
-    def buyStock(self, amount: int, nameOfTicker: str):
+    def buyStock(self, amount: int, nameOfTicker: str, mode: int = 0, date='0'):
         """
-        buys the stock if the funds are available
-        params: amount, nameOfTicker
+        buys the stock if the funds are available, default mode is with live prices,
+        past mode buys the stock on one particular day
+        params: amount, nameOfTicker, mode (-1 for past mode), dateStart, dateEnd
         """ 
-        try:
-            for stock in self.stocksHeld:
+        if mode == 0:
+            try:
+                for stock in self.stocksHeld:
                 #checks if the given stock is a stock held by the portfolio
-                if stock.name == nameOfTicker:
-                    currentPrice = stock.getStockPrice()
-                    totalCost = currentPrice * amount
+                    if stock.name == nameOfTicker:
+                        currentPrice = stock.getStockPrice()
+                        totalCost = currentPrice * amount
                 
                     #checks if there are enough funds to buy the stock & buys it
-                    if totalCost <= self.funds:
-                        self.funds -= totalCost
-                        stock.increaseStockAmount(amount)
-                        print(f"Bought {amount} shares of {nameOfTicker} at ${currentPrice} per share.")
-                    else:
-                        print("Insufficient funds to buy the stock.")
+                        if totalCost <= self.funds:
+                            self.funds -= totalCost
+                            stock.increaseStockAmount(amount)
+                            print(f"Bought {amount} shares of {nameOfTicker} at ${currentPrice} per share.")
+                        else:
+                            print("Insufficient funds to buy the stock.")
             
-        except KeyError:
-            raise ValueError("Unrecongnised ticker")
+            except KeyError:
+                raise ValueError("Unrecongnised ticker")
+        
+        elif mode == -1:
+            try:
+                for stock in self.stocksHeld:
+                    if stock.name == nameOfTicker:
+                        placeholderEndDate = createPlacholderEndDate(date)
+                        stockPrice = stock.getStockPrice(-1, date, date)
+                        
+                
+            except KeyError:
+                raise ValueError("Unrecongnised ticker")
+        
         
     def sellStock(self, amount: int, nameOfTicker: str):
         """
@@ -77,6 +91,12 @@ class Portfolio:
             
     def showFundsAvailable(self):
         print(f"Funds inside portfolio: \"{self.name}\" are ${self.funds}")
+        
+    
+    def createPlacholderEndDate(self, date: str):
+        #splits the given str date into parts and adds one day to it
+        print(date)
+        pass
     
     # doesnt work
     def findStock(self, nameOfTicker: str):
