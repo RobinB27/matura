@@ -1,4 +1,7 @@
 from TradingBot.Stock import Stock
+from datetime import datetime, timedelta
+import pandas as pd
+
 class Portfolio:
     """
     defines the portfolio class
@@ -54,9 +57,18 @@ class Portfolio:
             try:
                 for stock in self.stocksHeld:
                     if stock.name == nameOfTicker:
-                        placeholderEndDate = createPlacholderEndDate(date)
-                        stockPrice = stock.getStockPrice(-1, date, date)
+                        placeholderEndDate = self.createPlaceholderEndDate(date)
                         
+                        #Returns Open, High, Low, Close, Adj Close, Volume to the
+                        historicalStockPrice = stock.getStockPrice(-1, date, placeholderEndDate)
+                        totalCost = historicalStockPrice * amount
+                        
+                        if totalCost <= self.funds:
+                            self.funds -= totalCost
+                            stock.increaseStockAmount(amount)
+                            print(f"Bought {amount} shares of {nameOfTicker} at ${historicalStockPrice} per share.")
+                        else:
+                            print("Insufficient funds to buy the stock.")
                 
             except KeyError:
                 raise ValueError("Unrecongnised ticker")
@@ -93,10 +105,18 @@ class Portfolio:
         print(f"Funds inside portfolio: \"{self.name}\" are ${self.funds}")
         
     
-    def createPlacholderEndDate(self, date: str):
-        #splits the given str date into parts and adds one day to it
-        print(date)
-        pass
+    def createPlaceholderEndDate(self, date: str):
+        """
+        adds one day to any given date
+        Args: date(str)
+        """
+        
+        date = datetime.strptime(date, "%Y-%m-%d")
+        placeholderEndDate = date + timedelta(days=1)
+        
+        print(placeholderEndDate)
+        
+        return placeholderEndDate
     
     # doesnt work
     def findStock(self, nameOfTicker: str):

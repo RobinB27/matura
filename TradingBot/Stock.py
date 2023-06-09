@@ -12,7 +12,7 @@ class Stock:
         self.amountOfStock = 0
     
         try: 
-            self.tickerInfo = yf.Ticker(name).info
+            self.tickerInfo = yf.Ticker(self.name).info
         except KeyError:
             raise ValueError("Unrecongnised ticker")
         
@@ -27,8 +27,9 @@ class Stock:
             stockPrice = placeholder.get("currentPrice")
             return stockPrice
         elif mode == -1:
-            stock_historical = yf.download(self.name, start=dateStart, end=dateEnd)
-            print(stock_historical)
+            stockHistorical = yf.download(self.name, start=dateStart, end=dateEnd)
+            closing_price = stockHistorical.loc[dateStart, "Close"]
+            return closing_price
        
         
     def displayStockAmount(self):      
