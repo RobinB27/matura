@@ -28,7 +28,8 @@ class FileLogger:
                     stockValue = stock.amountOfStock * stock.getStockPrice(-1, date, placeholderDate) 
                 
                 log.write(f"value of stock: {stockValue}\n")
-                log.write(f"Overall profit/loss: {portfolio.funds + stockValue}\n")        
+                log.write(f"Overall profit/loss: {portfolio.funds + stockValue}\n")     
+                log.write("\n")   
        
         
 
