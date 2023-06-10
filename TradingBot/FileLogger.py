@@ -11,10 +11,10 @@ class FileLogger:
         self.log = open("log", mode="w")        
         
 
-    def snapshot(self, portfolio, date: str, mode = 0):
+    def snapshot(self, portfolio, date: str = "0", mode = 0):
         with open("log", mode="a") as log:
             log.write(f"date: {date}\n")
-            log.write(f"funds in portfolio: {portfolio.funds}\n")
+            log.write(f"funds in portfolio: ${portfolio.funds}\n")
             log.write("stocks held in portfolio: \n\n")
             for stock in portfolio.stocksHeld:
                 log.write(f"{stock.name} ")
@@ -27,9 +27,10 @@ class FileLogger:
                     placeholderDate = portfolio.createPlaceholderEndDate(date)
                     stockValue = stock.amountOfStock * stock.getStockPrice(-1, date, placeholderDate) 
                 
-                log.write(f"value of stock: {stockValue}\n")
-                log.write(f"Overall profit/loss: {portfolio.funds + stockValue}\n")     
-                log.write("\n")   
+                log.write(f"value of stock: ${stockValue}\n \n")
+            
+            log.write(f"Overall profit/loss: ${portfolio.funds + stockValue}\n")     
+            log.write("\n")   
        
         
 

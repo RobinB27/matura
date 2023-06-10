@@ -5,9 +5,13 @@ import yfinance as yf
 from TradingBot.FileLogger import FileLogger
 
 
-p1 = Portfolio(1000, "first")
-p1.addStock("TSLA")
-p1.addStock("AAPL")
-a = FileLogger("test")
+p1 = Portfolio(10000, "ToniTest")
+logger = FileLogger("Test")
 
-a.snapshot(p1, "2022-12-2")
+p1.addStock("AAPL")
+p1.addStock("TSLA")
+p1.buyStock(2, "TSLA")
+
+logger.snapshot(p1)
+
+
