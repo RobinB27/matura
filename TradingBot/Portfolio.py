@@ -1,5 +1,5 @@
 from TradingBot.Stock import Stock
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 import pandas as pd
 
 class Portfolio:
@@ -14,8 +14,6 @@ class Portfolio:
         self.stocksHeld = [] #could be optimised with a dict
         
        
-    
-   
     def addStock(self, ticker: str):
         """
         adds a stock to the portfolio identifying them in order that they were added with 1,2,3 etc
@@ -70,7 +68,7 @@ class Portfolio:
                         if totalCost <= self.funds:
                             self.funds -= totalCost
                             stock.increaseStockAmount(amount)
-                            print(f"Bought {amount} shares of {nameOfTicker} at ${historicalStockPrice} per share.")
+                            print(f"Bought {amount} shares of {nameOfTicker} at ${historicalStockPrice} per share on {date}.")
                         else:
                             print("Insufficient funds to buy the stock.")
                 
@@ -116,7 +114,7 @@ class Portfolio:
                         if stock.amountOfStock >= amount:
                             self.funds += totalPrice
                             stock.increaseStockAmount(amount)
-                            print(f"Sold {amount} shares of {nameOfTicker} at ${historicalStockPrice} per share.")
+                            print(f"Sold {amount} shares of {nameOfTicker} at ${historicalStockPrice} per share on {date}.")
                         else:
                             print("Insufficient shares to sell the stock.")
                 
@@ -140,9 +138,8 @@ class Portfolio:
         
         date = datetime.strptime(date, "%Y-%m-%d")
         placeholderEndDate = date + timedelta(days=1)
-        
-        print(placeholderEndDate)
-        
+        placeholderEndDate = placeholderEndDate.strftime("%Y-%m-%d")
+
         return placeholderEndDate
     
     # doesnt work

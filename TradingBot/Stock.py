@@ -25,6 +25,7 @@ class Stock:
         if mode == 0:
             placeholder = yf.Ticker(self.name).info
             stockPrice = placeholder.get("currentPrice")
+            print(stockPrice)
             return stockPrice
         elif mode == -1:
             stockHistorical = yf.download(self.name, start=dateStart, end=dateEnd)
