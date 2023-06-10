@@ -15,7 +15,7 @@ class FileLogger:
         with open("log", mode="a") as log:
             log.write(f"date: {date}\n")
             log.write(f"funds in portfolio: {portfolio.funds}\n")
-            log.write("stocks held in portfolio: \n")
+            log.write("stocks held in portfolio: \n\n")
             for stock in portfolio.stocksHeld:
                 log.write(f"{stock.name} ")
                 log.write(f"amount of stock: {stock.amountOfStock}\n")
