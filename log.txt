@@ -1,4 +1,4 @@
-date: 2018-3-22
+date: 2018-3-23
 funds in portfolio: $958.7866668701172
 stocks held in portfolio: 
 
@@ -6,7 +6,7 @@ AAPL amount of stock: 0
 value of stock: $0.0
  
 TSLA amount of stock: 2
-value of stock: $41.21333312988281
+value of stock: $40.2053337097168
  
-Overall profit/loss: $1000.0
+Overall profit/loss: $998.992000579834
 

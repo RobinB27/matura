@@ -8,11 +8,11 @@ class FileLogger:
     def __init__(self, name):
         self.name = name
         
-        self.log = open("log", mode="w")        
+        self.log = open("log.txt", mode="w")        
         
 
     def snapshot(self, portfolio,  mode = 0, date: str = "0"):
-        with open("log", mode="a") as log:
+        with open("log.txt", mode="a") as log:
             log.write(f"date: {date}\n")
             log.write(f"funds in portfolio: ${portfolio.funds}\n")
             log.write("stocks held in portfolio: \n\n")

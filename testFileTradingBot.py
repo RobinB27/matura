@@ -12,6 +12,6 @@ p1.addStock("AAPL")
 p1.addStock("TSLA")
 p1.buyStock(2, "TSLA", -1, "2018-3-22")
 
-logger.snapshot(p1, -1, "2018-3-22")
+logger.snapshot(p1, -1, "2018-3-23")
 
 
