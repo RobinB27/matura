@@ -11,7 +11,7 @@ class FileLogger:
         self.log = open("log", mode="w")        
         
 
-    def snapshot(self, portfolio, date: str = "0", mode = 0):
+    def snapshot(self, portfolio,  mode = 0, date: str = "0"):
         with open("log", mode="a") as log:
             log.write(f"date: {date}\n")
             log.write(f"funds in portfolio: ${portfolio.funds}\n")
