@@ -2,9 +2,12 @@ from TradingBot.Stock import Stock
 from TradingBot.Portfolio import Portfolio
 from TradingBot.Bot import Bot
 import yfinance as yf
+from TradingBot.FileLogger import FileLogger
 
-p1 = Portfolio(1000, "GOAT")
+
+p1 = Portfolio(1000, "first")
+p1.addStock("TSLA")
 p1.addStock("AAPL")
+a = FileLogger("test")
 
-p1.buyStock(1, "AAPL", -1, "2020-12-3")
-p1.sellStock(1, "AAPL", -1, "2020-12-3")
+a.snapshot(p1, "2022-12-2")
