@@ -16,7 +16,7 @@ class Portfolio:
        
     def addStock(self, ticker: str):
         """
-        adds a stock to the portfolio identifying them in order that they were added with 1,2,3 etc
+        appends the self.stocksHeld list with Stock object using ticker given
         params: ticker
         """
         try:

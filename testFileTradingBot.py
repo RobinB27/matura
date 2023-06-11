@@ -3,15 +3,16 @@ from TradingBot.Portfolio import Portfolio
 from TradingBot.Bot import Bot
 import yfinance as yf
 from TradingBot.FileLogger import FileLogger
+from TradingBot.MACDDecisionMaking import MACDDecisionMaking
 
 
-p1 = Portfolio(1000, "ToniTest")
-logger = FileLogger("Test")
-
-p1.addStock("AAPL")
+p1 = Portfolio(1000, "Test")
 p1.addStock("TSLA")
-p1.buyStock(2, "TSLA", -1, "2018-3-22")
 
-logger.snapshot(p1, -1, "2018-3-23")
+
+
+s1 = Stock("TSLA")
+
+print(s1.getStockPrice(-1, "2023-6-4", "2023-6-5"))
 
 
