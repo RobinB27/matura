@@ -24,7 +24,7 @@ class FileLogger:
                     stockValue = stock.amountOfStock * stock.getStockPrice()
                 
                 elif mode == -1:
-                    placeholderDate = portfolio.createPlaceholderEndDate(date)
+                    placeholderDate = portfolio.addDayToDate(date)
                     stockValue = stock.amountOfStock * stock.getStockPrice(-1, date, placeholderDate) 
                 
                 log.write(f"value of stock: ${stockValue}\n \n")

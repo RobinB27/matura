@@ -58,7 +58,7 @@ class Portfolio:
                 #gets historical price if ticker in portfolio
                 for stock in self.stocksHeld:
                     if stock.name == nameOfTicker:
-                        placeholderEndDate = self.createPlaceholderEndDate(date)
+                        placeholderEndDate = self.addDayToDate(date)
                         
                         #Returns Open, High, Low, Close, Adj Close, Volume to the
                         historicalStockPrice = stock.getStockPrice(-1, date, placeholderEndDate)
@@ -105,7 +105,7 @@ class Portfolio:
                 for stock in self.stocksHeld:
                     if stock.name == nameOfTicker:
                         
-                        placeholderEndDate = self.createPlaceholderEndDate(date)
+                        placeholderEndDate = self.addDayToDate(date)
                         #Returns historical closing price 
                         historicalStockPrice = stock.getStockPrice(-1, date, placeholderEndDate)
                         totalPrice = historicalStockPrice * amount
@@ -130,7 +130,7 @@ class Portfolio:
         print(f"Funds inside portfolio: \"{self.name}\" are ${self.funds}")
         
     
-    def createPlaceholderEndDate(self, date: str):
+    def addDayToDate(self, date: str):
         """
         adds one day to any given date
         Args: date(str)
