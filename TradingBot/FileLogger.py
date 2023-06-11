@@ -29,7 +29,7 @@ class FileLogger:
                 
                 log.write(f"value of stock: ${stockValue}\n \n")
             
-            log.write(f"Overall profit/loss: ${portfolio.funds + stockValue}\n")     
+            log.write(f"Overall profit/loss: ${portfolio.funds + stockValue - 1000}\n")     
             log.write("\n")   
        
         

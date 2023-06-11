@@ -8,5 +8,5 @@ value of stock: $0.0
 TSLA amount of stock: 2
 value of stock: $40.2053337097168
  
-Overall profit/loss: $998.992000579834
+Overall profit/loss: $-1.0079994201660156
 
