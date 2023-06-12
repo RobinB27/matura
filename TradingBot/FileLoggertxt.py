@@ -8,7 +8,7 @@ class FileLogger:
     def __init__(self, name):
         self.name = name
         
-        self.log = open("log.txt", mode="w")        
+        self.log = open("log.txt", mode="w")
         
 
     def snapshot(self, portfolio,  mode = 0, date: str = "0"):
@@ -29,6 +29,7 @@ class FileLogger:
                 
                 log.write(f"value of stock: ${stockValue}\n \n")
             
+            # Does this work as intended? Pay attention to Scope of stockValue, maybe an issue
             log.write(f"Overall profit/loss: ${portfolio.funds + stockValue - 1000}\n")     
             log.write("\n")   
        
