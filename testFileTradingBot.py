@@ -13,6 +13,6 @@ p1.addStock("TSLA")
 
 s1 = Stock("TSLA")
 
-print(s1.getStockPrice(-1, "2023-6-4", "2023-6-5"))
+d1 = MACDDecisionMaking(0)
 
-
+print(d1.calculateSMA(12, p1, "TSLA"))
