@@ -5,9 +5,11 @@ from TradingBot.Portfolio import Portfolio
 
 class MACDDecisionMaking:
     
+    
     def __init__(self, mode: int = 0, startDate: str = "0"):
         
         self.date = startDate
+        self.mode = mode
         
     
     def makeStockDecision(self, portfolio, stock):
