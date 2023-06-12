@@ -28,10 +28,14 @@ class Stock:
             print(stockPrice)
             return stockPrice
         elif mode == -1:
-            stockHistorical = yf.download(self.name, start=dateStart, end=dateEnd)
-            closing_price = stockHistorical.loc[dateStart, "Close"]
-            return closing_price
-       
+            try:
+                stockHistorical = yf.download(self.name, start=dateStart, end=dateEnd)
+                closing_price = stockHistorical.loc[dateStart, "Close"]
+                return closing_price
+            except KeyError:
+                print("No stock price available for the specified date range.")
+                return None
+            
         
     def displayStockAmount(self):      
         print(f"Number of {self.name} owned: {self.amountOfStock}")
