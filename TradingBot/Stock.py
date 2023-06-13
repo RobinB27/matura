@@ -30,6 +30,7 @@ class Stock:
         elif mode == -1:
             try:
                 stockHistorical = yf.download(self.name, start=dateStart, end=dateEnd)
+                
                 closing_price = stockHistorical.loc[dateStart, "Close"]
                 return closing_price
             except KeyError:
