@@ -12,6 +12,11 @@ p1.addStock("TSLA")
 s1 = Stock("TSLA")
 
 #problematic date, i have no idea why
+#Debugger information from the date  on the that might help 
+#(return)Empty DataFrame
+#style: '<pandas.io.formats.style.Styler -- debugger: skipped eval>'
+
+#'<transposed dataframe -- debugger:skipped eval>'
 print(s1.getStockPrice(-1, "2023-05-29", "2023-05-30"))
 
 d1 = MACDDecisionMaking(0)
@@ -22,4 +27,4 @@ d1 = MACDDecisionMaking(0)
 #SMA_Value +=  stock.getStockPrice(-1, placeHolderDate, secondPlaceHolderDate)
 #TypeError: unsupported operand type(s) for +: 'float' and 'NoneType'
 
-#print(d1.calculateSMA(12, p1, "TSLA"))
+print(d1.calculateSMA(12, p1, "TSLA"))
