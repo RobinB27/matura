@@ -18,13 +18,14 @@ class MACDDecisionMaking:
     
     def calculateMACD(self, portfolio, ticker: str, mode: int = 0, dateStart: str = "0"):
         
-        #MACD = 12 day EMA - 26 day EMA
-        #EMA = exponential moving average
+        # MACD = 12 day EMA - 26 day EMA
+        # EMA = exponential moving average
         # simple moving average * (2/days of SMA + 1)
         
-        #thought that maybe two modes arent needed because the code in mode = 0 should work for every date given (needs tasting)
-        #the above thought isnt possible due to the way the getStockPrice() function is implemented
+        # thought that maybe two modes arent needed because the code in mode = 0 should work for every date given (needs testing)
+        # the above thought isnt possible due to the way the getStockPrice() function is implemented
         
+        # mode is currently using the function param mode, shouldn't this be the class variable?
         if mode == 0:
             EMA_Placeholder12days = self.calculateEMA(12, portfolio, ticker)
             EMA_Placeholder26days = self.calculateEMA(26, portfolio, ticker)

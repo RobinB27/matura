@@ -19,6 +19,8 @@ s1 = Stock("TSLA")
 #'<transposed dataframe -- debugger:skipped eval>'
 print(s1.getStockPrice(-1, "2023-05-29", "2023-05-30"))
 
+# 29th June is bank holiday => add fix for holidays 
+
 d1 = MACDDecisionMaking(0)
 
 #on the "2023-05-29" the getStockPrice() function fails, mode=-1, the pandas dataframe is empty
