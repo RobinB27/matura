@@ -10,9 +10,9 @@ class FileLoggerJSON:
     Subsequent snapshots of a run are saved within the same file provided the same File Logger is used
     """
     
-    def __init__(self, path: str = "logs") -> None:
+    def __init__(self, prefix:str = "run" ,path: str = "logs") -> None:
         self.dirPath = path
-        self.fileName = "run_" + datetime.datetime.now().strftime("%I_%M_%p_%d_%b_%y") + ".json"
+        self.fileName = prefix + "_" + datetime.datetime.now().strftime("%I_%M_%p_%d_%b_%y") + ".json"
     
     def snapshot(self, portfolio: Portfolio, mode:int = 0, date:str = "0") -> None:
         """

@@ -2,7 +2,7 @@ from TradingBot.Stock import Stock
 from TradingBot.Portfolio import Portfolio
 from TradingBot.Bot import Bot
 import yfinance as yf
-from TradingBot.FileLoggertxt import FileLogger
+from TradingBot.FileLoggerTXT import FileLogger
 from TradingBot.MACDDecisionMaking import MACDDecisionMaking
 
 

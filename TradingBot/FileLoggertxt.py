@@ -1,21 +1,26 @@
 from TradingBot.Portfolio import Portfolio
+import datetime, os
+
+# Potential issue: see comment l37
 
 class FileLogger:
+    """
+    Utility class to log a snapshot of a Portfolio class to a txt file.
+    The generated file is not intended for further use, but for human readability.
+    """
     
-    #find way to name each file for the FileLogger independently,
-    #meaning keep track of how many loggers there are
-    #use class method for this?
-    def __init__(self, name):
-        self.name = name
-        
-        self.log = open("log.txt", mode="w")
-        
+    def __init__(self, prefix:str = "run", path:str = "logs") -> None:
+        self.dirPath = path
+        self.fileName = prefix + "_" + datetime.datetime.now().strftime("%I_%M_%p_%d_%b_%y") + ".txt"
 
-    def snapshot(self, portfolio,  mode = 0, date: str = "0"):
-        with open("log.txt", mode="a") as log:
+    def snapshot(self, portfolio,  mode = 0, date: str = "0") -> None:
+        filePath = os.path.join(self.dirPath, self.fileName)
+        
+        with open(filePath, mode="w") as log:
             log.write(f"date: {date}\n")
             log.write(f"funds in portfolio: ${portfolio.funds}\n")
             log.write("stocks held in portfolio: \n\n")
+        
             for stock in portfolio.stocksHeld:
                 log.write(f"{stock.name} ")
                 log.write(f"amount of stock: {stock.amountOfStock}\n")
