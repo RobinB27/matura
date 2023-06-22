@@ -151,9 +151,13 @@ class MACDDecisionMaking:
                         
                         
     def calculateEMA(self, daysToCalculate: int, portfolio, ticker, mode = 0, dateToCalculate = "0"):
+        
+        weightMultiplier = 2 / (daysToCalculate + 1)
+        
         if mode == 0:
             SMA_Placeholder = self.calculateSMA(daysToCalculate, portfolio, ticker)
         
         elif mode == -1:
             SMA_Placeholder = self.calculateSMA(daysToCalculate, portfolio, ticker, -1,  dateToCalculate)
+            
         
