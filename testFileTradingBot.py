@@ -13,4 +13,4 @@ s1 = Stock("TSLA")
 
 d1 = MACDDecisionMaking(0)
 
-print(d1.calculateSMA(12, p1, "TSLA"))
+print(d1.calculateSMA(12, p1, "TSLA", -1, "2023-5-15"))
