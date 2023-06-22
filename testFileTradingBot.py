@@ -2,7 +2,7 @@ from TradingBot.Stock import Stock
 from TradingBot.Portfolio import Portfolio
 from TradingBot.Bot import Bot
 import yfinance as yf
-from TradingBot.FileLoggerTXT import FileLogger
+from TradingBot.FileLoggertxt import FileLogger
 from TradingBot.MACDDecisionMaking import MACDDecisionMaking
 
 
@@ -17,7 +17,7 @@ s1 = Stock("TSLA")
 #style: '<pandas.io.formats.style.Styler -- debugger: skipped eval>'
 
 #'<transposed dataframe -- debugger:skipped eval>'
-print(s1.getStockPrice(-1, "2023-05-29", "2023-05-30"))
+#print(s1.getStockPrice(-1, "2023-05-29", "2023-05-30"))
 
 # 29th June is bank holiday => add fix for holidays 
 

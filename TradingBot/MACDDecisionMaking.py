@@ -44,15 +44,17 @@ class MACDDecisionMaking:
         
         if mode == 0:
             startDate = date.today()
-            #checks if the called date is a weekend
+            #checks if the called date is a weekend or a holiday
             if startDate.isoweekday()  > 5:
                 print("It's the weekend no current stock prices available to buy")
                 exit()
+            
         
             #should output the SMA value for avariable number of days
             for stock in portfolio.stocksHeld:
                     if stock.name == ticker:
                         #checks if the stockmarket is open yet
+                        #this has the potential to get buggy/confusing if the day is a holiday since it will never open
                         if stock.getStockPrice() is None:
                             print("no stock price available yet")
                             exit()
@@ -70,6 +72,7 @@ class MACDDecisionMaking:
                             if placeHolderDate.isoweekday() > 5:
                                 placeHolderDate -= timedelta(days=1)
                                 continue
+                                
                             else:
                                 
                                 secondPlaceHolderDate = placeHolderDate + timedelta(days=1)
@@ -78,12 +81,17 @@ class MACDDecisionMaking:
                                 placeHolderDate = placeHolderDate.strftime("%Y-%m-%d")
                                 secondPlaceHolderDate = secondPlaceHolderDate.strftime("%Y-%m-%d")
                                 
-                            
+                                #check if the stockmarket is open on that day (holiday check)
+                                if stock.getStockPrice(-1, placeHolderDate, secondPlaceHolderDate) is None:
+                                    placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
+                                    placeHolderDate -= timedelta(days=1)
+                                    continue
+                                
                                 SMA_Value +=  stock.getStockPrice(-1, placeHolderDate, secondPlaceHolderDate)
                                 
                                 #converts the str back into datetime objects
                                 placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
-                                secondPlaceHolderDate = datetime.strptime(secondPlaceHolderDate, "%Y-%m-%d")
+                                secondPlaceHolderDate = datetime.strptime(secondPlaceHolderDate, "%Y-%m-%d") #not sure if line is needed, to test
                                 
                                 placeHolderDate -= timedelta(days=1)
                             executions += 1

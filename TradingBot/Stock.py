@@ -16,6 +16,7 @@ class Stock:
             raise ValueError("Unrecongnised ticker")
         
     
+    #at some point has to be changed to utilise the download method of yf more precisely (time period)
     def getStockPrice(self, mode: int = 0, dateStart='0', dateEnd='0'):
         """
         fetches stock prices, default mode is live prices, past mode (daily intevals)
