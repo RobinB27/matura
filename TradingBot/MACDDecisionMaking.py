@@ -63,12 +63,12 @@ class MACDDecisionMaking:
                             SMA_Value +=  stock.getStockPrice()
                             placeHolderDate = startDate - timedelta(days=1)
                         #iterates over the past stock prices and adds the closing stock price to the SMA claculation from the current date backwards 
-                        print(SMA_Value)
                         
-                        #checks if date is a weekend, meaning no price
+                        
                         executions = 0
                         while executions != daysToCalculate - 1:
-        
+                            
+                            #checks if date is a weekend, meaning no price
                             if placeHolderDate.isoweekday() > 5:
                                 placeHolderDate -= timedelta(days=1)
                                 continue
@@ -95,8 +95,6 @@ class MACDDecisionMaking:
                                 
                                 placeHolderDate -= timedelta(days=1)
                             executions += 1
-                            print(SMA_Value)
-                            print(executions)
                           
                         #divides the total value by number of days to get the SMA
                         SMA_Value = SMA_Value / daysToCalculate
