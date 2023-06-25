@@ -12,8 +12,38 @@ class MACDDecisionMaking:
         self.mode = mode
         
     
-    def makeStockDecision(self, portfolio, stock):
+    def makeStockDecision(self, portfolio, ticker: str, mode: int = 0, dateStart: str = "0"):
+        """makes a decision whether to buy a stock or not on a given date
+
+        Args:
+            portfolio (_type_): _description_
+            ticker (str): _description_
+            mode (int, optional): _description_. Defaults to 0.
+            dateStart (str, optional): _description_. Defaults to "0".
+
+        Returns:
+            decision in a binary format where 0 is no and 1 is yes
+        """
         decision = 0
+        #signal line needs to be reworked DOES NOT MAKE RIGHT CALCULATIONS
+        #NEED TO REWORK THE WAY EMA WORKS, ABSOLUETLY NEEDS TO HAVE ROLLING DATES 
+        MACDPlaceholder = 0
+        if mode == 0:
+            signalLine = self.calculateEMA(9, portfolio, ticker)
+            print(f"SIgnal line: {signalLine}")
+            MACDPlaceholder = self.calculateMACD(portfolio, ticker)
+            print(f"MACD: {MACDPlaceholder}")
+        elif mode == -1:
+            signalLine = self.calculateEMA(9, portfolio, ticker, -1, dateStart)
+            print(f"SIgnal line: {signalLine}")
+            MACDPlaceholder = self.calculateMACD(portfolio, ticker, -1, dateStart)
+            print(f"MACD: {MACDPlaceholder}")
+        
+        if MACDPlaceholder > signalLine:
+            decision = 1
+        elif MACDPlaceholder < signalLine:
+            decision = 0
+        
         return decision
     
     def calculateMACD(self, portfolio, ticker: str, mode: int = 0, dateStart: str = "0"):
