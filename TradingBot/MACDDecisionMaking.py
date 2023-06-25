@@ -32,6 +32,7 @@ class MACDDecisionMaking:
             EMA_Placeholder26days = self.calculateEMA(26, portfolio, ticker)
             
             MACDline = EMA_Placeholder12days - EMA_Placeholder26days
+            return MACDline
             
             
             
@@ -41,6 +42,8 @@ class MACDDecisionMaking:
             EMA_Placeholder26days = self.calculateEMA(26, portfolio, ticker, -1, dateStart)
             
             MACDline = EMA_Placeholder12days - EMA_Placeholder26days
+            return MACDline
+
      
     #lot of boilerplate can be removed by putting the while loop inside it's own function
     def calculateSMA(self, daysToCalculate: int, portfolio, ticker, mode = 0, dateToCalculate = "0"):
