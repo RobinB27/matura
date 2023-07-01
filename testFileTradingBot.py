@@ -13,4 +13,4 @@ s1 = Stock("TSLA")
 
 d1 = MACDDecisionMaking(0)
 
-print(d1.makeStockDecision(p1, "TSLA", -1, "2023-5-8"))
+print(d1.makeStockDecision(p1, "TSLA", -1, "2023-1-13"))

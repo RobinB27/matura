@@ -25,19 +25,95 @@ class MACDDecisionMaking:
             decision in a binary format where 0 is no and 1 is yes
         """
         decision = 0
-        #signal line needs to be reworked DOES NOT MAKE RIGHT CALCULATIONS
-        #NEED TO REWORK THE WAY EMA WORKS, ABSOLUETLY NEEDS TO HAVE ROLLING DATES 
+        #EMA = (todays MACD * K) + (Previous EMA * (1 – K))
+        
+        signalLine = 0
+        weightMultiplier = 2 / (9 + 1)
+        
         MACDPlaceholder = 0
         if mode == 0:
-            signalLine = self.calculateEMA(9, portfolio, ticker)
-            print(f"SIgnal line: {signalLine}")
             MACDPlaceholder = self.calculateMACD(portfolio, ticker)
             print(f"MACD: {MACDPlaceholder}")
-        elif mode == -1:
-            signalLine = self.calculateEMA(9, portfolio, ticker, -1, dateStart)
+            
+            MACDAverage = 0
+            placeHolderDate = date.today()
+            
+            executions = 0
+            while executions < 9:
+                placeHolderDate = placeHolderDate - timedelta(days=1)
+                if placeHolderDate.isoweekday() > 5:
+                    continue
+                
+                placeHolderDate = placeHolderDate.strftime("%Y-%m-%d")
+                MACDAverage += self.calculateMACD(portfolio, ticker, -1, placeHolderDate)
+                placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
+                executions += 1
+            
+            MACDAverage = MACDAverage / 9
+
+            signalLine = (MACDPlaceholder * weightMultiplier) + (MACDAverage * (1 - weightMultiplier))
             print(f"SIgnal line: {signalLine}")
+            
+        elif mode == -1:
+            FirstCheckPlaceholder1 = datetime.strptime(dateStart, "%Y-%m-%d")
+                
+            if FirstCheckPlaceholder1.isoweekday() > 5:
+                    print(f"Weekend: {FirstCheckPlaceholder1}")
+                    exit()
+            
+            FirstCheckPlaceholder2 = FirstCheckPlaceholder1
+            FirstCheckPlaceholder2 += timedelta(days=1)
+            
+            FirstCheckPlaceholder1 = FirstCheckPlaceholder1.strftime("%Y-%m-%d")
+            FirstCheckPlaceholder2 = FirstCheckPlaceholder2.strftime("%Y-%m-%d")
+            
+            for stock in portfolio.stocksHeld:
+                if stock.name == ticker:
+                    if stock.getStockPrice(-1, FirstCheckPlaceholder1, FirstCheckPlaceholder2) is None:
+                                print(f"exception date: {FirstCheckPlaceholder1}")
+                                exit()
+                                
             MACDPlaceholder = self.calculateMACD(portfolio, ticker, -1, dateStart)
             print(f"MACD: {MACDPlaceholder}")
+            
+            MACDAverage = 0
+            placeHolderDate = datetime.strptime(dateStart, "%Y-%m-%d")
+            
+            executions = 0
+            while executions < 9:
+                
+                check = False
+                
+                placeHolderDate = placeHolderDate - timedelta(days=1)
+                
+                getStockPricePlacholder = placeHolderDate
+                getStockPricePlacholder += timedelta(days=1)
+                getStockPricePlacholder = getStockPricePlacholder.strftime("%Y-%m-%d")
+                
+                if placeHolderDate.isoweekday() > 5:
+                    print(f"Weekend: {placeHolderDate}")
+                    continue
+                placeHolderDate = placeHolderDate.strftime("%Y-%m-%d")
+                for stock in portfolio.stocksHeld:
+                    if stock.name == ticker:
+                        if stock.getStockPrice(-1, placeHolderDate, getStockPricePlacholder) is None:
+                                print(f"exception date: {placeHolderDate}")
+                                check = True
+                                continue
+                            
+                if check == True:
+                    placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
+                    continue
+                                
+                MACDAverage += self.calculateMACD(portfolio, ticker, -1, placeHolderDate)
+                placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
+                executions += 1
+            
+            MACDAverage = MACDAverage / 9
+
+            signalLine = (MACDPlaceholder * weightMultiplier) + (MACDAverage * (1 - weightMultiplier))
+            print(f"SIgnal line: {signalLine}")
+            print(MACDPlaceholder)
         
         if MACDPlaceholder > signalLine:
             decision = 1
@@ -60,7 +136,7 @@ class MACDDecisionMaking:
             
             EMA_Placeholder12days = self.calculateEMA(12, portfolio, ticker)
             EMA_Placeholder26days = self.calculateEMA(26, portfolio, ticker)
-            
+
             MACDline = EMA_Placeholder12days - EMA_Placeholder26days
             return MACDline
             
@@ -68,8 +144,11 @@ class MACDDecisionMaking:
             
         elif mode == -1:
             
+            
+            
             EMA_Placeholder12days = self.calculateEMA(12, portfolio, ticker, -1, dateStart)
             EMA_Placeholder26days = self.calculateEMA(26, portfolio, ticker, -1, dateStart)
+
             
             MACDline = EMA_Placeholder12days - EMA_Placeholder26days
             return MACDline
@@ -121,27 +200,32 @@ class MACDDecisionMaking:
                             #checks if date is a weekend, meaning no price
                             if placeHolderDate.isoweekday() > 5:
                                 placeHolderDate -= timedelta(days=1)
+                                print(f"Weekend on: {placeHolderDate}")
+                                continue
+                            if stock.getStockPrice(-1, placeHolderDate) is None:
+                                placeHolderDate -= timedelta(days=1)
+                                print("exception date")
                                 continue
                                 
                             else:
                                 
-                                secondPlaceHolderDate = placeHolderDate + timedelta(days=1)
+                                secondplaceHolderDate = placeHolderDate + timedelta(days=1)
                             
                                 #converts the datetime objects into str format for getStockPrice()
                                 placeHolderDate = placeHolderDate.strftime("%Y-%m-%d")
-                                secondPlaceHolderDate = secondPlaceHolderDate.strftime("%Y-%m-%d")
+                                secondplaceHolderDate = secondplaceHolderDate.strftime("%Y-%m-%d")
                                 
                                 #check if the stockmarket is open on that day (holiday check)
-                                if stock.getStockPrice(-1, placeHolderDate, secondPlaceHolderDate) is None:
+                                if stock.getStockPrice(-1, placeHolderDate, secondplaceHolderDate) is None:
                                     placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
                                     placeHolderDate -= timedelta(days=1)
                                     continue
                                 
-                                SMA_Value +=  stock.getStockPrice(-1, placeHolderDate, secondPlaceHolderDate)
+                                SMA_Value +=  stock.getStockPrice(-1, placeHolderDate, secondplaceHolderDate)
                                 
                                 #converts the str back into datetime objects
                                 placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
-                                secondPlaceHolderDate = datetime.strptime(secondPlaceHolderDate, "%Y-%m-%d") #not sure if line is needed, to test
+                                secondplaceHolderDate = datetime.strptime(secondplaceHolderDate, "%Y-%m-%d") #not sure if line is needed, to test
                                 
                                 placeHolderDate -= timedelta(days=1)
                             executions += 1
@@ -157,41 +241,51 @@ class MACDDecisionMaking:
                         
                         executions = 0
                         placeHolderDate = datetime.strptime(dateToCalculate, "%Y-%m-%d")
-                        dateToCalculate = datetime.strptime(dateToCalculate, "%Y-%m-%d")
                         
-                        if dateToCalculate.isoweekday() > 5:
-                                print("dateToCalculate is a weekend")
-                                exit()
-                        
-                        while executions != daysToCalculate:
+                        while executions < daysToCalculate:
                             
                             #checks if date is a weekend, meaning no price
-                            #not tested! 
+                            #DOESNT WORK
                             if placeHolderDate.isoweekday() > 5:
                                 placeHolderDate -= timedelta(days=1)
                                 continue
-                                
-                            else:
-                                
-                                secondPlaceHolderDate = placeHolderDate + timedelta(days=1)
                             
-                                #converts the datetime objects into str format for getStockPrice()
-                                placeHolderDate = placeHolderDate.strftime("%Y-%m-%d")
-                                secondPlaceHolderDate = secondPlaceHolderDate.strftime("%Y-%m-%d")
+                            #creates the second date needed for the getStockPrice function
+                            getStockPricePlacholder = placeHolderDate
+                            getStockPricePlacholder += timedelta(days=1)
+                            
+                            
+                            placeHolderDate = placeHolderDate.strftime("%Y-%m-%d")
+                            getStockPricePlacholder = getStockPricePlacholder.strftime("%Y-%m-%d")
+                            
+                            if stock.getStockPrice(-1, placeHolderDate, getStockPricePlacholder) is None:
                                 
-                                #check if the stockmarket is open on that day (holiday check)
-                                if stock.getStockPrice(-1, placeHolderDate, secondPlaceHolderDate) is None:
-                                    placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
-                                    placeHolderDate -= timedelta(days=1)
-                                    continue
-                                
-                                SMA_Value +=  stock.getStockPrice(-1, placeHolderDate, secondPlaceHolderDate)
-                                
-                                #converts the str back into datetime objects
-                                placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
-                                secondPlaceHolderDate = datetime.strptime(secondPlaceHolderDate, "%Y-%m-%d") #not sure if line is needed, to test
-                                
+                                placeHolderDate =  datetime.strptime(placeHolderDate, "%Y-%m-%d")
                                 placeHolderDate -= timedelta(days=1)
+                                print("exception date")
+                                continue
+                            
+                            placeHolderDate =  datetime.strptime(placeHolderDate, "%Y-%m-%d")   
+                        
+                            secondplaceHolderDate = placeHolderDate + timedelta(days=1)
+                            
+                            #converts the datetime objects into str format for getStockPrice()
+                            placeHolderDate = placeHolderDate.strftime("%Y-%m-%d")
+                            secondplaceHolderDate = secondplaceHolderDate.strftime("%Y-%m-%d")
+                                
+                            #check if the stockmarket is open on that day (holiday check)
+                            if stock.getStockPrice(-1, placeHolderDate, secondplaceHolderDate) is None:
+                                placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
+                                placeHolderDate -= timedelta(days=1) 
+                                continue
+                                
+                            SMA_Value +=  stock.getStockPrice(-1, placeHolderDate, secondplaceHolderDate)
+                                
+                            #converts the str back into datetime objects
+                            placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
+                            secondplaceHolderDate = datetime.strptime(secondplaceHolderDate, "%Y-%m-%d") #not sure if line is needed, to test
+                                
+                            placeHolderDate -= timedelta(days=1)
                             executions += 1
                           
                         #divides the total value by number of days to get the SMA
@@ -221,6 +315,13 @@ class MACDDecisionMaking:
         #could be optimised with keeping a running EMA calculation, this recalculates the EMA every time it's called
         if mode == 0:
             
+            placeholderWeekendCheck = datetime.strptime(dateToCalculate, "%Y-%m-%d")
+            #checks if dateToCalculate is on a weekend()
+            if placeholderWeekendCheck.isoweekday() > 5:
+                print("EMA calculatins not possible on a weekend")
+                exit()
+            
+            
             EMAValue = 0
             
             SMA_Placeholder = self.calculateSMA(daysToCalculate, portfolio, ticker)
@@ -236,18 +337,26 @@ class MACDDecisionMaking:
             
         elif mode == -1:
             
-            EMAValue = 0
-            placeholderDate = portfolio.addDayToDate(dateToCalculate)
             
-            SMA_Placeholder = self.calculateSMA(daysToCalculate, portfolio, ticker, -1,  dateToCalculate)
+            SMA_Placeholder = 0
+            executions = 0
             
-            stockPrice = 0
+            placeHolderDate = datetime.strptime(dateToCalculate, "%Y-%m-%d")
+            getStockPricePlacholder = placeHolderDate
+            
+            getStockPricePlacholder += timedelta(1)
+            getStockPricePlacholder = getStockPricePlacholder.strftime("%Y-%m-%d")
+            
             for stock in portfolio.stocksHeld:
                 if stock.name == ticker:
-                    stockPrice = stock.getStockPrice(-1, dateToCalculate, placeholderDate)
+                    SMA_Placeholder += self.calculateSMA(daysToCalculate, portfolio, ticker, -1,  dateToCalculate)
+
+                        
+            stockPrice = 0
+            stockPrice = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
                     
             EMAValue = (stockPrice * weightMultiplier) + (SMA_Placeholder * (1 - weightMultiplier))
-            
+           
             return EMAValue
             
         
