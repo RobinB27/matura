@@ -24,6 +24,7 @@ class MACDDecisionMaking:
         Returns:
             decision in a binary format where 0 is no and 1 is yes
         """
+        #TO DO CHECK IF TICKER VALID AT START
         decision = 0
         #EMA = (todays MACD * K) + (Previous EMA * (1 – K))
         
