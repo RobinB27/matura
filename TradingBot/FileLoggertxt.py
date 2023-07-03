@@ -3,7 +3,7 @@ import datetime, os
 
 # Potential issue: see comment l37
 
-class FileLogger:
+class FileLoggertxt:
     """
     Utility class to log a snapshot of a Portfolio class to a txt file.
     The generated file is not intended for further use, but for human readability.

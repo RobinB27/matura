@@ -5,11 +5,10 @@ import pandas as pd
 class Portfolio:
     """
     defines the portfolio class
-    params: fundsAmount, name
+    params: fundsAmount
     """
-    def __init__(self, fundsAmount, name):
+    def __init__(self, fundsAmount):
         
-        self.name = name
         self.funds = fundsAmount
         self.stocksHeld = [] #could be optimised with a dict
         
@@ -141,11 +140,3 @@ class Portfolio:
         placeholderEndDate = placeholderEndDate.strftime("%Y-%m-%d")
 
         return placeholderEndDate
-    
-    # doesnt work
-    def findStock(self, nameOfTicker: str):
-        for stock in self.stocksHeld:
-            if stock.name == nameOfTicker:
-                return stock
-            else:
-                return -1

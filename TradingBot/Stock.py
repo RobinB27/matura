@@ -7,11 +7,13 @@ class Stock:
     """
     def __init__(self, name):
         
-        self.name = name
+        self.name = str(name)
         self.amountOfStock = 0
+        self.ticker = yf.Ticker(name)
     
         # Throws useful exception message on invalid Ticker
-        try: self.tickerInfo = yf.Ticker(self.name).info
+        try: 
+            self.tickerInfo = self.ticker.info
         except KeyError:
             raise ValueError("Unrecongnised ticker")
         
