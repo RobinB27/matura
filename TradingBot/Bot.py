@@ -11,9 +11,11 @@ class Bot:
         self.mode = mode
         self.startDate = startDate
         self. portfolio = 0
-        self.date = ""
+        self.date = startDate
         self.timePeriod = 0
         self.decisionMaker = MACDDecisionMaking(mode)
+        self.fileLoggerTxt = FileLoggertxt()
+        
         #add in a self.date class attribute such that the bot can keep track of what date it is
         
     def initiating(self):
@@ -39,12 +41,10 @@ class Bot:
             
             for i in range(self.timePeriod):
                 print(f"{self.date}")
-                stockName = self.portfolio
-                
-                #DOES NOT WORK YET
-                decisions = map(self.decisionMaker.makeStockDecision(self.portfolio, stock.name, self.mode, self.date), self.portfolio.stocksHeld)
+                                
+                for stock in self.portfolio.stocksHeld:
+                    decision = self.decisionMaker.makeStockDecision(self.portfolio, stock.name, self.mode, self.date)
 
-                for decision, stock in zip(decisions, self.portfolio.stocksHeld):
                     if decision == 1:
                         self.portfolio.buyStock(10, stock.name, self.mode, self.date)
                         print(f"Buying stock: {stock.name}")
@@ -53,8 +53,12 @@ class Bot:
                         print(f"Selling stock: {stock.name}")
                     else:
                         print(f"Ignoring stock: {stock.name}")
+                        
+                self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
+                
+                self.date = self.portfolio.addDayToDate(self.date)
+                print(self.date)
         
-    #remember the map function to iterate over all stocks held and decide if you should sell them
     
     
     

@@ -140,3 +140,15 @@ class Portfolio:
         placeholderEndDate = placeholderEndDate.strftime("%Y-%m-%d")
 
         return placeholderEndDate
+    
+    def subtractDayFromDate(self, date: str):
+        """
+        adds one day to any given date
+        Args: date(str)
+        """
+        
+        date = datetime.strptime(date, "%Y-%m-%d")
+        placeholderEndDate = date - timedelta(days=1)
+        placeholderEndDate = placeholderEndDate.strftime("%Y-%m-%d")
+
+        return placeholderEndDate
