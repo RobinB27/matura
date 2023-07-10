@@ -1,8 +1,8 @@
 from TradingBot.Stock import Stock
 from TradingBot.Portfolio import Portfolio
 from TradingBot.MACDDecisionMaking import MACDDecisionMaking
-from TradingBot.FileLoggerJSON import FileLoggerJSON
-from TradingBot.FileLoggertxt import FileLoggertxt
+from TradingBot.FileLoggers.FileLoggerJSON import FileLoggerJSON
+from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
 import datetime
 
 class Bot:
@@ -15,6 +15,7 @@ class Bot:
         self.timePeriod = 0
         self.decisionMaker = MACDDecisionMaking(mode)
         self.fileLoggerTxt = FileLoggertxt()
+        self.fileLoggerJSON = FileLoggerJSON()
         
         #add in a self.date class attribute such that the bot can keep track of what date it is
         
@@ -24,7 +25,7 @@ class Bot:
                 
         self.portfolio = Portfolio(fundsForPortfolio)
         
-        amountOfStocks = input("Amount of stock to add: ")
+        amountOfStocks = input("Number of stock to add to Portfolio: ")
         amountOfStocks = int(amountOfStocks)
         
         for i in range(amountOfStocks):
