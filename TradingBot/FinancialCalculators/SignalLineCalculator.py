@@ -9,7 +9,7 @@ from TradingBot.FinancialCalculators.MACDCalculator import MACDCalculator
 class SignalLineCalculator:
     
     def __init__(self) -> None:
-         self.MACDCalculator = MACDCalculator
+         self.MACDCalculator = MACDCalculator()
     
     def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateStart: str = "0"):
                 #TO DO CHECK IF TICKER VALID AT START

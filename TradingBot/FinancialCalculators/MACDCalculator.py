@@ -8,7 +8,7 @@ from TradingBot.FinancialCalculators.EMACalculator import EMACalculator
 
 class MACDCalculator:
     
-    def __init__(self) -> None:
+    def __init__(self):
         self.EMACalculator = EMACalculator()
     
     def calculateMACD(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateStart: str = "0"):

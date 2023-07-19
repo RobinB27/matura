@@ -6,18 +6,18 @@ from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
 import datetime
 
 class Bot:
-    def __init__(self, startDate, mode = 0):
+    def __init__(self, startDate="", mode = 0):
         self.name = "trading bot"
         self.mode = mode
         self.startDate = startDate
-        self. portfolio = 0
+        self.portfolio = 0
         self.date = startDate
         self.timePeriod = 0
         self.decisionMaker = MACDDecisionMaking(mode)
         self.fileLoggerTxt = FileLoggertxt()
         self.fileLoggerJSON = FileLoggerJSON()
+    
         
-        #add in a self.date class attribute such that the bot can keep track of what date it is
         
     def initiating(self):
         fundsForPortfolio = input("How many funds $$$ does the portfolio have? ")
