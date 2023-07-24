@@ -19,7 +19,7 @@ class MACDCalculator:
         # thought that maybe two modes arent needed because the code in mode = 0 should work for every date given (needs testing)
         # the above thought isnt possible due to the way the getStockPrice() function is implemented
         
-        # mode is currently using the function param mode, shouldn't this be the class variable?
+        # mode is currently using the function param mode, couldn't this be the class variable?
         
         if mode == 0:
             

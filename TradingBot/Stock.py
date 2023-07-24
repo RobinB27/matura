@@ -26,17 +26,27 @@ class Stock:
         """
         if mode == 0:
             placeholder = yf.Ticker(self.name).info
-            stockPrice = placeholder.get("currentPrice")
-            print(stockPrice)
+            try:
+                stockPrice = placeholder.get("currentPrice")
+                print(stockPrice)
+            except KeyError:
+                print("Error: Market not open/Exception date")
+            
             return stockPrice
+        
         elif mode == -1:
             try:
                 stockHistorical = yf.download(self.name, start=dateStart, end=dateEnd)
                 
                 closing_price = stockHistorical.loc[dateStart, "Close"]
+                print(f"{self.name} price of {closing_price} on {dateStart}")
+                
                 return closing_price
+            
             except KeyError:
-                print("No stock price available for the specified date range.")
+                
+                print(f"exception date: {dateStart}")
+                
                 return None
             
         

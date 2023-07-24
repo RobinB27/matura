@@ -40,7 +40,6 @@ class SMACalculator:
                     if stock.name == ticker:
                         #checks if the stockmarket is open yet
                         if stock.getStockPrice() is None:
-                            print(f"Error: Market not open/Exception date: {str(startDate)}")
                             exit()
                         #adds the current price to the SMA_Value  
                         else:   
@@ -62,7 +61,6 @@ class SMACalculator:
                             getStockPricePlacholder = portfolio.addDayToDate(placeHolderDate)
                             
                             if stock.getStockPrice(-1, placeHolderDate, getStockPricePlacholder) is None:
-                                print(f"exception date: {placeHolderDate}")
                                 placeHolderDate = portfolio.subtractDayFromDate(placeHolderDate)
                                 continue                          
                                 
@@ -96,7 +94,6 @@ class SMACalculator:
                             getStockPricePlacholder = portfolio.addDayToDate(dateToCalculate)
                             
                             if stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder) is None:
-                                print(f"exception date: {dateToCalculate}")
                                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                                 continue                          
                                 

@@ -69,7 +69,6 @@ class EMACalculator:
             for stock in portfolio.stocksHeld:
                 if stock.name == ticker:
                     if stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder) is None:
-                        print(f"exception date: {dateToCalculate}")
                         exit()
                     else:                         
                         SMA_Placeholder += self.SMACAlculator.calculateSMA(daysToCalculate, portfolio, ticker, -1,  dateToCalculate)
