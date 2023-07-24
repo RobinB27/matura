@@ -26,53 +26,54 @@ class EMACalculator:
         """
         
         #EMA(today) = (Close(today) * α) + (EMA(yesterday) * (1 - α))
-        
+        EMAValue = 0            
         weightMultiplier = 2 / (daysToCalculate + 1)
         
         #could be optimised with keeping a running EMA calculation, this recalculates the EMA every time it's called
         if mode == 0:
             
-            placeholderWeekendCheck = datetime.strptime(dateToCalculate, "%Y-%m-%d")
+            stockPrice = 0
+            
+            startDate = date.today()
             #checks if dateToCalculate is on a weekend()
-            if placeholderWeekendCheck.isoweekday() > 5:
+            if startDate.isoweekday() > 5:
                 print("EMA calculatins not possible on a weekend")
                 exit()
                 
-            placeHolderExceptionCheck = placeholderWeekendCheck.strftime("%Y-%m-%d")
-            # implement exception date check
-            
-            
-            EMAValue = 0
+            #checks if dateToCalculate is an exception date for stock market closure
+            for stock in portfolio.stocksHeld:
+                    if stock.name == ticker:
+                        if stock.getStockPrice() is None:
+                            print(f"Error: Market not open/Exception date: {str(startDate)}")
+                            exit()
+                        else:
+                            stockPrice = stock.getStockPrice()
             
             SMA_Placeholder = self.SMACAlculator.calculateSMA(daysToCalculate, portfolio, ticker)
-            
-            stockPrice = 0
-            for stock in portfolio.stocksHeld:
-                if stock.name == ticker:
-                    stockPrice = stock.getStockPrice()
-                    
             EMAValue = (stockPrice * weightMultiplier) + (SMA_Placeholder * (1 - weightMultiplier))
             
             return EMAValue
             
         elif mode == -1:
-            
-            
+                       
             SMA_Placeholder = 0
+            stockPrice = 0
             
             placeHolderDate = datetime.strptime(dateToCalculate, "%Y-%m-%d")
-            getStockPricePlacholder = placeHolderDate
+            if placeHolderDate.isoweekday() > 5:
+                print(f"weekend: {dateToCalculate}")
+                exit()                            
             
-            getStockPricePlacholder += timedelta(1)
-            getStockPricePlacholder = getStockPricePlacholder.strftime("%Y-%m-%d")
-            
+            #checks if dateToCalculate is an exception date for stock market closure
+            getStockPricePlacholder = portfolio.addDayToDate(dateToCalculate)
             for stock in portfolio.stocksHeld:
                 if stock.name == ticker:
-                    SMA_Placeholder += self.SMACAlculator.calculateSMA(daysToCalculate, portfolio, ticker, -1,  dateToCalculate)
-
-                        
-            stockPrice = 0
-            stockPrice = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
+                    if stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder) is None:
+                        print(f"exception date: {dateToCalculate}")
+                        exit()
+                    else:                         
+                        SMA_Placeholder += self.SMACAlculator.calculateSMA(daysToCalculate, portfolio, ticker, -1,  dateToCalculate)
+                        stockPrice = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
                     
             EMAValue = (stockPrice * weightMultiplier) + (SMA_Placeholder * (1 - weightMultiplier))
            
