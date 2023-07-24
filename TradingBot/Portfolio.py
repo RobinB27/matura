@@ -129,10 +129,11 @@ class Portfolio:
         print(f"Funds inside portfolio: \"{self.name}\" are ${self.funds}")
         
     
-    def addDayToDate(self, date: str):
+    def addDayToDate(self, date: str) -> str:
         """
         adds one day to any given date
         Args: date(str)
+        returns: str
         """
         
         date = datetime.strptime(date, "%Y-%m-%d")
@@ -141,10 +142,11 @@ class Portfolio:
 
         return placeholderEndDate
     
-    def subtractDayFromDate(self, date: str):
+    def subtractDayFromDate(self, date: str) -> str:
         """
-        adds one day to any given date
+        subtracts one day to any given date
         Args: date(str)
+        returns: str
         """
         
         date = datetime.strptime(date, "%Y-%m-%d")

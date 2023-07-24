@@ -1,18 +1,23 @@
 import yfinance as fy
 import pandas as pd
+import diskcache
 
 from datetime import datetime, timedelta, date
-from TradingBot.Portfolio import Portfolio 
+from TradingBot.Portfolio import Portfolio
     
     #lot of boilerplate can be removed by putting the while loop inside it's own function
 
 class SMACalculator:
     
-    def calculateSMA(self, daysToCalculate: int, portfolio: Portfolio, ticker, mode = 0, dateToCalculate = "0"):
+    def __init__(self):
+        #creates cache for storing SMA values
+        cache = diskcache.Cache("./TradingBot/FinancialCalculators/CacheSMA")
+    
+    def calculateSMA(self, daysToCalculate: int, portfolio: Portfolio, ticker, mode = 0, dateToCalculate = ""):
         """calculates the SMA of a stock, variable time period, mode 0 for current time, mode -1 for past prices
 
         Args:
-            daysToCalculate (int): _description_
+            daysToCalculate (int): _description_ 
             portfolio (_type_): _description_
             ticker (_type_): _description_
             mode (int, optional): _description_. Defaults to 0.
@@ -31,58 +36,42 @@ class SMACalculator:
                 print("It's the weekend no current stock prices available to buy")
                 exit()
             
-        
-            #should output the SMA value for avariable number of days
             for stock in portfolio.stocksHeld:
                     if stock.name == ticker:
                         #checks if the stockmarket is open yet
-                        #this has the potential to get buggy/confusing if the day is a holiday since it will never open
                         if stock.getStockPrice() is None:
-                            print("no stock price available yet")
+                            print(f"Error: Market not open/Exception date: {str(startDate)}")
                             exit()
                         #adds the current price to the SMA_Value  
                         else:   
                             SMA_Value +=  stock.getStockPrice()
-                            placeHolderDate = startDate - timedelta(days=1)
+                            placeHolderDate = startDate.strftime("%Y-%m-%d")
+                            
                         #iterates over the past stock prices and adds the closing stock price to the SMA claculation from the current date backwards 
-                        
-                        
-                        executions = 0
-                        while executions != daysToCalculate - 1:
-                            
+                        while executions < daysToCalculate - 1:
+                                                                         
                             #checks if date is a weekend, meaning no price
-                            if placeHolderDate.isoweekday() > 5:
-                                placeHolderDate -= timedelta(days=1)
-                                print(f"Weekend on: {placeHolderDate}")
-                                continue
-                            if stock.getStockPrice(-1, placeHolderDate) is None:
-                                placeHolderDate -= timedelta(days=1)
-                                print("exception date")
-                                continue
-                                
-                            else:
-                                
-                                secondplaceHolderDate = placeHolderDate + timedelta(days=1)
+                            weekendCheckPlaceholder = datetime.strptime(placeHolderDate, "%Y-%m-%d")
                             
-                                #converts the datetime objects into str format for getStockPrice()
-                                placeHolderDate = placeHolderDate.strftime("%Y-%m-%d")
-                                secondplaceHolderDate = secondplaceHolderDate.strftime("%Y-%m-%d")
+                            if weekendCheckPlaceholder.isoweekday() > 5:
+                                print(f"weekend: {placeHolderDate}")
+                                placeHolderDate = portfolio.subtractDayFromDate(placeHolderDate)
+                                continue
+                            
+                            #checks if dateToCalculate is an exception date for stock market closure
+                            getStockPricePlacholder = portfolio.addDayToDate(placeHolderDate)
+                            
+                            if stock.getStockPrice(-1, placeHolderDate, getStockPricePlacholder) is None:
+                                print(f"exception date: {placeHolderDate}")
+                                placeHolderDate = portfolio.subtractDayFromDate(placeHolderDate)
+                                continue                          
                                 
-                                #check if the stockmarket is open on that day (holiday check)
-                                if stock.getStockPrice(-1, placeHolderDate, secondplaceHolderDate) is None:
-                                    placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
-                                    placeHolderDate -= timedelta(days=1)
-                                    continue
-                                
-                                SMA_Value +=  stock.getStockPrice(-1, placeHolderDate, secondplaceHolderDate)
-                                
-                                #converts the str back into datetime objects
-                                placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
-                                secondplaceHolderDate = datetime.strptime(secondplaceHolderDate, "%Y-%m-%d") #not sure if line is needed, to test
-                                
-                                placeHolderDate -= timedelta(days=1)
+                            SMA_Value +=  stock.getStockPrice(-1, placeHolderDate, getStockPricePlacholder)
+                            
+                            #ensures that a new date is processed in the next iteration
+                            placeHolderDate = portfolio.subtractDayFromDate(placeHolderDate)                                
                             executions += 1
-                          
+                                                  
                         #divides the total value by number of days to get the SMA
                         SMA_Value = SMA_Value / daysToCalculate
                         return SMA_Value
@@ -93,52 +82,28 @@ class SMACalculator:
                     if stock.name == ticker:
                         
                         executions = 0
-                        placeHolderDate = datetime.strptime(dateToCalculate, "%Y-%m-%d")
-                        
                         while executions < daysToCalculate:
                             
                             #checks if date is a weekend, meaning no price
-                            #DOESNT WORK
+                            placeHolderDate = datetime.strptime(dateToCalculate, "%Y-%m-%d")
+
                             if placeHolderDate.isoweekday() > 5:
-                                placeHolderDate -= timedelta(days=1)
+                                print(f"weekend: {dateToCalculate}")
+                                dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                                 continue
                             
-                            #creates the second date needed for the getStockPrice function
-                            getStockPricePlacholder = placeHolderDate
-                            getStockPricePlacholder += timedelta(days=1)
+                            #checks if dateToCalculate is an exception date for stock market closure
+                            getStockPricePlacholder = portfolio.addDayToDate(dateToCalculate)
                             
+                            if stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder) is None:
+                                print(f"exception date: {dateToCalculate}")
+                                dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
+                                continue                          
+                                
+                            SMA_Value +=  stock.getStockPrice(-1, placeHolderDate, getStockPricePlacholder)
                             
-                            placeHolderDate = placeHolderDate.strftime("%Y-%m-%d")
-                            getStockPricePlacholder = getStockPricePlacholder.strftime("%Y-%m-%d")
-                            
-                            if stock.getStockPrice(-1, placeHolderDate, getStockPricePlacholder) is None:
-                                
-                                placeHolderDate =  datetime.strptime(placeHolderDate, "%Y-%m-%d")
-                                placeHolderDate -= timedelta(days=1)
-                                print("exception date")
-                                continue
-                            
-                            placeHolderDate =  datetime.strptime(placeHolderDate, "%Y-%m-%d")   
-                        
-                            secondplaceHolderDate = placeHolderDate + timedelta(days=1)
-                            
-                            #converts the datetime objects into str format for getStockPrice()
-                            placeHolderDate = placeHolderDate.strftime("%Y-%m-%d")
-                            secondplaceHolderDate = secondplaceHolderDate.strftime("%Y-%m-%d")
-                                
-                            #check if the stockmarket is open on that day (holiday check)
-                            if stock.getStockPrice(-1, placeHolderDate, secondplaceHolderDate) is None:
-                                placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
-                                placeHolderDate -= timedelta(days=1) 
-                                continue
-                                
-                            SMA_Value +=  stock.getStockPrice(-1, placeHolderDate, secondplaceHolderDate)
-                                
-                            #converts the str back into datetime objects
-                            placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
-                            secondplaceHolderDate = datetime.strptime(secondplaceHolderDate, "%Y-%m-%d") #not sure if line is needed, to test
-                                
-                            placeHolderDate -= timedelta(days=1)
+                            #ensures that a new date is processed in the next iteration
+                            dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)                                
                             executions += 1
                           
                         #divides the total value by number of days to get the SMA
