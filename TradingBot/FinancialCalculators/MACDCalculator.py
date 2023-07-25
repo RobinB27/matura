@@ -23,7 +23,9 @@ class MACDCalculator:
         
         if mode == 0:
             
+            print(f"MACDCalculator: Downloading EMA 12")
             EMA_Placeholder12days = self.EMACalculator.calculateEMA(12, portfolio, ticker)
+            print(f"MACDCalculator: Downloading EMA 26")
             EMA_Placeholder26days = self.EMACalculator.calculateEMA(26, portfolio, ticker)
 
             MACDline = EMA_Placeholder12days - EMA_Placeholder26days
@@ -34,9 +36,12 @@ class MACDCalculator:
         elif mode == -1:
             
             
-            
+            print(f"MACDCalculator: Downloading EMA 12: {dateStart}")
             EMA_Placeholder12days = self.EMACalculator.calculateEMA(12, portfolio, ticker, -1, dateStart)
+            
+            print(f"MACDCalculator: Downloading EMA 26: {dateStart}")
             EMA_Placeholder26days = self.EMACalculator.calculateEMA(26, portfolio, ticker, -1, dateStart)
+            
 
             
             MACDline = EMA_Placeholder12days - EMA_Placeholder26days

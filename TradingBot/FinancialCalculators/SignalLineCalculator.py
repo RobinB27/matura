@@ -23,12 +23,12 @@ class SignalLineCalculator:
         if mode == 0:
             placeHolderDate = date.today()
             if placeHolderDate.isoweekday() > 5:
-                print(f"live calculations not possible on weekend")
+                print(f"SignalLineCalculator: live calculations not possible on weekend")
                 exit()
             
             for stock in portfolio.stocksHeld():
                 if stock.name == ticker & stock.getStockPrice() == None:
-                    print("stock market closed (exception date/closing times)")
+                    print("SignalLineCalculator: stock market closed (exception date/closing times)")
                     exit()
                     
             MACDPlaceholder = self.MACDCalculator.calculateMACD(portfolio, ticker)
@@ -42,7 +42,7 @@ class SignalLineCalculator:
             
             while executions < 9:
                 if placeHolderDate.isoweekday() > 5:
-                    print(f"Weekend: {str(placeHolderDate)}")
+                    print(f"SignalLineCalculator while loop 0: Weekend: {str(placeHolderDate)}")
                     placeHolderDate = placeHolderDate - timedelta(days=1)
                     continue
                 
@@ -51,7 +51,7 @@ class SignalLineCalculator:
                 
                 for stock in portfolio.stocksHeld():
                     if stock.name == ticker & stock.getStockPrice(-1, placeHolderDate, getStockPricePlacholderDate) == None:
-                        print(f"stock market closed (exception date/closing times) on {str(placeHolderDate)}")
+                        print(f"SignalLineCalculator while loop 0: stock market closed: {str(placeHolderDate)}")
                         placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
                         placeHolderDate = placeHolderDate - timedelta(days=1)
                         continue
@@ -69,7 +69,7 @@ class SignalLineCalculator:
             FirstCheckPlaceholder1 = datetime.strptime(dateStart, "%Y-%m-%d")
                 
             if FirstCheckPlaceholder1.isoweekday() > 5:
-                    print(f"Weekend for signal line calculations: {FirstCheckPlaceholder1}")
+                    print(f"SignalLineCalculator: Weekend: {FirstCheckPlaceholder1}")
                     exit()
             
             secondCheckPlaceholder = portfolio.addDayToDate(dateStart)
@@ -77,7 +77,7 @@ class SignalLineCalculator:
             for stock in portfolio.stocksHeld:
                 if stock.name == ticker:
                     if stock.getStockPrice(-1, dateStart, secondCheckPlaceholder) is None:
-                                print(f"exception date for signal line calculations: {dateStart} ")
+                                print(f"SignalLineCalculator: stock market closed: {dateStart} ")
                                 exit()
                                 
             MACDPlaceholder = self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateStart)
@@ -92,7 +92,7 @@ class SignalLineCalculator:
             while executions < 9:
                 
                 if placeHolderDate.isoweekday() > 5:
-                    print(f"Weekend for signal line calculations while loop: {placeHolderDate}")
+                    print(f"SignalLineCalculator while loop -1: Weekend: {placeHolderDate}")
                     placeHolderDate = placeHolderDate - timedelta(days=1)
                     continue
                 
@@ -102,7 +102,7 @@ class SignalLineCalculator:
                 for stock in portfolio.stocksHeld:
                     if stock.name == ticker:
                         if stock.getStockPrice(-1, placeHolderDate, getStockPricePlacholderDate) is None:
-                                print(f"exception date: {placeHolderDate}")
+                                print(f"SignalLineCalculator while loop -1: exception date: {placeHolderDate}")
                                 placeHolderDate = portfolio.subtractDayFromDate(placeHolderDate)
                                 placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
                                 continue

@@ -33,13 +33,14 @@ class SMACalculator:
             startDate = date.today()
             #checks if the called date is a weekend or a holiday
             if startDate.isoweekday()  > 5:
-                print("It's the weekend no current stock prices available to buy")
+                print("SMACalculator: Weekend no current stock prices available to buy")
                 exit()
             
             for stock in portfolio.stocksHeld:
                     if stock.name == ticker:
                         #checks if the stockmarket is open yet
                         if stock.getStockPrice() is None:
+                            print("SMACalculator: Market closed/Exception date")
                             exit()
                         #adds the current price to the SMA_Value  
                         else:   
@@ -53,7 +54,7 @@ class SMACalculator:
                             weekendCheckPlaceholder = datetime.strptime(placeHolderDate, "%Y-%m-%d")
                             
                             if weekendCheckPlaceholder.isoweekday() > 5:
-                                print(f"weekend: {placeHolderDate}")
+                                print(f"SMACalculator while loop 0: weekend: {placeHolderDate}")
                                 placeHolderDate = portfolio.subtractDayFromDate(placeHolderDate)
                                 continue
                             
@@ -86,7 +87,7 @@ class SMACalculator:
                             placeHolderDate = datetime.strptime(dateToCalculate, "%Y-%m-%d")
 
                             if placeHolderDate.isoweekday() > 5:
-                                print(f"weekend: {dateToCalculate}")
+                                print(f"SMACalculator: weekend: {dateToCalculate}")
                                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                                 continue
                             
@@ -94,9 +95,10 @@ class SMACalculator:
                             getStockPricePlacholder = portfolio.addDayToDate(dateToCalculate)
                             
                             if stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder) is None:
+                                print(f"SMACalculator: Market closed/Exception date: {dateToCalculate}")
                                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                                 continue                          
-                                
+                            print(f"SMACalculator: Downloading Stockvalues on: {dateToCalculate}")                         
                             SMA_Value +=  stock.getStockPrice(-1, placeHolderDate, getStockPricePlacholder)
                             
                             #ensures that a new date is processed in the next iteration

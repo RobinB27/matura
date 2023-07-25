@@ -9,10 +9,13 @@ class Bot:
     def __init__(self, startDate="", mode = 0):
         self.name = "trading bot"
         self.mode = mode
+        
         self.startDate = startDate
-        self.portfolio = 0
         self.date = startDate
+        
+        self.portfolio = 0
         self.timePeriod = 0
+        
         self.decisionMaker = MACDDecisionMaking(mode)
         self.fileLoggerTxt = FileLoggertxt()
         self.fileLoggerJSON = FileLoggerJSON()
@@ -38,6 +41,9 @@ class Bot:
         self.timePeriod = timePeriod
     
     def startBot(self):
+        if self.mode == 0:
+            pass
+        
         if self.mode == -1:
             
             for i in range(self.timePeriod):
@@ -47,10 +53,10 @@ class Bot:
                     decision = self.decisionMaker.makeStockDecision(self.portfolio, stock.name, self.mode, self.date)
 
                     if decision == 1:
-                        self.portfolio.buyStock(10, stock.name, self.mode, self.date)
+                        self.portfolio.buyStock(1, stock.name, self.mode, self.date)
                         print(f"Buying stock: {stock.name}")
                     elif decision == 0:
-                        self.portfolio.sellStock(10, stock.name, self.mode, self.date)
+                        self.portfolio.sellStock(1, stock.name, self.mode, self.date)
                         print(f"Selling stock: {stock.name}")
                     else:
                         print(f"Ignoring stock: {stock.name}")

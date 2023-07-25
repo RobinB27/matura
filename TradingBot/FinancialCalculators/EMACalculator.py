@@ -37,18 +37,19 @@ class EMACalculator:
             startDate = date.today()
             #checks if dateToCalculate is on a weekend()
             if startDate.isoweekday() > 5:
-                print("EMA calculatins not possible on a weekend")
+                print("EMACalculator: EMA calculatins not possible on a weekend")
                 exit()
                 
             #checks if dateToCalculate is an exception date for stock market closure
             for stock in portfolio.stocksHeld:
                     if stock.name == ticker:
                         if stock.getStockPrice() is None:
-                            print(f"Error: Market not open/Exception date: {str(startDate)}")
+                            print(f"EMACalculator: Market not open/Exception date: {str(startDate)}")
                             exit()
                         else:
                             stockPrice = stock.getStockPrice()
-            
+                            
+            print("EMACalculator: Downloading SMA values")                         
             SMA_Placeholder = self.SMACAlculator.calculateSMA(daysToCalculate, portfolio, ticker)
             EMAValue = (stockPrice * weightMultiplier) + (SMA_Placeholder * (1 - weightMultiplier))
             
@@ -61,7 +62,7 @@ class EMACalculator:
             
             placeHolderDate = datetime.strptime(dateToCalculate, "%Y-%m-%d")
             if placeHolderDate.isoweekday() > 5:
-                print(f"weekend: {dateToCalculate}")
+                print(f"EMACalculator: weekend: {dateToCalculate}")
                 exit()                            
             
             #checks if dateToCalculate is an exception date for stock market closure
@@ -69,8 +70,10 @@ class EMACalculator:
             for stock in portfolio.stocksHeld:
                 if stock.name == ticker:
                     if stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder) is None:
+                        print(f"EMACalculator: exception date: {dateToCalculate}")
                         exit()
-                    else:                         
+                    else:
+                        print(f"EMACalculator: Downloading SMA values on: {dateToCalculate}")                         
                         SMA_Placeholder += self.SMACAlculator.calculateSMA(daysToCalculate, portfolio, ticker, -1,  dateToCalculate)
                         stockPrice = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
                     
