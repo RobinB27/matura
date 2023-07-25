@@ -18,22 +18,44 @@ class SignalLineCalculator:
         
         signalLine = 0
         weightMultiplier = 2 / (9 + 1)
-        
         MACDPlaceholder = 0
+        
         if mode == 0:
+            placeHolderDate = date.today()
+            if placeHolderDate.isoweekday() > 5:
+                print(f"live calculations not possible on weekend")
+                exit()
+            
+            for stock in portfolio.stocksHeld():
+                if stock.name == ticker & stock.getStockPrice() == None:
+                    print("stock market closed (exception date/closing times)")
+                    exit()
+                    
             MACDPlaceholder = self.MACDCalculator.calculateMACD(portfolio, ticker)
-            print(f"MACD: {MACDPlaceholder}")
+            print(f"MACD: {MACDPlaceholder} on {str(placeHolderDate)}")
             
             MACDAverage = 0
-            placeHolderDate = date.today()
-            
             executions = 0
+            
+            #subtracting one day from the start for the EMA calculations of the MACD 
+            placeHolderDate = placeHolderDate - timedelta(days=1)
+            
             while executions < 9:
-                placeHolderDate = placeHolderDate - timedelta(days=1)
                 if placeHolderDate.isoweekday() > 5:
+                    print(f"Weekend: {str(placeHolderDate)}")
+                    placeHolderDate = placeHolderDate - timedelta(days=1)
                     continue
                 
                 placeHolderDate = placeHolderDate.strftime("%Y-%m-%d")
+                getStockPricePlacholderDate = portfolio.addDayToDate(placeHolderDate)
+                
+                for stock in portfolio.stocksHeld():
+                    if stock.name == ticker & stock.getStockPrice(-1, placeHolderDate, getStockPricePlacholderDate) == None:
+                        print(f"stock market closed (exception date/closing times) on {str(placeHolderDate)}")
+                        placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
+                        placeHolderDate = placeHolderDate - timedelta(days=1)
+                        continue
+                
                 MACDAverage += self.MACDCalculator.calculateMACD(portfolio, ticker, -1, placeHolderDate)
                 placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
                 executions += 1
@@ -47,53 +69,44 @@ class SignalLineCalculator:
             FirstCheckPlaceholder1 = datetime.strptime(dateStart, "%Y-%m-%d")
                 
             if FirstCheckPlaceholder1.isoweekday() > 5:
-                    print(f"Weekend: {FirstCheckPlaceholder1}")
+                    print(f"Weekend for signal line calculations: {FirstCheckPlaceholder1}")
                     exit()
             
-            FirstCheckPlaceholder2 = FirstCheckPlaceholder1
-            FirstCheckPlaceholder2 += timedelta(days=1)
-            
-            FirstCheckPlaceholder1 = FirstCheckPlaceholder1.strftime("%Y-%m-%d")
-            FirstCheckPlaceholder2 = FirstCheckPlaceholder2.strftime("%Y-%m-%d")
+            secondCheckPlaceholder = portfolio.addDayToDate(dateStart)
             
             for stock in portfolio.stocksHeld:
                 if stock.name == ticker:
-                    if stock.getStockPrice(-1, FirstCheckPlaceholder1, FirstCheckPlaceholder2) is None:
-                                print(f"exception date: {FirstCheckPlaceholder1}")
+                    if stock.getStockPrice(-1, dateStart, secondCheckPlaceholder) is None:
+                                print(f"exception date for signal line calculations: {dateStart} ")
                                 exit()
                                 
             MACDPlaceholder = self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateStart)
-            print(f"MACD: {MACDPlaceholder}")
+            print(f"MACD: {MACDPlaceholder} on {dateStart}")
             
             MACDAverage = 0
             placeHolderDate = datetime.strptime(dateStart, "%Y-%m-%d")
+            placeHolderDate = placeHolderDate - timedelta(days=1)
+
             
             executions = 0
             while executions < 9:
                 
-                check = False
-                
-                placeHolderDate = placeHolderDate - timedelta(days=1)
-                
-                getStockPricePlacholder = placeHolderDate
-                getStockPricePlacholder += timedelta(days=1)
-                getStockPricePlacholder = getStockPricePlacholder.strftime("%Y-%m-%d")
-                
                 if placeHolderDate.isoweekday() > 5:
-                    print(f"Weekend: {placeHolderDate}")
+                    print(f"Weekend for signal line calculations while loop: {placeHolderDate}")
+                    placeHolderDate = placeHolderDate - timedelta(days=1)
                     continue
+                
                 placeHolderDate = placeHolderDate.strftime("%Y-%m-%d")
+                getStockPricePlacholderDate = portfolio.addDayToDate(placeHolderDate)
+                
                 for stock in portfolio.stocksHeld:
                     if stock.name == ticker:
-                        if stock.getStockPrice(-1, placeHolderDate, getStockPricePlacholder) is None:
+                        if stock.getStockPrice(-1, placeHolderDate, getStockPricePlacholderDate) is None:
                                 print(f"exception date: {placeHolderDate}")
-                                check = True
+                                placeHolderDate = portfolio.subtractDayFromDate(placeHolderDate)
+                                placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
                                 continue
-                            
-                if check == True:
-                    placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
-                    continue
-                                
+                                                            
                 MACDAverage += self.MACDCalculator.calculateMACD(portfolio, ticker, -1, placeHolderDate)
                 placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
                 executions += 1
