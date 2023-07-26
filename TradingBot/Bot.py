@@ -3,7 +3,9 @@ from TradingBot.Portfolio import Portfolio
 from TradingBot.MACDDecisionMaking import MACDDecisionMaking
 from TradingBot.FileLoggers.FileLoggerJSON import FileLoggerJSON
 from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
-import datetime
+from datetime import  datetime, timedelta, date
+
+#in time period bot skipps weekends but counts them as a day of the time period
 
 class Bot:
     def __init__(self, startDate="", mode = 0):
@@ -46,8 +48,27 @@ class Bot:
         
         if self.mode == -1:
             
+            #have to implement checks for valid dates
+            
+            #checks for valid date: 
+            
             for i in range(self.timePeriod):
-                print(f"{self.date}")
+                
+                print(f"Trading day: {self.date}")
+                
+                weekendCheckDatetime = datetime.strptime(self.date, "%Y-%m-%d")
+                exceptionCheckDate = self.portfolio.addDayToDate(self.date)
+                
+                if weekendCheckDatetime.isoweekday() > 5:
+                    print(f"Bot: weekend: {self.date}")
+                    self.date = self.portfolio.addDayToDate(self.date)
+                    continue
+                
+                print("Bot: downloading Stock price for Exception date check")
+                if self.portfolio.stocksHeld[0].getStockPrice(-1, self.date, exceptionCheckDate) is None:
+                    print(f"Bot: exception date: {self.date}")
+                    self.date = self.portfolio.addDayToDate(self.date)
+                    continue
                                 
                 for stock in self.portfolio.stocksHeld:
                     decision = self.decisionMaker.makeStockDecision(self.portfolio, stock.name, self.mode, self.date)

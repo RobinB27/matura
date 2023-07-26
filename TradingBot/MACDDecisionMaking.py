@@ -42,6 +42,6 @@ class MACDDecisionMaking:
             decision = 1
         elif MACDPlaceholder < signalLine:
             decision = 0
-        
+                    
         return decision
            

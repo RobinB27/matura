@@ -65,20 +65,7 @@ class SignalLineCalculator:
             signalLine = (MACDPlaceholder * weightMultiplier) + (MACDAverage * (1 - weightMultiplier))
             print(f"SIgnal line: {signalLine}")
             
-        elif mode == -1:
-            FirstCheckPlaceholder1 = datetime.strptime(dateStart, "%Y-%m-%d")
-                
-            if FirstCheckPlaceholder1.isoweekday() > 5:
-                    print(f"SignalLineCalculator: Weekend: {FirstCheckPlaceholder1}")
-                    exit()
-            
-            secondCheckPlaceholder = portfolio.addDayToDate(dateStart)
-            
-            for stock in portfolio.stocksHeld:
-                if stock.name == ticker:
-                    if stock.getStockPrice(-1, dateStart, secondCheckPlaceholder) is None:
-                                print(f"SignalLineCalculator: stock market closed: {dateStart} ")
-                                exit()
+        elif mode == -1:                
                                 
             MACDPlaceholder = self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateStart)
             print(f"MACD: {MACDPlaceholder} on {dateStart}")

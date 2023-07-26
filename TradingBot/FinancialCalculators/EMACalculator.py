@@ -11,7 +11,7 @@ class EMACalculator:
     def __init__(self) -> None:
         self.SMACAlculator = SMACalculator()
     
-    def calculateEMA(self, daysToCalculate: int, portfolio: Portfolio, ticker, mode = 0, dateToCalculate = "0"):
+    def calculateEMA(self, daysToCalculate: int, portfolio: Portfolio, ticker, mode = 0, dateToCalculate = ""):
         """Calculates the EMA needed for MACD calculations
 
         Args:
@@ -60,22 +60,11 @@ class EMACalculator:
             SMA_Placeholder = 0
             stockPrice = 0
             
-            placeHolderDate = datetime.strptime(dateToCalculate, "%Y-%m-%d")
-            if placeHolderDate.isoweekday() > 5:
-                print(f"EMACalculator: weekend: {dateToCalculate}")
-                exit()                            
-            
-            #checks if dateToCalculate is an exception date for stock market closure
             getStockPricePlacholder = portfolio.addDayToDate(dateToCalculate)
-            for stock in portfolio.stocksHeld:
-                if stock.name == ticker:
-                    if stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder) is None:
-                        print(f"EMACalculator: exception date: {dateToCalculate}")
-                        exit()
-                    else:
-                        print(f"EMACalculator: Downloading SMA values on: {dateToCalculate}")                         
-                        SMA_Placeholder += self.SMACAlculator.calculateSMA(daysToCalculate, portfolio, ticker, -1,  dateToCalculate)
-                        stockPrice = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
+            
+            print(f"EMACalculator: Downloading SMA values on: {dateToCalculate}")                         
+            SMA_Placeholder += self.SMACAlculator.calculateSMA(daysToCalculate, portfolio, ticker, -1,  dateToCalculate)
+            stockPrice = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
                     
             EMAValue = (stockPrice * weightMultiplier) + (SMA_Placeholder * (1 - weightMultiplier))
            
