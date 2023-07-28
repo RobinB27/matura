@@ -11,7 +11,7 @@ class EMACalculator:
     def __init__(self) -> None:
         self.SMACAlculator = SMACalculator()
     
-    def calculateEMA(self, daysToCalculate: int, portfolio: Portfolio, ticker, mode = 0, dateToCalculate = ""):
+    def calculateEMA(self, daysToCalculate: int, portfolio: Portfolio, ticker, mode = 0, dateToCalculate:str = ""):
         """Calculates the EMA needed for MACD calculations
 
         Args:
@@ -64,7 +64,9 @@ class EMACalculator:
             
             print(f"EMACalculator: Downloading SMA values on: {dateToCalculate}")                         
             SMA_Placeholder += self.SMACAlculator.calculateSMA(daysToCalculate, portfolio, ticker, -1,  dateToCalculate)
-            stockPrice = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
+            for stock in portfolio.stocksHeld:
+                if stock.name == ticker:
+                    stockPrice = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
                     
             EMAValue = (stockPrice * weightMultiplier) + (SMA_Placeholder * (1 - weightMultiplier))
            

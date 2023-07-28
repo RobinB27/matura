@@ -11,7 +11,7 @@ class SignalLineCalculator:
     def __init__(self) -> None:
          self.MACDCalculator = MACDCalculator()
     
-    def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateStart: str = "0"):
+    def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = "0"):
                 #TO DO CHECK IF TICKER VALID AT START
         decision = 0
         #EMA = (todays MACD * K) + (Previous EMA * (1 – K))
@@ -67,11 +67,11 @@ class SignalLineCalculator:
             
         elif mode == -1:                
                                 
-            MACDPlaceholder = self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateStart)
-            print(f"MACD: {MACDPlaceholder} on {dateStart}")
+            MACDPlaceholder = self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateToCalculate)
+            print(f"MACD: {MACDPlaceholder} on {dateToCalculate}")
             
             MACDAverage = 0
-            placeHolderDate = datetime.strptime(dateStart, "%Y-%m-%d")
+            placeHolderDate = datetime.strptime(dateToCalculate, "%Y-%m-%d")
             placeHolderDate = placeHolderDate - timedelta(days=1)
 
             
@@ -93,7 +93,8 @@ class SignalLineCalculator:
                                 placeHolderDate = portfolio.subtractDayFromDate(placeHolderDate)
                                 placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
                                 continue
-                                                            
+                            
+                placeHolderDate = placeHolderDate.strftime("%Y-%m-%d")                                            
                 MACDAverage += self.MACDCalculator.calculateMACD(portfolio, ticker, -1, placeHolderDate)
                 placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
                 executions += 1

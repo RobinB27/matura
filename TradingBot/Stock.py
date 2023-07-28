@@ -45,7 +45,7 @@ class Stock:
             
             except KeyError:
                 
-                print(f"exception date: {dateStart}")
+                print(f"Stock: exception date: {dateStart}")
                 
                 return None
             

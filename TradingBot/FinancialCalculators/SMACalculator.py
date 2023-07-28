@@ -1,6 +1,6 @@
 import yfinance as fy
 import pandas as pd
-import diskcache
+from diskcache import Cache
 
 from datetime import datetime, timedelta, date
 from TradingBot.Portfolio import Portfolio
@@ -11,9 +11,9 @@ class SMACalculator:
     
     def __init__(self):
         #creates cache for storing SMA values
-        cache = diskcache.Cache("./TradingBot/FinancialCalculators/CacheSMA")
+        self.cache = Cache("./TradingBot/FinancialCalculators/CacheSMA")
     
-    def calculateSMA(self, daysToCalculate: int, portfolio: Portfolio, ticker, mode = 0, dateToCalculate = ""):
+    def calculateSMA(self, daysToCalculate: int, portfolio: Portfolio, ticker: str, mode = 0, dateToCalculate = ""):
         """calculates the SMA of a stock, variable time period, mode 0 for current time, mode -1 for past prices
 
         Args:
@@ -97,14 +97,26 @@ class SMACalculator:
                             if stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder) is None:
                                 print(f"SMACalculator: Market closed/Exception date: {dateToCalculate}")
                                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
-                                continue                          
-                            print(f"SMACalculator: Downloading Stockvalues on: {dateToCalculate}")                         
-                            SMA_Value +=  stock.getStockPrice(-1, placeHolderDate, getStockPricePlacholder)
+                                continue       
+                                               
                             
+                            #caching part
+                            key = ticker + "_" + dateToCalculate
+                            if key not in self.cache:
+                                print(f"SMACalculator: Downloading Stockvalues on: {dateToCalculate}")
+                                stockPriceOnDate = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
+                                self.cache[key] = stockPriceOnDate
+                            else:
+                                print(f"SMACalculator: Accessing cache for stock price on: {dateToCalculate}")
+                                print(f"SMACalculator:  {ticker} price: {self.cache[key]}")
+                                SMA_Value += self.cache[key]   
+                                                                             
                             #ensures that a new date is processed in the next iteration
                             dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)                                
                             executions += 1
                           
                         #divides the total value by number of days to get the SMA
                         SMA_Value = SMA_Value / daysToCalculate
+                        
+                        self.cache.close()
                         return SMA_Value
