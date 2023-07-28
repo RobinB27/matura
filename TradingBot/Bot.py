@@ -4,6 +4,7 @@ from TradingBot.MACDDecisionMaking import MACDDecisionMaking
 from TradingBot.FileLoggers.FileLoggerJSON import FileLoggerJSON
 from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
 from datetime import  datetime, timedelta, date
+from diskcache import Cache
 
 #in time period bot skipps weekends but counts them as a day of the time period
 
@@ -21,6 +22,9 @@ class Bot:
         self.decisionMaker = MACDDecisionMaking(mode)
         self.fileLoggerTxt = FileLoggertxt()
         self.fileLoggerJSON = FileLoggerJSON()
+        
+        self.cache = Cache("./TradingBot/FinancialCalculators/CacheSMA")
+
     
         
         
@@ -86,6 +90,8 @@ class Bot:
                 
                 self.date = self.portfolio.addDayToDate(self.date)
                 print(self.date)
+
+            self.cache.close()
         
     
     

@@ -94,7 +94,6 @@ class SignalLineCalculator:
                                 placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
                                 continue
                             
-                placeHolderDate = placeHolderDate.strftime("%Y-%m-%d")                                            
                 MACDAverage += self.MACDCalculator.calculateMACD(portfolio, ticker, -1, placeHolderDate)
                 placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
                 executions += 1

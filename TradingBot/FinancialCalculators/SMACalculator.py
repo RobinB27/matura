@@ -12,6 +12,7 @@ class SMACalculator:
     def __init__(self):
         #creates cache for storing SMA values
         self.cache = Cache("./TradingBot/FinancialCalculators/CacheSMA")
+
     
     def calculateSMA(self, daysToCalculate: int, portfolio: Portfolio, ticker: str, mode = 0, dateToCalculate = ""):
         """calculates the SMA of a stock, variable time period, mode 0 for current time, mode -1 for past prices
@@ -118,5 +119,4 @@ class SMACalculator:
                         #divides the total value by number of days to get the SMA
                         SMA_Value = SMA_Value / daysToCalculate
                         
-                        self.cache.close()
                         return SMA_Value
