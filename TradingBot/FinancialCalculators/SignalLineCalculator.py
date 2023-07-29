@@ -68,34 +68,34 @@ class SignalLineCalculator:
         elif mode == -1:                
                                 
             MACDPlaceholder = self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateToCalculate)
-            print(f"MACD: {MACDPlaceholder} on {dateToCalculate}")
+            print(f"SignalLineCalculator: MACD: {MACDPlaceholder} on {dateToCalculate}")
             
             MACDAverage = 0
-            placeHolderDate = datetime.strptime(dateToCalculate, "%Y-%m-%d")
-            placeHolderDate = placeHolderDate - timedelta(days=1)
 
+            #subtracting a day so that 9 MACD average does not include the one already downloaded
+            dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
             
             executions = 0
             while executions < 9:
                 
-                if placeHolderDate.isoweekday() > 5:
-                    print(f"SignalLineCalculator while loop -1: Weekend: {placeHolderDate}")
-                    placeHolderDate = placeHolderDate - timedelta(days=1)
+                weekendCheck = datetime.strptime(dateToCalculate, "%Y-%m-%d")
+                
+                if weekendCheck.isoweekday() > 5:
+                    print(f"SignalLineCalculator while loop -1: Weekend: {dateToCalculate}")
+                    dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                     continue
                 
-                placeHolderDate = placeHolderDate.strftime("%Y-%m-%d")
-                getStockPricePlacholderDate = portfolio.addDayToDate(placeHolderDate)
+                getStockPricePlacholderDate = portfolio.addDayToDate(dateToCalculate)
                 
                 for stock in portfolio.stocksHeld:
                     if stock.name == ticker:
-                        if stock.getStockPrice(-1, placeHolderDate, getStockPricePlacholderDate) is None:
-                                print(f"SignalLineCalculator while loop -1: exception date: {placeHolderDate}")
-                                placeHolderDate = portfolio.subtractDayFromDate(placeHolderDate)
-                                placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
+                        if stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholderDate) is None:
+                                print(f"SignalLineCalculator while loop -1: exception date: {dateToCalculate}")
+                                dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                                 continue
                             
-                MACDAverage += self.MACDCalculator.calculateMACD(portfolio, ticker, -1, placeHolderDate)
-                placeHolderDate = datetime.strptime(placeHolderDate, "%Y-%m-%d")
+                MACDAverage += self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateToCalculate)
+                dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                 executions += 1
             
             MACDAverage = MACDAverage / 9

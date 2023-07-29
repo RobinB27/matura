@@ -9,7 +9,7 @@ from diskcache import Cache
 #in time period bot skipps weekends but counts them as a day of the time period
 
 class Bot:
-    def __init__(self, startDate="", mode = 0):
+    def __init__(self, startDate: str="", mode = 0):
         self.name = "trading bot"
         self.mode = mode
         
@@ -58,7 +58,7 @@ class Bot:
             
             for i in range(self.timePeriod):
                 
-                print(f"Trading day: {self.date}")
+                print(f"Bot: Trading day: {self.date}")
                 
                 weekendCheckDatetime = datetime.strptime(self.date, "%Y-%m-%d")
                 exceptionCheckDate = self.portfolio.addDayToDate(self.date)
@@ -78,19 +78,20 @@ class Bot:
                     decision = self.decisionMaker.makeStockDecision(self.portfolio, stock.name, self.mode, self.date)
 
                     if decision == 1:
+                        print(f"Bot: Buying stock: {stock.name}")
                         self.portfolio.buyStock(1, stock.name, self.mode, self.date)
-                        print(f"Buying stock: {stock.name}")
                     elif decision == 0:
+                        print(f"Bot: Selling stock: {stock.name}")
                         self.portfolio.sellStock(1, stock.name, self.mode, self.date)
-                        print(f"Selling stock: {stock.name}")
                     else:
-                        print(f"Ignoring stock: {stock.name}")
+                        print(f"Bot: Ignoring stock: {stock.name}")
                         
                 self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
                 
                 self.date = self.portfolio.addDayToDate(self.date)
                 print(self.date)
 
+            print("Bot: Closing cache")
             self.cache.close()
         
     

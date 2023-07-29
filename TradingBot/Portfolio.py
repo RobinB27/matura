@@ -47,7 +47,7 @@ class Portfolio:
                             stock.increaseStockAmount(amount)
                             print(f"Bought {amount} shares of {nameOfTicker} at ${currentPrice} per share.")
                         else:
-                            print("Insufficient funds to buy the stock.")
+                            print("Portfolio: Insufficient funds to buy the stock.")
             
             except KeyError:
                 raise ValueError("Unrecongnised ticker")
@@ -69,7 +69,7 @@ class Portfolio:
                             stock.increaseStockAmount(amount)
                             print(f"Bought {amount} shares of {nameOfTicker} at ${historicalStockPrice} per share on {date}.")
                         else:
-                            print("Insufficient funds to buy the stock.")
+                            print("Portfolio: Insufficient funds to buy the stock.")
                 
             except KeyError:
                 raise ValueError("Unrecongnised ticker")

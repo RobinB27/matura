@@ -39,8 +39,10 @@ class MACDDecisionMaking:
         signalLine = placeholderResult[1]
         
         if MACDPlaceholder > signalLine:
+            print(f"MACDDecisionMaking: MACDPlaceholder: {MACDPlaceholder} > signalLine: {signalLine}")
             decision = 1
         elif MACDPlaceholder < signalLine:
+            print(f"MACDDecisionMaking: MACDPlaceholder: {MACDPlaceholder} < signalLine: {signalLine}")
             decision = 0
                     
         return decision

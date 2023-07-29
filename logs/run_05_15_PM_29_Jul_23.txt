@@ -1,0 +1,9 @@
+date: 2020-2-13
+funds in portfolio: $1345
+stocks held in portfolio: 
+
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $345.0
+
