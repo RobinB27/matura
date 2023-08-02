@@ -11,6 +11,7 @@ class SMACalculator:
     
     def __init__(self):
         #creates cache for storing SMA values
+        print("SMACalculator: Opening cache")
         self.cache = Cache("./TradingBot/FinancialCalculators/CacheSMA")
 
     

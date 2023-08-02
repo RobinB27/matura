@@ -9,9 +9,9 @@ from TradingBot.FinancialCalculators.MACDCalculator import MACDCalculator
 class SignalLineCalculator:
     
     def __init__(self) -> None:
-         self.MACDCalculator = MACDCalculator()
+        self.MACDCalculator = MACDCalculator()
     
-    def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = "0"):
+    def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = ""):
                 #TO DO CHECK IF TICKER VALID AT START
         decision = 0
         #EMA = (todays MACD * K) + (Previous EMA * (1 – K))
@@ -86,14 +86,21 @@ class SignalLineCalculator:
                     continue
                 
                 getStockPricePlacholderDate = portfolio.addDayToDate(dateToCalculate)
+                skipIteration = False
                 
                 for stock in portfolio.stocksHeld:
                     if stock.name == ticker:
                         if stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholderDate) is None:
                                 print(f"SignalLineCalculator while loop -1: exception date: {dateToCalculate}")
                                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
-                                continue
+                                print(f"this is the date to calculate{dateToCalculate} \n\n\n")
+                                skipIteration = True
+                                break
                             
+                if skipIteration == True:
+                    continue
+                
+                print(f"SignalLineCalculator: Downloading MACD in while loop on: {dateToCalculate}")            
                 MACDAverage += self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateToCalculate)
                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                 executions += 1

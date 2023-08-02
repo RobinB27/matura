@@ -8,9 +8,14 @@ from TradingBot.MACDDecisionMaking import MACDDecisionMaking
 a = Bot("2023-2-21", -1)
 t1 = Stock("TSLA")
 
+#t1.getStockPrice(-1, "2023-2-20", "2023-2-21")
+
 
 a.initiating()
 a.startBot()
 
-#fix issue with download after an exception/weekend date in EMA calculations line 63-71
-#2023-2-19 is weekend for reference
+#logger needs to deduct initial amount of funds from the log -> self.startingFunds? 
+
+#need to implement that the bot only buy/sells stocks if the line crosses 
+
+#need to check logs if they work

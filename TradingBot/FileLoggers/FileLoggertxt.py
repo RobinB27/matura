@@ -35,7 +35,7 @@ class FileLoggertxt:
                 log.write(f"value of stock: ${stockValue}\n \n")
             
             # Does this work as intended? Pay attention to Scope of stockValue, maybe an issue
-            log.write(f"Overall profit/loss: ${portfolio.funds + stockValue - 1000}\n")     
+            log.write(f"Overall profit/loss: ${portfolio.funds + stockValue}\n")     
             log.write("\n")   
        
         
