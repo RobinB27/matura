@@ -11,7 +11,7 @@ class FileLoggertxt:
     
     def __init__(self, prefix:str = "run", path:str = "logs") -> None:
         self.dirPath = path
-        self.fileName = prefix + "_" + datetime.datetime.now().strftime("%I_%M_%p_%d_%b_%y") + ".txt"
+        self.fileName = prefix + "_" + datetime.datetime.now().strftime("%d_%b_%y_%I_%M_%p") + ".txt"
 
     def snapshot(self, portfolio: Portfolio,  mode = 0, date: str = "0") -> None:
         filePath = os.path.join(self.dirPath, self.fileName)

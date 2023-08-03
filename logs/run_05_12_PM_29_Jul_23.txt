@@ -1,9 +1,0 @@
-date: 2023-2-16
-funds in portfolio: $123
-stocks held in portfolio: 
-
-AAPL amount of stock: 0
-value of stock: $0.0
- 
-Overall profit/loss: $-877.0
-

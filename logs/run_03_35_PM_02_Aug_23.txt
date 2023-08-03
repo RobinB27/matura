@@ -1,9 +1,0 @@
-date: 2023-2-17
-funds in portfolio: $12345
-stocks held in portfolio: 
-
-TSLA amount of stock: 0
-value of stock: $0.0
- 
-Overall profit/loss: $11345.0
-
