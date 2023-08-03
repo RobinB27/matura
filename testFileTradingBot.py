@@ -17,5 +17,3 @@ a.startBot()
 #logger needs to deduct initial amount of funds from the log -> self.startingFunds? 
 
 #need to implement that the bot only buy/sells stocks if the line crosses 
-
-#need to check logs if they work

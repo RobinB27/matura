@@ -11,6 +11,7 @@ class Portfolio:
         
         self.funds = fundsAmount
         self.stocksHeld = [] #could be optimised with a dict
+        self.startingFunds = fundsAmount
         
        
     def addStock(self, ticker: str):

@@ -13,7 +13,7 @@ class FileLoggertxt:
         self.dirPath = path
         self.fileName = prefix + "_" + datetime.datetime.now().strftime("%I_%M_%p_%d_%b_%y") + ".txt"
 
-    def snapshot(self, portfolio,  mode = 0, date: str = "0") -> None:
+    def snapshot(self, portfolio: Portfolio,  mode = 0, date: str = "0") -> None:
         filePath = os.path.join(self.dirPath, self.fileName)
         
         with open(filePath, mode="w") as log:
@@ -35,7 +35,7 @@ class FileLoggertxt:
                 log.write(f"value of stock: ${stockValue}\n \n")
             
             # Does this work as intended? Pay attention to Scope of stockValue, maybe an issue
-            log.write(f"Overall profit/loss: ${portfolio.funds + stockValue}\n")     
+            log.write(f"Overall profit/loss: ${portfolio.funds + stockValue -portfolio.startingFunds}\n")     
             log.write("\n")   
        
         
