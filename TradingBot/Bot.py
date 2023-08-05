@@ -7,6 +7,7 @@ from datetime import  datetime, timedelta, date
 from diskcache import Cache
 
 #in time period bot skipps weekends but counts them as a day of the time period
+#so to get full trading week timePeriod has to equal 7
 
 class Bot:
     def __init__(self, startDate: str="", mode = 0):
@@ -50,11 +51,7 @@ class Bot:
         if self.mode == 0:
             pass
         
-        if self.mode == -1:
-            
-            #have to implement checks for valid dates
-            
-            #checks for valid date: 
+        if self.mode == -1:            
             
             for i in range(self.timePeriod):
                 
@@ -87,6 +84,7 @@ class Bot:
                         print(f"Bot: Ignoring stock: {stock.name}")
                         
                 self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
+                #self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date)
                 
                 self.date = self.portfolio.addDayToDate(self.date)
                 print(self.date)
@@ -95,5 +93,8 @@ class Bot:
             self.cache.close()
         
     
-    
-    
+#need to see initial decision in some way -> initial state of the signal line and macd indicator
+#some way to track if signal line crosses the macd line
+#what if decision was decisionInstance 
+#if 
+#need to keep track over time

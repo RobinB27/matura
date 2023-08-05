@@ -20,8 +20,16 @@ class MACDDecisionMaking:
         self.MACDCalculator = MACDCalculator()
         self.SignalLineCalculator = SignalLineCalculator()
         
+        self.MACDValuesDict = {}
+        self.SingalLineValuesDict = {}
+        self.firstRun = True
+        
+        # curveComparison is from perspective of signal line 
+        # 1 -> signal line above MACD, 0 -> signal line = MACD, -1 -> signal line below MACD
+        self.curveComparison = {}
+        
     
-    def makeStockDecision(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateStart: str = "0"):
+    def makeStockDecision(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = "0"):
         """makes a decision whether to buy a stock or not on a given date
 
         Args:
@@ -33,17 +41,54 @@ class MACDDecisionMaking:
         Returns:
             decision in a binary format where 0 is no and 1 is yes
         """
-        placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateStart)
-        
-        MACDPlaceholder = placeholderResult[0]
-        signalLine = placeholderResult[1]
-        
-        if MACDPlaceholder > signalLine:
-            print(f"MACDDecisionMaking: MACDPlaceholder: {MACDPlaceholder} > signalLine: {signalLine}")
-            decision = 1
-        elif MACDPlaceholder < signalLine:
-            print(f"MACDDecisionMaking: MACDPlaceholder: {MACDPlaceholder} < signalLine: {signalLine}")
-            decision = 0
-                    
-        return decision
-           
+        if self.firstRun == True:
+            
+            placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateToCalculate)
+            
+            self.MACDValuesDict[dateToCalculate] = placeholderResult[0]
+            self.SingalLineValuesDict[dateToCalculate] = placeholderResult[1]
+            
+            if self.SingalLineValuesDict[dateToCalculate] > self.MACDValuesDict[dateToCalculate]:
+                print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} > signalLine: {self.SingalLineValuesDict[dateToCalculate]}")
+                self.curveComparison[dateToCalculate] = 1
+                
+            elif self.SingalLineValuesDict[dateToCalculate] < self.MACDValuesDict[dateToCalculate]:
+                print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} < signalLine: {self.SingalLineValuesDict[dateToCalculate]}")
+                self.curveComparison[dateToCalculate] = -1
+                
+            else:
+                self.curveComparison[dateToCalculate] = 0
+            
+            self.firstRun = False
+            
+        elif self.firstRun == False:
+    
+            placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateToCalculate)
+            
+            self.MACDValuesDict[dateToCalculate] = placeholderResult[0]
+            self.SingalLineValuesDict[dateToCalculate] = placeholderResult[1]
+
+            if self.SingalLineValuesDict[dateToCalculate] > self.MACDValuesDict[dateToCalculate]:
+                print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} > signalLine: {self.SingalLineValuesDict[dateToCalculate]}")
+                self.curveComparison[dateToCalculate] = 1
+                
+            elif self.SingalLineValuesDict[dateToCalculate] < self.MACDValuesDict[dateToCalculate]:
+                print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} < signalLine: {self.SingalLineValuesDict[dateToCalculate]}")
+                self.curveComparison[dateToCalculate] = -1
+                
+            else:
+                self.curveComparison[dateToCalculate] = 0
+                
+            
+            #checks for crossovers
+            
+            #to add checks for weekend and exceptions
+            previousDate = portfolio.subtractDayFromDate(dateToCalculate)
+            if self.curveComparison[previousDate] == -1 and self.curveComparison[dateToCalculate] == 1:
+                print(f"MACDDecisionMaking: Bullish Crossover on {dateToCalculate}")
+                return 1
+            elif self.curveComparison[previousDate] == 1 and self.curveComparison[dateToCalculate] == -1:
+                print(f"MACDDecisionMaking: Bearish Crossover on {dateToCalculate}")
+                return -1
+            else:
+                return None

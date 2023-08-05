@@ -5,7 +5,7 @@ import yfinance as yf
 from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
 from TradingBot.MACDDecisionMaking import MACDDecisionMaking
 
-a = Bot("2023-2-21", -1)
+a = Bot("2023-4-12", -1)
 t1 = Stock("TSLA")
 
 #t1.getStockPrice(-1, "2023-2-20", "2023-2-21")
@@ -14,6 +14,6 @@ t1 = Stock("TSLA")
 a.initiating()
 a.startBot()
 
-#logger needs to deduct initial amount of funds from the log -> self.startingFunds? 
+#checks for weekend/exception date in crossings checks in decisionmaking
 
-#need to implement that the bot only buy/sells stocks if the line crosses 
+#1h loggers changed tests decisions
