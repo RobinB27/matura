@@ -4,8 +4,10 @@ from diskcache import Cache
 
 from datetime import datetime, timedelta, date
 from TradingBot.Portfolio import Portfolio
+
     
     #lot of boilerplate can be removed by putting the while loop inside it's own function
+    #comment
 
 class SMACalculator:
     
@@ -89,21 +91,28 @@ class SMACalculator:
                             placeHolderDate = datetime.strptime(dateToCalculate, "%Y-%m-%d")
 
                             if placeHolderDate.isoweekday() > 5:
-                                print(f"SMACalculator: weekend: {dateToCalculate}")
                                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                                 continue
                             
                             #checks if dateToCalculate is an exception date for stock market closure
                             getStockPricePlacholder = portfolio.addDayToDate(dateToCalculate)
                             
-                            if stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder) is None:
-                                print(f"SMACalculator: Market closed/Exception date: {dateToCalculate}")
+                            #key for cache
+                            key = ticker + "_" + dateToCalculate
+                            
+                            if key not in self.cache:
+                                self.cache[key] = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
+                                if self.cache[key] == None:
+                                    print("SMACalculator: Exception check cache")
+                                    dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
+                                    continue
+                            elif self.cache[key] == None:
+                                print("SMACalculator: Exception check cache access")
                                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                                 continue       
                                                
-                            
                             #caching part
-                            key = ticker + "_" + dateToCalculate
+                            
                             if key not in self.cache:
                                 print(f"SMACalculator: Downloading Stockvalues on: {dateToCalculate}")
                                 stockPriceOnDate = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
