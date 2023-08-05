@@ -16,4 +16,3 @@ a.startBot()
 
 #checks for weekend/exception date in crossings checks in decisionmaking
 
-#1h loggers changed tests decisions
