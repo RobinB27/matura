@@ -91,10 +91,3 @@ class Bot:
 
             print("Bot: Closing cache")
             self.cache.close()
-        
-    
-#need to see initial decision in some way -> initial state of the signal line and macd indicator
-#some way to track if signal line crosses the macd line
-#what if decision was decisionInstance 
-#if 
-#need to keep track over time

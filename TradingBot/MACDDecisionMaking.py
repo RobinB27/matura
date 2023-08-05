@@ -78,8 +78,7 @@ class MACDDecisionMaking:
                 
             else:
                 self.curveComparison[dateToCalculate] = 0
-                
-            
+                           
             #checks for crossovers
             
             #to add checks for weekend and exceptions

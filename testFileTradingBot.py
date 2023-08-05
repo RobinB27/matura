@@ -5,6 +5,7 @@ import yfinance as yf
 from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
 from TradingBot.MACDDecisionMaking import MACDDecisionMaking
 
+#bot settings need date format like this: "2023-04-12"
 a = Bot("2023-04-12", -1)
 t1 = Stock("TSLA")
 
@@ -15,4 +16,6 @@ a.initiating()
 a.startBot()
 
 #checks for weekend/exception date in crossings checks in decisionmaking
+
+#from consts import debug
 

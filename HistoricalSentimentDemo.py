@@ -5,6 +5,9 @@ from datetime import date
 # Sentiment analysis on past events demo
 
 sampleDate = date(2018, 11, 27)
+
+#HistData class needed for data
+
 data = HistData.getHeadlinesDT(sampleDate)
 
 for i in range(10):
