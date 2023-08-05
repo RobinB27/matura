@@ -5,7 +5,7 @@ import yfinance as yf
 from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
 from TradingBot.MACDDecisionMaking import MACDDecisionMaking
 
-a = Bot("2023-4-12", -1)
+a = Bot("2023-04-12", -1)
 t1 = Stock("TSLA")
 
 #t1.getStockPrice(-1, "2023-2-20", "2023-2-21")
