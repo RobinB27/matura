@@ -1,2 +1,2 @@
 # global project variables
-debug = True
+debug = False

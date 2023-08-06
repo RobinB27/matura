@@ -1,4 +1,7 @@
 import yfinance as yf
+
+from consts import debug
+
 class Stock:
     
     """
@@ -39,14 +42,15 @@ class Stock:
                 stockHistorical = yf.download(self.name, start=dateStart, end=dateEnd)
                 
                 closing_price = stockHistorical.loc[dateStart, "Close"]
-                print(f"{self.name} price of {closing_price} on {dateStart}")
+                if debug:
+                    print(f"{self.name} price of {closing_price} on {dateStart}")
                 
                 return closing_price
             
             except KeyError:
                 
-                print(f"Stock: exception date: {dateStart}")
-                
+                if debug:
+                    print(f"Stock: exception date: {dateStart}")    
                 return None
             
         

@@ -15,7 +15,8 @@ t1 = Stock("TSLA")
 a.initiating()
 a.startBot()
 
-#checks for weekend/exception date in crossings checks in decisionmaking
+#checks for weekend/exception date in crossings checks in decisionmaking -> basically done
 
-#from consts import debug
+#implement caching for other exception dates checks
 
+# thirdRunAndBeyond implementation

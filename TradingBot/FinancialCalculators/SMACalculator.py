@@ -104,23 +104,27 @@ class SMACalculator:
                             if key not in self.cache:
                                 self.cache[key] = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
                                 if self.cache[key] == None:
-                                    print("SMACalculator: Exception check cache")
+                                    if debug:
+                                        print("SMACalculator: Exception check cache")
                                     dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                                     continue
                             elif self.cache[key] == None:
-                                print("SMACalculator: Exception check cache access")
+                                if debug:
+                                    print("SMACalculator: Exception check cache access")
                                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                                 continue       
                                                
                             #caching part
                             
                             if key not in self.cache:
-                                print(f"SMACalculator: Downloading Stockvalues on: {dateToCalculate}")
+                                if debug:
+                                    print(f"SMACalculator: Downloading Stockvalues on: {dateToCalculate}")
                                 stockPriceOnDate = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
                                 self.cache[key] = stockPriceOnDate
                             else:
-                                print(f"SMACalculator: Accessing cache for stock price on: {dateToCalculate}")
-                                print(f"SMACalculator:  {ticker} price: {self.cache[key]}")
+                                if debug:
+                                    print(f"SMACalculator: Accessing cache for stock price on: {dateToCalculate}")
+                                    print(f"SMACalculator:  {ticker} price: {self.cache[key]}")
                                 SMA_Value += self.cache[key]   
                                                                              
                             #ensures that a new date is processed in the next iteration

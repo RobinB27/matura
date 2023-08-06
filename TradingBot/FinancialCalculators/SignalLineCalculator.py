@@ -6,6 +6,8 @@ from TradingBot.Portfolio import Portfolio
 
 from TradingBot.FinancialCalculators.MACDCalculator import MACDCalculator
 
+from consts import debug
+
 class SignalLineCalculator:
     
     def __init__(self) -> None:
@@ -68,7 +70,8 @@ class SignalLineCalculator:
         elif mode == -1:                
                                 
             MACDPlaceholder = self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateToCalculate)
-            print(f"SignalLineCalculator: MACD: {MACDPlaceholder} on {dateToCalculate}")
+            if debug:
+                print(f"SignalLineCalculator: MACD: {MACDPlaceholder} on {dateToCalculate}")
             
             MACDAverage = 0
 
@@ -81,7 +84,8 @@ class SignalLineCalculator:
                 weekendCheck = datetime.strptime(dateToCalculate, "%Y-%m-%d")
                 
                 if weekendCheck.isoweekday() > 5:
-                    print(f"SignalLineCalculator while loop -1: Weekend: {dateToCalculate}")
+                    if debug:
+                        print(f"SignalLineCalculator while loop -1: Weekend: {dateToCalculate}")
                     dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                     continue
                 
@@ -91,16 +95,17 @@ class SignalLineCalculator:
                 for stock in portfolio.stocksHeld:
                     if stock.name == ticker:
                         if stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholderDate) is None:
-                                print(f"SignalLineCalculator while loop -1: exception date: {dateToCalculate}")
+                                if debug:
+                                    print(f"SignalLineCalculator while loop -1: exception date: {dateToCalculate}")
                                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
-                                print(f"this is the date to calculate{dateToCalculate} \n\n\n")
                                 skipIteration = True
                                 break
                             
                 if skipIteration == True:
                     continue
                 
-                print(f"SignalLineCalculator: Downloading MACD in while loop on: {dateToCalculate}")            
+                if debug:
+                    print(f"SignalLineCalculator: Downloading MACD in while loop on: {dateToCalculate}")            
                 MACDAverage += self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateToCalculate)
                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                 executions += 1
