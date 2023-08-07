@@ -6,10 +6,8 @@ from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
 from TradingBot.MACDDecisionMaking import MACDDecisionMaking
 
 #bot settings need date format like this: "2023-04-12"
-a = Bot(MACDDecisionMaking(-1), "2023-04-12", -1)
+a = Bot(MACDDecisionMaking(-1), "2023-01-9", -1)
 t1 = Stock("TSLA")
 
 a.initiating()
 a.startBot()
-
-#implement caching for other exception dates checks

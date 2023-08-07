@@ -1,0 +1,96 @@
+date: 2023-04-12
+funds in portfolio: $1000
+stocks held in portfolio: 
+
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-13
+funds in portfolio: $1000
+stocks held in portfolio: 
+
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-14
+funds in portfolio: $815.0
+stocks held in portfolio: 
+
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $185.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-17
+funds in portfolio: $815.0
+stocks held in portfolio: 
+
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $187.0399932861328
+ 
+Overall profit/loss: $2.0399932861328125
+
+date: 2023-04-18
+funds in portfolio: $815.0
+stocks held in portfolio: 
+
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $184.30999755859375
+ 
+Overall profit/loss: $-0.69000244140625
+
+date: 2023-04-19
+funds in portfolio: $815.0
+stocks held in portfolio: 
+
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $180.58999633789062
+ 
+Overall profit/loss: $-4.410003662109375
+
+date: 2023-04-20
+funds in portfolio: $815.0
+stocks held in portfolio: 
+
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $162.99000549316406
+ 
+Overall profit/loss: $-22.009994506835938
+
+date: 2023-04-21
+funds in portfolio: $815.0
+stocks held in portfolio: 
+
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $165.0800018310547
+ 
+Overall profit/loss: $-19.919998168945312
+
