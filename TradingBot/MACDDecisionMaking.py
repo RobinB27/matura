@@ -85,10 +85,10 @@ class MACDDecisionMaking:
                 
             else:
                 self.curveComparison[dateToCalculate] = 0
-                           
+                        
             self.thirdRunAndBeyond = True
             
-            #to add checks for weekend and exceptions
+            #checks for weekend and exceptions
             previousDate = portfolio.subtractDayFromDate(dateToCalculate)
             
             #checks for crossovers
@@ -106,5 +106,53 @@ class MACDDecisionMaking:
             else:
                 return None
             
-        elif self.thirdRunAndBeyond == True:
-            pass
+        elif self.firstRun == False and self.thirdRunAndBeyond == True:
+            placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateToCalculate)
+            
+            self.MACDValuesDict[dateToCalculate] = placeholderResult[0]
+            self.SingalLineValuesDict[dateToCalculate] = placeholderResult[1]
+            
+            if self.SingalLineValuesDict[dateToCalculate] > self.MACDValuesDict[dateToCalculate]:
+                if debug:
+                    print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} > signalLine: {self.SingalLineValuesDict[dateToCalculate]}")
+                self.curveComparison[dateToCalculate] = 1
+                
+            elif self.SingalLineValuesDict[dateToCalculate] < self.MACDValuesDict[dateToCalculate]:
+                if debug:
+                    print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} < signalLine: {self.SingalLineValuesDict[dateToCalculate]}")
+                self.curveComparison[dateToCalculate] = -1   
+            else:
+                self.curveComparison[dateToCalculate] = 0
+            
+            #checks for weekend and exceptions
+            previousDate = portfolio.subtractDayFromDate(dateToCalculate)
+            
+            while previousDate not in self.curveComparison:
+                previousDate = portfolio.subtractDayFromDate(previousDate)
+                
+            DayBeforePreviousDate = portfolio.subtractDayFromDate(dateToCalculate)
+            
+            #checks for crossovers
+            while DayBeforePreviousDate not in self.curveComparison:
+                DayBeforePreviousDate = portfolio.subtractDayFromDate(DayBeforePreviousDate)
+                
+            if self.curveComparison[previousDate] == -1 and self.curveComparison[dateToCalculate] == 1:
+                if debug:
+                    print(f"MACDDecisionMaking: Bullish Crossover on {dateToCalculate}")
+                return 1
+            elif self.curveComparison[DayBeforePreviousDate] == -1 and self.curveComparison[previousDate] == 0 and self.curveComparison[dateToCalculate] == 1:
+                if debug:
+                    print(f"MACDDecisionMaking: Bullish Crossover on {dateToCalculate}")
+                return 1
+            elif self.curveComparison[previousDate] == 1 and self.curveComparison[dateToCalculate] == -1:
+                if debug:
+                    print(f"MACDDecisionMaking: Bearish Crossover on {dateToCalculate}")
+                return -1
+            elif self.curveComparison[DayBeforePreviousDate] == 1 and self.curveComparison[previousDate] == 0 and self.curveComparison[dateToCalculate] == -1:
+                if debug:
+                    print(f"MACDDecisionMaking: Bearish Crossover on {dateToCalculate}")
+                return -1
+            else:
+                return None
+            
+            

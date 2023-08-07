@@ -5,6 +5,7 @@ from datetime import datetime, timedelta, date
 from TradingBot.Portfolio import Portfolio
 
 from TradingBot.FinancialCalculators.MACDCalculator import MACDCalculator
+from diskcache import Cache
 
 from consts import debug
 
@@ -12,6 +13,8 @@ class SignalLineCalculator:
     
     def __init__(self) -> None:
         self.MACDCalculator = MACDCalculator()
+        self.cache = Cache("./TradingBot/FinancialCalculators/CacheSMA")
+
     
     def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = ""):
                 #TO DO CHECK IF TICKER VALID AT START
@@ -94,13 +97,30 @@ class SignalLineCalculator:
                 
                 for stock in portfolio.stocksHeld:
                     if stock.name == ticker:
-                        if stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholderDate) is None:
+                        #if stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholderDate) is None:
+                                #if debug:
+                                    #print(f"SignalLineCalculator while loop -1: exception date: {dateToCalculate}")
+                                #dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
+                                #skipIteration = True
+                                #break
+                        #key for cache
+                        key = ticker + "_" + dateToCalculate
+                            
+                        if key not in self.cache:
+                            self.cache[key] = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholderDate)
+                            if self.cache[key] == None:
                                 if debug:
-                                    print(f"SignalLineCalculator while loop -1: exception date: {dateToCalculate}")
+                                    print("SMACalculator: Exception check cache")
                                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                                 skipIteration = True
                                 break
-                            
+                        elif self.cache[key] == None:
+                            if debug:
+                                print("SMACalculator: Exception check cache access")
+                            dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
+                            skipIteration = True
+                            break   
+                                                
                 if skipIteration == True:
                     continue
                 

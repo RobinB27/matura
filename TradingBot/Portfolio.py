@@ -2,6 +2,8 @@ from TradingBot.Stock import Stock
 from datetime import datetime, timedelta, date
 import pandas as pd
 
+from consts import debug
+
 class Portfolio:
     """
     defines the portfolio class
@@ -46,9 +48,11 @@ class Portfolio:
                         if totalCost <= self.funds:
                             self.funds -= totalCost
                             stock.increaseStockAmount(amount)
-                            print(f"Bought {amount} shares of {nameOfTicker} at ${currentPrice} per share.")
+                            if debug:
+                                print(f"Bought {amount} shares of {nameOfTicker} at ${currentPrice} per share.")
                         else:
-                            print("Portfolio: Insufficient funds to buy the stock.")
+                            if debug:
+                                print("Portfolio: Insufficient funds to buy the stock.")
             
             except KeyError:
                 raise ValueError("Unrecongnised ticker")
@@ -68,9 +72,11 @@ class Portfolio:
                         if totalCost <= self.funds:
                             self.funds -= totalCost
                             stock.increaseStockAmount(amount)
-                            print(f"Bought {amount} shares of {nameOfTicker} at ${historicalStockPrice} per share on {date}.")
+                            if debug:
+                                print(f"Bought {amount} shares of {nameOfTicker} at ${historicalStockPrice} per share on {date}.")
                         else:
-                            print("Portfolio: Insufficient funds to buy the stock.")
+                            if debug:
+                                print("Portfolio: Insufficient funds to buy the stock.")
                 
             except KeyError:
                 raise ValueError("Unrecongnised ticker")

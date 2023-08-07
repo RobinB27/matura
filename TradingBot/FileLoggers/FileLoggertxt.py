@@ -10,13 +10,22 @@ class FileLoggertxt:
     """
     
     def __init__(self, prefix:str = "run", path:str = "logs") -> None:
-        self.dirPath = path
-        self.fileName = prefix + "_" + datetime.datetime.now().strftime("%d_%b_%y_%I_%M_%p") + ".txt"
+        
+        self.logFileCreated = False
+        self.prefix = prefix
+        self.path = path
+
+    def createLogFile(self):
+        if not self.logFileCreated:
+            print("Log file created.")
+            self.dirPath = self.path
+            self.fileName = self.prefix + "_" + datetime.datetime.now().strftime("%d_%b_%y_%I_%M_%p") + ".txt"
+            self.log_file_created = True
 
     def snapshot(self, portfolio: Portfolio,  mode = 0, date: str = "0") -> None:
         filePath = os.path.join(self.dirPath, self.fileName)
         
-        with open(filePath, mode="w") as log:
+        with open(filePath, mode="a") as log:
             log.write(f"date: {date}\n")
             log.write(f"funds in portfolio: ${portfolio.funds}\n")
             log.write("stocks held in portfolio: \n\n")

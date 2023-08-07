@@ -1,0 +1,27 @@
+date: 2023-04-12
+funds in portfolio: $1000
+stocks held in portfolio: 
+
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-13
+funds in portfolio: $1000
+stocks held in portfolio: 
+
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-14
+funds in portfolio: $815.0
+stocks held in portfolio: 
+
+TSLA amount of stock: 1
+value of stock: $185.0
+ 
+Overall profit/loss: $0.0
+
