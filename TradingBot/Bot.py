@@ -26,9 +26,7 @@ class Bot:
         self.decisionMaker = decisionMaking
         self.fileLoggerTxt = FileLoggertxt()
         self.fileLoggerJSON = FileLoggerJSON()
-        
-        self.cache = Cache("./TradingBot/FinancialCalculators/CacheSMA")
-        
+                
         
         
     def initiating(self):
@@ -95,12 +93,12 @@ class Bot:
                         #decision = self.decisionMaker.makeStockDecision(self.portfolio, stock.name, self.mode, self.date)
 
                         if decision == 1:
-                            if debug:
-                                print(f"Bot: Buying stock: {self.portfolio.stocksHeld[i].name}")
+                            
+                            print(f"Bot: Buying stock: {self.portfolio.stocksHeld[i].name}")
                             self.portfolio.buyStock(1, self.portfolio.stocksHeld[i].name, self.mode, self.date)
                         elif decision == 0:
-                            if debug:
-                                print(f"Bot: Selling stock: {self.portfolio.stocksHeld[i].name}")
+                            
+                            print(f"Bot: Selling stock: {self.portfolio.stocksHeld[i].name}")
                             self.portfolio.sellStock(1, self.portfolio.stocksHeld[i].name, self.mode, self.date)
                         else:
                             if debug:
@@ -112,6 +110,3 @@ class Bot:
                     self.date = self.portfolio.addDayToDate(self.date)
                     if debug:
                         print(self.date)
-
-                print("Bot: Closing cache")
-                self.cache.close()

@@ -1,0 +1,378 @@
+date: 2023-03-15
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-16
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-17
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-20
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-21
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-22
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-23
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-24
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-27
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-28
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-29
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-30
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-31
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-03
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-04
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-05
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-06
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-10
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-11
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-12
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-13
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-15
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-16
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-17
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-20
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-21
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-22
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-23
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-24
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-27
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-28
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-29
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-30
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-31
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-03
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-04
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-05
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-06
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-10
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-11
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-12
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-13
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+

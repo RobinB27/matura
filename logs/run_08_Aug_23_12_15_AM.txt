@@ -1,5 +1,0 @@
-date: 2023-04-12
-funds in portfolio: $1000
-
-stocks held in portfolio: 
-AAPL amount of stock: 0

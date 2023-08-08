@@ -23,7 +23,7 @@ class MACDDecisionMaking:
         self.SignalLineCalculator = SignalLineCalculator()
         
         self.MACDValuesDict = {}
-        self.SingalLineValuesDict = {}
+        self.SignalLineValuesDict = {}
         self.firstRun = True
         self.thirdRunAndBeyond = False
         
@@ -49,16 +49,16 @@ class MACDDecisionMaking:
             placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateToCalculate)
             
             self.MACDValuesDict[dateToCalculate] = placeholderResult[0]
-            self.SingalLineValuesDict[dateToCalculate] = placeholderResult[1]
+            self.SignalLineValuesDict[dateToCalculate] = placeholderResult[1]
             
-            if self.SingalLineValuesDict[dateToCalculate] > self.MACDValuesDict[dateToCalculate]:
+            if self.SignalLineValuesDict[dateToCalculate] > self.MACDValuesDict[dateToCalculate]:
                 if debug:
-                    print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} > signalLine: {self.SingalLineValuesDict[dateToCalculate]}")
+                    print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} > signalLine: {self.SignalLineValuesDict[dateToCalculate]}")
                 self.curveComparison[dateToCalculate] = 1
                 
-            elif self.SingalLineValuesDict[dateToCalculate] < self.MACDValuesDict[dateToCalculate]:
+            elif self.SignalLineValuesDict[dateToCalculate] < self.MACDValuesDict[dateToCalculate]:
                 if debug:
-                    print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} < signalLine: {self.SingalLineValuesDict[dateToCalculate]}")
+                    print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} < signalLine: {self.SignalLineValuesDict[dateToCalculate]}")
                 self.curveComparison[dateToCalculate] = -1
                 
             else:
@@ -71,16 +71,16 @@ class MACDDecisionMaking:
             placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateToCalculate)
             
             self.MACDValuesDict[dateToCalculate] = placeholderResult[0]
-            self.SingalLineValuesDict[dateToCalculate] = placeholderResult[1]
+            self.SignalLineValuesDict[dateToCalculate] = placeholderResult[1]
 
-            if self.SingalLineValuesDict[dateToCalculate] > self.MACDValuesDict[dateToCalculate]:
+            if self.SignalLineValuesDict[dateToCalculate] > self.MACDValuesDict[dateToCalculate]:
                 if debug:
-                    print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} > signalLine: {self.SingalLineValuesDict[dateToCalculate]}")
+                    print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} > signalLine: {self.SignalLineValuesDict[dateToCalculate]}")
                 self.curveComparison[dateToCalculate] = 1
                 
-            elif self.SingalLineValuesDict[dateToCalculate] < self.MACDValuesDict[dateToCalculate]:
+            elif self.SignalLineValuesDict[dateToCalculate] < self.MACDValuesDict[dateToCalculate]:
                 if debug:
-                    print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} < signalLine: {self.SingalLineValuesDict[dateToCalculate]}")
+                    print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} < signalLine: {self.SignalLineValuesDict[dateToCalculate]}")
                 self.curveComparison[dateToCalculate] = -1
                 
             else:
@@ -110,16 +110,16 @@ class MACDDecisionMaking:
             placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateToCalculate)
             
             self.MACDValuesDict[dateToCalculate] = placeholderResult[0]
-            self.SingalLineValuesDict[dateToCalculate] = placeholderResult[1]
+            self.SignalLineValuesDict[dateToCalculate] = placeholderResult[1]
             
-            if self.SingalLineValuesDict[dateToCalculate] > self.MACDValuesDict[dateToCalculate]:
+            if self.SignalLineValuesDict[dateToCalculate] > self.MACDValuesDict[dateToCalculate]:
                 if debug:
-                    print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} > signalLine: {self.SingalLineValuesDict[dateToCalculate]}")
+                    print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} > signalLine: {self.SignalLineValuesDict[dateToCalculate]}")
                 self.curveComparison[dateToCalculate] = 1
                 
-            elif self.SingalLineValuesDict[dateToCalculate] < self.MACDValuesDict[dateToCalculate]:
+            elif self.SignalLineValuesDict[dateToCalculate] < self.MACDValuesDict[dateToCalculate]:
                 if debug:
-                    print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} < signalLine: {self.SingalLineValuesDict[dateToCalculate]}")
+                    print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} < signalLine: {self.SignalLineValuesDict[dateToCalculate]}")
                 self.curveComparison[dateToCalculate] = -1   
             else:
                 self.curveComparison[dateToCalculate] = 0
