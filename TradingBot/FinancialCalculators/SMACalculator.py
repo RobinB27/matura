@@ -130,15 +130,13 @@ class SMACalculator:
                                     print(f"SMACalculator: Accessing cache for stock price on: {dateToCalculate}")
                                     print(f"SMACalculator:  {ticker} price: {self.cache[key]}")
                                 SMA_Value += self.cache[key] 
-                            
-                                                                                    
-                            SMA_Value += stockPriceOnDate  
-                                                                             
+                                                                                                                                                                                            
                             #ensures that a new date is processed in the next iteration
                             dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)                                
                             executions += 1
                           
                         #divides the total value by number of days to get the SMA
                         SMA_Value = SMA_Value / daysToCalculate
+                        
                         
                         return SMA_Value

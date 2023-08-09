@@ -26,10 +26,10 @@ class MACDCalculator:
         
         if mode == 0:
             
-            if Config.debug():
+            if Config.debug():  
                 print(f"MACDCalculator: Downloading EMA 12")
             EMA_Placeholder12days = self.EMACalculator.calculateEMA(12, portfolio, ticker)
-            if Config.debug():
+            if Config.debug():  
                 print(f"MACDCalculator: Downloading EMA 26")
             EMA_Placeholder26days = self.EMACalculator.calculateEMA(26, portfolio, ticker)
 
@@ -41,11 +41,11 @@ class MACDCalculator:
         elif mode == -1:
             
             
-            if Config.debug():
+            if Config.debug():  
                 print(f"MACDCalculator: Downloading EMA 12: {dateStart}")
             EMA_Placeholder12days = self.EMACalculator.calculateEMA(12, portfolio, ticker, -1, dateStart)
             
-            if Config.debug():
+            if Config.debug():  
                 print(f"MACDCalculator: Downloading EMA 26: {dateStart}")
             EMA_Placeholder26days = self.EMACalculator.calculateEMA(26, portfolio, ticker, -1, dateStart)
             

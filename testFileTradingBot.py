@@ -29,12 +29,19 @@ s = SignalLineCalculator()
 M = SMACalculator()
 E = EMACalculator()
 
-print(t1.getStockPrice(-1, "2020-04-14", "2020-04-15"))
+#print(t1.getStockPrice(-1, "2023-04-18"
+# , "2023-04-19"))
 
-print(M.calculateSMA(12, p, "TSLA", -1, "2020-04-13"))
-print(E.calculateEMA(12, p, "TSLA", -1, "2023-04-13"))
-#print(c1.calculateMACD(p, "TSLA", -1, "2020-04-14"))
-#print(s.signalLineCalculation(p, "TSLA", -1, "2020-04-14"))
+#print(M.calculateSMA(12, p, "TSLA", -1, "2023-04-18"))
+#print(E.calculateEMA(12, p, "TSLA", -1, "2023-04-18"))
+#print(c1.calculateMACD(p, "TSLA", -1, "2023-04-18"))
+#print(s.signalLineCalculation(p, "TSLA", -1, "2023-04-18"))
 
-#a.initiating()
-#a.startBot()
+a.initiating()
+a.startBot()
+
+#bot trade for 12 days on 2023-04-24 and then 27 should be a signal but bot does not identify it
+
+#8. 1h bugfixes
+#9. 3h 15min bugfixes
+

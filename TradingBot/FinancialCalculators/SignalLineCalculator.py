@@ -72,66 +72,60 @@ class SignalLineCalculator:
             print(f"SIgnal line: {signalLine}")
             
         elif mode == -1:                
-                                
+                                                                                   
             MACDPlaceholder = self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateToCalculate)
-            if Config.debug():
-                print(f"SignalLineCalculator: MACD: {MACDPlaceholder} on {dateToCalculate}")
-            
-            MACDAverage = 0
-
-            #subtracting a day so that 9 MACD average does not include the one already downloaded
-            dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
+            MACD_values = [MACDPlaceholder]
             
             executions = 0
-            while executions < 9:
+            dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
+
+            while executions < 8:
                 
                 weekendCheck = datetime.strptime(dateToCalculate, "%Y-%m-%d")
                 
                 if weekendCheck.isoweekday() > 5:
-                    if Config.debug():
+                    if Config.debug():  
                         print(f"SignalLineCalculator while loop -1: Weekend: {dateToCalculate}")
                     dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                     continue
                 
-                getStockPricePlacholderDate = portfolio.addDayToDate(dateToCalculate)
-                skipIteration = False
-                
-                for stock in portfolio.stocksHeld:
-                    if stock.name == ticker:
-                        #if stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholderDate) is None:
-                                #if Config.debug():
-                                    #print(f"SignalLineCalculator while loop -1: exception date: {dateToCalculate}")
-                                #dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
-                                #skipIteration = True
-                                #break
-                        #key for cache
-                        key = ticker + "_" + dateToCalculate
+                #key for cache
+                key = ticker + "_" + dateToCalculate
                             
-                        if key not in self.cache:
-                            self.cache[key] = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholderDate)
-                            if self.cache[key] == None:
-                                if Config.debug():
-                                    print("SMACalculator: Exception check cache")
-                                dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
-                                skipIteration = True
-                                break
-                        elif self.cache[key] == None:
-                            if Config.debug():
-                                print("SMACalculator: Exception check cache access")
+                if key not in self.cache:
+                        self.cache[key] = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholderDate)
+                        if self.cache[key] == None:
+                            if Config.debug():  
+                                print("SMACalculator: Exception check cache")
                             dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
-                            skipIteration = True
-                            break   
-                                                
-                if skipIteration == True:
+                            continue
+                elif self.cache[key] == None:
+                    if Config.debug():  
+                        print("SMACalculator: Exception check cache access")
+                    dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                     continue
-                
-                if Config.debug():
-                    print(f"SignalLineCalculator: Downloading MACD in while loop on: {dateToCalculate}")            
-                MACDAverage += self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateToCalculate)
+                                             
+                MACD_values.append(self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateToCalculate))
                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                 executions += 1
+                
+            # Calculate the nine-day EMA of the MACD values
+            nine_day_MACD_ema = self.calculateEMA(MACD_values)
             
-            MACDAverage = MACDAverage / 9
+            # Replace the MACDAverage calculation with the calculated EMA value
+            signalLine = (MACDPlaceholder * weightMultiplier) + (nine_day_MACD_ema * (1 - weightMultiplier))
+            return MACDPlaceholder, signalLine
 
-            signalLine = (MACDPlaceholder * weightMultiplier) + (MACDAverage * (1 - weightMultiplier))
-            return MACDPlaceholder,signalLine
+    def calculateEMA(self, values):
+    
+        smoothing_factor = 2 / (9 + 1)
+    
+        # Initialize the EMA with the first value
+        MACD_EMA = values[0]
+    
+        # Calculate the EMA for the remaining values
+        #EMA(today) = (Close(today) * α) + (EMA(yesterday) * (1 - α))
+        for i in range(1, len(values)):
+            MACD_EMA = (values[i] * smoothing_factor) + (MACD_EMA * (1 - smoothing_factor))
+    
+        return MACD_EMA

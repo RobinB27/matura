@@ -49,10 +49,10 @@ class Portfolio:
                         if totalCost <= self.funds:
                             self.funds -= totalCost
                             stock.increaseStockAmount(amount)
-                            if Config.debug():
+                            if Config.debug():  
                                 print(f"Bought {amount} shares of {nameOfTicker} at ${currentPrice} per share.")
                         else:
-                            if Config.debug():
+                            if Config.debug():  
                                 print("Portfolio: Insufficient funds to buy the stock.")
             
             except KeyError:
@@ -73,10 +73,10 @@ class Portfolio:
                         if totalCost <= self.funds:
                             self.funds -= totalCost
                             stock.increaseStockAmount(amount)
-                            if Config.debug():
+                            if Config.debug():  
                                 print(f"Bought {amount} shares of {nameOfTicker} at ${historicalStockPrice} per share on {date}.")
                         else:
-                            if Config.debug():
+                            if Config.debug():  
                                 print("Portfolio: Insufficient funds to buy the stock.")
                 
             except KeyError:

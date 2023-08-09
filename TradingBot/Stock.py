@@ -43,14 +43,14 @@ class Stock:
         elif mode == -1:
             try:                
                 closing_price = self.stockInfo.loc[dateStart, "Close"]
-                if Config.debug():
+                if Config.debug():  
                     print(f"{self.name} price of {closing_price} on {dateStart}")
                 
                 return closing_price
             
             except KeyError:
                 
-                if Config.debug():
+                if Config.debug():  
                     print(f"Stock: exception date: {dateStart}")    
                 return None
             
