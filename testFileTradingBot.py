@@ -27,12 +27,14 @@ p.addStock("TSLA")
 c1 = MACDCalculator() 
 s = SignalLineCalculator()
 M = SMACalculator()
+E = EMACalculator()
 
 print(t1.getStockPrice(-1, "2020-04-14", "2020-04-15"))
 
 print(M.calculateSMA(12, p, "TSLA", -1, "2020-04-13"))
+print(E.calculateEMA(12, p, "TSLA", -1, "2023-04-13"))
 #print(c1.calculateMACD(p, "TSLA", -1, "2020-04-14"))
 #print(s.signalLineCalculation(p, "TSLA", -1, "2020-04-14"))
 
-a.initiating()
-a.startBot()
+#a.initiating()
+#a.startBot()

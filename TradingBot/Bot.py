@@ -27,7 +27,8 @@ class Bot:
         self.decisionMaker = decisionMaking
         self.fileLoggerTxt = FileLoggertxt()
         self.fileLoggerJSON = FileLoggerJSON()
-                        
+        
+        self.cache = Cache("./TradingBot/FinancialCalculators/CacheSMA")  
         
         
     def initiating(self):
@@ -111,3 +112,7 @@ class Bot:
                     self.date = self.portfolio.addDayToDate(self.date)
                     if Config.debug():
                         print(self.date)
+                        
+            if Config.debug():            
+                print("closing cache")
+            self.cache.close()
