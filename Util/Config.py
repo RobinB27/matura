@@ -13,7 +13,15 @@ class Config:
         Returns:
             dict: Dict-conversion of config.toml
         """
-        if Config.data is None: Config.data = toml.load(Config.path)
+        if Config.data is None: 
+            try:
+                Config.data = toml.load(Config.path)
+            except FileNotFoundError as error:
+                print("Config file could not be loaded. Maybe it does not exist.")
+                raise error
+            except toml.TomlDecodeError as error:
+                print("Config file contained invalid TOML syntax and could not be loaded.")
+                raise error
         return Config.data
     
     def debug() -> bool:
