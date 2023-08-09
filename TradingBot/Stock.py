@@ -1,4 +1,7 @@
 import yfinance as yf
+
+from consts import debug
+
 class Stock:
     
     """
@@ -9,11 +12,13 @@ class Stock:
         
         self.name = str(name)
         self.amountOfStock = 0
-        self.ticker = yf.Ticker(name)
+        self.tickerObject = yf.Ticker(name)
+        self.stockInfo = self.tickerObject.history(period ="max")
     
         # Throws useful exception message on invalid Ticker
         try: 
-            self.tickerInfo = self.ticker.info
+            self.tickerInfo = self.tickerObject.info
+            pass
         except KeyError:
             raise ValueError("Unrecongnised ticker")
         
@@ -35,18 +40,17 @@ class Stock:
             return stockPrice
         
         elif mode == -1:
-            try:
-                stockHistorical = yf.download(self.name, start=dateStart, end=dateEnd)
-                
-                closing_price = stockHistorical.loc[dateStart, "Close"]
-                print(f"{self.name} price of {closing_price} on {dateStart}")
+            try:                
+                closing_price = self.stockInfo.loc[dateStart, "Close"]
+                if debug:
+                    print(f"{self.name} price of {closing_price} on {dateStart}")
                 
                 return closing_price
             
             except KeyError:
                 
-                print(f"Stock: exception date: {dateStart}")
-                
+                if debug:
+                    print(f"Stock: exception date: {dateStart}")    
                 return None
             
         

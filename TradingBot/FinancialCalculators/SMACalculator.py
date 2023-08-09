@@ -5,6 +5,7 @@ from diskcache import Cache
 from datetime import datetime, timedelta, date
 from TradingBot.Portfolio import Portfolio
 
+from consts import debug
     
     #lot of boilerplate can be removed by putting the while loop inside it's own function
     #comment
@@ -12,9 +13,7 @@ from TradingBot.Portfolio import Portfolio
 class SMACalculator:
     
     def __init__(self):
-        #creates cache for storing SMA values
-        print("SMACalculator: Opening cache")
-        self.cache = Cache("./TradingBot/FinancialCalculators/CacheSMA")
+        self.stockValues = {}
 
     
     def calculateSMA(self, daysToCalculate: int, portfolio: Portfolio, ticker: str, mode = 0, dateToCalculate = ""):
@@ -84,6 +83,8 @@ class SMACalculator:
             for stock in portfolio.stocksHeld:
                     if stock.name == ticker:
                         
+                        SMA_Value = 0
+                        
                         executions = 0
                         while executions < daysToCalculate:
                             
@@ -97,30 +98,22 @@ class SMACalculator:
                             #checks if dateToCalculate is an exception date for stock market closure
                             getStockPricePlacholder = portfolio.addDayToDate(dateToCalculate)
                             
-                            #key for cache
-                            key = ticker + "_" + dateToCalculate
+                                                        
+                            skipIteration = False
                             
-                            if key not in self.cache:
-                                self.cache[key] = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
-                                if self.cache[key] == None:
-                                    print("SMACalculator: Exception check cache")
-                                    dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
-                                    continue
-                            elif self.cache[key] == None:
-                                print("SMACalculator: Exception check cache access")
-                                dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
-                                continue       
-                                               
-                            #caching part
+                            for stock in portfolio.stocksHeld:
+                                if ticker == stock.name:
+                                    if stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder) == None:
+                                        dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
+                                        skipIteration = True
+                                        break
+                                    
+                            if skipIteration == True:
+                                continue
+                 
+                            stockPriceOnDate = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
                             
-                            if key not in self.cache:
-                                print(f"SMACalculator: Downloading Stockvalues on: {dateToCalculate}")
-                                stockPriceOnDate = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
-                                self.cache[key] = stockPriceOnDate
-                            else:
-                                print(f"SMACalculator: Accessing cache for stock price on: {dateToCalculate}")
-                                print(f"SMACalculator:  {ticker} price: {self.cache[key]}")
-                                SMA_Value += self.cache[key]   
+                            SMA_Value += stockPriceOnDate  
                                                                              
                             #ensures that a new date is processed in the next iteration
                             dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)                                

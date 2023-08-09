@@ -10,16 +10,29 @@ class FileLoggertxt:
     """
     
     def __init__(self, prefix:str = "run", path:str = "logs") -> None:
-        self.dirPath = path
-        self.fileName = prefix + "_" + datetime.datetime.now().strftime("%d_%b_%y_%I_%M_%p") + ".txt"
+        
+        self.logFileCreated = False
+        self.prefix = prefix
+        self.path = path
+        
+        self.stockValueOnDate = 0
+
+    def createLogFile(self):
+        if not self.logFileCreated:
+            print("Log file created.")
+            self.dirPath = self.path
+            self.fileName = self.prefix + "_" + datetime.datetime.now().strftime("%d_%b_%y_%I_%M_%p") + ".txt"
+            self.log_file_created = True
 
     def snapshot(self, portfolio: Portfolio,  mode = 0, date: str = "0") -> None:
         filePath = os.path.join(self.dirPath, self.fileName)
         
-        with open(filePath, mode="w") as log:
+        self.stockValueOnDate = 0
+        
+        with open(filePath, mode="a") as log:
             log.write(f"date: {date}\n")
-            log.write(f"funds in portfolio: ${portfolio.funds}\n")
-            log.write("stocks held in portfolio: \n\n")
+            log.write(f"funds in portfolio: ${portfolio.funds}\n\n")
+            log.write("stocks held in portfolio: \n")
         
             for stock in portfolio.stocksHeld:
                 log.write(f"{stock.name} ")
@@ -30,12 +43,13 @@ class FileLoggertxt:
                 
                 elif mode == -1:
                     placeholderDate = portfolio.addDayToDate(date)
-                    stockValue = stock.amountOfStock * stock.getStockPrice(-1, date, placeholderDate) 
+                    stockValue = stock.amountOfStock * stock.getStockPrice(-1, date, placeholderDate)
+                    self.stockValueOnDate += stockValue
                 
                 log.write(f"value of stock: ${stockValue}\n \n")
             
             # Does this work as intended? Pay attention to Scope of stockValue, maybe an issue
-            log.write(f"Overall profit/loss: ${portfolio.funds + stockValue -portfolio.startingFunds}\n")     
+            log.write(f"Overall profit/loss: ${portfolio.funds + self.stockValueOnDate - portfolio.startingFunds}\n")     
             log.write("\n")   
        
         
