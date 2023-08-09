@@ -1,0 +1,9 @@
+# Main bot configuration file
+
+# Settings used for active development
+[development]
+debug = true
+
+# Settings for bot usage
+[parameters]
+sample = "sampleParam"
