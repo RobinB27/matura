@@ -9,7 +9,7 @@ from TradingBot.FinancialCalculators.EMACalculator import EMACalculator
 from TradingBot.FinancialCalculators.MACDCalculator import MACDCalculator
 from TradingBot.FinancialCalculators.SignalLineCalculator import SignalLineCalculator
 
-from consts import debug
+from Util.Config import Config
 
 class MACDDecisionMaking:
     
@@ -52,12 +52,12 @@ class MACDDecisionMaking:
             self.SignalLineValuesDict[dateToCalculate] = placeholderResult[1]
             
             if self.SignalLineValuesDict[dateToCalculate] > self.MACDValuesDict[dateToCalculate]:
-                if debug:
+                if Config.debug():
                     print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} > signalLine: {self.SignalLineValuesDict[dateToCalculate]}")
                 self.curveComparison[dateToCalculate] = 1
                 
             elif self.SignalLineValuesDict[dateToCalculate] < self.MACDValuesDict[dateToCalculate]:
-                if debug:
+                if Config.debug():
                     print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} < signalLine: {self.SignalLineValuesDict[dateToCalculate]}")
                 self.curveComparison[dateToCalculate] = -1
                 
@@ -74,12 +74,12 @@ class MACDDecisionMaking:
             self.SignalLineValuesDict[dateToCalculate] = placeholderResult[1]
 
             if self.SignalLineValuesDict[dateToCalculate] > self.MACDValuesDict[dateToCalculate]:
-                if debug:
+                if Config.debug():
                     print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} > signalLine: {self.SignalLineValuesDict[dateToCalculate]}")
                 self.curveComparison[dateToCalculate] = 1
                 
             elif self.SignalLineValuesDict[dateToCalculate] < self.MACDValuesDict[dateToCalculate]:
-                if debug:
+                if Config.debug():
                     print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} < signalLine: {self.SignalLineValuesDict[dateToCalculate]}")
                 self.curveComparison[dateToCalculate] = -1
                 
@@ -96,11 +96,11 @@ class MACDDecisionMaking:
                 previousDate = portfolio.subtractDayFromDate(previousDate)
             
             if self.curveComparison[previousDate] == -1 and self.curveComparison[dateToCalculate] == 1:
-                if debug:
+                if Config.debug():
                     print(f"MACDDecisionMaking: Bullish Crossover on {dateToCalculate}")
                 return 1
             elif self.curveComparison[previousDate] == 1 and self.curveComparison[dateToCalculate] == -1:
-                if debug:
+                if Config.debug():
                     print(f"MACDDecisionMaking: Bearish Crossover on {dateToCalculate}")
                 return -1
             else:
@@ -113,12 +113,12 @@ class MACDDecisionMaking:
             self.SignalLineValuesDict[dateToCalculate] = placeholderResult[1]
             
             if self.SignalLineValuesDict[dateToCalculate] > self.MACDValuesDict[dateToCalculate]:
-                if debug:
+                if Config.debug():
                     print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} > signalLine: {self.SignalLineValuesDict[dateToCalculate]}")
                 self.curveComparison[dateToCalculate] = 1
                 
             elif self.SignalLineValuesDict[dateToCalculate] < self.MACDValuesDict[dateToCalculate]:
-                if debug:
+                if Config.debug():
                     print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} < signalLine: {self.SignalLineValuesDict[dateToCalculate]}")
                 self.curveComparison[dateToCalculate] = -1   
             else:
@@ -137,19 +137,19 @@ class MACDDecisionMaking:
                 DayBeforePreviousDate = portfolio.subtractDayFromDate(DayBeforePreviousDate)
                 
             if self.curveComparison[previousDate] == -1 and self.curveComparison[dateToCalculate] == 1:
-                if debug:
+                if Config.debug():
                     print(f"MACDDecisionMaking: Bullish Crossover on {dateToCalculate}")
                 return 1
             elif self.curveComparison[DayBeforePreviousDate] == -1 and self.curveComparison[previousDate] == 0 and self.curveComparison[dateToCalculate] == 1:
-                if debug:
+                if Config.debug():
                     print(f"MACDDecisionMaking: Bullish Crossover on {dateToCalculate}")
                 return 1
             elif self.curveComparison[previousDate] == 1 and self.curveComparison[dateToCalculate] == -1:
-                if debug:
+                if Config.debug():
                     print(f"MACDDecisionMaking: Bearish Crossover on {dateToCalculate}")
                 return -1
             elif self.curveComparison[DayBeforePreviousDate] == 1 and self.curveComparison[previousDate] == 0 and self.curveComparison[dateToCalculate] == -1:
-                if debug:
+                if Config.debug():
                     print(f"MACDDecisionMaking: Bearish Crossover on {dateToCalculate}")
                 return -1
             else:

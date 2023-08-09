@@ -6,7 +6,8 @@ from TradingBot.Portfolio import Portfolio
 
 from TradingBot.FinancialCalculators.EMACalculator import EMACalculator
 
-from consts import debug
+from Util.Config import Config
+
 
 class MACDCalculator:
     
@@ -25,10 +26,10 @@ class MACDCalculator:
         
         if mode == 0:
             
-            if debug:
+            if Config.debug():
                 print(f"MACDCalculator: Downloading EMA 12")
             EMA_Placeholder12days = self.EMACalculator.calculateEMA(12, portfolio, ticker)
-            if debug:
+            if Config.debug():
                 print(f"MACDCalculator: Downloading EMA 26")
             EMA_Placeholder26days = self.EMACalculator.calculateEMA(26, portfolio, ticker)
 
@@ -40,11 +41,11 @@ class MACDCalculator:
         elif mode == -1:
             
             
-            if debug:
+            if Config.debug():
                 print(f"MACDCalculator: Downloading EMA 12: {dateStart}")
             EMA_Placeholder12days = self.EMACalculator.calculateEMA(12, portfolio, ticker, -1, dateStart)
             
-            if debug:
+            if Config.debug():
                 print(f"MACDCalculator: Downloading EMA 26: {dateStart}")
             EMA_Placeholder26days = self.EMACalculator.calculateEMA(26, portfolio, ticker, -1, dateStart)
             

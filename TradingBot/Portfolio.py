@@ -2,7 +2,8 @@ from TradingBot.Stock import Stock
 from datetime import datetime, timedelta, date
 import pandas as pd
 
-from consts import debug
+from Util.Config import Config
+
 
 class Portfolio:
     """
@@ -48,10 +49,10 @@ class Portfolio:
                         if totalCost <= self.funds:
                             self.funds -= totalCost
                             stock.increaseStockAmount(amount)
-                            if debug:
+                            if Config.debug():
                                 print(f"Bought {amount} shares of {nameOfTicker} at ${currentPrice} per share.")
                         else:
-                            if debug:
+                            if Config.debug():
                                 print("Portfolio: Insufficient funds to buy the stock.")
             
             except KeyError:
@@ -72,10 +73,10 @@ class Portfolio:
                         if totalCost <= self.funds:
                             self.funds -= totalCost
                             stock.increaseStockAmount(amount)
-                            if debug:
+                            if Config.debug():
                                 print(f"Bought {amount} shares of {nameOfTicker} at ${historicalStockPrice} per share on {date}.")
                         else:
-                            if debug:
+                            if Config.debug():
                                 print("Portfolio: Insufficient funds to buy the stock.")
                 
             except KeyError:

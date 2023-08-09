@@ -6,7 +6,8 @@ from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
 from datetime import  datetime, timedelta, date
 from diskcache import Cache
 
-from consts import debug
+from Util.Config import Config
+
 
 
 #in time period bot skipps weekends but counts them as a day of the time period
@@ -26,7 +27,7 @@ class Bot:
         self.decisionMaker = decisionMaking
         self.fileLoggerTxt = FileLoggertxt()
         self.fileLoggerJSON = FileLoggerJSON()
-                
+                        
         
         
     def initiating(self):
@@ -66,22 +67,22 @@ class Bot:
             
                 for i in range(self.timePeriod):
                     
-                    if debug:
+                    if Config.debug():
                         print(f"Bot: Trading day: {self.date}")
                 
                     weekendCheckDatetime = datetime.strptime(self.date, "%Y-%m-%d")
                     exceptionCheckDate = self.portfolio.addDayToDate(self.date)
                 
                     if weekendCheckDatetime.isoweekday() > 5:
-                        if debug:
+                        if Config.debug():
                             print(f"Bot: weekend: {self.date}")
                         self.date = self.portfolio.addDayToDate(self.date)
                         continue
                 
-                    if debug:
+                    if Config.debug():
                         print("Bot: downloading Stock price for Exception date check")
                     if self.portfolio.stocksHeld[0].getStockPrice(-1, self.date, exceptionCheckDate) is None:
-                        if debug:
+                        if Config.debug():
                             print(f"Bot: exception date: {self.date}")
                         self.date = self.portfolio.addDayToDate(self.date)
                         continue
@@ -101,12 +102,12 @@ class Bot:
                             print(f"Bot: Selling stock: {self.portfolio.stocksHeld[i].name}")
                             self.portfolio.sellStock(1, self.portfolio.stocksHeld[i].name, self.mode, self.date)
                         else:
-                            if debug:
+                            if Config.debug():
                                 print(f"Bot: Ignoring stock: {self.portfolio.stocksHeld[i].name}")
                         
                     self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
                     #self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date)
                 
                     self.date = self.portfolio.addDayToDate(self.date)
-                    if debug:
+                    if Config.debug():
                         print(self.date)

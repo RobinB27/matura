@@ -1,6 +1,7 @@
 import yfinance as yf
 
-from consts import debug
+from Util.Config import Config
+
 
 class Stock:
     
@@ -42,14 +43,14 @@ class Stock:
         elif mode == -1:
             try:                
                 closing_price = self.stockInfo.loc[dateStart, "Close"]
-                if debug:
+                if Config.debug():
                     print(f"{self.name} price of {closing_price} on {dateStart}")
                 
                 return closing_price
             
             except KeyError:
                 
-                if debug:
+                if Config.debug():
                     print(f"Stock: exception date: {dateStart}")    
                 return None
             

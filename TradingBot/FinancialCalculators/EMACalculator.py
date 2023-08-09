@@ -6,7 +6,8 @@ from TradingBot.Portfolio import Portfolio
 
 from TradingBot.FinancialCalculators.SMACalculator import SMACalculator
 
-from consts import debug
+from Util.Config import Config
+
 
 class EMACalculator:
     
@@ -64,7 +65,7 @@ class EMACalculator:
             
             getStockPricePlacholder = portfolio.addDayToDate(dateToCalculate)
             
-            if debug:
+            if Config.debug():
                 print(f"EMACalculator: Downloading SMA values on: {dateToCalculate}")                         
             SMA_Placeholder += self.SMACAlculator.calculateSMA(daysToCalculate, portfolio, ticker, -1,  dateToCalculate)
             for stock in portfolio.stocksHeld:

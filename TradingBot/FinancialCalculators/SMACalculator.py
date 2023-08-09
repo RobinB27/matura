@@ -5,7 +5,8 @@ from diskcache import Cache
 from datetime import datetime, timedelta, date
 from TradingBot.Portfolio import Portfolio
 
-from consts import debug
+from Util.Config import Config
+
     
     #lot of boilerplate can be removed by putting the while loop inside it's own function
     #comment
