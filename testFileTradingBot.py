@@ -39,9 +39,3 @@ E = EMACalculator()
 
 a.initiating()
 a.startBot()
-
-#bot trade for 12 days on 2023-04-24 and then 27 should be a signal but bot does not identify it
-
-#8. 1h bugfixes
-#9. 3h 15min bugfixes
-

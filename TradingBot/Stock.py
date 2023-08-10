@@ -66,7 +66,6 @@ class Stock:
     def decreaseStockAmount(self, amount):   
         if self.amountOfStock - amount >= 0:
             self.amountOfStock -= amount
-            print(self.amountOfStock)
         else:
             print("Stock: Insufficient amount of stock to sell.")
             
