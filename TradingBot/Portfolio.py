@@ -120,7 +120,7 @@ class Portfolio:
                         #sells the amount of shares given
                         if stock.amountOfStock >= amount:
                             self.funds += totalPrice
-                            stock.increaseStockAmount(amount)
+                            stock.decreaseStockAmount(amount)
                             print(f"Sold {amount} shares of {nameOfTicker} at ${historicalStockPrice} per share on {date}.")
                         else:
                             print("Insufficient shares to sell the stock.")

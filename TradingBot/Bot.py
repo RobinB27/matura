@@ -98,15 +98,19 @@ class Bot:
                             
                             print(f"Bot: Buying stock: {self.portfolio.stocksHeld[i].name} on {self.date}")
                             self.portfolio.buyStock(1, self.portfolio.stocksHeld[i].name, self.mode, self.date)
-                        elif decision == 0:
+                            self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
+
+                        elif decision == -1:
                             
                             print(f"Bot: Selling stock: {self.portfolio.stocksHeld[i].name} on {self.date}")
                             self.portfolio.sellStock(1, self.portfolio.stocksHeld[i].name, self.mode, self.date)
+                            self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
+
                         else:
                             if Config.debug():
                                 print(f"Bot: Ignoring stock: {self.portfolio.stocksHeld[i].name} on {self.date}")
                         
-                    self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
+                    #self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
                     #self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date)
                 
                     self.date = self.portfolio.addDayToDate(self.date)

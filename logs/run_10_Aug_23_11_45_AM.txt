@@ -1,0 +1,6228 @@
+date: 2020-03-16
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-03-17
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-03-18
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-03-19
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-03-20
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-03-23
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-03-24
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-03-25
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-03-26
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-03-27
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-03-30
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-03-31
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-01
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-02
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-03
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-06
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-07
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-08
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-09
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-13
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-14
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-15
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-16
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-17
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-20
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-21
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-22
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-23
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-24
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-27
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-28
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-29
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-04-30
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-05-01
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2020-05-04
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $50.74599838256836
+ 
+Overall profit/loss: $0.0
+
+date: 2020-05-05
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $51.2140007019043
+ 
+Overall profit/loss: $0.4680023193359375
+
+date: 2020-05-06
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $52.172000885009766
+ 
+Overall profit/loss: $1.4260025024414062
+
+date: 2020-05-07
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $52.00266647338867
+ 
+Overall profit/loss: $1.2566680908203125
+
+date: 2020-05-08
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $54.62799835205078
+ 
+Overall profit/loss: $3.881999969482422
+
+date: 2020-05-11
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $54.08599853515625
+ 
+Overall profit/loss: $3.3400001525878906
+
+date: 2020-05-12
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $53.96066665649414
+ 
+Overall profit/loss: $3.2146682739257812
+
+date: 2020-05-13
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $52.73066711425781
+ 
+Overall profit/loss: $1.9846687316894531
+
+date: 2020-05-14
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $53.55533218383789
+ 
+Overall profit/loss: $2.8093338012695312
+
+date: 2020-05-15
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $53.27799987792969
+ 
+Overall profit/loss: $2.532001495361328
+
+date: 2020-05-18
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $54.242000579833984
+ 
+Overall profit/loss: $3.496002197265625
+
+date: 2020-05-19
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $53.867332458496094
+ 
+Overall profit/loss: $3.1213340759277344
+
+date: 2020-05-20
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $54.37066650390625
+ 
+Overall profit/loss: $3.6246681213378906
+
+date: 2020-05-21
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $55.17333221435547
+ 
+Overall profit/loss: $4.427333831787109
+
+date: 2020-05-22
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $54.45866775512695
+ 
+Overall profit/loss: $3.7126693725585938
+
+date: 2020-05-26
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $54.591331481933594
+ 
+Overall profit/loss: $3.8453330993652344
+
+date: 2020-05-27
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $54.68199920654297
+ 
+Overall profit/loss: $3.9360008239746094
+
+date: 2020-05-28
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $53.72066879272461
+ 
+Overall profit/loss: $2.97467041015625
+
+date: 2020-05-29
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $55.66666793823242
+ 
+Overall profit/loss: $4.9206695556640625
+
+date: 2020-06-01
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $59.87333297729492
+ 
+Overall profit/loss: $9.127334594726562
+
+date: 2020-06-02
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $58.770668029785156
+ 
+Overall profit/loss: $8.024669647216797
+
+date: 2020-06-03
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $58.86399841308594
+ 
+Overall profit/loss: $8.118000030517578
+
+date: 2020-06-04
+funds in portfolio: $949.2540016174316
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $57.62533187866211
+ 
+Overall profit/loss: $6.87933349609375
+
+date: 2020-06-05
+funds in portfolio: $1008.2980003356934
+
+stocks held in portfolio: 
+TSLA amount of stock: 2
+value of stock: $118.08799743652344
+ 
+Overall profit/loss: $126.3859977722168
+
+date: 2020-06-08
+funds in portfolio: $1008.2980003356934
+
+stocks held in portfolio: 
+TSLA amount of stock: 2
+value of stock: $126.65599822998047
+ 
+Overall profit/loss: $134.95399856567383
+
+date: 2020-06-09
+funds in portfolio: $1008.2980003356934
+
+stocks held in portfolio: 
+TSLA amount of stock: 2
+value of stock: $125.42266845703125
+ 
+Overall profit/loss: $133.7206687927246
+
+date: 2020-06-10
+funds in portfolio: $1008.2980003356934
+
+stocks held in portfolio: 
+TSLA amount of stock: 2
+value of stock: $136.67333984375
+ 
+Overall profit/loss: $144.97134017944336
+
+date: 2020-06-11
+funds in portfolio: $1008.2980003356934
+
+stocks held in portfolio: 
+TSLA amount of stock: 2
+value of stock: $129.71200561523438
+ 
+Overall profit/loss: $138.01000595092773
+
+date: 2020-06-12
+funds in portfolio: $1008.2980003356934
+
+stocks held in portfolio: 
+TSLA amount of stock: 2
+value of stock: $124.7040023803711
+ 
+Overall profit/loss: $133.00200271606445
+
+date: 2020-06-15
+funds in portfolio: $1008.2980003356934
+
+stocks held in portfolio: 
+TSLA amount of stock: 2
+value of stock: $132.1199951171875
+ 
+Overall profit/loss: $140.41799545288086
+
+date: 2020-06-16
+funds in portfolio: $1008.2980003356934
+
+stocks held in portfolio: 
+TSLA amount of stock: 2
+value of stock: $130.95066833496094
+ 
+Overall profit/loss: $139.2486686706543
+
+date: 2020-06-17
+funds in portfolio: $1008.2980003356934
+
+stocks held in portfolio: 
+TSLA amount of stock: 2
+value of stock: $132.23866271972656
+ 
+Overall profit/loss: $140.53666305541992
+
+date: 2020-06-18
+funds in portfolio: $1008.2980003356934
+
+stocks held in portfolio: 
+TSLA amount of stock: 2
+value of stock: $133.861328125
+ 
+Overall profit/loss: $142.15932846069336
+
+date: 2020-06-19
+funds in portfolio: $1008.2980003356934
+
+stocks held in portfolio: 
+TSLA amount of stock: 2
+value of stock: $133.45333862304688
+ 
+Overall profit/loss: $141.75133895874023
+
+date: 2020-06-22
+funds in portfolio: $1008.2980003356934
+
+stocks held in portfolio: 
+TSLA amount of stock: 2
+value of stock: $132.5760040283203
+ 
+Overall profit/loss: $140.87400436401367
+
+date: 2020-06-23
+funds in portfolio: $1008.2980003356934
+
+stocks held in portfolio: 
+TSLA amount of stock: 2
+value of stock: $133.57066345214844
+ 
+Overall profit/loss: $141.8686637878418
+
+date: 2020-06-24
+funds in portfolio: $1008.2980003356934
+
+stocks held in portfolio: 
+TSLA amount of stock: 2
+value of stock: $128.1133270263672
+ 
+Overall profit/loss: $136.41132736206055
+
+date: 2020-06-25
+funds in portfolio: $1008.2980003356934
+
+stocks held in portfolio: 
+TSLA amount of stock: 2
+value of stock: $131.46400451660156
+ 
+Overall profit/loss: $139.76200485229492
+
+date: 2020-06-26
+funds in portfolio: $944.3153343200684
+
+stocks held in portfolio: 
+TSLA amount of stock: 3
+value of stock: $191.947998046875
+ 
+Overall profit/loss: $136.26333236694336
+
+date: 2020-06-29
+funds in portfolio: $944.3153343200684
+
+stocks held in portfolio: 
+TSLA amount of stock: 3
+value of stock: $201.87000274658203
+ 
+Overall profit/loss: $146.1853370666504
+
+date: 2020-06-30
+funds in portfolio: $944.3153343200684
+
+stocks held in portfolio: 
+TSLA amount of stock: 3
+value of stock: $215.96200561523438
+ 
+Overall profit/loss: $160.27733993530273
+
+date: 2020-07-01
+funds in portfolio: $944.3153343200684
+
+stocks held in portfolio: 
+TSLA amount of stock: 3
+value of stock: $223.92599487304688
+ 
+Overall profit/loss: $168.24132919311523
+
+date: 2020-07-02
+funds in portfolio: $944.3153343200684
+
+stocks held in portfolio: 
+TSLA amount of stock: 3
+value of stock: $241.73199462890625
+ 
+Overall profit/loss: $186.0473289489746
+
+date: 2020-07-06
+funds in portfolio: $944.3153343200684
+
+stocks held in portfolio: 
+TSLA amount of stock: 3
+value of stock: $274.31600189208984
+ 
+Overall profit/loss: $218.6313362121582
+
+date: 2020-07-07
+funds in portfolio: $944.3153343200684
+
+stocks held in portfolio: 
+TSLA amount of stock: 3
+value of stock: $277.9720001220703
+ 
+Overall profit/loss: $222.28733444213867
+
+date: 2020-07-08
+funds in portfolio: $1035.3740043640137
+
+stocks held in portfolio: 
+TSLA amount of stock: 4
+value of stock: $364.23468017578125
+ 
+Overall profit/loss: $399.6086845397949
+
+date: 2020-07-09
+funds in portfolio: $1035.3740043640137
+
+stocks held in portfolio: 
+TSLA amount of stock: 4
+value of stock: $371.8080139160156
+ 
+Overall profit/loss: $407.1820182800293
+
+date: 2020-07-10
+funds in portfolio: $1035.3740043640137
+
+stocks held in portfolio: 
+TSLA amount of stock: 4
+value of stock: $411.90667724609375
+ 
+Overall profit/loss: $447.2806816101074
+
+date: 2020-07-13
+funds in portfolio: $1035.3740043640137
+
+stocks held in portfolio: 
+TSLA amount of stock: 4
+value of stock: $399.21600341796875
+ 
+Overall profit/loss: $434.5900077819824
+
+date: 2020-07-14
+funds in portfolio: $1035.3740043640137
+
+stocks held in portfolio: 
+TSLA amount of stock: 4
+value of stock: $404.4800109863281
+ 
+Overall profit/loss: $439.8540153503418
+
+date: 2020-07-15
+funds in portfolio: $1035.3740043640137
+
+stocks held in portfolio: 
+TSLA amount of stock: 4
+value of stock: $412.2693176269531
+ 
+Overall profit/loss: $447.6433219909668
+
+date: 2020-07-16
+funds in portfolio: $1035.3740043640137
+
+stocks held in portfolio: 
+TSLA amount of stock: 4
+value of stock: $400.170654296875
+ 
+Overall profit/loss: $435.5446586608887
+
+date: 2020-07-17
+funds in portfolio: $1035.3740043640137
+
+stocks held in portfolio: 
+TSLA amount of stock: 4
+value of stock: $400.2239990234375
+ 
+Overall profit/loss: $435.5980033874512
+
+date: 2020-07-20
+funds in portfolio: $1035.3740043640137
+
+stocks held in portfolio: 
+TSLA amount of stock: 4
+value of stock: $438.1333312988281
+ 
+Overall profit/loss: $473.5073356628418
+
+date: 2020-07-21
+funds in portfolio: $1035.3740043640137
+
+stocks held in portfolio: 
+TSLA amount of stock: 4
+value of stock: $418.2293395996094
+ 
+Overall profit/loss: $453.60334396362305
+
+date: 2020-07-22
+funds in portfolio: $1035.3740043640137
+
+stocks held in portfolio: 
+TSLA amount of stock: 4
+value of stock: $424.621337890625
+ 
+Overall profit/loss: $459.9953422546387
+
+date: 2020-07-23
+funds in portfolio: $1035.3740043640137
+
+stocks held in portfolio: 
+TSLA amount of stock: 4
+value of stock: $403.4853210449219
+ 
+Overall profit/loss: $438.85932540893555
+
+date: 2020-07-24
+funds in portfolio: $1035.3740043640137
+
+stocks held in portfolio: 
+TSLA amount of stock: 4
+value of stock: $377.8666687011719
+ 
+Overall profit/loss: $413.24067306518555
+
+date: 2020-07-27
+funds in portfolio: $1035.3740043640137
+
+stocks held in portfolio: 
+TSLA amount of stock: 4
+value of stock: $410.55999755859375
+ 
+Overall profit/loss: $445.9340019226074
+
+date: 2020-07-28
+funds in portfolio: $936.941333770752
+
+stocks held in portfolio: 
+TSLA amount of stock: 5
+value of stock: $492.1633529663086
+ 
+Overall profit/loss: $429.10468673706055
+
+date: 2020-07-29
+funds in portfolio: $936.941333770752
+
+stocks held in portfolio: 
+TSLA amount of stock: 5
+value of stock: $499.70333099365234
+ 
+Overall profit/loss: $436.6446647644043
+
+date: 2020-07-30
+funds in portfolio: $936.941333770752
+
+stocks held in portfolio: 
+TSLA amount of stock: 5
+value of stock: $495.8300018310547
+ 
+Overall profit/loss: $432.77133560180664
+
+date: 2020-07-31
+funds in portfolio: $936.941333770752
+
+stocks held in portfolio: 
+TSLA amount of stock: 5
+value of stock: $476.9200134277344
+ 
+Overall profit/loss: $413.8613471984863
+
+date: 2020-08-03
+funds in portfolio: $936.941333770752
+
+stocks held in portfolio: 
+TSLA amount of stock: 5
+value of stock: $495.0
+ 
+Overall profit/loss: $431.94133377075195
+
+date: 2020-08-04
+funds in portfolio: $936.941333770752
+
+stocks held in portfolio: 
+TSLA amount of stock: 5
+value of stock: $495.6666564941406
+ 
+Overall profit/loss: $432.6079902648926
+
+date: 2020-08-05
+funds in portfolio: $936.941333770752
+
+stocks held in portfolio: 
+TSLA amount of stock: 5
+value of stock: $495.00667572021484
+ 
+Overall profit/loss: $431.9480094909668
+
+date: 2020-08-06
+funds in portfolio: $936.941333770752
+
+stocks held in portfolio: 
+TSLA amount of stock: 5
+value of stock: $496.5266799926758
+ 
+Overall profit/loss: $433.46801376342773
+
+date: 2020-08-07
+funds in portfolio: $936.941333770752
+
+stocks held in portfolio: 
+TSLA amount of stock: 5
+value of stock: $484.23667907714844
+ 
+Overall profit/loss: $421.1780128479004
+
+date: 2020-08-10
+funds in portfolio: $936.941333770752
+
+stocks held in portfolio: 
+TSLA amount of stock: 5
+value of stock: $472.85667419433594
+ 
+Overall profit/loss: $409.7980079650879
+
+date: 2020-08-11
+funds in portfolio: $936.941333770752
+
+stocks held in portfolio: 
+TSLA amount of stock: 5
+value of stock: $458.12999725341797
+ 
+Overall profit/loss: $395.0713310241699
+
+date: 2020-08-12
+funds in portfolio: $936.941333770752
+
+stocks held in portfolio: 
+TSLA amount of stock: 5
+value of stock: $518.2533264160156
+ 
+Overall profit/loss: $455.1946601867676
+
+date: 2020-08-13
+funds in portfolio: $936.941333770752
+
+stocks held in portfolio: 
+TSLA amount of stock: 5
+value of stock: $540.3333282470703
+ 
+Overall profit/loss: $477.27466201782227
+
+date: 2020-08-14
+funds in portfolio: $936.941333770752
+
+stocks held in portfolio: 
+TSLA amount of stock: 5
+value of stock: $550.2366638183594
+ 
+Overall profit/loss: $487.1779975891113
+
+date: 2020-08-17
+funds in portfolio: $936.941333770752
+
+stocks held in portfolio: 
+TSLA amount of stock: 5
+value of stock: $611.879997253418
+ 
+Overall profit/loss: $548.8213310241699
+
+date: 2020-08-18
+funds in portfolio: $936.941333770752
+
+stocks held in portfolio: 
+TSLA amount of stock: 5
+value of stock: $629.0299987792969
+ 
+Overall profit/loss: $565.9713325500488
+
+date: 2020-08-19
+funds in portfolio: $1062.176670074463
+
+stocks held in portfolio: 
+TSLA amount of stock: 6
+value of stock: $751.4120178222656
+ 
+Overall profit/loss: $813.5886878967285
+
+date: 2020-08-20
+funds in portfolio: $1062.176670074463
+
+stocks held in portfolio: 
+TSLA amount of stock: 6
+value of stock: $800.7320251464844
+ 
+Overall profit/loss: $862.9086952209473
+
+date: 2020-08-21
+funds in portfolio: $1062.176670074463
+
+stocks held in portfolio: 
+TSLA amount of stock: 6
+value of stock: $819.9919738769531
+ 
+Overall profit/loss: $882.168643951416
+
+date: 2020-08-24
+funds in portfolio: $1062.176670074463
+
+stocks held in portfolio: 
+TSLA amount of stock: 6
+value of stock: $805.6799926757812
+ 
+Overall profit/loss: $867.8566627502441
+
+date: 2020-08-25
+funds in portfolio: $1062.176670074463
+
+stocks held in portfolio: 
+TSLA amount of stock: 6
+value of stock: $809.3359680175781
+ 
+Overall profit/loss: $871.512638092041
+
+date: 2020-08-26
+funds in portfolio: $1062.176670074463
+
+stocks held in portfolio: 
+TSLA amount of stock: 6
+value of stock: $861.2679748535156
+ 
+Overall profit/loss: $923.4446449279785
+
+date: 2020-08-27
+funds in portfolio: $1062.176670074463
+
+stocks held in portfolio: 
+TSLA amount of stock: 6
+value of stock: $895.5
+ 
+Overall profit/loss: $957.6766700744629
+
+date: 2020-08-28
+funds in portfolio: $1062.176670074463
+
+stocks held in portfolio: 
+TSLA amount of stock: 6
+value of stock: $885.3599853515625
+ 
+Overall profit/loss: $947.5366554260254
+
+date: 2020-08-31
+funds in portfolio: $1062.176670074463
+
+stocks held in portfolio: 
+TSLA amount of stock: 6
+value of stock: $996.6400451660156
+ 
+Overall profit/loss: $1058.8167152404785
+
+date: 2020-09-01
+funds in portfolio: $1062.176670074463
+
+stocks held in portfolio: 
+TSLA amount of stock: 6
+value of stock: $950.1000366210938
+ 
+Overall profit/loss: $1012.2767066955566
+
+date: 2020-09-02
+funds in portfolio: $1062.176670074463
+
+stocks held in portfolio: 
+TSLA amount of stock: 6
+value of stock: $894.7400207519531
+ 
+Overall profit/loss: $956.916690826416
+
+date: 2020-09-03
+funds in portfolio: $1062.176670074463
+
+stocks held in portfolio: 
+TSLA amount of stock: 6
+value of stock: $814.0000305175781
+ 
+Overall profit/loss: $876.176700592041
+
+date: 2020-09-04
+funds in portfolio: $1062.176670074463
+
+stocks held in portfolio: 
+TSLA amount of stock: 6
+value of stock: $836.6400146484375
+ 
+Overall profit/loss: $898.8166847229004
+
+date: 2020-09-08
+funds in portfolio: $1062.176670074463
+
+stocks held in portfolio: 
+TSLA amount of stock: 6
+value of stock: $660.4199981689453
+ 
+Overall profit/loss: $722.5966682434082
+
+date: 2020-09-09
+funds in portfolio: $1062.176670074463
+
+stocks held in portfolio: 
+TSLA amount of stock: 6
+value of stock: $732.5599822998047
+ 
+Overall profit/loss: $794.7366523742676
+
+date: 2020-09-10
+funds in portfolio: $1062.176670074463
+
+stocks held in portfolio: 
+TSLA amount of stock: 6
+value of stock: $742.6799926757812
+ 
+Overall profit/loss: $804.8566627502441
+
+date: 2020-09-11
+funds in portfolio: $937.9366722106934
+
+stocks held in portfolio: 
+TSLA amount of stock: 7
+value of stock: $869.6799850463867
+ 
+Overall profit/loss: $807.6166572570801
+
+date: 2020-09-14
+funds in portfolio: $937.9366722106934
+
+stocks held in portfolio: 
+TSLA amount of stock: 7
+value of stock: $979.1133575439453
+ 
+Overall profit/loss: $917.0500297546387
+
+date: 2020-09-15
+funds in portfolio: $937.9366722106934
+
+stocks held in portfolio: 
+TSLA amount of stock: 7
+value of stock: $1049.4399871826172
+ 
+Overall profit/loss: $987.3766593933105
+
+date: 2020-09-16
+funds in portfolio: $937.9366722106934
+
+stocks held in portfolio: 
+TSLA amount of stock: 7
+value of stock: $1030.7732849121094
+ 
+Overall profit/loss: $968.7099571228027
+
+date: 2020-09-17
+funds in portfolio: $937.9366722106934
+
+stocks held in portfolio: 
+TSLA amount of stock: 7
+value of stock: $988.0032806396484
+ 
+Overall profit/loss: $925.9399528503418
+
+date: 2020-09-18
+funds in portfolio: $937.9366722106934
+
+stocks held in portfolio: 
+TSLA amount of stock: 7
+value of stock: $1031.6833190917969
+ 
+Overall profit/loss: $969.6199913024902
+
+date: 2020-09-21
+funds in portfolio: $937.9366722106934
+
+stocks held in portfolio: 
+TSLA amount of stock: 7
+value of stock: $1048.5766296386719
+ 
+Overall profit/loss: $986.5133018493652
+
+date: 2020-09-22
+funds in portfolio: $937.9366722106934
+
+stocks held in portfolio: 
+TSLA amount of stock: 7
+value of stock: $989.8700256347656
+ 
+Overall profit/loss: $927.806697845459
+
+date: 2020-09-23
+funds in portfolio: $937.9366722106934
+
+stocks held in portfolio: 
+TSLA amount of stock: 7
+value of stock: $887.5066680908203
+ 
+Overall profit/loss: $825.4433403015137
+
+date: 2020-09-24
+funds in portfolio: $937.9366722106934
+
+stocks held in portfolio: 
+TSLA amount of stock: 7
+value of stock: $904.8433532714844
+ 
+Overall profit/loss: $842.7800254821777
+
+date: 2020-09-25
+funds in portfolio: $937.9366722106934
+
+stocks held in portfolio: 
+TSLA amount of stock: 7
+value of stock: $950.4599914550781
+ 
+Overall profit/loss: $888.3966636657715
+
+date: 2020-09-28
+funds in portfolio: $1078.3366661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 8
+value of stock: $1123.199951171875
+ 
+Overall profit/loss: $1201.5366172790527
+
+date: 2020-09-29
+funds in portfolio: $1078.3366661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 8
+value of stock: $1117.52001953125
+ 
+Overall profit/loss: $1195.8566856384277
+
+date: 2020-09-30
+funds in portfolio: $1078.3366661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 8
+value of stock: $1144.026611328125
+ 
+Overall profit/loss: $1222.3632774353027
+
+date: 2020-10-01
+funds in portfolio: $1078.3366661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 8
+value of stock: $1195.0933837890625
+ 
+Overall profit/loss: $1273.4300498962402
+
+date: 2020-10-02
+funds in portfolio: $1078.3366661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 8
+value of stock: $1106.9066162109375
+ 
+Overall profit/loss: $1185.2432823181152
+
+date: 2020-10-05
+funds in portfolio: $1078.3366661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 8
+value of stock: $1135.1466064453125
+ 
+Overall profit/loss: $1213.4832725524902
+
+date: 2020-10-06
+funds in portfolio: $940.343334197998
+
+stocks held in portfolio: 
+TSLA amount of stock: 9
+value of stock: $1241.9399871826172
+ 
+Overall profit/loss: $1182.2833213806152
+
+date: 2020-10-07
+funds in portfolio: $940.343334197998
+
+stocks held in portfolio: 
+TSLA amount of stock: 9
+value of stock: $1275.8999633789062
+ 
+Overall profit/loss: $1216.2432975769043
+
+date: 2020-10-08
+funds in portfolio: $1082.3166618347168
+
+stocks held in portfolio: 
+TSLA amount of stock: 10
+value of stock: $1419.7332763671875
+ 
+Overall profit/loss: $1502.0499382019043
+
+date: 2020-10-09
+funds in portfolio: $1082.3166618347168
+
+stocks held in portfolio: 
+TSLA amount of stock: 10
+value of stock: $1446.6667175292969
+ 
+Overall profit/loss: $1528.9833793640137
+
+date: 2020-10-12
+funds in portfolio: $1082.3166618347168
+
+stocks held in portfolio: 
+TSLA amount of stock: 10
+value of stock: $1474.3333435058594
+ 
+Overall profit/loss: $1556.6500053405762
+
+date: 2020-10-13
+funds in portfolio: $1082.3166618347168
+
+stocks held in portfolio: 
+TSLA amount of stock: 10
+value of stock: $1488.8333129882812
+ 
+Overall profit/loss: $1571.149974822998
+
+date: 2020-10-14
+funds in portfolio: $1082.3166618347168
+
+stocks held in portfolio: 
+TSLA amount of stock: 10
+value of stock: $1537.6666259765625
+ 
+Overall profit/loss: $1619.9832878112793
+
+date: 2020-10-15
+funds in portfolio: $1082.3166618347168
+
+stocks held in portfolio: 
+TSLA amount of stock: 10
+value of stock: $1496.2666320800781
+ 
+Overall profit/loss: $1578.583293914795
+
+date: 2020-10-16
+funds in portfolio: $935.7599906921387
+
+stocks held in portfolio: 
+TSLA amount of stock: 11
+value of stock: $1612.1233825683594
+ 
+Overall profit/loss: $1547.883373260498
+
+date: 2020-10-19
+funds in portfolio: $935.7599906921387
+
+stocks held in portfolio: 
+TSLA amount of stock: 11
+value of stock: $1579.7100067138672
+ 
+Overall profit/loss: $1515.4699974060059
+
+date: 2020-10-20
+funds in portfolio: $935.7599906921387
+
+stocks held in portfolio: 
+TSLA amount of stock: 11
+value of stock: $1547.1133422851562
+ 
+Overall profit/loss: $1482.873332977295
+
+date: 2020-10-21
+funds in portfolio: $935.7599906921387
+
+stocks held in portfolio: 
+TSLA amount of stock: 11
+value of stock: $1549.6800537109375
+ 
+Overall profit/loss: $1485.4400444030762
+
+date: 2020-10-22
+funds in portfolio: $1077.68998336792
+
+stocks held in portfolio: 
+TSLA amount of stock: 12
+value of stock: $1703.159912109375
+ 
+Overall profit/loss: $1780.849895477295
+
+date: 2020-10-23
+funds in portfolio: $1077.68998336792
+
+stocks held in portfolio: 
+TSLA amount of stock: 12
+value of stock: $1682.5200805664062
+ 
+Overall profit/loss: $1760.2100639343262
+
+date: 2020-10-26
+funds in portfolio: $1077.68998336792
+
+stocks held in portfolio: 
+TSLA amount of stock: 12
+value of stock: $1681.1200561523438
+ 
+Overall profit/loss: $1758.8100395202637
+
+date: 2020-10-27
+funds in portfolio: $1077.68998336792
+
+stocks held in portfolio: 
+TSLA amount of stock: 12
+value of stock: $1698.719970703125
+ 
+Overall profit/loss: $1776.409954071045
+
+date: 2020-10-28
+funds in portfolio: $1077.68998336792
+
+stocks held in portfolio: 
+TSLA amount of stock: 12
+value of stock: $1624.0799560546875
+ 
+Overall profit/loss: $1701.7699394226074
+
+date: 2020-10-29
+funds in portfolio: $940.746654510498
+
+stocks held in portfolio: 
+TSLA amount of stock: 13
+value of stock: $1780.2632751464844
+ 
+Overall profit/loss: $1721.0099296569824
+
+date: 2020-10-30
+funds in portfolio: $940.746654510498
+
+stocks held in portfolio: 
+TSLA amount of stock: 13
+value of stock: $1681.5066375732422
+ 
+Overall profit/loss: $1622.2532920837402
+
+date: 2020-11-02
+funds in portfolio: $940.746654510498
+
+stocks held in portfolio: 
+TSLA amount of stock: 13
+value of stock: $1735.5432434082031
+ 
+Overall profit/loss: $1676.2898979187012
+
+date: 2020-11-03
+funds in portfolio: $940.746654510498
+
+stocks held in portfolio: 
+TSLA amount of stock: 13
+value of stock: $1836.9000396728516
+ 
+Overall profit/loss: $1777.6466941833496
+
+date: 2020-11-04
+funds in portfolio: $940.746654510498
+
+stocks held in portfolio: 
+TSLA amount of stock: 13
+value of stock: $1824.24658203125
+ 
+Overall profit/loss: $1764.993236541748
+
+date: 2020-11-05
+funds in portfolio: $940.746654510498
+
+stocks held in portfolio: 
+TSLA amount of stock: 13
+value of stock: $1898.3899841308594
+ 
+Overall profit/loss: $1839.1366386413574
+
+date: 2020-11-06
+funds in portfolio: $940.746654510498
+
+stocks held in portfolio: 
+TSLA amount of stock: 13
+value of stock: $1863.1166534423828
+ 
+Overall profit/loss: $1803.8633079528809
+
+date: 2020-11-09
+funds in portfolio: $940.746654510498
+
+stocks held in portfolio: 
+TSLA amount of stock: 13
+value of stock: $1825.459976196289
+ 
+Overall profit/loss: $1766.206630706787
+
+date: 2020-11-10
+funds in portfolio: $940.746654510498
+
+stocks held in portfolio: 
+TSLA amount of stock: 13
+value of stock: $1778.2266693115234
+ 
+Overall profit/loss: $1718.9733238220215
+
+date: 2020-11-11
+funds in portfolio: $940.746654510498
+
+stocks held in portfolio: 
+TSLA amount of stock: 13
+value of stock: $1807.5633544921875
+ 
+Overall profit/loss: $1748.3100090026855
+
+date: 2020-11-12
+funds in portfolio: $940.746654510498
+
+stocks held in portfolio: 
+TSLA amount of stock: 13
+value of stock: $1784.2932434082031
+ 
+Overall profit/loss: $1725.0398979187012
+
+date: 2020-11-13
+funds in portfolio: $940.746654510498
+
+stocks held in portfolio: 
+TSLA amount of stock: 13
+value of stock: $1770.166732788086
+ 
+Overall profit/loss: $1710.913387298584
+
+date: 2020-11-16
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $1904.4199829101562
+ 
+Overall profit/loss: $1981.1966361999512
+
+date: 2020-11-17
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2060.8467407226562
+ 
+Overall profit/loss: $2137.623394012451
+
+date: 2020-11-18
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2270.9866638183594
+ 
+Overall profit/loss: $2347.7633171081543
+
+date: 2020-11-19
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2329.9267578125
+ 
+Overall profit/loss: $2406.703411102295
+
+date: 2020-11-20
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2284.8467407226562
+ 
+Overall profit/loss: $2361.623394012451
+
+date: 2020-11-23
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2435.2999572753906
+ 
+Overall profit/loss: $2512.0766105651855
+
+date: 2020-11-24
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2591.7732849121094
+ 
+Overall profit/loss: $2668.5499382019043
+
+date: 2020-11-25
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2678.6665954589844
+ 
+Overall profit/loss: $2755.4432487487793
+
+date: 2020-11-27
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2733.5465698242188
+ 
+Overall profit/loss: $2810.3232231140137
+
+date: 2020-11-30
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2648.7999572753906
+ 
+Overall profit/loss: $2725.5766105651855
+
+date: 2020-12-01
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2728.8799743652344
+ 
+Overall profit/loss: $2805.6566276550293
+
+date: 2020-12-02
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2654.493438720703
+ 
+Overall profit/loss: $2731.270092010498
+
+date: 2020-12-03
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2769.106689453125
+ 
+Overall profit/loss: $2845.88334274292
+
+date: 2020-12-04
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2795.5198974609375
+ 
+Overall profit/loss: $2872.2965507507324
+
+date: 2020-12-07
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2994.8799743652344
+ 
+Overall profit/loss: $3071.6566276550293
+
+date: 2020-12-08
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $3032.7732849121094
+ 
+Overall profit/loss: $3109.5499382019043
+
+date: 2020-12-09
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2820.9066467285156
+ 
+Overall profit/loss: $2897.6833000183105
+
+date: 2020-12-10
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2926.326629638672
+ 
+Overall profit/loss: $3003.103282928467
+
+date: 2020-12-11
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2846.6200256347656
+ 
+Overall profit/loss: $2923.3966789245605
+
+date: 2020-12-14
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2985.8734130859375
+ 
+Overall profit/loss: $3062.6500663757324
+
+date: 2020-12-15
+funds in portfolio: $1076.776653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 14
+value of stock: $2955.1665954589844
+ 
+Overall profit/loss: $3031.9432487487793
+
+date: 2020-12-16
+funds in portfolio: $869.1866569519043
+
+stocks held in portfolio: 
+TSLA amount of stock: 15
+value of stock: $3113.8499450683594
+ 
+Overall profit/loss: $2983.0366020202637
+
+date: 2020-12-17
+funds in portfolio: $869.1866569519043
+
+stocks held in portfolio: 
+TSLA amount of stock: 15
+value of stock: $3279.499969482422
+ 
+Overall profit/loss: $3148.686626434326
+
+date: 2020-12-18
+funds in portfolio: $869.1866569519043
+
+stocks held in portfolio: 
+TSLA amount of stock: 15
+value of stock: $3475.0000762939453
+ 
+Overall profit/loss: $3344.1867332458496
+
+date: 2020-12-21
+funds in portfolio: $869.1866569519043
+
+stocks held in portfolio: 
+TSLA amount of stock: 15
+value of stock: $3249.2999267578125
+ 
+Overall profit/loss: $3118.486583709717
+
+date: 2020-12-22
+funds in portfolio: $869.1866569519043
+
+stocks held in portfolio: 
+TSLA amount of stock: 15
+value of stock: $3201.7000579833984
+ 
+Overall profit/loss: $3070.8867149353027
+
+date: 2020-12-23
+funds in portfolio: $869.1866569519043
+
+stocks held in portfolio: 
+TSLA amount of stock: 15
+value of stock: $3229.89990234375
+ 
+Overall profit/loss: $3099.0865592956543
+
+date: 2020-12-24
+funds in portfolio: $869.1866569519043
+
+stocks held in portfolio: 
+TSLA amount of stock: 15
+value of stock: $3308.8499450683594
+ 
+Overall profit/loss: $3178.0366020202637
+
+date: 2020-12-28
+funds in portfolio: $869.1866569519043
+
+stocks held in portfolio: 
+TSLA amount of stock: 15
+value of stock: $3318.449935913086
+ 
+Overall profit/loss: $3187.6365928649902
+
+date: 2020-12-29
+funds in portfolio: $869.1866569519043
+
+stocks held in portfolio: 
+TSLA amount of stock: 15
+value of stock: $3329.9501037597656
+ 
+Overall profit/loss: $3199.13676071167
+
+date: 2020-12-30
+funds in portfolio: $869.1866569519043
+
+stocks held in portfolio: 
+TSLA amount of stock: 15
+value of stock: $3473.9000701904297
+ 
+Overall profit/loss: $3343.086727142334
+
+date: 2020-12-31
+funds in portfolio: $869.1866569519043
+
+stocks held in portfolio: 
+TSLA amount of stock: 15
+value of stock: $3528.3499145507812
+ 
+Overall profit/loss: $3397.5365715026855
+
+date: 2021-01-04
+funds in portfolio: $869.1866569519043
+
+stocks held in portfolio: 
+TSLA amount of stock: 15
+value of stock: $3648.8500213623047
+ 
+Overall profit/loss: $3518.036678314209
+
+date: 2021-01-05
+funds in portfolio: $869.1866569519043
+
+stocks held in portfolio: 
+TSLA amount of stock: 15
+value of stock: $3675.550003051758
+ 
+Overall profit/loss: $3544.736660003662
+
+date: 2021-01-06
+funds in portfolio: $869.1866569519043
+
+stocks held in portfolio: 
+TSLA amount of stock: 15
+value of stock: $3779.8999786376953
+ 
+Overall profit/loss: $3649.0866355895996
+
+date: 2021-01-07
+funds in portfolio: $869.1866569519043
+
+stocks held in portfolio: 
+TSLA amount of stock: 15
+value of stock: $4080.2000427246094
+ 
+Overall profit/loss: $3949.3866996765137
+
+date: 2021-01-08
+funds in portfolio: $1162.526653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 16
+value of stock: $4693.43994140625
+ 
+Overall profit/loss: $4855.966594696045
+
+date: 2021-01-11
+funds in portfolio: $1162.526653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 16
+value of stock: $4326.3466796875
+ 
+Overall profit/loss: $4488.873332977295
+
+date: 2021-01-12
+funds in portfolio: $1162.526653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 16
+value of stock: $4530.3466796875
+ 
+Overall profit/loss: $4692.873332977295
+
+date: 2021-01-13
+funds in portfolio: $1162.526653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 16
+value of stock: $4556.853515625
+ 
+Overall profit/loss: $4719.380168914795
+
+date: 2021-01-14
+funds in portfolio: $1162.526653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 16
+value of stock: $4506.66650390625
+ 
+Overall profit/loss: $4669.193157196045
+
+date: 2021-01-15
+funds in portfolio: $1162.526653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 16
+value of stock: $4406.1865234375
+ 
+Overall profit/loss: $4568.713176727295
+
+date: 2021-01-19
+funds in portfolio: $1162.526653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 16
+value of stock: $4504.2666015625
+ 
+Overall profit/loss: $4666.793254852295
+
+date: 2021-01-20
+funds in portfolio: $1162.526653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 16
+value of stock: $4535.7333984375
+ 
+Overall profit/loss: $4698.260051727295
+
+date: 2021-01-21
+funds in portfolio: $1162.526653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 16
+value of stock: $4506.61328125
+ 
+Overall profit/loss: $4669.139934539795
+
+date: 2021-01-22
+funds in portfolio: $1162.526653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 16
+value of stock: $4515.4130859375
+ 
+Overall profit/loss: $4677.939739227295
+
+date: 2021-01-25
+funds in portfolio: $1162.526653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 16
+value of stock: $4697.60009765625
+ 
+Overall profit/loss: $4860.126750946045
+
+date: 2021-01-26
+funds in portfolio: $1162.526653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 16
+value of stock: $4709.8134765625
+ 
+Overall profit/loss: $4872.340129852295
+
+date: 2021-01-27
+funds in portfolio: $1162.526653289795
+
+stocks held in portfolio: 
+TSLA amount of stock: 16
+value of stock: $4608.853515625
+ 
+Overall profit/loss: $4771.380168914795
+
+date: 2021-01-28
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4734.103118896484
+ 
+Overall profit/loss: $4618.153118133545
+
+date: 2021-01-29
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4496.670166015625
+ 
+Overall profit/loss: $4380.720165252686
+
+date: 2021-02-01
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4758.923492431641
+ 
+Overall profit/loss: $4642.973491668701
+
+date: 2021-02-02
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4945.809875488281
+ 
+Overall profit/loss: $4829.859874725342
+
+date: 2021-02-03
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4843.243347167969
+ 
+Overall profit/loss: $4727.293346405029
+
+date: 2021-02-04
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4816.609771728516
+ 
+Overall profit/loss: $4700.659770965576
+
+date: 2021-02-05
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4829.30322265625
+ 
+Overall profit/loss: $4713.353221893311
+
+date: 2021-02-08
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4892.713409423828
+ 
+Overall profit/loss: $4776.763408660889
+
+date: 2021-02-09
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4813.6064453125
+ 
+Overall profit/loss: $4697.656444549561
+
+date: 2021-02-10
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4560.646881103516
+ 
+Overall profit/loss: $4444.696880340576
+
+date: 2021-02-11
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4599.4068603515625
+ 
+Overall profit/loss: $4483.456859588623
+
+date: 2021-02-12
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4624.680145263672
+ 
+Overall profit/loss: $4508.730144500732
+
+date: 2021-02-16
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4511.913513183594
+ 
+Overall profit/loss: $4395.963512420654
+
+date: 2021-02-17
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4522.849792480469
+ 
+Overall profit/loss: $4406.899791717529
+
+date: 2021-02-18
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4461.819854736328
+ 
+Overall profit/loss: $4345.869853973389
+
+date: 2021-02-19
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4427.366424560547
+ 
+Overall profit/loss: $4311.416423797607
+
+date: 2021-02-22
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4048.8334197998047
+ 
+Overall profit/loss: $3932.8834190368652
+
+date: 2021-02-23
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $3960.0933990478516
+ 
+Overall profit/loss: $3844.143398284912
+
+date: 2021-02-24
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4204.779937744141
+ 
+Overall profit/loss: $4088.829936981201
+
+date: 2021-02-25
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $3865.9132537841797
+ 
+Overall profit/loss: $3749.9632530212402
+
+date: 2021-02-26
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $3827.8334197998047
+ 
+Overall profit/loss: $3711.8834190368652
+
+date: 2021-03-01
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4071.1033782958984
+ 
+Overall profit/loss: $3955.153377532959
+
+date: 2021-03-02
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $3889.8267669677734
+ 
+Overall profit/loss: $3773.876766204834
+
+date: 2021-03-03
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $3701.4667358398438
+ 
+Overall profit/loss: $3585.5167350769043
+
+date: 2021-03-04
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $3521.4933471679688
+ 
+Overall profit/loss: $3405.5433464050293
+
+date: 2021-03-05
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $3388.383316040039
+ 
+Overall profit/loss: $3272.4333152770996
+
+date: 2021-03-08
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $3190.3334197998047
+ 
+Overall profit/loss: $3074.3834190368652
+
+date: 2021-03-09
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $3816.9534301757812
+ 
+Overall profit/loss: $3701.003429412842
+
+date: 2021-03-10
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $3785.6732330322266
+ 
+Overall profit/loss: $3669.723232269287
+
+date: 2021-03-11
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $3964.399948120117
+ 
+Overall profit/loss: $3848.4499473571777
+
+date: 2021-03-12
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $3931.1366424560547
+ 
+Overall profit/loss: $3815.1866416931152
+
+date: 2021-03-15
+funds in portfolio: $884.0499992370605
+
+stocks held in portfolio: 
+TSLA amount of stock: 17
+value of stock: $4011.659927368164
+ 
+Overall profit/loss: $3895.7099266052246
+
+date: 2021-03-16
+funds in portfolio: $1109.6766624450684
+
+stocks held in portfolio: 
+TSLA amount of stock: 18
+value of stock: $4061.2799377441406
+ 
+Overall profit/loss: $4170.956600189209
+
+date: 2021-03-17
+funds in portfolio: $1109.6766624450684
+
+stocks held in portfolio: 
+TSLA amount of stock: 18
+value of stock: $4210.859893798828
+ 
+Overall profit/loss: $4320.5365562438965
+
+date: 2021-03-18
+funds in portfolio: $1109.6766624450684
+
+stocks held in portfolio: 
+TSLA amount of stock: 18
+value of stock: $3918.9600219726562
+ 
+Overall profit/loss: $4028.6366844177246
+
+date: 2021-03-19
+funds in portfolio: $1109.6766624450684
+
+stocks held in portfolio: 
+TSLA amount of stock: 18
+value of stock: $3929.2198791503906
+ 
+Overall profit/loss: $4038.896541595459
+
+date: 2021-03-22
+funds in portfolio: $1109.6766624450684
+
+stocks held in portfolio: 
+TSLA amount of stock: 18
+value of stock: $4019.9999084472656
+ 
+Overall profit/loss: $4129.676570892334
+
+date: 2021-03-23
+funds in portfolio: $1109.6766624450684
+
+stocks held in portfolio: 
+TSLA amount of stock: 18
+value of stock: $3972.9600219726562
+ 
+Overall profit/loss: $4082.6366844177246
+
+date: 2021-03-24
+funds in portfolio: $1109.6766624450684
+
+stocks held in portfolio: 
+TSLA amount of stock: 18
+value of stock: $3781.6199340820312
+ 
+Overall profit/loss: $3891.2965965270996
+
+date: 2021-03-25
+funds in portfolio: $1109.6766624450684
+
+stocks held in portfolio: 
+TSLA amount of stock: 18
+value of stock: $3842.3399963378906
+ 
+Overall profit/loss: $3952.016658782959
+
+date: 2021-03-26
+funds in portfolio: $1109.6766624450684
+
+stocks held in portfolio: 
+TSLA amount of stock: 18
+value of stock: $3712.2599487304688
+ 
+Overall profit/loss: $3821.936611175537
+
+date: 2021-03-29
+funds in portfolio: $1109.6766624450684
+
+stocks held in portfolio: 
+TSLA amount of stock: 18
+value of stock: $3667.7400512695312
+ 
+Overall profit/loss: $3777.4167137145996
+
+date: 2021-03-30
+funds in portfolio: $1109.6766624450684
+
+stocks held in portfolio: 
+TSLA amount of stock: 18
+value of stock: $3813.7200622558594
+ 
+Overall profit/loss: $3923.3967247009277
+
+date: 2021-03-31
+funds in portfolio: $1109.6766624450684
+
+stocks held in portfolio: 
+TSLA amount of stock: 18
+value of stock: $4007.579864501953
+ 
+Overall profit/loss: $4117.2565269470215
+
+date: 2021-04-01
+funds in portfolio: $1109.6766624450684
+
+stocks held in portfolio: 
+TSLA amount of stock: 18
+value of stock: $3970.4999084472656
+ 
+Overall profit/loss: $4080.176570892334
+
+date: 2021-04-05
+funds in portfolio: $1109.6766624450684
+
+stocks held in portfolio: 
+TSLA amount of stock: 18
+value of stock: $4146.300109863281
+ 
+Overall profit/loss: $4255.97677230835
+
+date: 2021-04-06
+funds in portfolio: $1109.6766624450684
+
+stocks held in portfolio: 
+TSLA amount of stock: 18
+value of stock: $4149.719879150391
+ 
+Overall profit/loss: $4259.396541595459
+
+date: 2021-04-07
+funds in portfolio: $886.0200004577637
+
+stocks held in portfolio: 
+TSLA amount of stock: 19
+value of stock: $4249.476577758789
+ 
+Overall profit/loss: $4135.496578216553
+
+date: 2021-04-08
+funds in portfolio: $886.0200004577637
+
+stocks held in portfolio: 
+TSLA amount of stock: 19
+value of stock: $4330.733352661133
+ 
+Overall profit/loss: $4216.7533531188965
+
+date: 2021-04-09
+funds in portfolio: $886.0200004577637
+
+stocks held in portfolio: 
+TSLA amount of stock: 19
+value of stock: $4287.79345703125
+ 
+Overall profit/loss: $4173.813457489014
+
+date: 2021-04-12
+funds in portfolio: $886.0200004577637
+
+stocks held in portfolio: 
+TSLA amount of stock: 19
+value of stock: $4445.873306274414
+ 
+Overall profit/loss: $4331.893306732178
+
+date: 2021-04-13
+funds in portfolio: $886.0200004577637
+
+stocks held in portfolio: 
+TSLA amount of stock: 19
+value of stock: $4828.026809692383
+ 
+Overall profit/loss: $4714.0468101501465
+
+date: 2021-04-14
+funds in portfolio: $1130.0966606140137
+
+stocks held in portfolio: 
+TSLA amount of stock: 20
+value of stock: $4881.533203125
+ 
+Overall profit/loss: $5011.629863739014
+
+date: 2021-04-15
+funds in portfolio: $1130.0966606140137
+
+stocks held in portfolio: 
+TSLA amount of stock: 20
+value of stock: $4925.666809082031
+ 
+Overall profit/loss: $5055.763469696045
+
+date: 2021-04-16
+funds in portfolio: $1130.0966606140137
+
+stocks held in portfolio: 
+TSLA amount of stock: 20
+value of stock: $4931.866760253906
+ 
+Overall profit/loss: $5061.96342086792
+
+date: 2021-04-19
+funds in portfolio: $1130.0966606140137
+
+stocks held in portfolio: 
+TSLA amount of stock: 20
+value of stock: $4764.200134277344
+ 
+Overall profit/loss: $4894.296794891357
+
+date: 2021-04-20
+funds in portfolio: $1130.0966606140137
+
+stocks held in portfolio: 
+TSLA amount of stock: 20
+value of stock: $4793.2666015625
+ 
+Overall profit/loss: $4923.363262176514
+
+date: 2021-04-21
+funds in portfolio: $1130.0966606140137
+
+stocks held in portfolio: 
+TSLA amount of stock: 20
+value of stock: $4960.799865722656
+ 
+Overall profit/loss: $5090.89652633667
+
+date: 2021-04-22
+funds in portfolio: $1130.0966606140137
+
+stocks held in portfolio: 
+TSLA amount of stock: 20
+value of stock: $4797.933349609375
+ 
+Overall profit/loss: $4928.030010223389
+
+date: 2021-04-23
+funds in portfolio: $1130.0966606140137
+
+stocks held in portfolio: 
+TSLA amount of stock: 20
+value of stock: $4862.6666259765625
+ 
+Overall profit/loss: $4992.763286590576
+
+date: 2021-04-26
+funds in portfolio: $1130.0966606140137
+
+stocks held in portfolio: 
+TSLA amount of stock: 20
+value of stock: $4921.333312988281
+ 
+Overall profit/loss: $5051.429973602295
+
+date: 2021-04-27
+funds in portfolio: $1130.0966606140137
+
+stocks held in portfolio: 
+TSLA amount of stock: 20
+value of stock: $4698.2666015625
+ 
+Overall profit/loss: $4828.363262176514
+
+date: 2021-04-28
+funds in portfolio: $1130.0966606140137
+
+stocks held in portfolio: 
+TSLA amount of stock: 20
+value of stock: $4629.333190917969
+ 
+Overall profit/loss: $4759.429851531982
+
+date: 2021-04-29
+funds in portfolio: $1130.0966606140137
+
+stocks held in portfolio: 
+TSLA amount of stock: 20
+value of stock: $4513.333435058594
+ 
+Overall profit/loss: $4643.430095672607
+
+date: 2021-04-30
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4966.07991027832
+ 
+Overall profit/loss: $4859.696575164795
+
+date: 2021-05-03
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4794.300064086914
+ 
+Overall profit/loss: $4687.916728973389
+
+date: 2021-05-04
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4715.200149536133
+ 
+Overall profit/loss: $4608.816814422607
+
+date: 2021-05-05
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4696.580017089844
+ 
+Overall profit/loss: $4590.196681976318
+
+date: 2021-05-06
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4644.779846191406
+ 
+Overall profit/loss: $4538.396511077881
+
+date: 2021-05-07
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4706.590072631836
+ 
+Overall profit/loss: $4600.206737518311
+
+date: 2021-05-10
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4403.279846191406
+ 
+Overall profit/loss: $4296.896511077881
+
+date: 2021-05-11
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4320.400085449219
+ 
+Overall profit/loss: $4214.016750335693
+
+date: 2021-05-12
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4129.2301025390625
+ 
+Overall profit/loss: $4022.846767425537
+
+date: 2021-05-13
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4001.830123901367
+ 
+Overall profit/loss: $3895.446788787842
+
+date: 2021-05-14
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4128.180038452148
+ 
+Overall profit/loss: $4021.796703338623
+
+date: 2021-05-17
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4037.8101196289062
+ 
+Overall profit/loss: $3931.426784515381
+
+date: 2021-05-18
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4045.090072631836
+ 
+Overall profit/loss: $3938.7067375183105
+
+date: 2021-05-19
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $3944.2201538085938
+ 
+Overall profit/loss: $3837.8368186950684
+
+date: 2021-05-20
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4107.460098266602
+ 
+Overall profit/loss: $4001.076763153076
+
+date: 2021-05-21
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4066.159927368164
+ 
+Overall profit/loss: $3959.7765922546387
+
+date: 2021-05-24
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4245.080017089844
+ 
+Overall profit/loss: $4138.696681976318
+
+date: 2021-05-25
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4232.830123901367
+ 
+Overall profit/loss: $4126.446788787842
+
+date: 2021-05-26
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4333.909927368164
+ 
+Overall profit/loss: $4227.526592254639
+
+date: 2021-05-27
+funds in portfolio: $893.6166648864746
+
+stocks held in portfolio: 
+TSLA amount of stock: 21
+value of stock: $4415.950149536133
+ 
+Overall profit/loss: $4309.566814422607
+
+date: 2021-05-28
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4584.946563720703
+ 
+Overall profit/loss: $4686.969890594482
+
+date: 2021-06-01
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4575.266510009766
+ 
+Overall profit/loss: $4677.289836883545
+
+date: 2021-06-02
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4437.546630859375
+ 
+Overall profit/loss: $4539.569957733154
+
+date: 2021-06-03
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4200.826751708984
+ 
+Overall profit/loss: $4302.850078582764
+
+date: 2021-06-04
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4393.033355712891
+ 
+Overall profit/loss: $4495.05668258667
+
+date: 2021-06-07
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4437.620147705078
+ 
+Overall profit/loss: $4539.643474578857
+
+date: 2021-06-08
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4426.326751708984
+ 
+Overall profit/loss: $4528.350078582764
+
+date: 2021-06-09
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4391.053436279297
+ 
+Overall profit/loss: $4493.076763153076
+
+date: 2021-06-10
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4474.213409423828
+ 
+Overall profit/loss: $4576.236736297607
+
+date: 2021-06-11
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4472.526550292969
+ 
+Overall profit/loss: $4574.549877166748
+
+date: 2021-06-14
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4529.7266845703125
+ 
+Overall profit/loss: $4631.750011444092
+
+date: 2021-06-15
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4395.306671142578
+ 
+Overall profit/loss: $4497.329998016357
+
+date: 2021-06-16
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4435.713409423828
+ 
+Overall profit/loss: $4537.736736297607
+
+date: 2021-06-17
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4521.733489990234
+ 
+Overall profit/loss: $4623.756816864014
+
+date: 2021-06-18
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4570.940093994141
+ 
+Overall profit/loss: $4672.96342086792
+
+date: 2021-06-21
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4552.753234863281
+ 
+Overall profit/loss: $4654.776561737061
+
+date: 2021-06-22
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4573.873382568359
+ 
+Overall profit/loss: $4675.896709442139
+
+date: 2021-06-23
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4814.846832275391
+ 
+Overall profit/loss: $4916.87015914917
+
+date: 2021-06-24
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4985.346832275391
+ 
+Overall profit/loss: $5087.37015914917
+
+date: 2021-06-25
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4927.046630859375
+ 
+Overall profit/loss: $5029.069957733154
+
+date: 2021-06-28
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $5050.613342285156
+ 
+Overall profit/loss: $5152.636669158936
+
+date: 2021-06-29
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4992.239959716797
+ 
+Overall profit/loss: $5094.263286590576
+
+date: 2021-06-30
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4984.466644287109
+ 
+Overall profit/loss: $5086.489971160889
+
+date: 2021-07-01
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4971.4132080078125
+ 
+Overall profit/loss: $5073.436534881592
+
+date: 2021-07-02
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4978.600067138672
+ 
+Overall profit/loss: $5080.623394012451
+
+date: 2021-07-06
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4836.920013427734
+ 
+Overall profit/loss: $4938.943340301514
+
+date: 2021-07-07
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4727.433288574219
+ 
+Overall profit/loss: $4829.456615447998
+
+date: 2021-07-08
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4787.2733154296875
+ 
+Overall profit/loss: $4889.296642303467
+
+date: 2021-07-09
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4817.6334228515625
+ 
+Overall profit/loss: $4919.656749725342
+
+date: 2021-07-12
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $5028.466644287109
+ 
+Overall profit/loss: $5130.489971160889
+
+date: 2021-07-13
+funds in portfolio: $1102.0233268737793
+
+stocks held in portfolio: 
+TSLA amount of stock: 22
+value of stock: $4902.626617431641
+ 
+Overall profit/loss: $5004.64994430542
+
+date: 2021-07-14
+funds in portfolio: $884.2299919128418
+
+stocks held in portfolio: 
+TSLA amount of stock: 23
+value of stock: $5009.2467041015625
+ 
+Overall profit/loss: $4893.476696014404
+
+date: 2021-07-15
+funds in portfolio: $884.2299919128418
+
+stocks held in portfolio: 
+TSLA amount of stock: 23
+value of stock: $4987.933380126953
+ 
+Overall profit/loss: $4872.163372039795
+
+date: 2021-07-16
+funds in portfolio: $884.2299919128418
+
+stocks held in portfolio: 
+TSLA amount of stock: 23
+value of stock: $4939.020126342773
+ 
+Overall profit/loss: $4823.250118255615
+
+date: 2021-07-19
+funds in portfolio: $884.2299919128418
+
+stocks held in portfolio: 
+TSLA amount of stock: 23
+value of stock: $4954.353225708008
+ 
+Overall profit/loss: $4838.58321762085
+
+date: 2021-07-20
+funds in portfolio: $884.2299919128418
+
+stocks held in portfolio: 
+TSLA amount of stock: 23
+value of stock: $5063.833450317383
+ 
+Overall profit/loss: $4948.063442230225
+
+date: 2021-07-21
+funds in portfolio: $884.2299919128418
+
+stocks held in portfolio: 
+TSLA amount of stock: 23
+value of stock: $5023.889831542969
+ 
+Overall profit/loss: $4908.119823455811
+
+date: 2021-07-22
+funds in portfolio: $884.2299919128418
+
+stocks held in portfolio: 
+TSLA amount of stock: 23
+value of stock: $4977.659957885742
+ 
+Overall profit/loss: $4861.889949798584
+
+date: 2021-07-23
+funds in portfolio: $884.2299919128418
+
+stocks held in portfolio: 
+TSLA amount of stock: 23
+value of stock: $4932.580154418945
+ 
+Overall profit/loss: $4816.810146331787
+
+date: 2021-07-26
+funds in portfolio: $884.2299919128418
+
+stocks held in portfolio: 
+TSLA amount of stock: 23
+value of stock: $5041.7532958984375
+ 
+Overall profit/loss: $4925.983287811279
+
+date: 2021-07-27
+funds in portfolio: $884.2299919128418
+
+stocks held in portfolio: 
+TSLA amount of stock: 23
+value of stock: $4943.313323974609
+ 
+Overall profit/loss: $4827.543315887451
+
+date: 2021-07-28
+funds in portfolio: $884.2299919128418
+
+stocks held in portfolio: 
+TSLA amount of stock: 23
+value of stock: $4960.180084228516
+ 
+Overall profit/loss: $4844.410076141357
+
+date: 2021-07-29
+funds in portfolio: $884.2299919128418
+
+stocks held in portfolio: 
+TSLA amount of stock: 23
+value of stock: $5193.016830444336
+ 
+Overall profit/loss: $5077.246822357178
+
+date: 2021-07-30
+funds in portfolio: $884.2299919128418
+
+stocks held in portfolio: 
+TSLA amount of stock: 23
+value of stock: $5268.533309936523
+ 
+Overall profit/loss: $5152.763301849365
+
+date: 2021-08-02
+funds in portfolio: $884.2299919128418
+
+stocks held in portfolio: 
+TSLA amount of stock: 23
+value of stock: $5440.803436279297
+ 
+Overall profit/loss: $5325.033428192139
+
+date: 2021-08-03
+funds in portfolio: $884.2299919128418
+
+stocks held in portfolio: 
+TSLA amount of stock: 23
+value of stock: $5441.340042114258
+ 
+Overall profit/loss: $5325.5700340271
+
+date: 2021-08-04
+funds in portfolio: $1121.2033195495605
+
+stocks held in portfolio: 
+TSLA amount of stock: 24
+value of stock: $5687.35986328125
+ 
+Overall profit/loss: $5808.563182830811
+
+date: 2021-08-05
+funds in portfolio: $1121.2033195495605
+
+stocks held in portfolio: 
+TSLA amount of stock: 24
+value of stock: $5717.0401611328125
+ 
+Overall profit/loss: $5838.243480682373
+
+date: 2021-08-06
+funds in portfolio: $1121.2033195495605
+
+stocks held in portfolio: 
+TSLA amount of stock: 24
+value of stock: $5592.8001708984375
+ 
+Overall profit/loss: $5714.003490447998
+
+date: 2021-08-09
+funds in portfolio: $1121.2033195495605
+
+stocks held in portfolio: 
+TSLA amount of stock: 24
+value of stock: $5710.0799560546875
+ 
+Overall profit/loss: $5831.283275604248
+
+date: 2021-08-10
+funds in portfolio: $1121.2033195495605
+
+stocks held in portfolio: 
+TSLA amount of stock: 24
+value of stock: $5679.919921875
+ 
+Overall profit/loss: $5801.123241424561
+
+date: 2021-08-11
+funds in portfolio: $1121.2033195495605
+
+stocks held in portfolio: 
+TSLA amount of stock: 24
+value of stock: $5662.56005859375
+ 
+Overall profit/loss: $5783.763378143311
+
+date: 2021-08-12
+funds in portfolio: $1121.2033195495605
+
+stocks held in portfolio: 
+TSLA amount of stock: 24
+value of stock: $5778.0
+ 
+Overall profit/loss: $5899.203319549561
+
+date: 2021-08-13
+funds in portfolio: $1121.2033195495605
+
+stocks held in portfolio: 
+TSLA amount of stock: 24
+value of stock: $5737.360107421875
+ 
+Overall profit/loss: $5858.563426971436
+
+date: 2021-08-16
+funds in portfolio: $1121.2033195495605
+
+stocks held in portfolio: 
+TSLA amount of stock: 24
+value of stock: $5489.35986328125
+ 
+Overall profit/loss: $5610.563182830811
+
+date: 2021-08-17
+funds in portfolio: $1121.2033195495605
+
+stocks held in portfolio: 
+TSLA amount of stock: 24
+value of stock: $5325.6800537109375
+ 
+Overall profit/loss: $5446.883373260498
+
+date: 2021-08-18
+funds in portfolio: $1121.2033195495605
+
+stocks held in portfolio: 
+TSLA amount of stock: 24
+value of stock: $5511.919921875
+ 
+Overall profit/loss: $5633.123241424561
+
+date: 2021-08-19
+funds in portfolio: $1121.2033195495605
+
+stocks held in portfolio: 
+TSLA amount of stock: 24
+value of stock: $5387.7601318359375
+ 
+Overall profit/loss: $5508.963451385498
+
+date: 2021-08-20
+funds in portfolio: $894.4499931335449
+
+stocks held in portfolio: 
+TSLA amount of stock: 25
+value of stock: $5668.833160400391
+ 
+Overall profit/loss: $5563.283153533936
+
+date: 2021-08-23
+funds in portfolio: $894.4499931335449
+
+stocks held in portfolio: 
+TSLA amount of stock: 25
+value of stock: $5885.833358764648
+ 
+Overall profit/loss: $5780.283351898193
+
+date: 2021-08-24
+funds in portfolio: $894.4499931335449
+
+stocks held in portfolio: 
+TSLA amount of stock: 25
+value of stock: $5904.083251953125
+ 
+Overall profit/loss: $5798.53324508667
+
+date: 2021-08-25
+funds in portfolio: $894.4499931335449
+
+stocks held in portfolio: 
+TSLA amount of stock: 25
+value of stock: $5926.666641235352
+ 
+Overall profit/loss: $5821.1166343688965
+
+date: 2021-08-26
+funds in portfolio: $894.4499931335449
+
+stocks held in portfolio: 
+TSLA amount of stock: 25
+value of stock: $5843.000030517578
+ 
+Overall profit/loss: $5737.450023651123
+
+date: 2021-08-27
+funds in portfolio: $894.4499931335449
+
+stocks held in portfolio: 
+TSLA amount of stock: 25
+value of stock: $5932.666778564453
+ 
+Overall profit/loss: $5827.116771697998
+
+date: 2021-08-30
+funds in portfolio: $894.4499931335449
+
+stocks held in portfolio: 
+TSLA amount of stock: 25
+value of stock: $6090.91682434082
+ 
+Overall profit/loss: $5985.366817474365
+
+date: 2021-08-31
+funds in portfolio: $894.4499931335449
+
+stocks held in portfolio: 
+TSLA amount of stock: 25
+value of stock: $6131.000137329102
+ 
+Overall profit/loss: $6025.4501304626465
+
+date: 2021-09-01
+funds in portfolio: $894.4499931335449
+
+stocks held in portfolio: 
+TSLA amount of stock: 25
+value of stock: $6117.416763305664
+ 
+Overall profit/loss: $6011.866756439209
+
+date: 2021-09-02
+funds in portfolio: $894.4499931335449
+
+stocks held in portfolio: 
+TSLA amount of stock: 25
+value of stock: $6103.2501220703125
+ 
+Overall profit/loss: $5997.700115203857
+
+date: 2021-09-03
+funds in portfolio: $894.4499931335449
+
+stocks held in portfolio: 
+TSLA amount of stock: 25
+value of stock: $6113.083267211914
+ 
+Overall profit/loss: $6007.533260345459
+
+date: 2021-09-07
+funds in portfolio: $1145.4233207702637
+
+stocks held in portfolio: 
+TSLA amount of stock: 26
+value of stock: $6525.3065185546875
+ 
+Overall profit/loss: $6670.729839324951
+
+date: 2021-09-08
+funds in portfolio: $1145.4233207702637
+
+stocks held in portfolio: 
+TSLA amount of stock: 26
+value of stock: $6533.539825439453
+ 
+Overall profit/loss: $6678.963146209717
+
+date: 2021-09-09
+funds in portfolio: $1145.4233207702637
+
+stocks held in portfolio: 
+TSLA amount of stock: 26
+value of stock: $6542.119873046875
+ 
+Overall profit/loss: $6687.543193817139
+
+date: 2021-09-10
+funds in portfolio: $1145.4233207702637
+
+stocks held in portfolio: 
+TSLA amount of stock: 26
+value of stock: $6381.0068359375
+ 
+Overall profit/loss: $6526.430156707764
+
+date: 2021-09-13
+funds in portfolio: $1145.4233207702637
+
+stocks held in portfolio: 
+TSLA amount of stock: 26
+value of stock: $6439.333465576172
+ 
+Overall profit/loss: $6584.756786346436
+
+date: 2021-09-14
+funds in portfolio: $1145.4233207702637
+
+stocks held in portfolio: 
+TSLA amount of stock: 26
+value of stock: $6452.24658203125
+ 
+Overall profit/loss: $6597.669902801514
+
+date: 2021-09-15
+funds in portfolio: $1145.4233207702637
+
+stocks held in portfolio: 
+TSLA amount of stock: 26
+value of stock: $6550.526550292969
+ 
+Overall profit/loss: $6695.949871063232
+
+date: 2021-09-16
+funds in portfolio: $1145.4233207702637
+
+stocks held in portfolio: 
+TSLA amount of stock: 26
+value of stock: $6560.580047607422
+ 
+Overall profit/loss: $6706.003368377686
+
+date: 2021-09-17
+funds in portfolio: $1145.4233207702637
+
+stocks held in portfolio: 
+TSLA amount of stock: 26
+value of stock: $6582.24658203125
+ 
+Overall profit/loss: $6727.669902801514
+
+date: 2021-09-20
+funds in portfolio: $1145.4233207702637
+
+stocks held in portfolio: 
+TSLA amount of stock: 26
+value of stock: $6328.139984130859
+ 
+Overall profit/loss: $6473.563304901123
+
+date: 2021-09-21
+funds in portfolio: $1145.4233207702637
+
+stocks held in portfolio: 
+TSLA amount of stock: 26
+value of stock: $6407.960174560547
+ 
+Overall profit/loss: $6553.383495330811
+
+date: 2021-09-22
+funds in portfolio: $1145.4233207702637
+
+stocks held in portfolio: 
+TSLA amount of stock: 26
+value of stock: $6516.8133544921875
+ 
+Overall profit/loss: $6662.236675262451
+
+date: 2021-09-23
+funds in portfolio: $894.2099876403809
+
+stocks held in portfolio: 
+TSLA amount of stock: 27
+value of stock: $6782.759994506836
+ 
+Overall profit/loss: $6676.969982147217
+
+date: 2021-09-24
+funds in portfolio: $894.2099876403809
+
+stocks held in portfolio: 
+TSLA amount of stock: 27
+value of stock: $6969.5101318359375
+ 
+Overall profit/loss: $6863.720119476318
+
+date: 2021-09-27
+funds in portfolio: $894.2099876403809
+
+stocks held in portfolio: 
+TSLA amount of stock: 27
+value of stock: $7122.240417480469
+ 
+Overall profit/loss: $7016.45040512085
+
+date: 2021-09-28
+funds in portfolio: $894.2099876403809
+
+stocks held in portfolio: 
+TSLA amount of stock: 27
+value of stock: $6998.040252685547
+ 
+Overall profit/loss: $6892.250240325928
+
+date: 2021-09-29
+funds in portfolio: $894.2099876403809
+
+stocks held in portfolio: 
+TSLA amount of stock: 27
+value of stock: $7031.790252685547
+ 
+Overall profit/loss: $6926.000240325928
+
+date: 2021-09-30
+funds in portfolio: $894.2099876403809
+
+stocks held in portfolio: 
+TSLA amount of stock: 27
+value of stock: $6979.320373535156
+ 
+Overall profit/loss: $6873.530361175537
+
+date: 2021-10-01
+funds in portfolio: $894.2099876403809
+
+stocks held in portfolio: 
+TSLA amount of stock: 27
+value of stock: $6976.980285644531
+ 
+Overall profit/loss: $6871.190273284912
+
+date: 2021-10-04
+funds in portfolio: $894.2099876403809
+
+stocks held in portfolio: 
+TSLA amount of stock: 27
+value of stock: $7033.770263671875
+ 
+Overall profit/loss: $6927.980251312256
+
+date: 2021-10-05
+funds in portfolio: $894.2099876403809
+
+stocks held in portfolio: 
+TSLA amount of stock: 27
+value of stock: $7025.3096923828125
+ 
+Overall profit/loss: $6919.519680023193
+
+date: 2021-10-06
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $7305.6663818359375
+ 
+Overall profit/loss: $7460.793025970459
+
+date: 2021-10-07
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $7407.027099609375
+ 
+Overall profit/loss: $7562.1537437438965
+
+date: 2021-10-08
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $7331.2396240234375
+ 
+Overall profit/loss: $7486.366268157959
+
+date: 2021-10-11
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $7391.4403076171875
+ 
+Overall profit/loss: $7546.566951751709
+
+date: 2021-10-12
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $7520.0533447265625
+ 
+Overall profit/loss: $7675.179988861084
+
+date: 2021-10-13
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $7570.07958984375
+ 
+Overall profit/loss: $7725.2062339782715
+
+date: 2021-10-14
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $7637.6536865234375
+ 
+Overall profit/loss: $7792.780330657959
+
+date: 2021-10-15
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $7868.2802734375
+ 
+Overall profit/loss: $8023.4069175720215
+
+date: 2021-10-18
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $8121.027099609375
+ 
+Overall profit/loss: $8276.153743743896
+
+date: 2021-10-19
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $8066.5198974609375
+ 
+Overall profit/loss: $8221.646541595459
+
+date: 2021-10-20
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $8080.8001708984375
+ 
+Overall profit/loss: $8235.926815032959
+
+date: 2021-10-21
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $8344.0
+ 
+Overall profit/loss: $8499.126644134521
+
+date: 2021-10-22
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $8490.346313476562
+ 
+Overall profit/loss: $8645.472957611084
+
+date: 2021-10-25
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $9565.35986328125
+ 
+Overall profit/loss: $9720.486507415771
+
+date: 2021-10-26
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $9505.346313476562
+ 
+Overall profit/loss: $9660.472957611084
+
+date: 2021-10-27
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $9686.693481445312
+ 
+Overall profit/loss: $9841.820125579834
+
+date: 2021-10-28
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $10052.373413085938
+ 
+Overall profit/loss: $10207.500057220459
+
+date: 2021-10-29
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $10397.333618164062
+ 
+Overall profit/loss: $10552.460262298584
+
+date: 2021-11-01
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $11280.173583984375
+ 
+Overall profit/loss: $11435.300228118896
+
+date: 2021-11-02
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $10938.666381835938
+ 
+Overall profit/loss: $11093.793025970459
+
+date: 2021-11-03
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $11329.35986328125
+ 
+Overall profit/loss: $11484.486507415771
+
+date: 2021-11-04
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $11479.160034179688
+ 
+Overall profit/loss: $11634.286678314209
+
+date: 2021-11-05
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $11406.173583984375
+ 
+Overall profit/loss: $11561.300228118896
+
+date: 2021-11-08
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $10854.106689453125
+ 
+Overall profit/loss: $11009.233333587646
+
+date: 2021-11-09
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $9552.666381835938
+ 
+Overall profit/loss: $9707.793025970459
+
+date: 2021-11-10
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $9967.533447265625
+ 
+Overall profit/loss: $10122.660091400146
+
+date: 2021-11-11
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $9926.093139648438
+ 
+Overall profit/loss: $10081.219783782959
+
+date: 2021-11-12
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $9645.253173828125
+ 
+Overall profit/loss: $9800.379817962646
+
+date: 2021-11-15
+funds in portfolio: $1155.1266441345215
+
+stocks held in portfolio: 
+TSLA amount of stock: 28
+value of stock: $9458.306518554688
+ 
+Overall profit/loss: $9613.433162689209
+
+date: 2021-11-16
+funds in portfolio: $803.5499839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 29
+value of stock: $10195.72314453125
+ 
+Overall profit/loss: $9999.273128509521
+
+date: 2021-11-17
+funds in portfolio: $803.5499839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 29
+value of stock: $10527.096466064453
+ 
+Overall profit/loss: $10330.646450042725
+
+date: 2021-11-18
+funds in portfolio: $803.5499839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 29
+value of stock: $10598.339752197266
+ 
+Overall profit/loss: $10401.889736175537
+
+date: 2021-11-19
+funds in portfolio: $803.5499839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 29
+value of stock: $10991.579681396484
+ 
+Overall profit/loss: $10795.129665374756
+
+date: 2021-11-22
+funds in portfolio: $803.5499839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 29
+value of stock: $11183.07632446289
+ 
+Overall profit/loss: $10986.626308441162
+
+date: 2021-11-23
+funds in portfolio: $803.5499839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 29
+value of stock: $10720.623321533203
+ 
+Overall profit/loss: $10524.173305511475
+
+date: 2021-11-24
+funds in portfolio: $803.5499839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 29
+value of stock: $10788.0
+ 
+Overall profit/loss: $10591.549983978271
+
+date: 2021-11-26
+funds in portfolio: $803.5499839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 29
+value of stock: $10458.560424804688
+ 
+Overall profit/loss: $10262.110408782959
+
+date: 2021-11-29
+funds in portfolio: $803.5499839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 29
+value of stock: $10990.903533935547
+ 
+Overall profit/loss: $10794.453517913818
+
+date: 2021-11-30
+funds in portfolio: $803.5499839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 29
+value of stock: $11066.013427734375
+ 
+Overall profit/loss: $10869.563411712646
+
+date: 2021-12-01
+funds in portfolio: $803.5499839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 29
+value of stock: $10585.0
+ 
+Overall profit/loss: $10388.549983978271
+
+date: 2021-12-02
+funds in portfolio: $803.5499839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 29
+value of stock: $10484.466430664062
+ 
+Overall profit/loss: $10288.016414642334
+
+date: 2021-12-03
+funds in portfolio: $803.5499839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 29
+value of stock: $9811.376678466797
+ 
+Overall profit/loss: $9614.926662445068
+
+date: 2021-12-06
+funds in portfolio: $803.5499839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 29
+value of stock: $9753.763427734375
+ 
+Overall profit/loss: $9557.313411712646
+
+date: 2021-12-07
+funds in portfolio: $803.5499839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 29
+value of stock: $10166.916961669922
+ 
+Overall profit/loss: $9970.466945648193
+
+date: 2021-12-08
+funds in portfolio: $803.5499839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 29
+value of stock: $10333.280212402344
+ 
+Overall profit/loss: $10136.830196380615
+
+date: 2021-12-09
+funds in portfolio: $1138.149990081787
+
+stocks held in portfolio: 
+TSLA amount of stock: 30
+value of stock: $10038.000183105469
+ 
+Overall profit/loss: $10176.150173187256
+
+date: 2021-12-10
+funds in portfolio: $1138.149990081787
+
+stocks held in portfolio: 
+TSLA amount of stock: 30
+value of stock: $10170.30029296875
+ 
+Overall profit/loss: $10308.450283050537
+
+date: 2021-12-13
+funds in portfolio: $1138.149990081787
+
+stocks held in portfolio: 
+TSLA amount of stock: 30
+value of stock: $9664.099731445312
+ 
+Overall profit/loss: $9802.2497215271
+
+date: 2021-12-14
+funds in portfolio: $1138.149990081787
+
+stocks held in portfolio: 
+TSLA amount of stock: 30
+value of stock: $9585.099792480469
+ 
+Overall profit/loss: $9723.249782562256
+
+date: 2021-12-15
+funds in portfolio: $812.8200035095215
+
+stocks held in portfolio: 
+TSLA amount of stock: 31
+value of stock: $10085.229583740234
+ 
+Overall profit/loss: $9898.049587249756
+
+date: 2021-12-16
+funds in portfolio: $812.8200035095215
+
+stocks held in portfolio: 
+TSLA amount of stock: 31
+value of stock: $9578.173156738281
+ 
+Overall profit/loss: $9390.993160247803
+
+date: 2021-12-17
+funds in portfolio: $812.8200035095215
+
+stocks held in portfolio: 
+TSLA amount of stock: 31
+value of stock: $9636.556427001953
+ 
+Overall profit/loss: $9449.376430511475
+
+date: 2021-12-20
+funds in portfolio: $812.8200035095215
+
+stocks held in portfolio: 
+TSLA amount of stock: 31
+value of stock: $9299.380340576172
+ 
+Overall profit/loss: $9112.200344085693
+
+date: 2021-12-21
+funds in portfolio: $812.8200035095215
+
+stocks held in portfolio: 
+TSLA amount of stock: 31
+value of stock: $9698.143005371094
+ 
+Overall profit/loss: $9510.963008880615
+
+date: 2021-12-22
+funds in portfolio: $812.8200035095215
+
+stocks held in portfolio: 
+TSLA amount of stock: 31
+value of stock: $10424.990264892578
+ 
+Overall profit/loss: $10237.8102684021
+
+date: 2021-12-23
+funds in portfolio: $812.8200035095215
+
+stocks held in portfolio: 
+TSLA amount of stock: 31
+value of stock: $11025.66635131836
+ 
+Overall profit/loss: $10838.48635482788
+
+date: 2021-12-27
+funds in portfolio: $812.8200035095215
+
+stocks held in portfolio: 
+TSLA amount of stock: 31
+value of stock: $11304.046691894531
+ 
+Overall profit/loss: $11116.866695404053
+
+date: 2021-12-28
+funds in portfolio: $812.8200035095215
+
+stocks held in portfolio: 
+TSLA amount of stock: 31
+value of stock: $11247.523345947266
+ 
+Overall profit/loss: $11060.343349456787
+
+date: 2021-12-29
+funds in portfolio: $812.8200035095215
+
+stocks held in portfolio: 
+TSLA amount of stock: 31
+value of stock: $11223.96304321289
+ 
+Overall profit/loss: $11036.783046722412
+
+date: 2021-12-30
+funds in portfolio: $1169.6000022888184
+
+stocks held in portfolio: 
+TSLA amount of stock: 32
+value of stock: $11416.9599609375
+ 
+Overall profit/loss: $11586.559963226318
+
+date: 2021-12-31
+funds in portfolio: $1169.6000022888184
+
+stocks held in portfolio: 
+TSLA amount of stock: 32
+value of stock: $11272.3203125
+ 
+Overall profit/loss: $11441.920314788818
+
+date: 2022-01-03
+funds in portfolio: $1169.6000022888184
+
+stocks held in portfolio: 
+TSLA amount of stock: 32
+value of stock: $12797.6533203125
+ 
+Overall profit/loss: $12967.253322601318
+
+date: 2022-01-04
+funds in portfolio: $1169.6000022888184
+
+stocks held in portfolio: 
+TSLA amount of stock: 32
+value of stock: $12262.29296875
+ 
+Overall profit/loss: $12431.892971038818
+
+date: 2022-01-05
+funds in portfolio: $1169.6000022888184
+
+stocks held in portfolio: 
+TSLA amount of stock: 32
+value of stock: $11606.61328125
+ 
+Overall profit/loss: $11776.213283538818
+
+date: 2022-01-06
+funds in portfolio: $1169.6000022888184
+
+stocks held in portfolio: 
+TSLA amount of stock: 32
+value of stock: $11356.7998046875
+ 
+Overall profit/loss: $11526.399806976318
+
+date: 2022-01-07
+funds in portfolio: $1169.6000022888184
+
+stocks held in portfolio: 
+TSLA amount of stock: 32
+value of stock: $10954.240234375
+ 
+Overall profit/loss: $11123.840236663818
+
+date: 2022-01-10
+funds in portfolio: $1169.6000022888184
+
+stocks held in portfolio: 
+TSLA amount of stock: 32
+value of stock: $11286.61328125
+ 
+Overall profit/loss: $11456.213283538818
+
+date: 2022-01-11
+funds in portfolio: $1169.6000022888184
+
+stocks held in portfolio: 
+TSLA amount of stock: 32
+value of stock: $11353.599609375
+ 
+Overall profit/loss: $11523.199611663818
+
+date: 2022-01-12
+funds in portfolio: $1169.6000022888184
+
+stocks held in portfolio: 
+TSLA amount of stock: 32
+value of stock: $11799.6796875
+ 
+Overall profit/loss: $11969.279689788818
+
+date: 2022-01-13
+funds in portfolio: $1169.6000022888184
+
+stocks held in portfolio: 
+TSLA amount of stock: 32
+value of stock: $11003.306640625
+ 
+Overall profit/loss: $11172.906642913818
+
+date: 2022-01-14
+funds in portfolio: $1169.6000022888184
+
+stocks held in portfolio: 
+TSLA amount of stock: 32
+value of stock: $11195.83984375
+ 
+Overall profit/loss: $11365.439846038818
+
+date: 2022-01-18
+funds in portfolio: $1169.6000022888184
+
+stocks held in portfolio: 
+TSLA amount of stock: 32
+value of stock: $10992.1064453125
+ 
+Overall profit/loss: $11161.706447601318
+
+date: 2022-01-19
+funds in portfolio: $837.7166709899902
+
+stocks held in portfolio: 
+TSLA amount of stock: 33
+value of stock: $10952.149932861328
+ 
+Overall profit/loss: $10789.866603851318
+
+date: 2022-01-20
+funds in portfolio: $837.7166709899902
+
+stocks held in portfolio: 
+TSLA amount of stock: 33
+value of stock: $10958.96987915039
+ 
+Overall profit/loss: $10796.68655014038
+
+date: 2022-01-21
+funds in portfolio: $837.7166709899902
+
+stocks held in portfolio: 
+TSLA amount of stock: 33
+value of stock: $10382.899932861328
+ 
+Overall profit/loss: $10220.616603851318
+
+date: 2022-01-24
+funds in portfolio: $837.7166709899902
+
+stocks held in portfolio: 
+TSLA amount of stock: 33
+value of stock: $10230.0
+ 
+Overall profit/loss: $10067.71667098999
+
+date: 2022-01-25
+funds in portfolio: $837.7166709899902
+
+stocks held in portfolio: 
+TSLA amount of stock: 33
+value of stock: $10102.399932861328
+ 
+Overall profit/loss: $9940.116603851318
+
+date: 2022-01-26
+funds in portfolio: $837.7166709899902
+
+stocks held in portfolio: 
+TSLA amount of stock: 33
+value of stock: $10311.510040283203
+ 
+Overall profit/loss: $10149.226711273193
+
+date: 2022-01-27
+funds in portfolio: $837.7166709899902
+
+stocks held in portfolio: 
+TSLA amount of stock: 33
+value of stock: $9120.100067138672
+ 
+Overall profit/loss: $8957.816738128662
+
+date: 2022-01-28
+funds in portfolio: $837.7166709899902
+
+stocks held in portfolio: 
+TSLA amount of stock: 33
+value of stock: $9309.850067138672
+ 
+Overall profit/loss: $9147.566738128662
+
+date: 2022-01-31
+funds in portfolio: $837.7166709899902
+
+stocks held in portfolio: 
+TSLA amount of stock: 33
+value of stock: $10303.919677734375
+ 
+Overall profit/loss: $10141.636348724365
+
+date: 2022-02-01
+funds in portfolio: $837.7166709899902
+
+stocks held in portfolio: 
+TSLA amount of stock: 33
+value of stock: $10243.74966430664
+ 
+Overall profit/loss: $10081.46633529663
+
+date: 2022-02-02
+funds in portfolio: $837.7166709899902
+
+stocks held in portfolio: 
+TSLA amount of stock: 33
+value of stock: $9962.259704589844
+ 
+Overall profit/loss: $9799.976375579834
+
+date: 2022-02-03
+funds in portfolio: $837.7166709899902
+
+stocks held in portfolio: 
+TSLA amount of stock: 33
+value of stock: $9802.539825439453
+ 
+Overall profit/loss: $9640.256496429443
+
+date: 2022-02-04
+funds in portfolio: $837.7166709899902
+
+stocks held in portfolio: 
+TSLA amount of stock: 33
+value of stock: $10156.520416259766
+ 
+Overall profit/loss: $9994.237087249756
+
+date: 2022-02-07
+funds in portfolio: $837.7166709899902
+
+stocks held in portfolio: 
+TSLA amount of stock: 33
+value of stock: $9980.739624023438
+ 
+Overall profit/loss: $9818.456295013428
+
+date: 2022-02-08
+funds in portfolio: $837.7166709899902
+
+stocks held in portfolio: 
+TSLA amount of stock: 33
+value of stock: $10142.00033569336
+ 
+Overall profit/loss: $9979.71700668335
+
+date: 2022-02-09
+funds in portfolio: $837.7166709899902
+
+stocks held in portfolio: 
+TSLA amount of stock: 33
+value of stock: $10251.99966430664
+ 
+Overall profit/loss: $10089.71633529663
+
+date: 2022-02-10
+funds in portfolio: $1139.2333335876465
+
+stocks held in portfolio: 
+TSLA amount of stock: 34
+value of stock: $10251.566528320312
+ 
+Overall profit/loss: $10390.799861907959
+
+date: 2022-02-11
+funds in portfolio: $1139.2333335876465
+
+stocks held in portfolio: 
+TSLA amount of stock: 34
+value of stock: $9746.666320800781
+ 
+Overall profit/loss: $9885.899654388428
+
+date: 2022-02-14
+funds in portfolio: $1139.2333335876465
+
+stocks held in portfolio: 
+TSLA amount of stock: 34
+value of stock: $9925.280456542969
+ 
+Overall profit/loss: $10064.513790130615
+
+date: 2022-02-15
+funds in portfolio: $1139.2333335876465
+
+stocks held in portfolio: 
+TSLA amount of stock: 34
+value of stock: $10454.206237792969
+ 
+Overall profit/loss: $10593.439571380615
+
+date: 2022-02-16
+funds in portfolio: $1139.2333335876465
+
+stocks held in portfolio: 
+TSLA amount of stock: 34
+value of stock: $10465.086486816406
+ 
+Overall profit/loss: $10604.319820404053
+
+date: 2022-02-17
+funds in portfolio: $1139.2333335876465
+
+stocks held in portfolio: 
+TSLA amount of stock: 34
+value of stock: $9931.966735839844
+ 
+Overall profit/loss: $10071.20006942749
+
+date: 2022-02-18
+funds in portfolio: $1139.2333335876465
+
+stocks held in portfolio: 
+TSLA amount of stock: 34
+value of stock: $9712.440124511719
+ 
+Overall profit/loss: $9851.673458099365
+
+date: 2022-02-22
+funds in portfolio: $1139.2333335876465
+
+stocks held in portfolio: 
+TSLA amount of stock: 34
+value of stock: $9310.672973632812
+ 
+Overall profit/loss: $9449.906307220459
+
+date: 2022-02-23
+funds in portfolio: $1139.2333335876465
+
+stocks held in portfolio: 
+TSLA amount of stock: 34
+value of stock: $8659.119750976562
+ 
+Overall profit/loss: $8798.353084564209
+
+date: 2022-02-24
+funds in portfolio: $1139.2333335876465
+
+stocks held in portfolio: 
+TSLA amount of stock: 34
+value of stock: $9075.3935546875
+ 
+Overall profit/loss: $9214.626888275146
+
+date: 2022-02-25
+funds in portfolio: $1139.2333335876465
+
+stocks held in portfolio: 
+TSLA amount of stock: 34
+value of stock: $9178.526611328125
+ 
+Overall profit/loss: $9317.759944915771
+
+date: 2022-02-28
+funds in portfolio: $1139.2333335876465
+
+stocks held in portfolio: 
+TSLA amount of stock: 34
+value of stock: $9864.873596191406
+ 
+Overall profit/loss: $10004.106929779053
+
+date: 2022-03-01
+funds in portfolio: $1139.2333335876465
+
+stocks held in portfolio: 
+TSLA amount of stock: 34
+value of stock: $9796.192932128906
+ 
+Overall profit/loss: $9935.426265716553
+
+date: 2022-03-02
+funds in portfolio: $1139.2333335876465
+
+stocks held in portfolio: 
+TSLA amount of stock: 34
+value of stock: $9972.086486816406
+ 
+Overall profit/loss: $10111.319820404053
+
+date: 2022-03-03
+funds in portfolio: $859.4699974060059
+
+stocks held in portfolio: 
+TSLA amount of stock: 35
+value of stock: $9791.716766357422
+ 
+Overall profit/loss: $9651.186763763428
+
+date: 2022-03-04
+funds in portfolio: $859.4699974060059
+
+stocks held in portfolio: 
+TSLA amount of stock: 35
+value of stock: $9780.049743652344
+ 
+Overall profit/loss: $9639.51974105835
+
+date: 2022-03-07
+funds in portfolio: $859.4699974060059
+
+stocks held in portfolio: 
+TSLA amount of stock: 35
+value of stock: $9386.766510009766
+ 
+Overall profit/loss: $9246.236507415771
+
+date: 2022-03-08
+funds in portfolio: $859.4699974060059
+
+stocks held in portfolio: 
+TSLA amount of stock: 35
+value of stock: $9617.999572753906
+ 
+Overall profit/loss: $9477.469570159912
+
+date: 2022-03-09
+funds in portfolio: $859.4699974060059
+
+stocks held in portfolio: 
+TSLA amount of stock: 35
+value of stock: $10021.316680908203
+ 
+Overall profit/loss: $9880.786678314209
+
+date: 2022-03-10
+funds in portfolio: $859.4699974060059
+
+stocks held in portfolio: 
+TSLA amount of stock: 35
+value of stock: $9780.16616821289
+ 
+Overall profit/loss: $9639.636165618896
+
+date: 2022-03-11
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $9544.200073242188
+ 
+Overall profit/loss: $9668.786739349365
+
+date: 2022-03-14
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $9196.43994140625
+ 
+Overall profit/loss: $9321.026607513428
+
+date: 2022-03-15
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $9622.679809570312
+ 
+Overall profit/loss: $9747.26647567749
+
+date: 2022-03-16
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $10082.759765625
+ 
+Overall profit/loss: $10207.346431732178
+
+date: 2022-03-17
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $10459.19970703125
+ 
+Overall profit/loss: $10583.786373138428
+
+date: 2022-03-18
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $10864.679809570312
+ 
+Overall profit/loss: $10989.26647567749
+
+date: 2022-03-21
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $11053.92041015625
+ 
+Overall profit/loss: $11178.507076263428
+
+date: 2022-03-22
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $11927.759765625
+ 
+Overall profit/loss: $12052.346431732178
+
+date: 2022-03-23
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $11989.320556640625
+ 
+Overall profit/loss: $12113.907222747803
+
+date: 2022-03-24
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $12167.039794921875
+ 
+Overall profit/loss: $12291.626461029053
+
+date: 2022-03-25
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $12127.68017578125
+ 
+Overall profit/loss: $12252.266841888428
+
+date: 2022-03-28
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $13102.07958984375
+ 
+Overall profit/loss: $13226.666255950928
+
+date: 2022-03-29
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $13194.840454101562
+ 
+Overall profit/loss: $13319.42712020874
+
+date: 2022-03-30
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $13127.8798828125
+ 
+Overall profit/loss: $13252.466548919678
+
+date: 2022-03-31
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $12931.200439453125
+ 
+Overall profit/loss: $13055.787105560303
+
+date: 2022-04-01
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $13015.079956054688
+ 
+Overall profit/loss: $13139.666622161865
+
+date: 2022-04-04
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $13745.400512695312
+ 
+Overall profit/loss: $13869.98717880249
+
+date: 2022-04-05
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $13095.119750976562
+ 
+Overall profit/loss: $13219.70641708374
+
+date: 2022-04-06
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $12549.1201171875
+ 
+Overall profit/loss: $12673.706783294678
+
+date: 2022-04-07
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $12687.120483398438
+ 
+Overall profit/loss: $12811.707149505615
+
+date: 2022-04-08
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $12305.879516601562
+ 
+Overall profit/loss: $12430.46618270874
+
+date: 2022-04-11
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $11711.159912109375
+ 
+Overall profit/loss: $11835.746578216553
+
+date: 2022-04-12
+funds in portfolio: $1124.5866661071777
+
+stocks held in portfolio: 
+TSLA amount of stock: 36
+value of stock: $11843.400146484375
+ 
+Overall profit/loss: $11967.986812591553
+
+date: 2022-04-13
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $12609.23031616211
+ 
+Overall profit/loss: $12393.026973724365
+
+date: 2022-04-14
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $12148.333709716797
+ 
+Overall profit/loss: $11932.130367279053
+
+date: 2022-04-18
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $12386.243438720703
+ 
+Overall profit/loss: $12170.040096282959
+
+date: 2022-04-19
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $12680.516967773438
+ 
+Overall profit/loss: $12464.313625335693
+
+date: 2022-04-20
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $12052.133483886719
+ 
+Overall profit/loss: $11835.930141448975
+
+date: 2022-04-21
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $12441.620361328125
+ 
+Overall profit/loss: $12225.41701889038
+
+date: 2022-04-22
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $12395.616516113281
+ 
+Overall profit/loss: $12179.413173675537
+
+date: 2022-04-25
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $12308.91357421875
+ 
+Overall profit/loss: $12092.710231781006
+
+date: 2022-04-26
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $10809.180541992188
+ 
+Overall profit/loss: $10592.977199554443
+
+date: 2022-04-27
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $10871.956787109375
+ 
+Overall profit/loss: $10655.75344467163
+
+date: 2022-04-28
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $10822.623077392578
+ 
+Overall profit/loss: $10606.419734954834
+
+date: 2022-04-29
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $10739.373077392578
+ 
+Overall profit/loss: $10523.169734954834
+
+date: 2022-05-02
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $11136.26040649414
+ 
+Overall profit/loss: $10920.057064056396
+
+date: 2022-05-03
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $11214.083709716797
+ 
+Overall profit/loss: $10997.880367279053
+
+date: 2022-05-04
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $11748.98031616211
+ 
+Overall profit/loss: $11532.776973724365
+
+date: 2022-05-05
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $10770.452941894531
+ 
+Overall profit/loss: $10554.249599456787
+
+date: 2022-05-06
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $10676.349548339844
+ 
+Overall profit/loss: $10460.1462059021
+
+date: 2022-05-09
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $9707.689819335938
+ 
+Overall profit/loss: $9491.486476898193
+
+date: 2022-05-10
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $9867.159729003906
+ 
+Overall profit/loss: $9650.956386566162
+
+date: 2022-05-11
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $9052.666854858398
+ 
+Overall profit/loss: $8836.463512420654
+
+date: 2022-05-12
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $8978.666854858398
+ 
+Overall profit/loss: $8762.463512420654
+
+date: 2022-05-13
+funds in portfolio: $783.7966575622559
+
+stocks held in portfolio: 
+TSLA amount of stock: 37
+value of stock: $9491.609954833984
+ 
+Overall profit/loss: $9275.40661239624
+
+date: 2022-05-16
+funds in portfolio: $1025.2533226013184
+
+stocks held in portfolio: 
+TSLA amount of stock: 38
+value of stock: $9175.353271484375
+ 
+Overall profit/loss: $9200.606594085693
+
+date: 2022-05-17
+funds in portfolio: $771.3833274841309
+
+stocks held in portfolio: 
+TSLA amount of stock: 39
+value of stock: $9900.929809570312
+ 
+Overall profit/loss: $9672.313137054443
+
+date: 2022-05-18
+funds in portfolio: $771.3833274841309
+
+stocks held in portfolio: 
+TSLA amount of stock: 39
+value of stock: $9227.529968261719
+ 
+Overall profit/loss: $8998.91329574585
+
+date: 2022-05-19
+funds in portfolio: $771.3833274841309
+
+stocks held in portfolio: 
+TSLA amount of stock: 39
+value of stock: $9222.459777832031
+ 
+Overall profit/loss: $8993.843105316162
+
+date: 2022-05-20
+funds in portfolio: $771.3833274841309
+
+stocks held in portfolio: 
+TSLA amount of stock: 39
+value of stock: $8630.700119018555
+ 
+Overall profit/loss: $8402.083446502686
+
+date: 2022-05-23
+funds in portfolio: $771.3833274841309
+
+stocks held in portfolio: 
+TSLA amount of stock: 39
+value of stock: $8773.699722290039
+ 
+Overall profit/loss: $8545.08304977417
+
+date: 2022-05-24
+funds in portfolio: $771.3833274841309
+
+stocks held in portfolio: 
+TSLA amount of stock: 39
+value of stock: $8166.08024597168
+ 
+Overall profit/loss: $7937.463573455811
+
+date: 2022-05-25
+funds in portfolio: $771.3833274841309
+
+stocks held in portfolio: 
+TSLA amount of stock: 39
+value of stock: $8564.40023803711
+ 
+Overall profit/loss: $8335.78356552124
+
+date: 2022-05-26
+funds in portfolio: $771.3833274841309
+
+stocks held in portfolio: 
+TSLA amount of stock: 39
+value of stock: $9200.490142822266
+ 
+Overall profit/loss: $8971.873470306396
+
+date: 2022-05-27
+funds in portfolio: $771.3833274841309
+
+stocks held in portfolio: 
+TSLA amount of stock: 39
+value of stock: $9875.19026184082
+ 
+Overall profit/loss: $9646.573589324951
+
+date: 2022-05-31
+funds in portfolio: $1024.1366539001465
+
+stocks held in portfolio: 
+TSLA amount of stock: 40
+value of stock: $10110.133056640625
+ 
+Overall profit/loss: $10134.269710540771
+
+date: 2022-06-01
+funds in portfolio: $1024.1366539001465
+
+stocks held in portfolio: 
+TSLA amount of stock: 40
+value of stock: $9871.599731445312
+ 
+Overall profit/loss: $9895.736385345459
+
+date: 2022-06-02
+funds in portfolio: $1024.1366539001465
+
+stocks held in portfolio: 
+TSLA amount of stock: 40
+value of stock: $10333.333740234375
+ 
+Overall profit/loss: $10357.470394134521
+
+date: 2022-06-03
+funds in portfolio: $1024.1366539001465
+
+stocks held in portfolio: 
+TSLA amount of stock: 40
+value of stock: $9380.66650390625
+ 
+Overall profit/loss: $9404.803157806396
+
+date: 2022-06-06
+funds in portfolio: $1024.1366539001465
+
+stocks held in portfolio: 
+TSLA amount of stock: 40
+value of stock: $9531.199951171875
+ 
+Overall profit/loss: $9555.336605072021
+
+date: 2022-06-07
+funds in portfolio: $1024.1366539001465
+
+stocks held in portfolio: 
+TSLA amount of stock: 40
+value of stock: $9555.466918945312
+ 
+Overall profit/loss: $9579.603572845459
+
+date: 2022-06-08
+funds in portfolio: $1024.1366539001465
+
+stocks held in portfolio: 
+TSLA amount of stock: 40
+value of stock: $9674.666748046875
+ 
+Overall profit/loss: $9698.803401947021
+
+date: 2022-06-09
+funds in portfolio: $1024.1366539001465
+
+stocks held in portfolio: 
+TSLA amount of stock: 40
+value of stock: $9588.2666015625
+ 
+Overall profit/loss: $9612.403255462646
+
+date: 2022-06-10
+funds in portfolio: $1024.1366539001465
+
+stocks held in portfolio: 
+TSLA amount of stock: 40
+value of stock: $9289.199829101562
+ 
+Overall profit/loss: $9313.336483001709
+
+date: 2022-06-13
+funds in portfolio: $1024.1366539001465
+
+stocks held in portfolio: 
+TSLA amount of stock: 40
+value of stock: $8629.466552734375
+ 
+Overall profit/loss: $8653.603206634521
+
+date: 2022-06-14
+funds in portfolio: $1024.1366539001465
+
+stocks held in portfolio: 
+TSLA amount of stock: 40
+value of stock: $8835.599975585938
+ 
+Overall profit/loss: $8859.736629486084
+
+date: 2022-06-15
+funds in portfolio: $1024.1366539001465
+
+stocks held in portfolio: 
+TSLA amount of stock: 40
+value of stock: $9320.0
+ 
+Overall profit/loss: $9344.136653900146
+
+date: 2022-06-16
+funds in portfolio: $1024.1366539001465
+
+stocks held in portfolio: 
+TSLA amount of stock: 40
+value of stock: $8524.000244140625
+ 
+Overall profit/loss: $8548.136898040771
+
+date: 2022-06-17
+funds in portfolio: $1024.1366539001465
+
+stocks held in portfolio: 
+TSLA amount of stock: 40
+value of stock: $8670.399780273438
+ 
+Overall profit/loss: $8694.536434173584
+
+date: 2022-06-21
+funds in portfolio: $1024.1366539001465
+
+stocks held in portfolio: 
+TSLA amount of stock: 40
+value of stock: $9481.466674804688
+ 
+Overall profit/loss: $9505.603328704834
+
+date: 2022-06-22
+funds in portfolio: $1024.1366539001465
+
+stocks held in portfolio: 
+TSLA amount of stock: 40
+value of stock: $9443.466796875
+ 
+Overall profit/loss: $9467.603450775146
+
+date: 2022-06-23
+funds in portfolio: $789.0666465759277
+
+stocks held in portfolio: 
+TSLA amount of stock: 41
+value of stock: $9637.870300292969
+ 
+Overall profit/loss: $9426.936946868896
+
+date: 2022-06-24
+funds in portfolio: $789.0666465759277
+
+stocks held in portfolio: 
+TSLA amount of stock: 41
+value of stock: $10073.973266601562
+ 
+Overall profit/loss: $9863.03991317749
+
+date: 2022-06-27
+funds in portfolio: $789.0666465759277
+
+stocks held in portfolio: 
+TSLA amount of stock: 41
+value of stock: $10041.719924926758
+ 
+Overall profit/loss: $9830.786571502686
+
+date: 2022-06-28
+funds in portfolio: $789.0666465759277
+
+stocks held in portfolio: 
+TSLA amount of stock: 41
+value of stock: $9539.196533203125
+ 
+Overall profit/loss: $9328.263179779053
+
+date: 2022-06-29
+funds in portfolio: $789.0666465759277
+
+stocks held in portfolio: 
+TSLA amount of stock: 41
+value of stock: $9368.090225219727
+ 
+Overall profit/loss: $9157.156871795654
+
+date: 2022-06-30
+funds in portfolio: $789.0666465759277
+
+stocks held in portfolio: 
+TSLA amount of stock: 41
+value of stock: $9203.406433105469
+ 
+Overall profit/loss: $8992.473079681396
+
+date: 2022-07-01
+funds in portfolio: $789.0666465759277
+
+stocks held in portfolio: 
+TSLA amount of stock: 41
+value of stock: $9317.796783447266
+ 
+Overall profit/loss: $9106.863430023193
+
+date: 2022-07-05
+funds in portfolio: $789.0666465759277
+
+stocks held in portfolio: 
+TSLA amount of stock: 41
+value of stock: $9555.733291625977
+ 
+Overall profit/loss: $9344.799938201904
+
+date: 2022-07-06
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $9732.800170898438
+ 
+Overall profit/loss: $9753.600154876709
+
+date: 2022-07-07
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $10270.820068359375
+ 
+Overall profit/loss: $10291.620052337646
+
+date: 2022-07-08
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $10532.060119628906
+ 
+Overall profit/loss: $10552.860103607178
+
+date: 2022-07-11
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $9842.420196533203
+ 
+Overall profit/loss: $9863.220180511475
+
+date: 2022-07-12
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $9788.940307617188
+ 
+Overall profit/loss: $9809.740291595459
+
+date: 2022-07-13
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $9955.679718017578
+ 
+Overall profit/loss: $9976.47970199585
+
+date: 2022-07-14
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $10009.160247802734
+ 
+Overall profit/loss: $10029.960231781006
+
+date: 2022-07-15
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $10082.79995727539
+ 
+Overall profit/loss: $10103.599941253662
+
+date: 2022-07-18
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $10102.959777832031
+ 
+Overall profit/loss: $10123.759761810303
+
+date: 2022-07-19
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $10312.259948730469
+ 
+Overall profit/loss: $10333.05993270874
+
+date: 2022-07-20
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $10395.0
+ 
+Overall profit/loss: $10415.799983978271
+
+date: 2022-07-21
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $11411.679931640625
+ 
+Overall profit/loss: $11432.479915618896
+
+date: 2022-07-22
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $11434.220581054688
+ 
+Overall profit/loss: $11455.020565032959
+
+date: 2022-07-25
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $11274.199401855469
+ 
+Overall profit/loss: $11294.99938583374
+
+date: 2022-07-26
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $10872.119384765625
+ 
+Overall profit/loss: $10892.919368743896
+
+date: 2022-07-27
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $11542.440307617188
+ 
+Overall profit/loss: $11563.240291595459
+
+date: 2022-07-28
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $11797.799743652344
+ 
+Overall profit/loss: $11818.599727630615
+
+date: 2022-07-29
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $12480.299743652344
+ 
+Overall profit/loss: $12501.099727630615
+
+date: 2022-08-01
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $12485.620239257812
+ 
+Overall profit/loss: $12506.420223236084
+
+date: 2022-08-02
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $12624.64013671875
+ 
+Overall profit/loss: $12645.440120697021
+
+date: 2022-08-03
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $12910.660034179688
+ 
+Overall profit/loss: $12931.460018157959
+
+date: 2022-08-04
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $12962.599914550781
+ 
+Overall profit/loss: $12983.399898529053
+
+date: 2022-08-05
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $12103.140563964844
+ 
+Overall profit/loss: $12123.940547943115
+
+date: 2022-08-08
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $12197.7802734375
+ 
+Overall profit/loss: $12218.580257415771
+
+date: 2022-08-09
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $11900.000427246094
+ 
+Overall profit/loss: $11920.800411224365
+
+date: 2022-08-10
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $12362.979675292969
+ 
+Overall profit/loss: $12383.77965927124
+
+date: 2022-08-11
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $12038.460205078125
+ 
+Overall profit/loss: $12059.260189056396
+
+date: 2022-08-12
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $12601.259948730469
+ 
+Overall profit/loss: $12622.05993270874
+
+date: 2022-08-15
+funds in portfolio: $1020.7999839782715
+
+stocks held in portfolio: 
+TSLA amount of stock: 42
+value of stock: $12991.440307617188
+ 
+Overall profit/loss: $13012.240291595459
+
+date: 2022-08-16
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $13182.222930908203
+ 
+Overall profit/loss: $12896.459590911865
+
+date: 2022-08-17
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $13071.856964111328
+ 
+Overall profit/loss: $12786.09362411499
+
+date: 2022-08-18
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $13023.409790039062
+ 
+Overall profit/loss: $12737.646450042725
+
+date: 2022-08-19
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $12756.666229248047
+ 
+Overall profit/loss: $12470.902889251709
+
+date: 2022-08-22
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $12466.273193359375
+ 
+Overall profit/loss: $12180.509853363037
+
+date: 2022-08-23
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $12747.493560791016
+ 
+Overall profit/loss: $12461.730220794678
+
+date: 2022-08-24
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $12775.1572265625
+ 
+Overall profit/loss: $12489.393886566162
+
+date: 2022-08-25
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $12731.010314941406
+ 
+Overall profit/loss: $12445.246974945068
+
+date: 2022-08-26
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $12387.869842529297
+ 
+Overall profit/loss: $12102.106502532959
+
+date: 2022-08-29
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $12247.260314941406
+ 
+Overall profit/loss: $11961.496974945068
+
+date: 2022-08-30
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $11941.100524902344
+ 
+Overall profit/loss: $11655.337184906006
+
+date: 2022-08-31
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $11851.229370117188
+ 
+Overall profit/loss: $11565.46603012085
+
+date: 2022-09-01
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $11917.880157470703
+ 
+Overall profit/loss: $11632.116817474365
+
+date: 2022-09-02
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $11619.02963256836
+ 
+Overall profit/loss: $11333.266292572021
+
+date: 2022-09-06
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $11800.060577392578
+ 
+Overall profit/loss: $11514.29723739624
+
+date: 2022-09-07
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $12199.100524902344
+ 
+Overall profit/loss: $11913.337184906006
+
+date: 2022-09-08
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $12438.180419921875
+ 
+Overall profit/loss: $12152.417079925537
+
+date: 2022-09-09
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $12886.239685058594
+ 
+Overall profit/loss: $12600.476345062256
+
+date: 2022-09-12
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $13090.060577392578
+ 
+Overall profit/loss: $12804.29723739624
+
+date: 2022-09-13
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $12561.590209960938
+ 
+Overall profit/loss: $12275.8268699646
+
+date: 2022-09-14
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $13012.229370117188
+ 
+Overall profit/loss: $12726.46603012085
+
+date: 2022-09-15
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $13061.25
+ 
+Overall profit/loss: $12775.486660003662
+
+date: 2022-09-16
+funds in portfolio: $714.2366600036621
+
+stocks held in portfolio: 
+TSLA amount of stock: 43
+value of stock: $13044.050262451172
+ 
+Overall profit/loss: $12758.286922454834
+
+date: 2022-09-19
+funds in portfolio: $1023.3066673278809
+
+stocks held in portfolio: 
+TSLA amount of stock: 44
+value of stock: $13599.080322265625
+ 
+Overall profit/loss: $13622.386989593506
+
+date: 2022-09-20
+funds in portfolio: $1023.3066673278809
+
+stocks held in portfolio: 
+TSLA amount of stock: 44
+value of stock: $13584.120483398438
+ 
+Overall profit/loss: $13607.427150726318
+
+date: 2022-09-21
+funds in portfolio: $1023.3066673278809
+
+stocks held in portfolio: 
+TSLA amount of stock: 44
+value of stock: $13235.199462890625
+ 
+Overall profit/loss: $13258.506130218506
+
+date: 2022-09-22
+funds in portfolio: $1023.3066673278809
+
+stocks held in portfolio: 
+TSLA amount of stock: 44
+value of stock: $12697.959838867188
+ 
+Overall profit/loss: $12721.266506195068
+
+date: 2022-09-23
+funds in portfolio: $1023.3066673278809
+
+stocks held in portfolio: 
+TSLA amount of stock: 44
+value of stock: $12114.519409179688
+ 
+Overall profit/loss: $12137.826076507568
+
+date: 2022-09-26
+funds in portfolio: $1023.3066673278809
+
+stocks held in portfolio: 
+TSLA amount of stock: 44
+value of stock: $12144.4404296875
+ 
+Overall profit/loss: $12167.74709701538
+
+date: 2022-09-27
+funds in portfolio: $1023.3066673278809
+
+stocks held in portfolio: 
+TSLA amount of stock: 44
+value of stock: $12449.360107421875
+ 
+Overall profit/loss: $12472.666774749756
+
+date: 2022-09-28
+funds in portfolio: $1023.3066673278809
+
+stocks held in portfolio: 
+TSLA amount of stock: 44
+value of stock: $12663.639892578125
+ 
+Overall profit/loss: $12686.946559906006
+
+date: 2022-09-29
+funds in portfolio: $1023.3066673278809
+
+stocks held in portfolio: 
+TSLA amount of stock: 44
+value of stock: $11801.239624023438
+ 
+Overall profit/loss: $11824.546291351318
+
+date: 2022-09-30
+funds in portfolio: $1023.3066673278809
+
+stocks held in portfolio: 
+TSLA amount of stock: 44
+value of stock: $11671.0
+ 
+Overall profit/loss: $11694.30666732788
+
+date: 2022-10-03
+funds in portfolio: $780.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 45
+value of stock: $10907.999725341797
+ 
+Overall profit/loss: $10688.906398773193
+
+date: 2022-10-04
+funds in portfolio: $780.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 45
+value of stock: $11224.800109863281
+ 
+Overall profit/loss: $11005.706783294678
+
+date: 2022-10-05
+funds in portfolio: $780.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 45
+value of stock: $10836.449890136719
+ 
+Overall profit/loss: $10617.356563568115
+
+date: 2022-10-06
+funds in portfolio: $780.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 45
+value of stock: $10715.850219726562
+ 
+Overall profit/loss: $10496.756893157959
+
+date: 2022-10-07
+funds in portfolio: $780.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 45
+value of stock: $10038.150329589844
+ 
+Overall profit/loss: $9819.05700302124
+
+date: 2022-10-10
+funds in portfolio: $780.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 45
+value of stock: $10033.200302124023
+ 
+Overall profit/loss: $9814.10697555542
+
+date: 2022-10-11
+funds in portfolio: $780.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 45
+value of stock: $9742.5
+ 
+Overall profit/loss: $9523.406673431396
+
+date: 2022-10-12
+funds in portfolio: $780.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 45
+value of stock: $9775.800247192383
+ 
+Overall profit/loss: $9556.70692062378
+
+date: 2022-10-13
+funds in portfolio: $780.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 45
+value of stock: $9977.40005493164
+ 
+Overall profit/loss: $9758.306728363037
+
+date: 2022-10-14
+funds in portfolio: $780.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 45
+value of stock: $9224.550247192383
+ 
+Overall profit/loss: $9005.45692062378
+
+date: 2022-10-17
+funds in portfolio: $780.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 45
+value of stock: $9870.750274658203
+ 
+Overall profit/loss: $9651.6569480896
+
+date: 2022-10-18
+funds in portfolio: $780.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 45
+value of stock: $9908.550109863281
+ 
+Overall profit/loss: $9689.456783294678
+
+date: 2022-10-19
+funds in portfolio: $780.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 45
+value of stock: $9991.799697875977
+ 
+Overall profit/loss: $9772.706371307373
+
+date: 2022-10-20
+funds in portfolio: $780.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 45
+value of stock: $9327.59994506836
+ 
+Overall profit/loss: $9108.506618499756
+
+date: 2022-10-21
+funds in portfolio: $780.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 45
+value of stock: $9649.800109863281
+ 
+Overall profit/loss: $9430.706783294678
+
+date: 2022-10-24
+funds in portfolio: $780.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 45
+value of stock: $9506.25
+ 
+Overall profit/loss: $9287.156673431396
+
+date: 2022-10-25
+funds in portfolio: $1003.3266716003418
+
+stocks held in portfolio: 
+TSLA amount of stock: 46
+value of stock: $10231.319915771484
+ 
+Overall profit/loss: $10234.646587371826
+
+date: 2022-10-26
+funds in portfolio: $1003.3266716003418
+
+stocks held in portfolio: 
+TSLA amount of stock: 46
+value of stock: $10333.439971923828
+ 
+Overall profit/loss: $10336.76664352417
+
+date: 2022-10-27
+funds in portfolio: $1003.3266716003418
+
+stocks held in portfolio: 
+TSLA amount of stock: 46
+value of stock: $10354.139831542969
+ 
+Overall profit/loss: $10357.46650314331
+
+date: 2022-10-28
+funds in portfolio: $1003.3266716003418
+
+stocks held in portfolio: 
+TSLA amount of stock: 46
+value of stock: $10511.920196533203
+ 
+Overall profit/loss: $10515.246868133545
+
+date: 2022-10-31
+funds in portfolio: $1003.3266716003418
+
+stocks held in portfolio: 
+TSLA amount of stock: 46
+value of stock: $10466.83969116211
+ 
+Overall profit/loss: $10470.166362762451
+
+date: 2022-11-01
+funds in portfolio: $1003.3266716003418
+
+stocks held in portfolio: 
+TSLA amount of stock: 46
+value of stock: $10479.720336914062
+ 
+Overall profit/loss: $10483.047008514404
+
+date: 2022-11-02
+funds in portfolio: $1003.3266716003418
+
+stocks held in portfolio: 
+TSLA amount of stock: 46
+value of stock: $9889.079803466797
+ 
+Overall profit/loss: $9892.406475067139
+
+date: 2022-11-03
+funds in portfolio: $1003.3266716003418
+
+stocks held in portfolio: 
+TSLA amount of stock: 46
+value of stock: $9904.259887695312
+ 
+Overall profit/loss: $9907.586559295654
+
+date: 2022-11-04
+funds in portfolio: $1003.3266716003418
+
+stocks held in portfolio: 
+TSLA amount of stock: 46
+value of stock: $9543.620056152344
+ 
+Overall profit/loss: $9546.946727752686
+
+date: 2022-11-07
+funds in portfolio: $1003.3266716003418
+
+stocks held in portfolio: 
+TSLA amount of stock: 46
+value of stock: $9065.680084228516
+ 
+Overall profit/loss: $9069.006755828857
+
+date: 2022-11-08
+funds in portfolio: $1003.3266716003418
+
+stocks held in portfolio: 
+TSLA amount of stock: 46
+value of stock: $8799.80014038086
+ 
+Overall profit/loss: $8803.126811981201
+
+date: 2022-11-09
+funds in portfolio: $1003.3266716003418
+
+stocks held in portfolio: 
+TSLA amount of stock: 46
+value of stock: $8169.139831542969
+ 
+Overall profit/loss: $8172.466503143311
+
+date: 2022-11-10
+funds in portfolio: $1003.3266716003418
+
+stocks held in portfolio: 
+TSLA amount of stock: 46
+value of stock: $8773.120056152344
+ 
+Overall profit/loss: $8776.446727752686
+
+date: 2022-11-11
+funds in portfolio: $1003.3266716003418
+
+stocks held in portfolio: 
+TSLA amount of stock: 46
+value of stock: $9014.620056152344
+ 
+Overall profit/loss: $9017.946727752686
+
+date: 2022-11-14
+funds in portfolio: $1003.3266716003418
+
+stocks held in portfolio: 
+TSLA amount of stock: 46
+value of stock: $8783.69985961914
+ 
+Overall profit/loss: $8787.026531219482
+
+date: 2022-11-15
+funds in portfolio: $808.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 47
+value of stock: $9137.73991394043
+ 
+Overall profit/loss: $8946.646587371826
+
+date: 2022-11-16
+funds in portfolio: $808.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 47
+value of stock: $8785.23991394043
+ 
+Overall profit/loss: $8594.146587371826
+
+date: 2022-11-17
+funds in portfolio: $808.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 47
+value of stock: $8608.98991394043
+ 
+Overall profit/loss: $8417.896587371826
+
+date: 2022-11-18
+funds in portfolio: $808.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 47
+value of stock: $8468.930114746094
+ 
+Overall profit/loss: $8277.83678817749
+
+date: 2022-11-21
+funds in portfolio: $808.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 47
+value of stock: $7889.8897705078125
+ 
+Overall profit/loss: $7698.796443939209
+
+date: 2022-11-22
+funds in portfolio: $808.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 47
+value of stock: $7985.770172119141
+ 
+Overall profit/loss: $7794.676845550537
+
+date: 2022-11-23
+funds in portfolio: $808.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 47
+value of stock: $8610.399856567383
+ 
+Overall profit/loss: $8419.30652999878
+
+date: 2022-11-25
+funds in portfolio: $808.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 47
+value of stock: $8594.420028686523
+ 
+Overall profit/loss: $8403.32670211792
+
+date: 2022-11-28
+funds in portfolio: $808.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 47
+value of stock: $8597.23991394043
+ 
+Overall profit/loss: $8406.146587371826
+
+date: 2022-11-29
+funds in portfolio: $808.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 47
+value of stock: $8499.01008605957
+ 
+Overall profit/loss: $8307.916759490967
+
+date: 2022-11-30
+funds in portfolio: $808.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 47
+value of stock: $9150.899856567383
+ 
+Overall profit/loss: $8959.80652999878
+
+date: 2022-12-01
+funds in portfolio: $808.9066734313965
+
+stocks held in portfolio: 
+TSLA amount of stock: 47
+value of stock: $9150.899856567383
+ 
+Overall profit/loss: $8959.80652999878
+
+date: 2022-12-02
+funds in portfolio: $1003.766674041748
+
+stocks held in portfolio: 
+TSLA amount of stock: 48
+value of stock: $9353.280029296875
+ 
+Overall profit/loss: $9357.046703338623
+
+date: 2022-12-05
+funds in portfolio: $1003.766674041748
+
+stocks held in portfolio: 
+TSLA amount of stock: 48
+value of stock: $8757.599853515625
+ 
+Overall profit/loss: $8761.366527557373
+
+date: 2022-12-06
+funds in portfolio: $1003.766674041748
+
+stocks held in portfolio: 
+TSLA amount of stock: 48
+value of stock: $8631.3603515625
+ 
+Overall profit/loss: $8635.127025604248
+
+date: 2022-12-07
+funds in portfolio: $1003.766674041748
+
+stocks held in portfolio: 
+TSLA amount of stock: 48
+value of stock: $8353.919677734375
+ 
+Overall profit/loss: $8357.686351776123
+
+date: 2022-12-08
+funds in portfolio: $1003.766674041748
+
+stocks held in portfolio: 
+TSLA amount of stock: 48
+value of stock: $8325.1201171875
+ 
+Overall profit/loss: $8328.886791229248
+
+date: 2022-12-09
+funds in portfolio: $1003.766674041748
+
+stocks held in portfolio: 
+TSLA amount of stock: 48
+value of stock: $8594.400146484375
+ 
+Overall profit/loss: $8598.166820526123
+

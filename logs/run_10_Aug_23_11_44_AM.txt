@@ -1,0 +1,918 @@
+date: 2023-03-15
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-16
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-17
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-20
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-21
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-22
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-23
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-24
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-27
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-28
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-29
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-30
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-03-31
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-03
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-04
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-05
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-06
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-10
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-11
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-12
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-13
+funds in portfolio: $1000000
+
+stocks held in portfolio: 
+TLSA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-14
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $1.0700000524520874
+ 
+Overall profit/loss: $0.0
+
+date: 2023-04-17
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $1.190000057220459
+ 
+Overall profit/loss: $0.12000000476837158
+
+date: 2023-04-18
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $1.2899999618530273
+ 
+Overall profit/loss: $0.21999990940093994
+
+date: 2023-04-19
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $1.1699999570846558
+ 
+Overall profit/loss: $0.09999990463256836
+
+date: 2023-04-20
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $1.1399999856948853
+ 
+Overall profit/loss: $0.06999993324279785
+
+date: 2023-04-21
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $1.0399999618530273
+ 
+Overall profit/loss: $-0.03000009059906006
+
+date: 2023-04-24
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.9800000190734863
+ 
+Overall profit/loss: $-0.09000003337860107
+
+date: 2023-04-25
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.8700000047683716
+ 
+Overall profit/loss: $-0.20000004768371582
+
+date: 2023-04-26
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.8700000047683716
+ 
+Overall profit/loss: $-0.20000004768371582
+
+date: 2023-04-27
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.800000011920929
+ 
+Overall profit/loss: $-0.27000004053115845
+
+date: 2023-04-28
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.7900000214576721
+ 
+Overall profit/loss: $-0.2800000309944153
+
+date: 2023-05-01
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.7900000214576721
+ 
+Overall profit/loss: $-0.2800000309944153
+
+date: 2023-05-02
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.7699999809265137
+ 
+Overall profit/loss: $-0.30000007152557373
+
+date: 2023-05-03
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.7900000214576721
+ 
+Overall profit/loss: $-0.2800000309944153
+
+date: 2023-05-04
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.7799999713897705
+ 
+Overall profit/loss: $-0.2900000810623169
+
+date: 2023-05-05
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.7799999713897705
+ 
+Overall profit/loss: $-0.2900000810623169
+
+date: 2023-05-08
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.800000011920929
+ 
+Overall profit/loss: $-0.27000004053115845
+
+date: 2023-05-09
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.7900000214576721
+ 
+Overall profit/loss: $-0.2800000309944153
+
+date: 2023-05-10
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.8100000023841858
+ 
+Overall profit/loss: $-0.2600000500679016
+
+date: 2023-05-11
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.8199999928474426
+ 
+Overall profit/loss: $-0.2500000596046448
+
+date: 2023-05-12
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.7799999713897705
+ 
+Overall profit/loss: $-0.2900000810623169
+
+date: 2023-05-15
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.7900000214576721
+ 
+Overall profit/loss: $-0.2800000309944153
+
+date: 2023-05-16
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.7900000214576721
+ 
+Overall profit/loss: $-0.2800000309944153
+
+date: 2023-05-17
+funds in portfolio: $999998.9299999475
+
+stocks held in portfolio: 
+TLSA amount of stock: 1
+value of stock: $0.7799999713897705
+ 
+Overall profit/loss: $-0.2900000810623169
+
+date: 2023-05-18
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.659999966621399
+ 
+Overall profit/loss: $1.419999897480011
+
+date: 2023-05-19
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.6799999475479126
+ 
+Overall profit/loss: $1.4399998784065247
+
+date: 2023-05-22
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.5199999809265137
+ 
+Overall profit/loss: $1.2799999117851257
+
+date: 2023-05-23
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.5199999809265137
+ 
+Overall profit/loss: $1.2799999117851257
+
+date: 2023-05-24
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.4600000381469727
+ 
+Overall profit/loss: $1.2199999690055847
+
+date: 2023-05-25
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.5
+ 
+Overall profit/loss: $1.259999930858612
+
+date: 2023-05-26
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.4600000381469727
+ 
+Overall profit/loss: $1.2199999690055847
+
+date: 2023-05-30
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.7000000476837158
+ 
+Overall profit/loss: $1.4599999785423279
+
+date: 2023-05-31
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.7000000476837158
+ 
+Overall profit/loss: $1.4599999785423279
+
+date: 2023-06-01
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.7999999523162842
+ 
+Overall profit/loss: $1.5599998831748962
+
+date: 2023-06-02
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $2.059999942779541
+ 
+Overall profit/loss: $1.819999873638153
+
+date: 2023-06-05
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.840000033378601
+ 
+Overall profit/loss: $1.5999999642372131
+
+date: 2023-06-06
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.6799999475479126
+ 
+Overall profit/loss: $1.4399998784065247
+
+date: 2023-06-07
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.559999942779541
+ 
+Overall profit/loss: $1.319999873638153
+
+date: 2023-06-08
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.5199999809265137
+ 
+Overall profit/loss: $1.2799999117851257
+
+date: 2023-06-09
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.4800000190734863
+ 
+Overall profit/loss: $1.2399999499320984
+
+date: 2023-06-12
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.559999942779541
+ 
+Overall profit/loss: $1.319999873638153
+
+date: 2023-06-13
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.5199999809265137
+ 
+Overall profit/loss: $1.2799999117851257
+
+date: 2023-06-14
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.5
+ 
+Overall profit/loss: $1.259999930858612
+
+date: 2023-06-15
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.5800000429153442
+ 
+Overall profit/loss: $1.3399999737739563
+
+date: 2023-06-16
+funds in portfolio: $999999.7599999309
+
+stocks held in portfolio: 
+TLSA amount of stock: 2
+value of stock: $1.2999999523162842
+ 
+Overall profit/loss: $1.0599998831748962
+
+date: 2023-06-20
+funds in portfolio: $999999.0599999428
+
+stocks held in portfolio: 
+TLSA amount of stock: 3
+value of stock: $2.099999964237213
+ 
+Overall profit/loss: $1.1599999070167542
+
+date: 2023-06-21
+funds in portfolio: $999999.0599999428
+
+stocks held in portfolio: 
+TLSA amount of stock: 3
+value of stock: $2.1600000858306885
+ 
+Overall profit/loss: $1.2200000286102295
+
+date: 2023-06-22
+funds in portfolio: $999999.0599999428
+
+stocks held in portfolio: 
+TLSA amount of stock: 3
+value of stock: $2.1600000858306885
+ 
+Overall profit/loss: $1.2200000286102295
+
+date: 2023-06-23
+funds in portfolio: $999999.0599999428
+
+stocks held in portfolio: 
+TLSA amount of stock: 3
+value of stock: $2.1600000858306885
+ 
+Overall profit/loss: $1.2200000286102295
+
+date: 2023-06-26
+funds in portfolio: $999999.0599999428
+
+stocks held in portfolio: 
+TLSA amount of stock: 3
+value of stock: $2.1299999356269836
+ 
+Overall profit/loss: $1.1899998784065247
+
+date: 2023-06-27
+funds in portfolio: $999999.0599999428
+
+stocks held in portfolio: 
+TLSA amount of stock: 3
+value of stock: $2.099999964237213
+ 
+Overall profit/loss: $1.1599999070167542
+
+date: 2023-06-28
+funds in portfolio: $999999.0599999428
+
+stocks held in portfolio: 
+TLSA amount of stock: 3
+value of stock: $2.099999964237213
+ 
+Overall profit/loss: $1.1599999070167542
+
+date: 2023-06-29
+funds in portfolio: $999999.0599999428
+
+stocks held in portfolio: 
+TLSA amount of stock: 3
+value of stock: $2.040000021457672
+ 
+Overall profit/loss: $1.0999999642372131
+
+date: 2023-06-30
+funds in portfolio: $999999.0599999428
+
+stocks held in portfolio: 
+TLSA amount of stock: 3
+value of stock: $2.040000021457672
+ 
+Overall profit/loss: $1.0999999642372131
+
+date: 2023-07-03
+funds in portfolio: $999999.0599999428
+
+stocks held in portfolio: 
+TLSA amount of stock: 3
+value of stock: $2.0699999928474426
+ 
+Overall profit/loss: $1.1299999356269836
+
+date: 2023-07-05
+funds in portfolio: $999999.0599999428
+
+stocks held in portfolio: 
+TLSA amount of stock: 3
+value of stock: $2.0699999928474426
+ 
+Overall profit/loss: $1.1299999356269836
+
+date: 2023-07-06
+funds in portfolio: $999999.0599999428
+
+stocks held in portfolio: 
+TLSA amount of stock: 3
+value of stock: $2.0100000500679016
+ 
+Overall profit/loss: $1.0699999928474426
+
+date: 2023-07-07
+funds in portfolio: $999999.0599999428
+
+stocks held in portfolio: 
+TLSA amount of stock: 3
+value of stock: $2.099999964237213
+ 
+Overall profit/loss: $1.1599999070167542
+
+date: 2023-07-10
+funds in portfolio: $999999.0599999428
+
+stocks held in portfolio: 
+TLSA amount of stock: 3
+value of stock: $2.0699999928474426
+ 
+Overall profit/loss: $1.1299999356269836
+
+date: 2023-07-11
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.759999990463257
+ 
+Overall profit/loss: $2.509999930858612
+
+date: 2023-07-12
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.7200000286102295
+ 
+Overall profit/loss: $2.4699999690055847
+
+date: 2023-07-13
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.7200000286102295
+ 
+Overall profit/loss: $2.4699999690055847
+
+date: 2023-07-14
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.7200000286102295
+ 
+Overall profit/loss: $2.4699999690055847
+
+date: 2023-07-17
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.680000066757202
+ 
+Overall profit/loss: $2.4300000071525574
+
+date: 2023-07-18
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.640000104904175
+ 
+Overall profit/loss: $2.39000004529953
+
+date: 2023-07-19
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.680000066757202
+ 
+Overall profit/loss: $2.4300000071525574
+
+date: 2023-07-20
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.680000066757202
+ 
+Overall profit/loss: $2.4300000071525574
+
+date: 2023-07-21
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.759999990463257
+ 
+Overall profit/loss: $2.509999930858612
+
+date: 2023-07-24
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.7200000286102295
+ 
+Overall profit/loss: $2.4699999690055847
+
+date: 2023-07-25
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.5999999046325684
+ 
+Overall profit/loss: $2.3499998450279236
+
+date: 2023-07-26
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.680000066757202
+ 
+Overall profit/loss: $2.4300000071525574
+
+date: 2023-07-27
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.7200000286102295
+ 
+Overall profit/loss: $2.4699999690055847
+
+date: 2023-07-28
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.559999942779541
+ 
+Overall profit/loss: $2.3099998831748962
+
+date: 2023-07-31
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.5999999046325684
+ 
+Overall profit/loss: $2.3499998450279236
+
+date: 2023-08-01
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.5199999809265137
+ 
+Overall profit/loss: $2.269999921321869
+
+date: 2023-08-02
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.559999942779541
+ 
+Overall profit/loss: $2.3099998831748962
+
+date: 2023-08-03
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.5999999046325684
+ 
+Overall profit/loss: $2.3499998450279236
+
+date: 2023-08-04
+funds in portfolio: $999999.7499999404
+
+stocks held in portfolio: 
+TLSA amount of stock: 4
+value of stock: $2.640000104904175
+ 
+Overall profit/loss: $2.39000004529953
+
+date: 2023-08-07
+funds in portfolio: $999999.0999999642
+
+stocks held in portfolio: 
+TLSA amount of stock: 5
+value of stock: $3.2499998807907104
+ 
+Overall profit/loss: $2.3499998450279236
+
+date: 2023-08-08
+funds in portfolio: $999999.0999999642
+
+stocks held in portfolio: 
+TLSA amount of stock: 5
+value of stock: $3.2499998807907104
+ 
+Overall profit/loss: $2.3499998450279236
+
+date: 2023-08-09
+funds in portfolio: $999999.0999999642
+
+stocks held in portfolio: 
+TLSA amount of stock: 5
+value of stock: $3.149999976158142
+ 
+Overall profit/loss: $2.2499999403953552
+
