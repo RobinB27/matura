@@ -22,18 +22,18 @@ class FileLoggerJSON:
         
         # Retrieve file content
         content = ""
-        with open(filePath, 'r') as log: content = log.read().replace('\n', '')
-
         
-        # If file is empty, add an empty JSON Object (json.reads() breaks on empty strings)
-        if (content == ""): content = '{"snapshots": []}'
+        # If file doesn't exist yet, add empty JSON template
+        try: 
+            with open(filePath, 'r') as log: content = log.read().replace('\n', '')
+        except FileNotFoundError:
+            content = '{"snapshots": []}'
             
         # Update file content based on data in Portfolio
         content = json.loads(content);
         
         pObject = {
             "date": date,
-            "name": portfolio.name,
             "funds": portfolio.funds,
             "stocksHeld": []
         }

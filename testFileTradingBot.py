@@ -11,7 +11,7 @@ from TradingBot.FinancialCalculators.MACDCalculator import MACDCalculator
 from TradingBot.FinancialCalculators.SignalLineCalculator import SignalLineCalculator
 
 
-
+# Use datetime dates instead of date strings as function, eliminates your problem
 
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #bot settings need date format like this: "2023-04-12"

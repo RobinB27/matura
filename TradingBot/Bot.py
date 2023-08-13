@@ -111,7 +111,7 @@ class Bot:
                                 print(f"Bot: Ignoring stock: {self.portfolio.stocksHeld[i].name} on {self.date}")
                         
                     #self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
-                    #self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date)
+                    self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date)
                 
                     self.date = self.portfolio.addDayToDate(self.date)
                     if Config.debug():
