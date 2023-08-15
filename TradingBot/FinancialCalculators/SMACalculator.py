@@ -98,13 +98,12 @@ class SMACalculator:
                                 continue
                             
                             #checks if dateToCalculate is an exception date for stock market closure
-                            getStockPricePlacholder = portfolio.addDayToDate(dateToCalculate)
                             
                             #key for cache
                             key = ticker + "_" + dateToCalculate
                             
                             if key not in self.cache:
-                                self.cache[key] = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
+                                self.cache[key] = stock.getStockPrice(-1, dateToCalculate)
                                 if self.cache[key] == None:
                                     if Config.debug():
                                         print("SMACalculator: Exception check cache")
@@ -123,7 +122,7 @@ class SMACalculator:
                                     print(f"SMACalculator: Downloading Stockvalues on: {dateToCalculate}")
                                 stockPriceOnDate = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
                                 self.cache[key] = stockPriceOnDate
-                                SMA_Value += self.cache[key]
+                                SMA_Value += stockPriceOnDate
                              
                             else:
                                 if Config.debug():

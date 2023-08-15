@@ -74,7 +74,7 @@ class SignalLineCalculator:
         elif mode == -1:                
                                                                                    
             MACDPlaceholder = self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateToCalculate)
-            MACD_values = [MACDPlaceholder]
+            MACD_prices = [MACDPlaceholder]
             
             executions = 0
             dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
@@ -91,41 +91,50 @@ class SignalLineCalculator:
                 
                 #key for cache
                 key = ticker + "_" + dateToCalculate
-                            
-                if key not in self.cache:
-                        self.cache[key] = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholderDate)
-                        if self.cache[key] == None:
+                skipIteration = False
+                for stock in portfolio.stocksHeld:
+                    if stock.name == ticker:
+                        if key not in self.cache:
+                            self.cache[key] = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholderDate)
+                            if self.cache[key] == None:
+                                if Config.debug():  
+                                    print("SMACalculator: Exception check cache")
+                                dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
+                                skipIteration = True
+                                break
+                        elif self.cache[key] == None:
                             if Config.debug():  
-                                print("SMACalculator: Exception check cache")
+                                print("SMACalculator: Exception check cache access")
                             dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
-                            continue
-                elif self.cache[key] == None:
-                    if Config.debug():  
-                        print("SMACalculator: Exception check cache access")
-                    dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
+                            skipIteration = True
+                            break
+                        
+                if skipIteration == True:
                     continue
                                              
-                MACD_values.append(self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateToCalculate))
+                MACD_prices.append(self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateToCalculate))
                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                 executions += 1
                 
             # Calculate the nine-day EMA of the MACD values
-            nine_day_MACD_ema = self.calculateEMA(MACD_values)
+            nine_day_MACD_ema = self.calculateEMA(MACD_prices)
             
             # Replace the MACDAverage calculation with the calculated EMA value
             signalLine = (MACDPlaceholder * weightMultiplier) + (nine_day_MACD_ema * (1 - weightMultiplier))
             return MACDPlaceholder, signalLine
 
-    def calculateEMA(self, values):
+    def calculateEMA(self, MACD_prices):
     
         smoothing_factor = 2 / (9 + 1)
     
         # Initialize the EMA with the first value
-        MACD_EMA = values[0]
+        MACD_EMA = []
+        MACD_ema_yesterday = MACD_prices[0]
+        
+        for price in MACD_prices:
+            MACD_ema_today = (price * smoothing_factor) + (MACD_ema_yesterday * (1 - smoothing_factor))
+            MACD_EMA.append(MACD_ema_today)
+            MACD_ema_yesterday = MACD_ema_today
     
-        # Calculate the EMA for the remaining values
-        #EMA(today) = (Close(today) * α) + (EMA(yesterday) * (1 - α))
-        for i in range(1, len(values)):
-            MACD_EMA = (values[i] * smoothing_factor) + (MACD_EMA * (1 - smoothing_factor))
-    
-        return MACD_EMA
+        
+        return MACD_EMA[-1]

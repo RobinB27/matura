@@ -49,8 +49,7 @@ class FileLoggerJSON:
                 value = stock.amountOfStock * stock.getStockPrice()
                 
             elif mode == -1:
-                placeholderDate = portfolio.addDayToDate(date)
-                value = stock.amountOfStock * stock.getStockPrice(-1, date, placeholderDate)
+                value = stock.amountOfStock * stock.getStockPrice(-1, date)
             
             sObject["value"] = value
             

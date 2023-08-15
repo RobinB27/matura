@@ -1,0 +1,9 @@
+date: 2023-07-03
+funds in portfolio: $9720.179992675781
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $279.82000732421875
+ 
+Overall profit/loss: $0.0
+

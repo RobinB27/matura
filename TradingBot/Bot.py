@@ -72,7 +72,6 @@ class Bot:
                         print(f"Bot: Trading day: {self.date}")
                 
                     weekendCheckDatetime = datetime.strptime(self.date, "%Y-%m-%d")
-                    exceptionCheckDate = self.portfolio.addDayToDate(self.date)
                 
                     if weekendCheckDatetime.isoweekday() > 5:
                         if Config.debug():
@@ -82,7 +81,7 @@ class Bot:
                 
                     if Config.debug():
                         print("Bot: downloading Stock price for Exception date check")
-                    if self.portfolio.stocksHeld[0].getStockPrice(-1, self.date, exceptionCheckDate) is None:
+                    if self.portfolio.stocksHeld[0].getStockPrice(-1, self.date) is None:
                         if Config.debug():
                             print(f"Bot: exception date: {self.date}")
                         self.date = self.portfolio.addDayToDate(self.date)

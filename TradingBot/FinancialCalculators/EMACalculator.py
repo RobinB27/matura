@@ -1,5 +1,6 @@
 import yfinance as fy
 import pandas as pd
+from decimal import *
 
 from datetime import datetime, timedelta, date
 from TradingBot.Portfolio import Portfolio
@@ -16,10 +17,13 @@ class EMACalculator:
     def __init__(self) -> None:
         self.SMACAlculator = SMACalculator()
         self.cache = Cache("./TradingBot/FinancialCalculators/CacheSMA")
+        getcontext().prec = 10
 
     
     def calculateEMA(self, daysToCalculate: int, portfolio: Portfolio, ticker, mode = 0, dateToCalculate:str = ""):
-        """Calculates the EMA needed for MACD calculations
+        """Calculates the EMA needed for MACD calculations, 
+        EMA(today) = (Close(today) * weightMultiplier) + (EMA(yesterday) * (1 - weightMultiplier))
+
 
         Args:
             daysToCalculate (int): _description_
@@ -33,7 +37,6 @@ class EMACalculator:
         """
         
         #EMA(today) = (Close(today) * α) + (EMA(yesterday) * (1 - α))
-        EMAValue = 0            
         weightMultiplier = 2 / (daysToCalculate + 1)
         
         #could be optimised with keeping a running EMA calculation, this recalculates the EMA every time it's called
@@ -66,61 +69,117 @@ class EMACalculator:
             
         elif mode == -1:
             
-            #EMA(today) = (Close(today) * α) + (EMA(yesterday) * (1 - α))
-            
-            #checks if date is a weekend, meaning no price
-            
-            Stock_Price_Value = []
-            Stock_Price_Value.append(self.SMACAlculator.calculateSMA(daysToCalculate, portfolio, ticker, -1,  dateToCalculate))
+            prices = []
 
             executions = 0
             
+            # daysToCalculate - 1 means that the SMA will be used as testing later
             while executions < daysToCalculate - 1:
+                
+                 #checks if date is a weekend, meaning no price
                 placeHolderDate = datetime.strptime(dateToCalculate, "%Y-%m-%d")
                 if placeHolderDate.isoweekday() > 5:
                     dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                     continue
                             
-                #checks if dateToCalculate is an exception date for stock market closure
-                getStockPricePlacholder = portfolio.addDayToDate(dateToCalculate)
+                #checks if dateToCalculate is an exception date for stock market closure with cache
                             
                 #key for cache
                 key = ticker + "_" + dateToCalculate
+                
+                skipIteration = False
+                for stock in portfolio.stocksHeld:
+                    if stock.name == ticker:
                             
-                if key not in self.cache:
-                    self.cache[key] = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholder)
-                if self.cache[key] == None:
-                    if Config.debug():
-                        print("EMACalculator: Exception check cache")
-                    dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
-                    continue
-                elif self.cache[key] == None:
-                    if Config.debug():
-                        print("EMACalculator: Exception check cache access")
-                    dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
-                    continue             
+                        if key not in self.cache:
+                            self.cache[key] = stock.getStockPrice(-1, dateToCalculate)
+                        if self.cache[key] == None:
+                            if Config.debug():
+                                print("EMACalculator: Exception check cache")
+                            dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
+                            skipIteration = True
+                            break
+                        elif self.cache[key] == None:
+                            if Config.debug():
+                                print("EMACalculator: Exception check cache access")
+                            dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
+                            skipIteration = True
+                            break  
+                if skipIteration == True:
+                    continue           
                         
                 if Config.debug():  
                     print(f"EMACalculator: Downloading SMA values on: {dateToCalculate}") 
                       
-                #Stock_Price_Value.append(self.SMACAlculator.calculateSMA(daysToCalculate, portfolio, ticker, -1,  dateToCalculate))
                 for stock in portfolio.stocksHeld:
                     if stock.name == ticker:
                         
-                        Stock_Price_Value.append(stock.getStockPrice(-1, dateToCalculate))
-
+                        prices.append(stock.getStockPrice(-1, dateToCalculate))
+                
                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
 
                 executions += 1
                 
+            #code for SMA calculation for first EMA value
+            
+            # checks to ensure SMA is not called on invalid date
+            
+            SMA_checks_executions = 0
+            
+            while SMA_checks_executions < 1:
+                
+                #checks if date is a weekend, meaning no price
+                placeHolderDate = datetime.strptime(dateToCalculate, "%Y-%m-%d")
+                if placeHolderDate.isoweekday() > 5:
+                    dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
+                    continue
+                            
+                #checks if dateToCalculate is an exception date for stock market closure with cache
+                            
+                #key for cache
+                key = ticker + "_" + dateToCalculate
+                            
+                for stock in portfolio.stocksHeld:
+                    if stock.name == ticker:
+                            
+                        skipIteration == False
+                        if key not in self.cache:
+                            self.cache[key] = stock.getStockPrice(-1, dateToCalculate)
+                        if self.cache[key] == None:
+                            if Config.debug():
+                                print("EMACalculator: SMA Calculation Exception check cache")
+                            dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
+                            skipIteration = True
+                            break
+                        elif self.cache[key] == None:
+                            if Config.debug():
+                                print("EMACalculator: SMA Calculation Exception check cache access")
+                            dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
+                            skipIteration = True
+                            break
+                        
+                if skipIteration == True:
+                    continue
+                
+                SMA_checks_executions += 1  
+            
+            #calculation of SMA
+            first_EMA = self.SMACAlculator.calculateSMA(daysToCalculate, portfolio, ticker, mode, dateToCalculate)
+            
+            #insertion of SMA as first EMA value
+            prices.insert(0, first_EMA)
+            
+            
+            ema_values = []
+            ema_yesterday = prices[0]
+       
+
             #EMA(today) = (Close(today) * α) + (EMA(yesterday) * (1 - α))
                 
-            EMA_Value = Stock_Price_Value[0]
-            
-            for i in range(1, len(Stock_Price_Value)):
-                #EMA_Value = (Stock_Price_Value[i] * weightMultiplier) - (EMA_Value * (1 - weightMultiplier))
-                #EMA(today) = (Close(today) * α) + (EMA(yesterday) * (1 - α))
-
-                EMA_Value = (((Stock_Price_Value[i] - (EMA_Value)) * weightMultiplier) + EMA_Value)
-                   
-            return EMA_Value
+            for price in prices:
+                ema_today = (price * weightMultiplier) + (ema_yesterday * (1 - weightMultiplier))
+                ema_values.append(ema_today)
+                ema_yesterday = ema_today
+                
+            ema_value_to_return = round(ema_values[-1], 3)
+            return ema_value_to_return

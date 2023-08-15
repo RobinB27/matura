@@ -1,0 +1,18 @@
+date: 2022-05-13
+funds in portfolio: $9853.960433959961
+
+stocks held in portfolio: 
+AAPL amount of stock: 1
+value of stock: $146.03956604003906
+ 
+Overall profit/loss: $0.0
+
+date: 2022-05-17
+funds in portfolio: $9705.806350708008
+
+stocks held in portfolio: 
+AAPL amount of stock: 2
+value of stock: $296.30816650390625
+ 
+Overall profit/loss: $2.1145172119140625
+

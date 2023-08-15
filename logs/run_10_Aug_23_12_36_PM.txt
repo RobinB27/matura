@@ -1,0 +1,2115 @@
+date: 2019-05-14
+funds in portfolio: $1000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2019-05-14
+funds in portfolio: $957.3128051757812
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $42.68719482421875
+ 
+Overall profit/loss: $0.0
+
+date: 2019-05-22
+funds in portfolio: $944.4641380310059
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $12.84866714477539
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $43.52883529663086
+ 
+Overall profit/loss: $0.8416404724121094
+
+date: 2019-05-28
+funds in portfolio: $987.5107879638672
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $12.579999923706055
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.09078788757324219
+
+date: 2019-06-07
+funds in portfolio: $987.5107879638672
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $13.633333206176758
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $1.1441211700439453
+
+date: 2019-06-11
+funds in portfolio: $1001.9841213226318
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $1.984121322631836
+
+date: 2019-06-26
+funds in portfolio: $956.8166522979736
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $45.1674690246582
+ 
+Overall profit/loss: $1.984121322631836
+
+date: 2019-07-03
+funds in portfolio: $941.1566524505615
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $15.65999984741211
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $46.03335189819336
+ 
+Overall profit/loss: $2.850004196166992
+
+date: 2019-07-03
+funds in portfolio: $891.5758571624756
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $15.65999984741211
+ 
+AAPL amount of stock: 1
+value of stock: $49.58079528808594
+ 
+KO amount of stock: 1
+value of stock: $46.03335189819336
+ 
+Overall profit/loss: $2.850004196166992
+
+date: 2019-07-17
+funds in portfolio: $908.5665245056152
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $49.32368850708008
+ 
+KO amount of stock: 1
+value of stock: $46.104042053222656
+ 
+Overall profit/loss: $3.9942550659179688
+
+date: 2019-07-18
+funds in portfolio: $954.538028717041
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $49.88398361206055
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $4.4220123291015625
+
+date: 2019-07-23
+funds in portfolio: $906.5343360900879
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $50.65532302856445
+ 
+KO amount of stock: 1
+value of stock: $48.003692626953125
+ 
+Overall profit/loss: $5.193351745605469
+
+date: 2019-07-26
+funds in portfolio: $954.3966522216797
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $50.38851547241211
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $4.785167694091797
+
+date: 2019-07-30
+funds in portfolio: $1005.0374183654785
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $5.037418365478516
+
+date: 2019-07-31
+funds in portfolio: $988.9300861358643
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $16.107332229614258
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $5.037418365478516
+
+date: 2019-08-06
+funds in portfolio: $941.1466274261475
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $15.383333206176758
+ 
+AAPL amount of stock: 1
+value of stock: $47.7834587097168
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $4.313419342041016
+
+date: 2019-08-12
+funds in portfolio: $894.1413593292236
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $15.267333030700684
+ 
+AAPL amount of stock: 1
+value of stock: $48.81231689453125
+ 
+KO amount of stock: 1
+value of stock: $47.00526809692383
+ 
+Overall profit/loss: $5.2262773513793945
+
+date: 2019-08-21
+funds in portfolio: $941.9418392181396
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $14.722000122070312
+ 
+AAPL amount of stock: 1
+value of stock: $51.77299880981445
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $8.436838150024414
+
+date: 2019-08-22
+funds in portfolio: $993.6710147857666
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $14.8100004196167
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $8.4810152053833
+
+date: 2019-08-26
+funds in portfolio: $1008.0043478012085
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $8.004347801208496
+
+date: 2019-09-11
+funds in portfolio: $953.5652761459351
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $54.43907165527344
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $8.004347801208496
+
+date: 2019-09-11
+funds in portfolio: $905.1728200912476
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $54.43907165527344
+ 
+KO amount of stock: 1
+value of stock: $48.3924560546875
+ 
+Overall profit/loss: $8.004347801208496
+
+date: 2019-09-13
+funds in portfolio: $958.4334630966187
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $48.292354583740234
+ 
+Overall profit/loss: $6.725817680358887
+
+date: 2019-09-30
+funds in portfolio: $942.3754625320435
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $16.058000564575195
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $48.45255661010742
+ 
+Overall profit/loss: $6.886019706726074
+
+date: 2019-09-30
+funds in portfolio: $887.8438692092896
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $16.058000564575195
+ 
+AAPL amount of stock: 1
+value of stock: $54.531593322753906
+ 
+KO amount of stock: 1
+value of stock: $48.45255661010742
+ 
+Overall profit/loss: $6.886019706726074
+
+date: 2019-10-09
+funds in portfolio: $935.7535181045532
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $16.302000045776367
+ 
+AAPL amount of stock: 1
+value of stock: $55.27662658691406
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $7.332144737243652
+
+date: 2019-10-15
+funds in portfolio: $993.048581123352
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $17.19266700744629
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $10.24124813079834
+
+date: 2019-10-15
+funds in portfolio: $945.4237337112427
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $17.19266700744629
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $47.624847412109375
+ 
+Overall profit/loss: $10.24124813079834
+
+date: 2019-10-17
+funds in portfolio: $962.8884000778198
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $47.87405014038086
+ 
+Overall profit/loss: $10.762450218200684
+
+date: 2019-10-24
+funds in portfolio: $1011.4922590255737
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $11.49225902557373
+
+date: 2019-11-07
+funds in portfolio: $964.9532384872437
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $46.53902053833008
+ 
+Overall profit/loss: $11.49225902557373
+
+date: 2019-11-12
+funds in portfolio: $900.9804601669312
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $63.9727783203125
+ 
+KO amount of stock: 1
+value of stock: $46.02280807495117
+ 
+Overall profit/loss: $10.976046562194824
+
+date: 2019-11-13
+funds in portfolio: $965.5661993026733
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $46.64582443237305
+ 
+Overall profit/loss: $12.212023735046387
+
+date: 2019-11-14
+funds in portfolio: $942.276198387146
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $23.290000915527344
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $46.84162521362305
+ 
+Overall profit/loss: $12.407824516296387
+
+date: 2019-11-22
+funds in portfolio: $878.3473615646362
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $22.202667236328125
+ 
+AAPL amount of stock: 1
+value of stock: $63.928836822509766
+ 
+KO amount of stock: 1
+value of stock: $47.19763946533203
+ 
+Overall profit/loss: $11.676505088806152
+
+date: 2019-11-26
+funds in portfolio: $926.3193120956421
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $21.92799949645996
+ 
+AAPL amount of stock: 1
+value of stock: $64.54178619384766
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $12.789097785949707
+
+date: 2019-12-18
+funds in portfolio: $952.5293111801147
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $68.31480407714844
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $20.844115257263184
+
+date: 2019-12-18
+funds in portfolio: $1020.8441152572632
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $20.844115257263184
+
+date: 2019-12-19
+funds in portfolio: $972.1372327804565
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $48.70688247680664
+ 
+Overall profit/loss: $20.844115257263184
+
+date: 2020-01-14
+funds in portfolio: $936.2759008407593
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $35.861331939697266
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $50.213279724121094
+ 
+Overall profit/loss: $22.350512504577637
+
+date: 2020-01-15
+funds in portfolio: $970.8425664901733
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $50.84095001220703
+ 
+Overall profit/loss: $21.68351650238037
+
+date: 2020-01-22
+funds in portfolio: $1022.4994802474976
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $22.49948024749756
+
+date: 2020-01-28
+funds in portfolio: $944.9169759750366
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $77.58250427246094
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $22.49948024749756
+
+date: 2020-02-11
+funds in portfolio: $891.4846563339233
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $78.23661804199219
+ 
+KO amount of stock: 1
+value of stock: $53.43231964111328
+ 
+Overall profit/loss: $23.15359401702881
+
+date: 2020-02-13
+funds in portfolio: $944.9349012374878
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $79.52421569824219
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $24.45911693572998
+
+date: 2020-02-14
+funds in portfolio: $891.1797819137573
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $79.54379272460938
+ 
+KO amount of stock: 1
+value of stock: $53.75511932373047
+ 
+Overall profit/loss: $24.478693962097168
+
+date: 2020-02-20
+funds in portfolio: $969.5852994918823
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $53.548885345458984
+ 
+Overall profit/loss: $23.13418483734131
+
+date: 2020-02-24
+funds in portfolio: $913.9993009567261
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $55.58599853515625
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $52.58946228027344
+ 
+Overall profit/loss: $22.17476177215576
+
+date: 2020-02-24
+funds in portfolio: $841.0084714889526
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $55.58599853515625
+ 
+AAPL amount of stock: 1
+value of stock: $72.99082946777344
+ 
+KO amount of stock: 1
+value of stock: $52.58946228027344
+ 
+Overall profit/loss: $22.17476177215576
+
+date: 2020-03-18
+funds in portfolio: $901.3902730941772
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $24.08133316040039
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $40.56815719604492
+ 
+Overall profit/loss: $-33.96023654937744
+
+date: 2020-03-19
+funds in portfolio: $841.4711217880249
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $28.50933265686035
+ 
+AAPL amount of stock: 1
+value of stock: $59.919151306152344
+ 
+KO amount of stock: 1
+value of stock: $37.83647537231445
+ 
+Overall profit/loss: $-32.26391887664795
+
+date: 2020-03-31
+funds in portfolio: $876.4044561386108
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $62.24708938598633
+ 
+KO amount of stock: 1
+value of stock: $40.02543258666992
+ 
+Overall profit/loss: $-21.32302188873291
+
+date: 2020-04-01
+funds in portfolio: $935.3762845993042
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $38.098785400390625
+ 
+Overall profit/loss: $-26.524930000305176
+
+date: 2020-04-06
+funds in portfolio: $977.5906820297241
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-22.40931797027588
+
+date: 2020-04-28
+funds in portfolio: $935.3129682540894
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $42.277713775634766
+ 
+Overall profit/loss: $-22.40931797027588
+
+date: 2020-04-30
+funds in portfolio: $863.3943281173706
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $71.91864013671875
+ 
+KO amount of stock: 1
+value of stock: $41.50886154174805
+ 
+Overall profit/loss: $-23.178170204162598
+
+date: 2020-05-04
+funds in portfolio: $812.6483297348022
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $50.74599838256836
+ 
+AAPL amount of stock: 1
+value of stock: $71.76199340820312
+ 
+KO amount of stock: 1
+value of stock: $40.830467224121094
+ 
+Overall profit/loss: $-24.013211250305176
+
+date: 2020-05-13
+funds in portfolio: $888.1611547470093
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $52.73066711425781
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $39.74502944946289
+ 
+Overall profit/loss: $-19.36314868927002
+
+date: 2020-05-21
+funds in portfolio: $929.018759727478
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $55.17333221435547
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-15.807908058166504
+
+date: 2020-05-28
+funds in portfolio: $850.9041738510132
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $53.72066879272461
+ 
+AAPL amount of stock: 1
+value of stock: $78.11458587646484
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-17.260571479797363
+
+date: 2020-06-05
+funds in portfolio: $909.9481725692749
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $81.3668212890625
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-8.685006141662598
+
+date: 2020-06-15
+funds in portfolio: $994.1352071762085
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-5.864792823791504
+
+date: 2020-06-19
+funds in portfolio: $952.1305875778198
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $42.00461959838867
+ 
+Overall profit/loss: $-5.864792823791504
+
+date: 2020-06-26
+funds in portfolio: $888.1479215621948
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $63.982666015625
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $39.768394470214844
+ 
+Overall profit/loss: $-8.101017951965332
+
+date: 2020-07-02
+funds in portfolio: $798.7769575119019
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $80.57733154296875
+ 
+AAPL amount of stock: 1
+value of stock: $89.37096405029297
+ 
+KO amount of stock: 1
+value of stock: $40.96409225463867
+ 
+Overall profit/loss: $9.689345359802246
+
+date: 2020-07-08
+funds in portfolio: $889.8356275558472
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $93.60741424560547
+ 
+KO amount of stock: 1
+value of stock: $41.13751983642578
+ 
+Overall profit/loss: $24.580561637878418
+
+date: 2020-07-14
+funds in portfolio: $931.7033414840698
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $95.29121398925781
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $26.994555473327637
+
+date: 2020-07-17
+funds in portfolio: $1026.277850151062
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $26.27785015106201
+
+date: 2020-07-24
+funds in portfolio: $935.3482847213745
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $90.9295654296875
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $26.27785015106201
+
+date: 2020-07-28
+funds in portfolio: $836.9156141281128
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $98.43267059326172
+ 
+AAPL amount of stock: 1
+value of stock: $91.55546569824219
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $26.9037504196167
+
+date: 2020-08-07
+funds in portfolio: $793.2863035202026
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $96.84733581542969
+ 
+AAPL amount of stock: 1
+value of stock: $109.2871322631836
+ 
+KO amount of stock: 1
+value of stock: $43.629310607910156
+ 
+Overall profit/loss: $43.050082206726074
+
+date: 2020-08-10
+funds in portfolio: $904.1619062423706
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $94.57133483886719
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $43.55630111694336
+ 
+Overall profit/loss: $42.28954219818115
+
+date: 2020-08-19
+funds in portfolio: $1029.3972425460815
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $43.2368278503418
+ 
+Overall profit/loss: $72.63407039642334
+
+date: 2020-08-26
+funds in portfolio: $1073.35515499115
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $73.3551549911499
+
+date: 2020-08-28
+funds in portfolio: $950.5979986190796
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $122.75715637207031
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $73.3551549911499
+
+date: 2020-09-11
+funds in portfolio: $826.3580007553101
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $124.23999786376953
+ 
+AAPL amount of stock: 1
+value of stock: $110.16004943847656
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $60.75804805755615
+
+date: 2020-09-23
+funds in portfolio: $781.9982633590698
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $126.78666687011719
+ 
+AAPL amount of stock: 1
+value of stock: $105.3602294921875
+ 
+KO amount of stock: 1
+value of stock: $44.359737396240234
+ 
+Overall profit/loss: $58.504897117614746
+
+date: 2020-09-28
+funds in portfolio: $922.3982572555542
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $113.07142639160156
+ 
+KO amount of stock: 1
+value of stock: $45.34428024291992
+ 
+Overall profit/loss: $80.81396389007568
+
+date: 2020-10-02
+funds in portfolio: $1033.561541557312
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $45.41789627075195
+ 
+Overall profit/loss: $78.97943782806396
+
+date: 2020-10-06
+funds in portfolio: $895.5682096481323
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $137.9933319091797
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $45.03144454956055
+ 
+Overall profit/loss: $78.59298610687256
+
+date: 2020-10-08
+funds in portfolio: $1037.541537284851
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $46.4300422668457
+ 
+Overall profit/loss: $83.97157955169678
+
+date: 2020-10-13
+funds in portfolio: $1083.7507467269897
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $83.75074672698975
+
+date: 2020-10-16
+funds in portfolio: $937.1940755844116
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $146.55667114257812
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $83.75074672698975
+
+date: 2020-10-22
+funds in portfolio: $1079.1240682601929
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $79.12406826019287
+
+date: 2020-10-27
+funds in portfolio: $964.4395971298218
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $114.6844711303711
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $79.12406826019287
+
+date: 2020-10-29
+funds in portfolio: $827.4962682723999
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $136.94332885742188
+ 
+AAPL amount of stock: 1
+value of stock: $113.42552185058594
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $77.86511898040771
+
+date: 2020-10-29
+funds in portfolio: $783.3113584518433
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $136.94332885742188
+ 
+AAPL amount of stock: 1
+value of stock: $113.42552185058594
+ 
+KO amount of stock: 1
+value of stock: $44.18490982055664
+ 
+Overall profit/loss: $77.86511898040771
+
+date: 2020-11-13
+funds in portfolio: $832.4926099777222
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $136.1666717529297
+ 
+AAPL amount of stock: 1
+value of stock: $117.503173828125
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $86.16245555877686
+
+date: 2020-11-16
+funds in portfolio: $968.522608757019
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $118.52783966064453
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $87.05044841766357
+
+date: 2020-11-16
+funds in portfolio: $1087.0504484176636
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $87.05044841766357
+
+date: 2020-12-02
+funds in portfolio: $965.7835645675659
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $121.26688385009766
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $87.05044841766357
+
+date: 2020-12-02
+funds in portfolio: $917.4593381881714
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $121.26688385009766
+ 
+KO amount of stock: 1
+value of stock: $48.32422637939453
+ 
+Overall profit/loss: $87.05044841766357
+
+date: 2020-12-11
+funds in portfolio: $1038.0660963058472
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $49.474143981933594
+ 
+Overall profit/loss: $87.54024028778076
+
+date: 2020-12-16
+funds in portfolio: $830.4760999679565
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $207.58999633789062
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $49.20520782470703
+ 
+Overall profit/loss: $87.2713041305542
+
+date: 2020-12-18
+funds in portfolio: $880.3119077682495
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $231.6666717529297
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $111.9785795211792
+
+date: 2020-12-31
+funds in portfolio: $829.4560117721558
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $235.22332763671875
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $50.85589599609375
+ 
+Overall profit/loss: $115.53523540496826
+
+date: 2021-01-08
+funds in portfolio: $1122.7960081100464
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $47.369056701660156
+ 
+Overall profit/loss: $170.16506481170654
+
+date: 2021-01-08
+funds in portfolio: $992.6912565231323
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $130.10475158691406
+ 
+KO amount of stock: 1
+value of stock: $47.369056701660156
+ 
+Overall profit/loss: $170.16506481170654
+
+date: 2021-01-28
+funds in portfolio: $714.214602470398
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $278.4766540527344
+ 
+AAPL amount of stock: 1
+value of stock: $135.0704803466797
+ 
+KO amount of stock: 1
+value of stock: $45.57927703857422
+ 
+Overall profit/loss: $173.34101390838623
+
+date: 2021-01-28
+funds in portfolio: $849.2850828170776
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $278.4766540527344
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $45.57927703857422
+ 
+Overall profit/loss: $173.34101390838623
+
+date: 2021-02-02
+funds in portfolio: $894.6881513595581
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $290.92999267578125
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $185.61814403533936
+
+date: 2021-02-11
+funds in portfolio: $761.3498182296753
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $270.5533447265625
+ 
+AAPL amount of stock: 1
+value of stock: $133.3383331298828
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $165.2414960861206
+
+date: 2021-03-03
+funds in portfolio: $715.0008497238159
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $217.73333740234375
+ 
+AAPL amount of stock: 1
+value of stock: $120.44161987304688
+ 
+KO amount of stock: 1
+value of stock: $46.348968505859375
+ 
+Overall profit/loss: $99.52477550506592
+
+date: 2021-03-15
+funds in portfolio: $837.3468809127808
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $235.97999572753906
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $47.71657943725586
+ 
+Overall profit/loss: $121.04345607757568
+
+date: 2021-03-16
+funds in portfolio: $1062.9735441207886
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $47.89423370361328
+ 
+Overall profit/loss: $110.86777782440186
+
+date: 2021-03-17
+funds in portfolio: $1110.8864812850952
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $110.88648128509521
+
+date: 2021-04-07
+funds in portfolio: $887.2298192977905
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $223.6566619873047
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $110.88648128509521
+
+date: 2021-04-14
+funds in portfolio: $1131.3064794540405
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $131.30647945404053
+
+date: 2021-04-15
+funds in portfolio: $1081.4392385482788
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $49.86724090576172
+ 
+Overall profit/loss: $131.30647945404053
+
+date: 2021-04-29
+funds in portfolio: $949.7290487289429
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $131.71018981933594
+ 
+KO amount of stock: 1
+value of stock: $50.736846923828125
+ 
+Overall profit/loss: $132.17608547210693
+
+date: 2021-04-30
+funds in portfolio: $713.2490530014038
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $236.47999572753906
+ 
+AAPL amount of stock: 1
+value of stock: $129.71697998046875
+ 
+KO amount of stock: 1
+value of stock: $50.47502517700195
+ 
+Overall profit/loss: $129.92105388641357
+
+date: 2021-05-27
+funds in portfolio: $837.0779409408569
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $210.28334045410156
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $51.88698196411133
+ 
+Overall profit/loss: $99.24826335906982
+
+date: 2021-05-27
+funds in portfolio: $888.9649229049683
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $210.28334045410156
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $99.24826335906982
+
+date: 2021-05-28
+funds in portfolio: $1097.371584892273
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $97.37158489227295
+
+date: 2021-06-21
+funds in portfolio: $1046.158221244812
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $51.21336364746094
+ 
+Overall profit/loss: $97.37158489227295
+
+date: 2021-07-13
+funds in portfolio: $1097.9933767318726
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $97.99337673187256
+
+date: 2021-07-14
+funds in portfolio: $880.2000417709351
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $217.7933349609375
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $97.99337673187256
+
+date: 2021-07-26
+funds in portfolio: $732.9357595443726
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $219.2066650390625
+ 
+AAPL amount of stock: 1
+value of stock: $147.2642822265625
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $99.40670680999756
+
+date: 2021-08-04
+funds in portfolio: $969.9090871810913
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $145.24790954589844
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $115.15699672698975
+
+date: 2021-08-06
+funds in portfolio: $916.5477056503296
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $144.6636962890625
+ 
+KO amount of stock: 1
+value of stock: $53.36138153076172
+ 
+Overall profit/loss: $114.57278347015381
+
+date: 2021-08-19
+funds in portfolio: $1061.7657537460327
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $53.568641662597656
+ 
+Overall profit/loss: $115.33439540863037
+
+date: 2021-08-20
+funds in portfolio: $835.0124273300171
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $226.75332641601562
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $53.36138153076172
+ 
+Overall profit/loss: $115.12713527679443
+
+date: 2021-09-07
+funds in portfolio: $1085.9857549667358
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $52.44753646850586
+ 
+Overall profit/loss: $138.4332914352417
+
+date: 2021-09-14
+funds in portfolio: $1138.8480978012085
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $138.8480978012085
+
+date: 2021-09-17
+funds in portfolio: $994.2635793685913
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $144.5845184326172
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $138.8480978012085
+
+date: 2021-09-21
+funds in portfolio: $942.9579648971558
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $141.98104858398438
+ 
+KO amount of stock: 1
+value of stock: $51.30561447143555
+ 
+Overall profit/loss: $136.24462795257568
+
+date: 2021-09-23
+funds in portfolio: $691.744631767273
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $251.2133331298828
+ 
+AAPL amount of stock: 1
+value of stock: $145.3467559814453
+ 
+KO amount of stock: 1
+value of stock: $51.29612350463867
+ 
+Overall profit/loss: $139.60084438323975
+
+date: 2021-10-06
+funds in portfolio: $952.6612882614136
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $140.56553649902344
+ 
+KO amount of stock: 1
+value of stock: $50.98287582397461
+ 
+Overall profit/loss: $144.20970058441162
+
+date: 2021-10-12
+funds in portfolio: $1092.7417478561401
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $51.47647476196289
+ 
+Overall profit/loss: $144.21822261810303
+
+date: 2021-10-13
+funds in portfolio: $1144.2277135849
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $144.2277135848999
+
+date: 2021-11-09
+funds in portfolio: $994.7233190536499
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $149.50439453125
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $144.2277135848999
+
+date: 2021-11-16
+funds in portfolio: $643.1466588973999
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $351.57666015625
+ 
+AAPL amount of stock: 1
+value of stock: $149.69276428222656
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $144.41608333587646
+
+date: 2021-11-18
+funds in portfolio: $590.5500974655151
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $365.4599914550781
+ 
+AAPL amount of stock: 1
+value of stock: $156.50326538085938
+ 
+KO amount of stock: 1
+value of stock: $52.596561431884766
+ 
+Overall profit/loss: $165.1099157333374
+
+date: 2021-11-26
+funds in portfolio: $746.0025663375854
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $360.6400146484375
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $51.001869201660156
+ 
+Overall profit/loss: $157.6444501876831
+
+date: 2021-12-09
+funds in portfolio: $1080.602572441101
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 1
+value of stock: $52.47831726074219
+ 
+Overall profit/loss: $133.08088970184326
+
+date: 2021-12-14
+funds in portfolio: $1135.8932523727417
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $135.8932523727417
+
+date: 2021-12-15
+funds in portfolio: $810.5632658004761
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $325.3299865722656
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $135.8932523727417
+
+date: 2021-12-23
+funds in portfolio: $635.8093595504761
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $355.6666564941406
+ 
+AAPL amount of stock: 1
+value of stock: $174.75390625
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $166.2299222946167
+
+date: 2021-12-30
+funds in portfolio: $992.589358329773
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $176.65728759765625
+ 
+KO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $169.2466459274292
+
+date: 2022-01-05
+funds in portfolio: $934.4384870529175
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $173.40567016601562
+ 
+KO amount of stock: 1
+value of stock: $58.15087127685547
+ 
+Overall profit/loss: $165.99502849578857
+
+date: 2022-01-19
+funds in portfolio: $602.5551557540894
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $331.8833312988281
+ 
+AAPL amount of stock: 1
+value of stock: $164.79090881347656
+ 
+KO amount of stock: 1
+value of stock: $58.351749420166016
+ 
+Overall profit/loss: $157.58114528656006
+

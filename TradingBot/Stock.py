@@ -25,7 +25,7 @@ class Stock:
         
     
     #at some point has to be changed to utilise the download method of yf more precisely (time period)
-    def getStockPrice(self, mode: int = 0, dateStart='0', dateEnd='0'):
+    def getStockPrice(self, mode: int = 0, dateStart='0'):
         """
         fetches stock prices, default mode is live prices, past mode (daily intevals)
         Args: mode (-1 for past mode), start date('year-month-day'), end date
