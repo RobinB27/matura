@@ -1,5 +1,13 @@
+# no pyCache files & Mac-generated .DS_Store
 *.pyc 
 *.DS_Store
+# no cache from financial calculators
 *.db
 *.db-shm
 *.db-wal
+# no graph outputs, keep empty outputs folder
+output/*
+!output/.gitkeep
+# no log files, keep empty logs folder
+logs/*
+!logs/.gitkeep
