@@ -54,6 +54,20 @@ class Stock:
                     print(f"Stock: exception date: {dateStart}")    
                 return None
             
+            
+    def getStockPricesUntilDate(self, dateToCalculate):
+        try:
+            historical_data = self.tickerObject.history(period="max")
+            historical_data = historical_data.dropna()  # Remove NaN rows
+            historical_data = historical_data[historical_data.index <= dateToCalculate]            
+            prices = historical_data['Close'].to_dict()
+            return prices
+
+        except KeyError:
+            if Config.debug():
+                print(f"Stock: exception date: {dateToCalculate}")
+            return {}
+            
         
     def displayStockAmount(self):      
         print(f"Number of {self.name} owned: {self.amountOfStock}")

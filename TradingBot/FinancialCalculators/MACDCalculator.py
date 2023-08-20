@@ -52,4 +52,4 @@ class MACDCalculator:
 
             
             MACDline = EMA_Placeholder12days - EMA_Placeholder26days
-            return MACDline
+            return round(MACDline, 2)

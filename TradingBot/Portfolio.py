@@ -63,10 +63,9 @@ class Portfolio:
                 #gets historical price if ticker in portfolio
                 for stock in self.stocksHeld:
                     if stock.name == nameOfTicker:
-                        placeholderEndDate = self.addDayToDate(date)
                         
                         #Returns Open, High, Low, Close, Adj Close, Volume to the
-                        historicalStockPrice = stock.getStockPrice(-1, date, placeholderEndDate)
+                        historicalStockPrice = stock.getStockPrice(-1, date)
                         totalCost = historicalStockPrice * amount
                         
                         #sells the amount of shares given if enough funds are available
@@ -112,9 +111,8 @@ class Portfolio:
                 for stock in self.stocksHeld:
                     if stock.name == nameOfTicker:
                         
-                        placeholderEndDate = self.addDayToDate(date)
                         #Returns historical closing price 
-                        historicalStockPrice = stock.getStockPrice(-1, date, placeholderEndDate)
+                        historicalStockPrice = stock.getStockPrice(-1, date)
                         totalPrice = historicalStockPrice * amount
                         
                         #sells the amount of shares given

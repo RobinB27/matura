@@ -7,7 +7,6 @@ from TradingBot.Bot import Bot
 from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
 from TradingBot.MACDDecisionMaking import MACDDecisionMaking
 
-from TradingBot.FinancialCalculators.SMACalculator import SMACalculator
 from TradingBot.FinancialCalculators.EMACalculator import EMACalculator
 from TradingBot.FinancialCalculators.MACDCalculator import MACDCalculator
 from TradingBot.FinancialCalculators.SignalLineCalculator import SignalLineCalculator
@@ -30,17 +29,16 @@ p.addStock("TSLA")
 
 c1 = MACDCalculator() 
 s = SignalLineCalculator()
-M = SMACalculator()
 E = EMACalculator()
 
 #print(t1.getStockPrice(-1, "2023-05-29"))
 # , "2023-04-19"))
 
 #print(M.calculateSMA(12, p, "TSLA", -1, "2020-05-25"))
-#print(E.calculateEMA(12, p, "TSLA", -1, "2023-04-18"))
+#print(E.calculateEMA(12, p, "TSLA", -1, "2023-03-17"))
 #print("EMA: 2023-04-18: 186.83")
-#print(c1.calculateMACD(p, "TSLA", -1, "2023-04-18"))
-#print(s.signalLineCalculation(p, "TSLA", -1, "2023-04-18"))
+#print(c1.calculateMACD(p, "TSLA", -1, "2022-03-24"))
+#print(s.signalLineCalculation(p, "TSLA", -1, "2022-03-24"))
 
 a.initiating()
 a.startBot()

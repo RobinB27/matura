@@ -4,7 +4,6 @@ import pandas as pd
 from datetime import datetime, timedelta, date
 from TradingBot.Portfolio import Portfolio
 
-from TradingBot.FinancialCalculators.SMACalculator import SMACalculator
 from TradingBot.FinancialCalculators.EMACalculator import EMACalculator
 from TradingBot.FinancialCalculators.MACDCalculator import MACDCalculator
 from TradingBot.FinancialCalculators.SignalLineCalculator import SignalLineCalculator
@@ -17,7 +16,6 @@ class MACDDecisionMaking:
     def __init__(self, mode: int = 0):
         
         self.mode = mode
-        self.SMACalculator = SMACalculator()
         self.EmaCalculator = EMACalculator()
         self.MACDCalculator = MACDCalculator()
         self.SignalLineCalculator = SignalLineCalculator()

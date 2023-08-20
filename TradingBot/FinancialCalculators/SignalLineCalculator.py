@@ -1,5 +1,7 @@
 import yfinance as fy
 import pandas as pd
+import numpy as np
+import talib
 
 from datetime import datetime, timedelta, date
 from TradingBot.Portfolio import Portfolio
@@ -18,10 +20,7 @@ class SignalLineCalculator:
 
     
     def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = ""):
-                #TO DO CHECK IF TICKER VALID AT START
-        decision = 0
-        #EMA = (todays MACD * K) + (Previous EMA * (1 – K))
-        
+                
         signalLine = 0
         weightMultiplier = 2 / (9 + 1)
         MACDPlaceholder = 0
@@ -71,14 +70,15 @@ class SignalLineCalculator:
             signalLine = (MACDPlaceholder * weightMultiplier) + (MACDAverage * (1 - weightMultiplier))
             print(f"SIgnal line: {signalLine}")
             
-        elif mode == -1:                
-                                                                                   
-            MACDPlaceholder = self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateToCalculate)
-            MACD_prices = [MACDPlaceholder]
+        elif mode == -1:    
+                        
+            MACD_prices = []
+            
+            nextDay = portfolio.addDayToDate(dateToCalculate)
+            MACDNextDay = self.MACDCalculator.calculateMACD(portfolio, ticker, -1, nextDay)
+            MACD_prices.append(MACDNextDay)
             
             executions = 0
-            dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
-
             while executions < 8:
                 
                 weekendCheck = datetime.strptime(dateToCalculate, "%Y-%m-%d")
@@ -98,13 +98,13 @@ class SignalLineCalculator:
                             self.cache[key] = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholderDate)
                             if self.cache[key] == None:
                                 if Config.debug():  
-                                    print("SMACalculator: Exception check cache")
+                                    print("SignalLineCalculator: Exception check cache")
                                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                                 skipIteration = True
                                 break
                         elif self.cache[key] == None:
                             if Config.debug():  
-                                print("SMACalculator: Exception check cache access")
+                                print("SignalLineCalculator: Exception check cache access")
                             dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                             skipIteration = True
                             break
@@ -115,26 +115,10 @@ class SignalLineCalculator:
                 MACD_prices.append(self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateToCalculate))
                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                 executions += 1
-                
-            # Calculate the nine-day EMA of the MACD values
-            nine_day_MACD_ema = self.calculateEMA(MACD_prices)
-            
-            # Replace the MACDAverage calculation with the calculated EMA value
-            signalLine = (MACDPlaceholder * weightMultiplier) + (nine_day_MACD_ema * (1 - weightMultiplier))
-            return MACDPlaceholder, signalLine
 
-    def calculateEMA(self, MACD_prices):
-    
-        smoothing_factor = 2 / (9 + 1)
-    
-        # Initialize the EMA with the first value
-        MACD_EMA = []
-        MACD_ema_yesterday = MACD_prices[0]
-        
-        for price in MACD_prices:
-            MACD_ema_today = (price * smoothing_factor) + (MACD_ema_yesterday * (1 - smoothing_factor))
-            MACD_EMA.append(MACD_ema_today)
-            MACD_ema_yesterday = MACD_ema_today
-    
-        
-        return MACD_EMA[-1]
+
+                
+            signalLine = talib.EMA(np.array(MACD_prices), timeperiod=9)
+            return MACD_prices[1], round(signalLine[-1], 2)
+                
+            
