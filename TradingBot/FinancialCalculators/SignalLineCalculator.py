@@ -16,7 +16,8 @@ class SignalLineCalculator:
     
     def __init__(self) -> None:
         self.MACDCalculator = MACDCalculator()
-        self.cache = Cache("./TradingBot/FinancialCalculators/CacheSMA")
+        self.cacheExceptionDates = Cache("./TradingBot/FinancialCalculators/Chaches/cacheExceptionDates")
+        self.cacheMACD = Cache("./TradingBot/FinancialCalculators/Caches/CacheMACD")
 
     
     def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = ""):
@@ -91,18 +92,20 @@ class SignalLineCalculator:
                 
                 #key for cache
                 key = ticker + "_" + dateToCalculate
+                
                 skipIteration = False
+                
                 for stock in portfolio.stocksHeld:
                     if stock.name == ticker:
-                        if key not in self.cache:
-                            self.cache[key] = stock.getStockPrice(-1, dateToCalculate, getStockPricePlacholderDate)
-                            if self.cache[key] == None:
+                        if key not in self.cacheExceptionDates:
+                            self.cacheExceptionDates[key] = stock.getStockPrice(-1, dateToCalculate)
+                            if self.cacheExceptionDates[key] == None:
                                 if Config.debug():  
                                     print("SignalLineCalculator: Exception check cache")
                                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                                 skipIteration = True
                                 break
-                        elif self.cache[key] == None:
+                        elif self.cacheExceptionDates[key] == None:
                             if Config.debug():  
                                 print("SignalLineCalculator: Exception check cache access")
                             dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
@@ -111,13 +114,19 @@ class SignalLineCalculator:
                         
                 if skipIteration == True:
                     continue
-                                             
-                MACD_prices.append(self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateToCalculate))
+                
+                keyMACDPrice = ticker + "_" + dateToCalculate
+                
+                if keyMACDPrice not in self.cacheMACD:
+                    MACDPrice =self.MACDCalculator.calculateMACD(portfolio, ticker, -1, dateToCalculate)
+                    self.cacheMACD[keyMACDPrice] = MACDPrice
+                    MACD_prices.append(MACDPrice)
+                else:
+                    MACD_prices.append(self.cacheMACD[keyMACDPrice])
+                                            
                 dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                 executions += 1
 
-
-                
             signalLine = talib.EMA(np.array(MACD_prices), timeperiod=9)
             return MACD_prices[1], round(signalLine[-1], 2)
                 

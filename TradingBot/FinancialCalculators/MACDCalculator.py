@@ -3,6 +3,7 @@ import pandas as pd
 
 from datetime import datetime, timedelta, date
 from TradingBot.Portfolio import Portfolio
+from diskcache import Cache
 
 from TradingBot.FinancialCalculators.EMACalculator import EMACalculator
 
@@ -13,8 +14,11 @@ class MACDCalculator:
     
     def __init__(self):
         self.EMACalculator = EMACalculator()
+        self.cache = Cache("./TradingBot/FinancialCalculators/Caches/CacheEMA12")
+        self.cache = Cache("./TradingBot/FinancialCalculators/Caches/CacheEMA26")
+
     
-    def calculateMACD(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateStart: str = "0"):
+    def calculateMACD(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = "0"):
         
         # MACD = 12 day EMA - 26 day EMA
         # EMA = exponential moving average
@@ -40,16 +44,28 @@ class MACDCalculator:
             
         elif mode == -1:
             
+            key12 = ticker + "_" + dateToCalculate + "_12"
+            key26 = ticker + "_" + dateToCalculate + "_26"
             
-            if Config.debug():  
-                print(f"MACDCalculator: Downloading EMA 12: {dateStart}")
-            EMA_Placeholder12days = self.EMACalculator.calculateEMA(12, portfolio, ticker, -1, dateStart)
+            if key12 not in self.cache:
+                if Config.debug():  
+                    print(f"MACDCalculator: Downloading EMA 12: {dateToCalculate}")
+                EMA12OnDate = self.EMACalculator.calculateEMA(12, portfolio, ticker, -1, dateToCalculate)
+                self.cache[key12] = EMA12OnDate  
+            else:
+                if Config.debug():  
+                    print(f"MACDCalculator: Accessing Cache for EMA 12: {dateToCalculate}")
+                EMA12OnDate = self.cache[key12]
             
-            if Config.debug():  
-                print(f"MACDCalculator: Downloading EMA 26: {dateStart}")
-            EMA_Placeholder26days = self.EMACalculator.calculateEMA(26, portfolio, ticker, -1, dateStart)
-            
-
-            
-            MACDline = EMA_Placeholder12days - EMA_Placeholder26days
-            return round(MACDline, 2)
+            if key26 not in self.cache:
+                if Config.debug():  
+                    print(f"MACDCalculator: Downloading EMA 26: {dateToCalculate}")
+                EMA26OnDate = self.EMACalculator.calculateEMA(26, portfolio, ticker, -1, dateToCalculate)
+                self.cache[key26] = EMA26OnDate  
+            else:
+                if Config.debug():  
+                    print(f"MACDCalculator: Accessing Cache for EMA 26: {dateToCalculate}")
+                EMA26OnDate = self.cache[key26]
+                
+            MACDline = EMA12OnDate - EMA26OnDate 
+            return round(MACDline, 2)                        

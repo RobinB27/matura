@@ -27,9 +27,7 @@ class Bot:
         self.decisionMaker = decisionMaking
         self.fileLoggerTxt = FileLoggertxt()
         self.fileLoggerJSON = FileLoggerJSON()
-        
-        self.cache = Cache("./TradingBot/FinancialCalculators/CacheSMA")  
-        
+                
         
     def initiating(self):
         fundsForPortfolio = input("How many funds $$$ does the portfolio have? ")
@@ -118,4 +116,3 @@ class Bot:
                         
             if Config.debug():            
                 print("closing cache")
-            self.cache.close()

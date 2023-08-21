@@ -3,8 +3,6 @@ import pandas as pd
 import numpy as np
 import talib
 
-from decimal import *
-
 from datetime import datetime, timedelta, date
 from TradingBot.Portfolio import Portfolio
 
@@ -16,8 +14,7 @@ from Util.Config import Config
 class EMACalculator:
     
     def __init__(self) -> None:
-        self.cache = Cache("./TradingBot/FinancialCalculators/CacheSMA")
-        getcontext().prec = 10
+        self.cacheExceptionDates = Cache("./TradingBot/FinancialCalculators/Chaches/cacheExceptionDates")
 
     
     def calculateEMA(self, daysToCalculate: int, portfolio: Portfolio, ticker, mode = 0, dateToCalculate:str = ""):
@@ -65,15 +62,15 @@ class EMACalculator:
                 skipIteration = False
                 for stock in portfolio.stocksHeld:
                     if stock.name == ticker:
-                        if key not in self.cache:
-                            self.cache[key] = stock.getStockPrice(-1, dateToCalculate)
-                        if self.cache[key] == None:
+                        if key not in self.cacheExceptionDates:
+                            self.cacheExceptionDates[key] = stock.getStockPrice(-1, dateToCalculate)
+                        if self.cacheExceptionDates[key] == None:
                             if Config.debug():
                                 print("EMACalculator: Exception check cache")
                             dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)
                             skipIteration = True
                             break
-                        elif self.cache[key] == None:
+                        elif self.cacheExceptionDates[key] == None:
                             if Config.debug():
                                 print("EMACalculator: Exception check cache access")
                             dateToCalculate = portfolio.subtractDayFromDate(dateToCalculate)

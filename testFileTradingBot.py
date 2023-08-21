@@ -37,7 +37,7 @@ E = EMACalculator()
 #print(M.calculateSMA(12, p, "TSLA", -1, "2020-05-25"))
 #print(E.calculateEMA(12, p, "TSLA", -1, "2023-03-17"))
 #print("EMA: 2023-04-18: 186.83")
-#print(c1.calculateMACD(p, "TSLA", -1, "2022-03-24"))
+#print(c1.calculateMACD(p, "TSLA", -1, "2023-08-08"))
 #print(s.signalLineCalculation(p, "TSLA", -1, "2022-03-24"))
 
 a.initiating()
