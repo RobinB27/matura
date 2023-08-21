@@ -5,7 +5,7 @@ from decimal import *
 from datetime import datetime, timedelta, date
 from TradingBot.Portfolio import Portfolio
 
-from TradingBot.FinancialCalculators.Old_Files.Old_SMACalculator import SMACalculator
+from TradingBot.FinancialCalculators.Old_Files.LEGACY_SMACalculator import SMACalculator
 
 from diskcache import Cache
 

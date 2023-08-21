@@ -1,5 +1,6 @@
 from TradingBot.Stock import Stock
 from TradingBot.Portfolio import Portfolio
+from TradingBot.SimpleSentimentDM import SimpleSentimentDM
 from TradingBot.MACDDecisionMaking import MACDDecisionMaking
 from TradingBot.FileLoggers.FileLoggerJSON import FileLoggerJSON
 from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
@@ -7,8 +8,6 @@ from datetime import  datetime, timedelta, date
 from diskcache import Cache
 
 from Util.Config import Config
-
-
 
 #in time period bot skipps weekends but counts them as a day of the time period
 #so to get full trading week timePeriod has to equal 7
@@ -49,70 +48,78 @@ class Bot:
         
         self.fileLoggerTxt.createLogFile()
         
+        
+        self.DecisionMakerList = []
+        
         if isinstance(self.decisionMaker, MACDDecisionMaking):
-            self.MACDDecisionMakerList = []
-            
             for i in range(len(self.portfolio.stocksHeld)):
-                self.MACDDecisionMakerList.append(MACDDecisionMaking(self.mode))
+                self.DecisionMakerList.append(MACDDecisionMaking(self.mode))
+        elif isinstance(self.decisionMaker, SimpleSentimentDM):
+            for i in range(len(self.portfolio.stocksHeld)):
+                self.DecisionMakerList.append(SimpleSentimentDM(self.mode))
+            
                 
         
     
     def startBot(self):
-        if isinstance(self.decisionMaker, MACDDecisionMaking):
-            if self.mode == 0:
-                pass
+    
+        if self.mode == 0:
+            pass
+    
+        if self.mode == -1:            
         
-            if self.mode == -1:            
+            for i in range(self.timePeriod):
+                
+                if Config.debug():
+                    print(f"Bot: Trading day: {self.date}")
             
-                for i in range(self.timePeriod):
-                    
+                weekendCheckDatetime = datetime.strptime(self.date, "%Y-%m-%d")
+            
+                if weekendCheckDatetime.isoweekday() > 5:
                     if Config.debug():
-                        print(f"Bot: Trading day: {self.date}")
-                
-                    weekendCheckDatetime = datetime.strptime(self.date, "%Y-%m-%d")
-                
-                    if weekendCheckDatetime.isoweekday() > 5:
-                        if Config.debug():
-                            print(f"Bot: weekend: {self.date}")
-                        self.date = self.portfolio.addDayToDate(self.date)
-                        continue
-                
-                    if Config.debug():
-                        print("Bot: downloading Stock price for Exception date check")
-                    if self.portfolio.stocksHeld[0].getStockPrice(-1, self.date) is None:
-                        if Config.debug():
-                            print(f"Bot: exception date: {self.date}")
-                        self.date = self.portfolio.addDayToDate(self.date)
-                        continue
-                    
-                    for i in range(len(self.MACDDecisionMakerList)):
-                        decision = self.MACDDecisionMakerList[i].makeStockDecision(self.portfolio, self.portfolio.stocksHeld[i].name, self.mode, self.date)
-                        
-                    #for stock in self.portfolio.stocksHeld:
-                        #decision = self.decisionMaker.makeStockDecision(self.portfolio, stock.name, self.mode, self.date)
-
-                        if decision == 1:
-                            
-                            print(f"Bot: Buying stock: {self.portfolio.stocksHeld[i].name} on {self.date}")
-                            self.portfolio.buyStock(1, self.portfolio.stocksHeld[i].name, self.mode, self.date)
-                            self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
-
-                        elif decision == -1:
-                            
-                            print(f"Bot: Selling stock: {self.portfolio.stocksHeld[i].name} on {self.date}")
-                            self.portfolio.sellStock(1, self.portfolio.stocksHeld[i].name, self.mode, self.date)
-                            self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
-
-                        else:
-                            if Config.debug():
-                                print(f"Bot: Ignoring stock: {self.portfolio.stocksHeld[i].name} on {self.date}")
-                        
-                    #self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
-                    self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date)
-                
+                        print(f"Bot: weekend: {self.date}")
                     self.date = self.portfolio.addDayToDate(self.date)
+                    continue
+            
+                if Config.debug():
+                    print("Bot: downloading Stock price for Exception date check")
+                if self.portfolio.stocksHeld[0].getStockPrice(-1, self.date) is None:
                     if Config.debug():
-                        print(self.date)
+                        print(f"Bot: exception date: {self.date}")
+                    self.date = self.portfolio.addDayToDate(self.date)
+                    continue
+                
+                for i in range(len(self.DecisionMakerList)):
+                    decision = self.DecisionMakerList[i].makeStockDecision(self.portfolio, self.portfolio.stocksHeld[i].name, self.mode, self.date)
+                    
+                #for stock in self.portfolio.stocksHeld:
+                    #decision = self.decisionMaker.makeStockDecision(self.portfolio, stock.name, self.mode, self.date)
+
+                    if decision == 1:
                         
-            if Config.debug():            
-                print("closing cache")
+                        print(f"Bot: Buying stock: {self.portfolio.stocksHeld[i].name} on {self.date}")
+                        self.portfolio.buyStock(1, self.portfolio.stocksHeld[i].name, self.mode, self.date)
+                        self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
+
+                    elif decision == -1:
+                        
+                        print(f"Bot: Selling stock: {self.portfolio.stocksHeld[i].name} on {self.date}")
+                        self.portfolio.sellStock(1, self.portfolio.stocksHeld[i].name, self.mode, self.date)
+                        self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
+
+                    else:
+                        if Config.debug():
+                            print(f"Bot: Ignoring stock: {self.portfolio.stocksHeld[i].name} on {self.date}")
+                    
+                #self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
+                self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date)
+            
+                self.date = self.portfolio.addDayToDate(self.date)
+                if Config.debug():
+                    print(self.date)
+            
+            # creates snapshot for last day
+            self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
+       
+        if Config.debug():            
+            print("closing cache")

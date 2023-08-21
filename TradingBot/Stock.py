@@ -2,6 +2,8 @@ import yfinance as yf
 
 from Util.Config import Config
 
+import pandas as pd
+
 
 class Stock:
     
@@ -60,13 +62,14 @@ class Stock:
             historical_data = self.tickerObject.history(period="max")
             historical_data = historical_data.dropna()  # Remove NaN rows
             historical_data = historical_data[historical_data.index <= dateToCalculate]            
-            prices = historical_data['Close'].to_dict()
+            prices = historical_data['Close'].to_list()
             return prices
 
         except KeyError:
             if Config.debug():
                 print(f"Stock: exception date: {dateToCalculate}")
             return {}
+    
             
         
     def displayStockAmount(self):      

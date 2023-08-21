@@ -4,9 +4,9 @@ import pandas as pd
 from datetime import datetime, timedelta, date
 from TradingBot.Portfolio import Portfolio
 
-from TradingBot.FinancialCalculators.EMACalculator import EMACalculator
-from TradingBot.FinancialCalculators.MACDCalculator import MACDCalculator
 from TradingBot.FinancialCalculators.SignalLineCalculator import SignalLineCalculator
+
+
 
 from Util.Config import Config
 
@@ -16,8 +16,6 @@ class MACDDecisionMaking:
     def __init__(self, mode: int = 0):
         
         self.mode = mode
-        self.EmaCalculator = EMACalculator()
-        self.MACDCalculator = MACDCalculator()
         self.SignalLineCalculator = SignalLineCalculator()
         
         # curveComparison is from perspective of signal line 

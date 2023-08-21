@@ -5,7 +5,7 @@ from datetime import datetime, timedelta, date
 from TradingBot.Portfolio import Portfolio
 from diskcache import Cache
 
-from TradingBot.FinancialCalculators.EMACalculator import EMACalculator
+from TradingBot.FinancialCalculators.Old_Files.LEGACY_EMACalculator import EMACalculator
 
 from Util.Config import Config
 
