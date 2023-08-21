@@ -19,7 +19,7 @@ from TradingBot.FinancialCalculators.SignalLineCalculator import SignalLineCalcu
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #bot settings need date format like this: "2023-04-12"
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-a = Bot(MACDDecisionMaking(-1), "2020-05-31", -1)
+a = Bot(MACDDecisionMaking(-1), "2022-01-04", -1)
 t1 = Stock("TSLA")
 p = Portfolio(1000)
 p.addStock("TSLA")
