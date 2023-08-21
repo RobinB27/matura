@@ -14,7 +14,58 @@ class Graphing:
         Args:
             path (str): path to the JSON log file
         """
-        pass
+        x, y = Graphing.parseForComp(path)
+        name = "Portfolio over Time" + "_" + datetime.datetime.now().strftime("%d_%b_%y_%I_%M_%p")
+        
+        plt.title(name)
+        plt.xlabel("Days")
+        plt.ylabel("Stocks held")
+        
+        for ticker, amounts in y.items():
+            # Plot config
+            plt.plot(x, amounts, label=ticker)
+        
+        plt.legend()
+        
+        if displayWindow: plt.show()
+        if savePath is not None: plt.savefig(savePath + name + ".png", dpi=300)
+    
+    def parseForComp(path: str) -> tuple[list, dict]:
+        """Utility funcion for getting x & y values for a time/composition graph from a log file.
+        
+        Args:
+            path (str): path to the JSON log file
+        Returns:
+            list, list: x-value list, dict containing stock amount lists (y values)
+        """
+        data = Graphing.fetchLog(path)
+        
+        # x & y for plot
+        dates = []
+        amounts ={} # dict containing lists of y-values for all stocks
+        
+        # extract stock names from first snapshot
+        for stock in data["snapshots"][0]["stocksHeld"]: amounts[stock["name"]] = []
+        
+        prevDate = None
+        daysPassed = 0
+        for snapshot in data["snapshots"]:
+            # Getting y values (stocks held)
+            for stock in snapshot["stocksHeld"]: amounts[stock["name"]].append(stock["amount"])
+            
+            # Getting x values (time)
+            if prevDate is None:
+                dates.append(0)
+                prevDate = Graphing.strToDate(snapshot["date"])
+            else:
+                currentDate = Graphing.strToDate(snapshot["date"])
+                difference = currentDate - prevDate
+                difference = difference.days
+                daysPassed += difference
+                dates.append(daysPassed)
+                prevDate = currentDate
+        
+        return dates, amounts
 
     def plotValue(path: str, displayWindow: bool = False, savePath: str = "output/") -> None:
         """Generates a plot visualising portfolio value development over time.\n
@@ -39,7 +90,6 @@ class Graphing:
 
         Args:
             path (str): path to the JSON log file
-
         Returns:
             dict: processed JSON log file
         """
@@ -54,7 +104,6 @@ class Graphing:
 
         Args:
             path (str): path to the JSON log file
-
         Returns:
             list, list: x-value list, y-value list
         """
@@ -92,7 +141,6 @@ class Graphing:
 
         Args:
             string (str): String in format descirbed in Graphing.dateFormat
-
         Returns:
             datetime.date: converted date
         """
