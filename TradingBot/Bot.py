@@ -54,6 +54,7 @@ class Bot:
         if isinstance(self.decisionMaker, MACDDecisionMaking):
             for i in range(len(self.portfolio.stocksHeld)):
                 self.DecisionMakerList.append(MACDDecisionMaking(self.mode))
+                
         elif isinstance(self.decisionMaker, SimpleSentimentDM):
             for i in range(len(self.portfolio.stocksHeld)):
                 self.DecisionMakerList.append(SimpleSentimentDM(self.mode))
@@ -117,9 +118,6 @@ class Bot:
                 self.date = self.portfolio.addDayToDate(self.date)
                 if Config.debug():
                     print(self.date)
-            
-            # creates snapshot for last day
-            self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
-       
+                   
         if Config.debug():            
             print("closing cache")
