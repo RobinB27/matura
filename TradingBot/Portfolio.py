@@ -7,10 +7,14 @@ from Util.Config import Config
 
 class Portfolio:
     """
-    defines the portfolio class
+    defines  portfolio class, holds stocks, buy/sell stocks, keeps track of funds
     params: fundsAmount
     """
     def __init__(self, fundsAmount):
+        """constructor of portfolio class
+        Args:
+            fundsAmount (int): starting funds of portfolio
+        """
         
         self.funds = fundsAmount
         self.stocksHeld = [] #could be optimised with a dict
@@ -20,23 +24,29 @@ class Portfolio:
     def addStock(self, ticker: str):
         """
         appends the self.stocksHeld list with Stock object using ticker given
-        params: ticker
+        args:
+            params (str): name of stockticker
         """
         try:
-            
-            self.stocksHeld.append(Stock(ticker))
-            
+            self.stocksHeld.append(Stock(ticker))           
         except KeyError:
             raise ValueError("Unrecongnised ticker")
                 
     
     #try except clause could be optimised by putting it outside the mode checks
     def buyStock(self, amount: int, nameOfTicker: str, mode: int = 0, date='0'):
+        """buys the stock if funds available, default mode live prices,
+        past mode buys stock with historical price data on date given
+        Args:
+            amount (int): amount of stock to buy
+            nameOfTicker (str): name of stock ticker
+            mode (int, optional): live(0) or past mode (-1). Defaults to 0.
+            date (str, optional): date for past mode. Defaults to '0'.
+
+        Raises:
+            ValueError: invalid ticker name
+            ValueError: invalid ticker name
         """
-        buys the stock if the funds are available, default mode is with live prices,
-        past mode buys the stock on one particular day
-        params: amount, nameOfTicker, mode (-1 for past mode), dateStart, dateEnd
-        """ 
         if mode == 0:
             try:
                 for stock in self.stocksHeld:
@@ -83,10 +93,19 @@ class Portfolio:
         
         
     def sellStock(self, amount: int, nameOfTicker: str, mode: int = 0, date='0'):
+        """sells the stock if stock class attribute amountOfStock sufficent, default mode live prices,
+        past mode sells stock with historical price data on date given
+
+        Args:
+            amount (int): amount to sell
+            nameOfTicker (str): name of ticker to sell
+            mode (int, optional): live(0) or past (-1) mode. Defaults to 0.
+            date (str, optional): date for past mode. Defaults to '0'.
+
+        Raises:
+            ValueError: invalid ticker name
+            ValueError: invalid ticker name
         """
-        sells the stock if the shares are available
-        params: amount, nameOfTicker
-        """ 
         if mode == 0:
             try:
                 for stock in self.stocksHeld:
@@ -128,6 +147,8 @@ class Portfolio:
             
     
     def showStocksHeld(self):
+        """until method to display all stocks held in portfolio
+        """
         for stock in self.stocksHeld:
             print(stock.name)
             
@@ -139,7 +160,7 @@ class Portfolio:
         """
         adds one day to any given date
         Args: date(str)
-        returns: str
+        returns: date(str)
         """
         
         date = datetime.strptime(date, "%Y-%m-%d")
@@ -150,9 +171,9 @@ class Portfolio:
     
     def subtractDayFromDate(self, date: str) -> str:
         """
-        subtracts one day to any given date
+        subtracts one day from any given date
         Args: date(str)
-        returns: str
+        returns: date(str)
         """
         
         date = datetime.strptime(date, "%Y-%m-%d")
@@ -163,7 +184,7 @@ class Portfolio:
     
     def subtractMultipleDaysFromDate(self, date: str, daysToSubtract) -> str:
         """
-        subtracts one day to any given date
+        subtracts multiple days from any given date
         Args: date(str)
         returns: str
         """
