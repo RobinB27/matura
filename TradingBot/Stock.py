@@ -75,7 +75,8 @@ class Stock:
         """
         try:
             historical_data = self.tickerObject.history(period="max")
-            historical_data = historical_data.dropna()  # Remove NaN rows
+            # Removes not a number rows (NaN rows)
+            historical_data = historical_data.dropna()  
             historical_data = historical_data[historical_data.index <= dateToCalculate]            
             prices = historical_data['Close'].to_list()
             return prices
