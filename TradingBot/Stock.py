@@ -33,7 +33,7 @@ class Stock:
         Args:
             mode (int, optional): live or past mode. Defaults to 0.
             dateStart (str, optional): _description_. date to fetch prices.
-
+ 
         Returns:
             _type_: int
         """
