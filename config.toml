@@ -6,4 +6,4 @@ debug = false
 
 # Settings for bot usage
 [parameters]
-sample = "sampleParam"
+displayGraph = true

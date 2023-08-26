@@ -7,6 +7,24 @@ class Config:
     data = None
     path: str = "config.toml"
     
+    def getParam(paramName: str) -> any:
+        """Shorthand for returing the content of a specific parameter from the config file.
+
+        Args:
+            paramName (str): Name of the parameter in the config.toml file under parameters.
+
+        Raises:
+            KeyError: The accessed parameter does not exist in the config file.
+
+        Returns:
+            any: Content of the desired parameter.
+        """
+        params: dict = Config.get()["parameters"]
+        if paramName in params: return params[paramName]
+        else: 
+            print(f"Accessed config parameter {paramName} does not exist.")
+            raise KeyError()
+    
     def get() -> dict:
         """Use this method to acces the config file's content
 

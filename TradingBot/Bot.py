@@ -4,9 +4,11 @@ from TradingBot.SimpleSentimentDM import SimpleSentimentDM
 from TradingBot.MACDDecisionMaking import MACDDecisionMaking
 from TradingBot.FileLoggers.FileLoggerJSON import FileLoggerJSON
 from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
+
 from datetime import  datetime, timedelta, date
 from diskcache import Cache
 
+from Util.Graphing import Graphing
 from Util.Config import Config
 
 #in time period bot skipps weekends but counts them as a day of the time period
@@ -166,6 +168,8 @@ class Bot:
                 self.date = self.portfolio.addDayToDate(self.date)
                 if Config.debug():
                     print(self.date)
-                   
-        if Config.debug():            
+        
+        if Config.getParam("displayGraph"):
+            Graphing.plotValue("logs/" + self.fileLoggerJSON.fileName, displayWindow=True)
+        if Config.debug(): 
             print("closing cache")
