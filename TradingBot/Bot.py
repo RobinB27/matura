@@ -1,12 +1,8 @@
-from TradingBot.Stock import Stock
+from datetime import datetime
+
 from TradingBot.Portfolio import Portfolio
-from TradingBot.SimpleSentimentDM import SimpleSentimentDM
-from TradingBot.MACDDecisionMaking import MACDDecisionMaking
 from TradingBot.FileLoggers.FileLoggerJSON import FileLoggerJSON
 from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
-
-from datetime import  datetime, timedelta, date
-from diskcache import Cache
 
 from Util.Graphing import Graphing
 from Util.Config import Config
@@ -15,27 +11,28 @@ from Util.Config import Config
 #so to get full trading week timePeriod has to equal 7
 
 class Bot:
-    """Trading bot class that makes decisions based on a specified decision-making
+    """Trading bot class that makes decisions based on a specified decision-making (trading strategy)
     The bot operates within a given time period, trading stocks in a portfolio and logging its actions.
     
     Attributes:
-        name (str): name of trading bot
+        name (str): name of trading bot NOTE: is this needed? Remove if not
         mode (int): live mode 0, past mode -1
-        startDate (str): start date for trading: format "YYYY-MM-DD"
+        startDate (str): start date for trading: format "YYYY-MM-DD" NOTE: change to dateTime
         date (str): current trading date: format "YYYY-MM-DD".
         portfolio (Portfolio): instance of Portfolio class containing stocks and funds
-        timePeriod (int): trading period in days
+        timePeriod (int): trading period in days NOTE: Needs to be updated to allow for intraday timeperiods later
         decisionMaker (DecisionMakingStrategy): instance of a decision-making used by the bot.
         fileLoggerTxt (FileLoggertxt): instance of the FileLoggertxt class for text-based logging
         fileLoggerJSON (FileLoggerJSON): instance of the FileLoggerJSON class for JSON-based logging
+        
     Methods:
         initiating(self): initialize the bot, set up the portfolio, and prepare decision-making strategies
         startBot(self): start the bot's trading activities based on the specified mode and strategy
 
     Note:
-        The bot operates in two modes: live (0) and past  (-1). 
+        The bot operates in two modes: live (0) and past (-1). 
     """
-    def __init__(self, decisionMaking, startDate: str="", mode = 0):
+    def __init__(self, decisionMaking, startDate: str="", mode: int= 0) -> None:
         """ Initializes a trading bot with a decision-making strategy, start date, trading mode
 
         Args:
@@ -50,15 +47,15 @@ class Bot:
         self.startDate = startDate
         self.date = startDate
         
-        self.portfolio = 0
+        self.portfolio = None
         self.timePeriod = 0
         
         self.decisionMaker = decisionMaking
         self.fileLoggerTxt = FileLoggertxt()
         self.fileLoggerJSON = FileLoggerJSON()
                 
-        
-    def initiating(self):
+        # NOTE: we also need a way later on to create bots with code instead of command line, for automated tests
+    def initialiseCLI(self):
         """This method initializes the trading bot's portfolio, stock holdings
         and trading parameters. Prompts the user for input regarding funds, stocks, and the trading period
         Prepares the bots decision-making and creates Log files
@@ -78,6 +75,7 @@ class Bot:
                 
         self.portfolio = Portfolio(fundsForPortfolio)
         
+        # NOTE: Maybe instead of giving a fixed number, let user add stocks until he types "EXIT" or something similar
         amountOfStocks = input("Number of stock to add to Portfolio: ")
         amountOfStocks = int(amountOfStocks)
         
@@ -92,84 +90,81 @@ class Bot:
         
         self.fileLoggerTxt.createLogFile()
         
+        self.decisionMakerInstances = []
         
-        self.DecisionMakerList = []
-        
-        if isinstance(self.decisionMaker, MACDDecisionMaking):
-            for i in range(len(self.portfolio.stocksHeld)):
-                self.DecisionMakerList.append(MACDDecisionMaking(self.mode))
-                
-        elif isinstance(self.decisionMaker, SimpleSentimentDM):
-            for i in range(len(self.portfolio.stocksHeld)):
-                self.DecisionMakerList.append(SimpleSentimentDM(self.mode))
-            
-                
-        
+        # Check class type and populate Instances list
+        decisionMakingType = self.decisionMaker.__class__
+        for i in range(len(self.portfolio.stocksHeld)):
+            self.decisionMakerInstances.append(decisionMakingType(self.mode))
     
-    def startBot(self):
+    def isExceptionDate(self) -> bool:
+        """Utility function to check whether a date is either weekend or exception Date.
+
+        Returns:
+            bool: True if exception date else False
+        """
+        if Config.debug():
+            print(f"Bot:\t Trading day: {self.date}")
+            
+        weekendCheckDatetime = datetime.strptime(self.date, "%Y-%m-%d")
+            
+        if weekendCheckDatetime.isoweekday() > 5:
+            if Config.debug():
+                print(f"Bot:\t weekend: {self.date}")
+            self.date = self.portfolio.addDayToDate(self.date)
+            return True
+        # NOTE: removed a console message here to improve code legibility, re-add if you think it's necessary
+        elif self.portfolio.stocksHeld[0].getStockPrice(-1, self.date) is None:
+            if Config.debug():
+                print(f"Bot:\t exception date: {self.date}")
+            self.date = self.portfolio.addDayToDate(self.date)
+            return True
+        else: return False
+          
+    def startBot(self) -> None:
         """Start the trading activities of the bot based on the specified mode and strategy
 
         This method initiates the trading activities of the bot by iterating through the specified
         time period, skipping weekends, and making stock trading decisions according to the bot's mode and decision-making strategy
-        logs trading actions in JSON and TXT format
+        logs trading actions in JSON and TXT format, creates a value over time Graph and saves to output.
         """
     
-        if self.mode == 0:
-            pass
-    
-        if self.mode == -1:            
-        
+        if self.mode == 0: 
+            pass # NOTE: real time implementation here
+        elif self.mode == -1:            
+            
+            # Main trading loop
             for i in range(self.timePeriod):
                 
-                if Config.debug():
-                    print(f"Bot: Trading day: {self.date}")
-            
-                weekendCheckDatetime = datetime.strptime(self.date, "%Y-%m-%d")
-            
-                if weekendCheckDatetime.isoweekday() > 5:
-                    if Config.debug():
-                        print(f"Bot: weekend: {self.date}")
-                    self.date = self.portfolio.addDayToDate(self.date)
-                    continue
-            
-                if Config.debug():
-                    print("Bot: downloading Stock price for Exception date check")
-                if self.portfolio.stocksHeld[0].getStockPrice(-1, self.date) is None:
-                    if Config.debug():
-                        print(f"Bot: exception date: {self.date}")
-                    self.date = self.portfolio.addDayToDate(self.date)
-                    continue
+                if self.isExceptionDate(): continue
                 
-                for i in range(len(self.DecisionMakerList)):
-                    decision = self.DecisionMakerList[i].makeStockDecision(self.portfolio, self.portfolio.stocksHeld[i].name, self.mode, self.date)
-                    
-                #for stock in self.portfolio.stocksHeld:
-                    #decision = self.decisionMaker.makeStockDecision(self.portfolio, stock.name, self.mode, self.date)
+                # Seperate Decision Making instance for each stock in portfolio
+                for i in range(len(self.decisionMakerInstances)):
+                    decision = self.decisionMakerInstances[i].makeStockDecision(self.portfolio, self.portfolio.stocksHeld[i].name, self.mode, self.date)
 
                     if decision == 1:
-                        
-                        print(f"Bot: Buying stock: {self.portfolio.stocksHeld[i].name} on {self.date}")
+                        print(f"Bot:\t Buying stock: {self.portfolio.stocksHeld[i].name} on {self.date}")
                         self.portfolio.buyStock(1, self.portfolio.stocksHeld[i].name, self.mode, self.date)
                         self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
 
                     elif decision == -1:
-                        
-                        print(f"Bot: Selling stock: {self.portfolio.stocksHeld[i].name} on {self.date}")
+                        print(f"Bot:\t Selling stock: {self.portfolio.stocksHeld[i].name} on {self.date}")
                         self.portfolio.sellStock(1, self.portfolio.stocksHeld[i].name, self.mode, self.date)
                         self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
 
                     else:
                         if Config.debug():
-                            print(f"Bot: Ignoring stock: {self.portfolio.stocksHeld[i].name} on {self.date}")
-                    
-                #self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
+                            print(f"Bot:\t Ignoring stock: {self.portfolio.stocksHeld[i].name} on {self.date}")
+                
                 self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date)
             
+                # NOTE: datetimes
                 self.date = self.portfolio.addDayToDate(self.date)
                 if Config.debug():
-                    print(self.date)
+                    print(f"Bot:\t Date updated to: {self.date}")
         
         if Config.getParam("displayGraph"):
+            if Config.debug(): print("Bot:\t Creating graph")
             Graphing.plotValue("logs/" + self.fileLoggerJSON.fileName, displayWindow=True)
-        if Config.debug(): 
-            print("closing cache")
+            
+        if Config.debug(): print("Bot:\t closing cache")

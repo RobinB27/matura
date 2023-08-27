@@ -20,7 +20,7 @@ class TemplateDecisionMaking:
             dateStart (str, optional): Starting datestring for past mode. Defaults to "0".
 
         Returns:
-            int: 1 = buy, None = hold, -1 = sell
+            int: 1 = buy, -1 = sell, any other value = ignore stock 
         """
         
         if Config.debug(): print("Stock Bought")

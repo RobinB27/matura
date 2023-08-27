@@ -1,5 +1,6 @@
 from TradingBot.Portfolio import Portfolio
 from TradingBot.FinancialCalculators.SignalLineCalculator import SignalLineCalculator
+
 from Util.Config import Config
 
 

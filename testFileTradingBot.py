@@ -34,5 +34,5 @@ s = SignalLineCalculator()
 
 #print(s.signalLineCalculation(p, "TSLA", -1, "2022-05-22"))
 
-a.initiating()
+a.initialiseCLI()
 a.startBot()
