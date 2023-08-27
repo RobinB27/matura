@@ -51,14 +51,14 @@ class Portfolio:
             try:
                 for stock in self.stocksHeld:
                 #checks if the given stock is a stock held by the portfolio
-                    if stock.name == nameOfTicker:
-                        currentPrice = stock.getStockPrice()
+                    if stock.ticker == nameOfTicker:
+                        currentPrice = stock.getPrice()
                         totalCost = currentPrice * amount
                 
                     #checks if there are enough funds to buy the stock & buys it
                         if totalCost <= self.funds:
                             self.funds -= totalCost
-                            stock.increaseStockAmount(amount)
+                            stock.increase(amount)
                             if Config.debug():  
                                 print(f"Bought {amount} shares of {nameOfTicker} at ${currentPrice} per share.")
                         else:
@@ -72,16 +72,16 @@ class Portfolio:
             try:
                 #gets historical price if ticker in portfolio
                 for stock in self.stocksHeld:
-                    if stock.name == nameOfTicker:
+                    if stock.ticker == nameOfTicker:
                         
                         #Returns Open, High, Low, Close, Adj Close, Volume to the
-                        historicalStockPrice = stock.getStockPrice(-1, date)
+                        historicalStockPrice = stock.getPrice(-1, date)
                         totalCost = historicalStockPrice * amount
                         
                         #sells the amount of shares given if enough funds are available
                         if totalCost <= self.funds:
                             self.funds -= totalCost
-                            stock.increaseStockAmount(amount)
+                            stock.increase(amount)
                             if Config.debug():  
                                 print(f"Bought {amount} shares of {nameOfTicker} at ${historicalStockPrice} per share on {date}.")
                         else:
@@ -110,14 +110,14 @@ class Portfolio:
             try:
                 for stock in self.stocksHeld:
                     #gets current price of ticker if in portfolio
-                    if stock.name == nameOfTicker:
-                        currentPrice = stock.getStockPrice()
+                    if stock.ticker == nameOfTicker:
+                        currentPrice = stock.getPrice()
                         totalPrice = currentPrice * amount
                     
                     #checks if there is enough of a given stock to sell & sells it
-                        if stock.amountOfStock >= amount:
+                        if stock.amount >= amount:
                             self.funds += totalPrice
-                            stock.decreaseStockAmount(amount)
+                            stock.decrease(amount)
                             print(f"Sold {amount} shares of {nameOfTicker} at ${currentPrice} per share.")
                         else:
                             print("Insufficient shares to sell the stock.")
@@ -128,16 +128,16 @@ class Portfolio:
             try:
                 #gets historical price of ticker if in portfolio
                 for stock in self.stocksHeld:
-                    if stock.name == nameOfTicker:
+                    if stock.ticker == nameOfTicker:
                         
                         #Returns historical closing price 
-                        historicalStockPrice = stock.getStockPrice(-1, date)
+                        historicalStockPrice = stock.getPrice(-1, date)
                         totalPrice = historicalStockPrice * amount
                         
                         #sells the amount of shares given
-                        if stock.amountOfStock >= amount:
+                        if stock.amount >= amount:
                             self.funds += totalPrice
-                            stock.decreaseStockAmount(amount)
+                            stock.decrease(amount)
                             print(f"Sold {amount} shares of {nameOfTicker} at ${historicalStockPrice} per share on {date}.")
                         else:
                             print("Insufficient shares to sell the stock.")
@@ -150,7 +150,7 @@ class Portfolio:
         """until method to display all stocks held in portfolio
         """
         for stock in self.stocksHeld:
-            print(stock.name)
+            print(stock.ticker)
             
     def showFundsAvailable(self):
         print(f"Funds inside portfolio: \"{self.name}\" are ${self.funds}")
@@ -202,7 +202,7 @@ class Portfolio:
         exceptionCheck = date.strftime("%Y-%m-%d")
         
         TSLA = Stock("TSLA")    
-        if TSLA.getStockPrice(-1, exceptionCheck) is None:
+        if TSLA.getPrice(-1, exceptionCheck) is None:
             date = date - timedelta(days=1)
                     
         while date.isoweekday() > 5:

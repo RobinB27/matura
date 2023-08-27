@@ -27,8 +27,8 @@ class SignalLineCalculator:
             stockPrices = []
             
             for stock in portfolio.stocksHeld:
-                    if stock.name == ticker:
-                        stockPrices = stock.getStockPricesUntilDate(dateToCalculate)
+                    if stock.ticker == ticker:
+                        stockPrices = stock.getPricesUntilDate(dateToCalculate)
 
             macd, signal, hist = talib.MACD(np.array(stockPrices), fastperiod=12, slowperiod=26, signalperiod=9)
             return macd[-1], signal[-1]

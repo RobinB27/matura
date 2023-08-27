@@ -35,14 +35,14 @@ class FileLoggertxt:
             log.write("stocks held in portfolio: \n")
         
             for stock in portfolio.stocksHeld:
-                log.write(f"{stock.name} ")
-                log.write(f"amount of stock: {stock.amountOfStock}\n")
+                log.write(f"{stock.ticker} ")
+                log.write(f"amount of stock: {stock.amount}\n")
                 
                 if mode == 0:
-                    stockValue = stock.amountOfStock * stock.getStockPrice()
+                    stockValue = stock.amount * stock.getPrice()
                 
                 elif mode == -1:
-                    stockValue = stock.amountOfStock * stock.getStockPrice(-1, date)
+                    stockValue = stock.amount * stock.getPrice(-1, date)
                     self.stockValueOnDate += stockValue
                 
                 log.write(f"value of stock: ${stockValue}\n \n")

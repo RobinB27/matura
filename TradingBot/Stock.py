@@ -2,70 +2,72 @@ import yfinance as yf
 
 from Util.Config import Config
 
-import pandas as pd
-
 
 class Stock:
-    
     """
-        defines the Stock class to be used by the portfolio, keeps track of amount of stock bought and pertinent information
-        args: name
+    Class representing an amount of a specific stock. This type is used by the Portfolio class.
     """
-    def __init__(self, name):
-        
-        self.name = str(name)
-        self.amountOfStock = 0
-        self.tickerObject = yf.Ticker(name)
-        self.stockInfo = self.tickerObject.history(period ="max")
-    
-        # Throws exception message on invalid Ticker
-        try: 
-            self.tickerInfo = self.tickerObject.info
-            pass
-        except KeyError:
-            raise ValueError("Unrecongnised ticker")
-        
-    
-    def getStockPrice(self, mode: int = 0, dateStart: str ='0') -> int:
-        """fetches stock prices, default mode is live prices, past mode has daily intevals
-        Args: mode (-1 for past mode), start date('year-month-day')
+
+    def __init__(self, ticker: str):
+        """Creates a new instance of the Stock class, checks Ticker validity.
 
         Args:
-            mode (int, optional): live or past mode. Defaults to 0.
-            dateStart (str, optional): _description_. date to fetch prices.
- 
+            ticker (str): Stock Ticker, e.g. "TSLA"
+
+        Raises:
+            ValueError: Raised if ticker input is invalid
+        """
+        self.ticker = ticker
+        self.amount = 0
+        self.tickerObject = yf.Ticker(ticker)
+        self.stockInfo = self.tickerObject.history(period="max")
+
+        # Check ticker validity
+        try:
+            self.tickerInfo = self.tickerObject.info
+        except KeyError:
+            raise ValueError("Unrecongnised ticker")
+
+    def getPrice(self, mode: int = 0, date: str = '0') -> int:
+        """Fetches stock prices for a specific date.
+
+        Args:
+            mode (int, optional): live (0) or past mode (-1). Defaults to 0.
+            dateStart (str, optional): date to fetch prices.
+
         Returns:
-            _type_: int
+            int: stock price
         """
         if mode == 0:
-            placeholder = yf.Ticker(self.name).info
+            placeholder = yf.Ticker(self.ticker).info
             try:
                 stockPrice = placeholder.get("currentPrice")
-                print(stockPrice)
+                if Config.debug():
+                    print(f"Stock:\t Current stock price of {self.ticker} is {stockPrice}")
             except KeyError:
-                print("Error: Market not open/Exception date")
-            
+                if Config.debug():
+                    print(f"Stock:\t Error: Market not open/Exception date")
+
             return stockPrice
-        
+
         elif mode == -1:
-            try:                
-                closing_price = self.stockInfo.loc[dateStart, "Close"]
-                if Config.debug():  
-                    print(f"{self.name} price of {closing_price} on {dateStart}")
-                
+            try:
+                closing_price = self.stockInfo.loc[date, "Close"]
+
+                if Config.debug():
+                    print(f"Stock:\t Stock price of {self.ticker} is {closing_price} on {date}")
+
                 return closing_price
-            
+
             except KeyError:
-                
-                if Config.debug():  
-                    print(f"Stock: exception date: {dateStart}")    
+                if Config.debug():
+                    print(f"Stock: exception date: {date}")
                 return None
-            
-            
-    def getStockPricesUntilDate(self, dateToCalculate):
-        """fetches past stock prices for a period of time until a a given date
-        date is included 
-        Args: start date('year-month-day')
+
+    def getPricesUntilDate(self, dateToCalculate: str):
+        """fetches past stock prices for a period of time
+        (Ending date inclusive)
+        Args: start date ('year-month-day') #NOTE: datetimes
 
         Args:
             dateToCalculate (str): the last date of prices
@@ -75,43 +77,34 @@ class Stock:
         """
         try:
             historical_data = self.tickerObject.history(period="max")
-            # Removes not a number rows (NaN rows)
-            historical_data = historical_data.dropna()  
-            historical_data = historical_data[historical_data.index <= dateToCalculate]            
+            # Removes NaN rows
+            historical_data = historical_data.dropna()
+            historical_data = historical_data[historical_data.index <= dateToCalculate]
             prices = historical_data['Close'].to_list()
             return prices
 
         except KeyError:
             if Config.debug():
-                print(f"Stock: exception date: {dateToCalculate}")
-            return {}
-    
-            
-        
-    def displayStockAmount(self):      
-        """displays the stock class attribute amountOfStock 
-        for debugging purposes
-        """
-        print(f"Number of {self.name} owned: {self.amountOfStock}")
-        
-        
-    def increaseStockAmount(self, amount):
+                print(f"Stock:\t exception date: {dateToCalculate}")
+            return {}  # NOTE: does returning this on an error make sense? Shouldn't the programme cancel?
+
+    def displayAmount(self) -> None:
+        """displays the stock class attribute amountOfStock for debugging purposes"""
+        print(f"Number of {self.ticker} owned: {self.amount}")
+
+    def increase(self, amount: int) -> None:
         """increases stock class attribute amountOfStock 
 
         Args:
             amount (int): amount to increase
         """
-        self.amountOfStock += amount
-        
-        
-    def decreaseStockAmount(self, amount):
+        self.amount += amount
+
+    def decrease(self, amount: int) -> None:
         """decreases stock class attribute amountOfStock 
 
         Args:
             amount (int): amount to decrease
-        """  
-        if self.amountOfStock - amount >= 0:
-            self.amountOfStock -= amount
-        else:
-            print("Stock: Insufficient amount of stock to sell.")
-            
+        """
+        if self.amount - amount >= 0: self.amount -= amount
+        else: print("Stock: Insufficient amount of stock to sell.")

@@ -40,16 +40,16 @@ class FileLoggerJSON:
         
         for stock in portfolio.stocksHeld:
             sObject = {
-                    "name": stock.name,
-                    "amount": stock.amountOfStock,
+                    "name": stock.ticker,
+                    "amount": stock.amount,
                     "value": "undefined"
                 }
             
             if mode == 0:
-                value = stock.amountOfStock * stock.getStockPrice()
+                value = stock.amount * stock.getPrice()
                 
             elif mode == -1:
-                value = stock.amountOfStock * stock.getStockPrice(-1, date)
+                value = stock.amount * stock.getPrice(-1, date)
             
             sObject["value"] = value
             
