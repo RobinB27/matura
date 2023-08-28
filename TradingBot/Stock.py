@@ -44,6 +44,7 @@ class Stock:
             int: stock price
         """
         if mode == 0:
+            #always ensured that not used when market closed
             placeholder = yf.Ticker(self.ticker).info
             try:
                 stockPrice = placeholder.get("currentPrice")
