@@ -5,7 +5,9 @@ import yfinance as fy
 import pandas as pd
 import numpy as np
 import talib
-
+import schedule
+import time
+    
 from datetime import datetime, timedelta, date
 from TradingBot.Portfolio import Portfolio
 
@@ -17,21 +19,33 @@ from Util.Config import Config
 class SignalLineCalculator:
     
     def __init__(self) -> None:
-        self.cacheExceptionDates = Cache("./TradingBot/FinancialCalculators/Chaches/cacheExceptionDates")
-        self.cacheStockPrice = Cache("./TradingBot/FinancialCalculators/Caches/StockPriceCache")
+        #self.cacheExceptionDates = Cache("./TradingBot/FinancialCalculators/Chaches/cacheExceptionDates")
+        #self.cacheStockPrice = Cache("./TradingBot/FinancialCalculators/Caches/StockPriceCache")
+        self.stockPrices = []
     
-    def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = ""):
+    def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = "", intervalTime: int= 0):
                 
         if mode == 0:
-            pass
+            self.stockPrices = []
+            for i in range(26):
+                
+                schedule.every(intervalTime).minutes.do(self.job, portfolio, ticker)
+            
+            schedule.cancel_job(self.job)
+            
+            macd, signal, hist = talib.MACD(np.array(self.stockPrices), fastperiod=12, slowperiod=26, signalperiod=9)
+            return macd[-1], signal[-1]
             
         elif mode == -1:    
-                        
-            stockPrices = []
             
             for stock in portfolio.stocksHeld:
                     if stock.ticker == ticker:
-                        stockPrices = stock.getPricesUntilDate(dateToCalculate)
+                        self.stockPrices = stock.getPricesUntilDate(dateToCalculate)
 
-            macd, signal, hist = talib.MACD(np.array(stockPrices), fastperiod=12, slowperiod=26, signalperiod=9)
+            macd, signal, hist = talib.MACD(np.array(self.stockPrices), fastperiod=12, slowperiod=26, signalperiod=9)
             return macd[-1], signal[-1]
+
+    def job(self, portfolio, ticker ):
+        for stock in portfolio.stocksHeld:
+                    if stock.ticker == ticker:
+                        self.stockPrices.append(stock.getPrice(0))

@@ -186,32 +186,3 @@ class Portfolio:
         placeholderEndDate = placeholderEndDate.strftime("%Y-%m-%d")
 
         return placeholderEndDate
-    
-    def subtractMultipleDaysFromDate(self, date: str, daysToSubtract) -> str:
-        """
-        subtracts multiple days from any given date
-        Args: date(str)
-        returns: str
-        """
-        #double weekendcheck to ensure that it's not a weekend after an exception date
-        for i in range(daysToSubtract):
-            date = datetime.strptime(date, "%Y-%m-%d")
-            date = date - timedelta(days=1)
-            date = date.strftime("%Y-%m-%d")
-        
-        date = datetime.strptime(date, "%Y-%m-%d")
-        
-        while date.isoweekday() > 5:
-            date = date - timedelta(days=1)
-            
-        exceptionCheck = date.strftime("%Y-%m-%d")
-        
-        TSLA = Stock("TSLA")    
-        if TSLA.getPrice(-1, exceptionCheck) is None:
-            date = date - timedelta(days=1)
-                    
-        while date.isoweekday() > 5:
-            date = date - timedelta(days=1)
-            
-        date = date.strftime("%Y-%m-%d")  
-        return date
