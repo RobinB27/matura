@@ -93,10 +93,10 @@ class Bot:
             nameOfTickerToAdd = input("Ticker: ")
 
             self.portfolio.addStock(nameOfTickerToAdd)
-
-        timePeriod = input("For how many days should the Bot trade? ")
-        timePeriod = int(timePeriod)
-        self.timePeriod = timePeriod
+        if self.mode == -1:
+            timePeriod = input("For how many days should the Bot trade? ")
+            timePeriod = int(timePeriod)
+            self.timePeriod = timePeriod
 
         self.fileLoggerTxt.createLogFile()
 
@@ -108,8 +108,8 @@ class Bot:
             self.decisionMakerInstances.append(decisionMakingType(self.mode))
             
         if self.mode == 0:
-            self.interval = input(int("What interval will the bot be trading (in minutes): "))
-            self.amountOfIntervals = input(int("What amount of interval will the bot be trading: "))
+            self.interval = int(input("What interval will the bot be trading (in minutes): "))
+            self.amountOfIntervals = int(input("What amount of interval will the bot be trading: "))
 
     def isExceptionDate(self) -> bool:
         """Utility function to check whether a date is either weekend or exception Date.
@@ -148,6 +148,8 @@ class Bot:
             # Main trading loop
             for i in range(self.amountOfIntervals):
                 
+                self.date = datetime.now()
+                self.date = self.date.strftime("%Y-%m-%d")
                 if self.isExceptionDate():
                     continue
                 
@@ -162,8 +164,8 @@ class Bot:
                 if startTimeStockExchange <= currentTimeEDT <= endTimeStockExchange:
                     pass
                 else:
-                    time.sleep(self.interval * 60)
-                    continue
+                    print("not trading hours")
+                    break
                 
                 # stock decisions
                 for i in range(len(self.decisionMakerInstances)):
