@@ -1,3 +1,9 @@
+# This file implements the YahooWebScraper class
+# This class is used to get current headlines for when the bot is running in real time.
+# The WebScraper (Selenium Webdriver) navigates to and downloads the YahooFinance website of a specific stock
+# and then uses functions from the file Parser.py to extract the headlines from the downloaded html file.
+# the function 'getHeadlines()' is the way through which the bot interacts with the WebScraper and receives its headlines from.
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By

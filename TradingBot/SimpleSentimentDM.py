@@ -1,3 +1,9 @@
+# This file implements the SimpleSentimentDM (DecisionMaking)
+# This DecisionMaking class implements a trading strategy based on Sentiment Analysis.
+# The Strategy is very simple and primarily used as a testing device to see whether the
+# different features required for any Sentiment Analysis based strategy work without error.
+# (Specifically the Sentiment Classifier itself and the Historical Dataset)
+
 import yfinance as fy
 
 from TradingBot.Portfolio import Portfolio

@@ -1,3 +1,8 @@
+# This file implements the getSentiment function which is used
+# to access the pretrained Sentiment Classifier. The function takes a head line text
+# and outputs the classification into the categories 'positive', 'negative' or 'neutral'
+# which the classifier model has produced.
+
 from SentimentAnalysis.Training import loadClassifier
 from SentimentAnalysis.Training import remove_noise
 

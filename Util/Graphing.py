@@ -1,3 +1,10 @@
+# This file implements the Graphing class, mainly using matplotlib.
+# The Graphing class handles the production of all visualisations.
+# Visualisations currently implemented are a graph showing the change in value of the portfolio over time
+# and a graph showing the changes in the stocks held in a portfolio over time.
+# The methods starting with 'fetch' or 'parse' are used for reading a log file
+# and getting the necessar data from it and converting it into a format usable by matplotlib.
+
 import json, datetime
 import matplotlib.pyplot as plt
 

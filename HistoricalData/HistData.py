@@ -1,9 +1,13 @@
+# This file implements the HistData class (Historical Dataset)
+# This class is needed to allow the bot to interact with a large dataset of headlines from the past ~10 years.
+# The dataset used can be found here: https://www.kaggle.com/datasets/miguelaenlle/massive-stock-news-analysis-db-for-nlpbacktests
+# The dataset is no longer included in this project due to its large file size preventing us from incorporating it into the GitHub repository.
+# The function 'convertData()' was used to convert the dataset into the two JSON files data1.json & data2.json, it requires the original dataset to be installed to function.
+# The dataset has been split into 2 JSON files using 'splitData()' so as to circumvent the 100mb filesize limit on free GitHub repositories. Besides this
+# the splitting serves no further use and the bot would work identically with just one JSON file.
+
 import csv, json, datetime
 
-# Issue: filesize. Remove duplicate headlines and change ticker attribute from string to list, unifying duplicates. If filsize still >100mb, split file.
-
-# The dataset used here is "analyst_ratings_processed.csv" available on https://www.kaggle.com/datasets/miguelaenlle/massive-stock-news-analysis-db-for-nlpbacktests
-# As it is ~150mb in size it is omitted from the repository to reduce its size (Since a generated data.json file is included, it is unnecessary)
 
 class HistData():
     """

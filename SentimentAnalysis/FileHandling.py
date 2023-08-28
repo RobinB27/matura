@@ -1,4 +1,6 @@
-# Script for importing the training dataset for the NaiveBayesClassifier from the Kaggle Dataset
+# This file implements several utiltiy functions which are needed for interacting
+# with the FinancialPhraseBank dataset. This dataset is used to train the Naive Bayes Classifier
+# which provides the Sentiment Classification of news Head lines for the bot.
 
 def parseLine(line: str) -> list:
     """Utility Function that converts line read from dataset to format that can be used by the NaiveBayes Classifier

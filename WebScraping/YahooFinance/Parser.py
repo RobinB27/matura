@@ -1,3 +1,6 @@
+# This script implements two functions which extract news headlines from a YahooFinance stock website's html file.
+# The simpler function only extracts headlines, whereas the more complex function also extracts source and the publication date
+
 from bs4 import BeautifulSoup
 from WebScraping.YahooFinance.Headline import Headline
 

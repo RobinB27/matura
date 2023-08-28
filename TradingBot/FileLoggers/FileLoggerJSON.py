@@ -1,3 +1,8 @@
+# This file implements the FileLoggerJSON class.
+# The FileLoggerJSON class generates a JSON file representation of a portfolio
+# that the bot has created. The files produced by this logger are used by the
+# class Graphing to produce the visualisations which are shown at the end of every bot run.
+
 from TradingBot.Portfolio import Portfolio
 import json, os, datetime
 

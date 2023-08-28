@@ -1,7 +1,6 @@
-# Script for training the Naive Bayes Classifier used in Sentiment Analysis
-# ---------
+# This script implements functions used for training the Naive Bayes Classifier which is used for classifiying Head lines.
 # This Script is a modified version of the script used in the tutorial linked here, which originally categorised Tweets binarily
-# This modified version uses the Kaggle dataset found in the same directory as this file and sorts News Headlines into 3 categories: Positive, Negative & Neutral
+# This modified version uses the Kaggle dataset 'FinancialPhraseBank' found in the same directory as this file and sorts News Headlines into 3 categories: Positive, Negative & Neutral
 # Additionally, comments & Docstrings have been added to the whole file
 # https://www.digitalocean.com/community/tutorials/how-to-perform-sentiment-analysis-in-python-3-using-the-natural-language-toolkit-nltk#step-8-cleaning-up-the-code-optional
 

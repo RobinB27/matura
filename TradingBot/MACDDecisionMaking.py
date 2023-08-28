@@ -23,8 +23,7 @@ class MACDDecisionMaking:
         self.MACDValuesDict = {}
         self.SignalLineValuesDict = {}
 
-        self.firstRun = True
-        self.secondRun = False
+        self.iterations = 0
 
     def getPreviousDate(self, portfolio: Portfolio, dateToCalculate: str) -> str:
         # NOTE: Refactor things like subtractDayFromDate into class functions instead of object functions, also rework using dateTimes
@@ -47,8 +46,8 @@ class MACDDecisionMaking:
             None, updates the object's curveComparison dict
         """
 
-        placeholderResult = self.SignalLineCalculator.signalLineCalculation(
-            portfolio, ticker, mode, dateToCalculate)
+        # Get placeholder date
+        placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateToCalculate)
 
         # Update MACD & Signal line
         self.MACDValuesDict[dateToCalculate] = placeholderResult[0]
@@ -57,14 +56,12 @@ class MACDDecisionMaking:
         # Update curveComparison
         if self.SignalLineValuesDict[dateToCalculate] > self.MACDValuesDict[dateToCalculate]:
             if Config.debug():
-                print(
-                    f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} > signalLine: {self.SignalLineValuesDict[dateToCalculate]}")
+                print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} > signalLine: {self.SignalLineValuesDict[dateToCalculate]}")
             self.curveComparison[dateToCalculate] = 1
 
         elif self.SignalLineValuesDict[dateToCalculate] < self.MACDValuesDict[dateToCalculate]:
             if Config.debug():
-                print(
-                    f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} < signalLine: {self.SignalLineValuesDict[dateToCalculate]}")
+                print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[dateToCalculate]} < signalLine: {self.SignalLineValuesDict[dateToCalculate]}")
             self.curveComparison[dateToCalculate] = -1
 
         else:
@@ -80,19 +77,14 @@ class MACDDecisionMaking:
             dateToCalculate (str, optional): Date for which the decision should be made. Defaults to "0". NOTE: Change this to use datetimes and make it non-optional
 
         Returns:
-            decision in a binary format where 0 is no and 1 is yes NOTE: How are sell decisions done?
+            decision in a binary format where 0 is no and 1 is yes, other response means stock is held
         """
         # Value update happens regardless of iteration
         self.update(portfolio, ticker, mode, dateToCalculate)
+        self.iterations += 1;
 
-        if self.firstRun:
-            # first iteration, no special actions
-            self.firstRun = False
-            self.secondRun = True
-
-        elif self.secondRun:
-            # second iteration
-            self.secondRun = False
+        if self.iterations == 2:
+            # Special actions for second iteration only
 
             # checks for weekend and exceptions
             previousDate = self.getPreviousDate(portfolio, dateToCalculate)
@@ -101,50 +93,48 @@ class MACDDecisionMaking:
             if self.curveComparison[previousDate] == -1 and self.curveComparison[dateToCalculate] == 1:
                 if Config.debug():
                     print(
-                        f"MACDDecisionMaking: Bullish Crossover on {dateToCalculate}")
+                        f"MACDDecisionMaking:\t Bullish Crossover on {dateToCalculate}")
                 return 1
             elif self.curveComparison[previousDate] == 1 and self.curveComparison[dateToCalculate] == -1:
                 if Config.debug():
                     print(
-                        f"MACDDecisionMaking: Bearish Crossover on {dateToCalculate}")
+                        f"MACDDecisionMaking:\t Bearish Crossover on {dateToCalculate}")
                 return -1
             else:
                 return None
 
-        else:
-            # 3rd iteration and upwards
+        elif self.iterations < 2:
+            # Special actions for 3rd iteration and upwards
 
             # checks for weekend, exceptions & crossover
             previousDate = self.getPreviousDate(portfolio, dateToCalculate)
 
             # NOTE: Doesn't this calculate the same thing as previousDate?
-            DayBeforePreviousDate = portfolio.subtractDayFromDate(
-                dateToCalculate)
+            DayBeforePreviousDate = portfolio.subtractDayFromDate(dateToCalculate)
 
             while DayBeforePreviousDate not in self.curveComparison:
-                DayBeforePreviousDate = portfolio.subtractDayFromDate(
-                    DayBeforePreviousDate)
+                DayBeforePreviousDate = portfolio.subtractDayFromDate(DayBeforePreviousDate)
 
             # Final general decision making
             if self.curveComparison[previousDate] == -1 and self.curveComparison[dateToCalculate] == 1:
                 if Config.debug():
                     print(
-                        f"MACDDecisionMaking: Bullish Crossover on {dateToCalculate}")
+                        f"MACDDecisionMaking:\t Bullish Crossover on {dateToCalculate}")
                 return 1
             elif self.curveComparison[DayBeforePreviousDate] == -1 and self.curveComparison[previousDate] == 0 and self.curveComparison[dateToCalculate] == 1:
                 if Config.debug():
                     print(
-                        f"MACDDecisionMaking: Bullish Crossover on {dateToCalculate}")
+                        f"MACDDecisionMaking:\t Bullish Crossover on {dateToCalculate}")
                 return 1
             elif self.curveComparison[previousDate] == 1 and self.curveComparison[dateToCalculate] == -1:
                 if Config.debug():
                     print(
-                        f"MACDDecisionMaking: Bearish Crossover on {dateToCalculate}")
+                        f"MACDDecisionMaking:\t Bearish Crossover on {dateToCalculate}")
                 return -1
             elif self.curveComparison[DayBeforePreviousDate] == 1 and self.curveComparison[previousDate] == 0 and self.curveComparison[dateToCalculate] == -1:
                 if Config.debug():
                     print(
-                        f"MACDDecisionMaking: Bearish Crossover on {dateToCalculate}")
+                        f"MACDDecisionMaking:\t Bearish Crossover on {dateToCalculate}")
                 return -1
             else:
                 return None

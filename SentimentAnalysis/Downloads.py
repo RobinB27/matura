@@ -1,5 +1,7 @@
-# These are all necessary modules that are required to run the Classifier Training.
-# NOT required for using the saved Classifier.
+# This file contains a list of commands which need to be run to install
+# the necessarry features of the NLTK library that are needed for training
+# the Sentiment Classifier. These downloads are also required for simply running
+# the pretrained Classifier file already included in this project.
 
 import nltk
 

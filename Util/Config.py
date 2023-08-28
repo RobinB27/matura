@@ -1,3 +1,8 @@
+# This file contains the Config class.
+# This class is used for enabling the bot to read the options selected by the user in the config.toml file
+# The config.toml file allows any user, regardless of programming ability, to easily modify parameters
+# that the bot uses for runs.
+
 import toml
 
 class Config:
