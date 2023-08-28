@@ -1,3 +1,8 @@
+# This File contains the Stock class. It is a virtual representation of any given Stock (Aktie) that is listed on the NYSE or NASDAQ stock exchange.
+# This means that it keeps track of the amount of stock owned, it can fetch the stock's price on any given date (or real time), and you can buy/sell a stock
+# The stock objects created by this function are held in another type of class called Portfolio (see Portfolio.py) inside a list of other stocks.
+# This file is important for the overarching project because it is the fundamental building block for all trading activities and since it gets all stock prices
+
 import yfinance as yf
 
 from Util.Config import Config

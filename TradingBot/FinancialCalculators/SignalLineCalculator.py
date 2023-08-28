@@ -1,3 +1,6 @@
+# This file contains the SignalLineCalculator class. The signal line is part of the so called MACD indicator, a tool to help with trend trading strategies.
+# The filee calculates the signal line as well as the MACD itself. To make calculations quicker a chaching system has been used.
+# The results of these calculations are the basis with which stock buy/sell decisions are decided (see MACDDecisionmaking.py) according to a MACD indicator trading strategy
 import yfinance as fy
 import pandas as pd
 import numpy as np
