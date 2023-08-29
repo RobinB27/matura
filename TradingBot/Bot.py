@@ -147,49 +147,54 @@ class Bot:
         if self.mode == 0:
             # Main trading loop
             for i in range(self.amountOfIntervals):
+                while True:
+                    self.date = datetime.now()
+                    self.date = self.date.strftime("%Y-%m-%d")
+                    if self.isExceptionDate():
+                        print("exception date, going to sleep for 86400 seconds")
+                        time.sleep(86400) #length of a day
+                        continue
                 
-                self.date = datetime.now()
-                self.date = self.date.strftime("%Y-%m-%d")
-                if self.isExceptionDate():
-                    continue
+                    # check if it's trading hours 
+                    currentTimeUTC = datetime.utcnow()
+                    timezoneEDT = pytz.timezone('US/Eastern')
+                    currentTimeEDT =  currentTimeUTC.replace(tzinfo=pytz.utc).astimezone(timezoneEDT)
                 
-                # check if it's trading hours 
-                currentTimeUTC = datetime.utcnow()
-                timezoneEDT = pytz.timezone('US/Eastern')
-                currentTimeEDT =  currentTimeUTC.replace(tzinfo=pytz.utc).astimezone(timezoneEDT)
+                    startTimeStockExchange = currentTimeEDT.replace(hour=9, minute=30, second=0, microsecond=0)
+                    endTimeStockExchange = currentTimeEDT.replace(hour=16, minute=0, second=0, microsecond=0)
                 
-                startTimeStockExchange = currentTimeEDT.replace(hour=9, minute=30, second=0, microsecond=0)
-                endTimeStockExchange = currentTimeEDT.replace(hour=16, minute=0, second=0, microsecond=0)
-                
-                if startTimeStockExchange <= currentTimeEDT <= endTimeStockExchange:
-                    pass
-                else:
-                    print("not trading hours")
-                    break
+                    if startTimeStockExchange <= currentTimeEDT <= endTimeStockExchange:
+                        break
+                    else:
+                        print("not trading hours")
+                        time.sleep(600) #waiting 10 min until checking again
+                        continue
+                        
                 
                 # stock decisions
                 for i in range(len(self.decisionMakerInstances)):
-                    decision = self.decisionMakerInstances[i].makeStockDecision(
-                        self.portfolio, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
+                        decision = self.decisionMakerInstances[i].makeStockDecision(
+                            self.portfolio, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
                     
-                    # decision execution / logging 
-                    if decision == 1:
-                        print(f"Bot:\t Buying stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
-                        self.portfolio.buyStock(
-                            1, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
-                        self.fileLoggerTxt.snapshot(
+                        # decision execution / logging 
+                        if decision == 1:
+                            print(f"Bot:\t Buying stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
+                            self.portfolio.buyStock(
+                                1, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
+                            self.fileLoggerTxt.snapshot(
+                                self.portfolio, self.mode, self.date)
+
+                        elif decision == -1:
+                            print(f"Bot:\t Selling stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
+                            self.portfolio.sellStock(
+                                1, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
+                            self.fileLoggerTxt.snapshot(
                             self.portfolio, self.mode, self.date)
 
-                    elif decision == -1:
-                        print(f"Bot:\t Selling stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
-                        self.portfolio.sellStock(
-                            1, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
-                        self.fileLoggerTxt.snapshot(
-                            self.portfolio, self.mode, self.date)
-
-                    else:
-                        if Config.debug():
-                            print(f"Bot:\t Ignoring stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
+                        else:
+                            if Config.debug():
+                                print(f"Bot:\t Ignoring stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
+                
                          
                 
         elif self.mode == -1:

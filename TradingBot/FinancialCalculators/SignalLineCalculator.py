@@ -22,16 +22,17 @@ class SignalLineCalculator:
         #self.cacheExceptionDates = Cache("./TradingBot/FinancialCalculators/Chaches/cacheExceptionDates")
         #self.cacheStockPrice = Cache("./TradingBot/FinancialCalculators/Caches/StockPriceCache")
         self.stockPrices = []
+        self.run = 0
     
     def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = "", intervalTime: int= 0):
                 
         if mode == 0:
-            self.stockPrices = []
-            for i in range(26):
-                
-                schedule.every(intervalTime).minutes.do(self.job, portfolio, ticker)
-            
-            schedule.cancel_job(self.job)
+            if self.run == 0:
+                self.run += 1
+            elif self. run >= 1:
+                pass
+            #schedule.every(intervalTime).minutes.do(self.job, portfolio, ticker)
+            #schedule.cancel_job(self.job)
             
             macd, signal, hist = talib.MACD(np.array(self.stockPrices), fastperiod=12, slowperiod=26, signalperiod=9)
             return macd[-1], signal[-1]
