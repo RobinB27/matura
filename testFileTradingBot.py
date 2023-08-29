@@ -15,6 +15,8 @@ from TradingBot.FinancialCalculators.SignalLineCalculator import SignalLineCalcu
 
 # Use datetime dates instead of date strings as function, eliminates your problem
 
+#1h intervals are the highest granularity of data allowed for live mode at present
+
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #bot settings need date format like this: "2023-04-13"
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25,8 +27,8 @@ p = Portfolio(1000)
 p.addStock("TSLA")
 
 #stockPrice = t1.getStockPrice(-1, "2020-04-12", "2020-04-13")
-stockPrice = t1.getPrice()
-print(stockPrice)
+#stockPrice = t1.getPrice()
+#print(stockPrice)
 
 
 #print(stockPrice)

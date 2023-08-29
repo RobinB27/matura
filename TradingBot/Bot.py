@@ -165,8 +165,8 @@ class Bot:
                         time.sleep(600) # time in minutes for
                         continue
                     else:
-                        break
-                        
+                        print("valid trading hours")
+                        break        
                 
                 # stock decisions
                 for i in range(len(self.decisionMakerInstances)):

@@ -47,10 +47,8 @@ class MACDDecisionMaking:
         """
 
         # Get placeholder date
-        if mode == 0:
-            placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateToCalculate, interval)
-        elif mode  == -1:
-            placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateToCalculate)
+        placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateToCalculate, interval)
+        
 
         # Update MACD & Signal line
         self.MACDValuesDict[dateToCalculate] = placeholderResult[0]
@@ -70,7 +68,7 @@ class MACDDecisionMaking:
         else:
             self.curveComparison[dateToCalculate] = 0
 
-    def makeStockDecision(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = "0"):
+    def makeStockDecision(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = "0", interval: int = 0):
         """Makes a decision on whether to buy a stock or not on a given date.
 
         Args:
@@ -83,8 +81,10 @@ class MACDDecisionMaking:
             decision in a binary format where 0 is no and 1 is yes, other response means stock is held
         """
         # Value update happens regardless of iteration
-        self.update(portfolio, ticker, mode, dateToCalculate)
+        
+        self.update(portfolio, ticker, mode, dateToCalculate, interval)
         self.iterations += 1;
+        
 
         if self.iterations == 2:
             # Special actions for second iteration only
