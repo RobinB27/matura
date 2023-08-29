@@ -1,4 +1,7 @@
-from TradingBot.Portfolio import Portfolio
+# This file implements the FileLoggerTXT class.
+# The FileLoggerTXT class generates a FileLoggerTXT file representation of a portfolio
+# that the bot has created. The files produced by this logger are used to gain an insight 
+# into the bots trading activity and for debugging
 import datetime, os
 
 # Potential issue: see comment l37
