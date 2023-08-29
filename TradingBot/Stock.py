@@ -25,7 +25,7 @@ class Stock:
         self.ticker = ticker
         self.amount = 0
         self.tickerObject = yf.Ticker(ticker)
-        self.stockInfo = self.tickerObject.history(period="max")
+        self.stockHist = self.tickerObject.history(period="max")
 
         # Check ticker validity
         try:
@@ -47,7 +47,7 @@ class Stock:
             #always ensured that not used when market closed
             placeholder = yf.Ticker(self.ticker).info
             try:
-                stockPrice = placeholder.get("currentPrice")
+                stockPrice = placeholder.get("regularMarketPrice")
                 if Config.debug():
                     print(f"Stock:\t Current stock price of {self.ticker} is {stockPrice}")
             except KeyError:
@@ -58,7 +58,7 @@ class Stock:
 
         elif mode == -1:
             try:
-                closing_price = self.stockInfo.loc[date, "Close"]
+                closing_price = self.stockHist.loc[date, "Close"]
 
                 if Config.debug():
                     print(f"Stock:\t Stock price of {self.ticker} is {closing_price} on {date}")

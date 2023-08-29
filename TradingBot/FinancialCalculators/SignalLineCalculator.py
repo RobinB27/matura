@@ -24,13 +24,22 @@ class SignalLineCalculator:
         self.stockPrices = []
         self.run = 0
     
-    def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = "", intervalTime: int= 0):
+    def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = "", intervalToTrade: int= 0):
                 
         if mode == 0:
             if self.run == 0:
+                for stock in portfolio.stocksHeld:
+                    if stock.ticker == ticker:
+                        histData = stock.history(period= "m", interval=intervalToTrade)
+                        selectedPrices = histData['Close'].tail(26)
+                        self.stockPrices.append(selectedPrices)
+  
                 self.run += 1
             elif self. run >= 1:
-                pass
+                for stock in portfolio.stocksHeld:
+                    if stock.ticker == ticker:
+                        self.stockPrices.append(stock.getPrice(0))
+                        
             #schedule.every(intervalTime).minutes.do(self.job, portfolio, ticker)
             #schedule.cancel_job(self.job)
             
@@ -47,6 +56,4 @@ class SignalLineCalculator:
             return macd[-1], signal[-1]
 
     def job(self, portfolio, ticker ):
-        for stock in portfolio.stocksHeld:
-                    if stock.ticker == ticker:
-                        self.stockPrices.append(stock.getPrice(0))
+        pass

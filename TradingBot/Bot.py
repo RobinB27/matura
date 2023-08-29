@@ -9,6 +9,7 @@ from datetime import datetime
 import pytz
 import time
 
+from TradingBot.Stock import Stock
 from TradingBot.Portfolio import Portfolio
 from TradingBot.FileLoggers.FileLoggerJSON import FileLoggerJSON
 from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
@@ -121,18 +122,26 @@ class Bot:
             print(f"Bot:\t Trading day: {self.date}")
 
         weekendCheckDatetime = datetime.strptime(self.date, "%Y-%m-%d")
-
+        
         if weekendCheckDatetime.isoweekday() > 5:
             if Config.debug():
                 print(f"Bot:\t weekend: {self.date}")
             self.date = self.portfolio.addDayToDate(self.date)
             return True
         # NOTE: removed a console message here to improve code legibility, re-add if you think it's necessary
-        elif self.portfolio.stocksHeld[0].getPrice(-1, self.date) is None:
-            if Config.debug():
-                print(f"Bot:\t exception date: {self.date}")
-            self.date = self.portfolio.addDayToDate(self.date)
-            return True
+        if self.mode == 0:
+            if self.portfolio.stocksHeld[0].getPrice() is None:
+                if Config.debug():
+                    print(f"Bot:\t exception date: {self.date}")
+                self.date = self.portfolio.addDayToDate(self.date)
+                return True
+        if self.mode == -1:
+            
+            if self.portfolio.stocksHeld[0].getPrice(-1, self.date) is None:
+                if Config.debug():
+                    print(f"Bot:\t exception date: {self.date}")
+                self.date = self.portfolio.addDayToDate(self.date)
+                return True
         else:
             return False
 
@@ -150,31 +159,19 @@ class Bot:
                 while True:
                     self.date = datetime.now()
                     self.date = self.date.strftime("%Y-%m-%d")
+                    
                     if self.isExceptionDate():
-                        print("exception date, going to sleep for 86400 seconds")
-                        time.sleep(86400) #length of a day
+                        print("exception date/stock market not open yet, going to sleep for 10 minutes before trying agian")
+                        time.sleep(600) # time in minutes for
                         continue
-                
-                    # check if it's trading hours 
-                    currentTimeUTC = datetime.utcnow()
-                    timezoneEDT = pytz.timezone('US/Eastern')
-                    currentTimeEDT =  currentTimeUTC.replace(tzinfo=pytz.utc).astimezone(timezoneEDT)
-                
-                    startTimeStockExchange = currentTimeEDT.replace(hour=9, minute=30, second=0, microsecond=0)
-                    endTimeStockExchange = currentTimeEDT.replace(hour=16, minute=0, second=0, microsecond=0)
-                
-                    if startTimeStockExchange <= currentTimeEDT <= endTimeStockExchange:
-                        break
                     else:
-                        print("not trading hours")
-                        time.sleep(600) #waiting 10 min until checking again
-                        continue
+                        break
                         
                 
                 # stock decisions
                 for i in range(len(self.decisionMakerInstances)):
                         decision = self.decisionMakerInstances[i].makeStockDecision(
-                            self.portfolio, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
+                            self.portfolio, self.portfolio.stocksHeld[i].ticker, self.mode, self.date, self.interval)
                     
                         # decision execution / logging 
                         if decision == 1:
@@ -194,6 +191,9 @@ class Bot:
                         else:
                             if Config.debug():
                                 print(f"Bot:\t Ignoring stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
+                
+                #   waiting until next schedueled interval
+                time.sleep(self.interval * 60)
                 
                          
                 

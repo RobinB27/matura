@@ -36,7 +36,7 @@ class MACDDecisionMaking:
 
         return previousDate
 
-    def update(self, portfolio: Portfolio, ticker: str, mode: int, dateToCalculate: str) -> None:
+    def update(self, portfolio: Portfolio, ticker: str, mode: int, dateToCalculate: str, interval: int= 0) -> None:
         """Utility function to update all value dicts. Only intended for use in class MACDDecisionMaking
 
         Args:
@@ -47,7 +47,10 @@ class MACDDecisionMaking:
         """
 
         # Get placeholder date
-        placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateToCalculate)
+        if mode == 0:
+            placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateToCalculate, interval)
+        elif mode  == -1:
+            placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateToCalculate)
 
         # Update MACD & Signal line
         self.MACDValuesDict[dateToCalculate] = placeholderResult[0]
