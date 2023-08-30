@@ -20,7 +20,7 @@ class SignalLineCalculator:
     def __init__(self) -> None:
         #self.cacheExceptionDates = Cache("./TradingBot/FinancialCalculators/Chaches/cacheExceptionDates")
         #self.cacheStockPrice = Cache("./TradingBot/FinancialCalculators/Caches/StockPriceCache")
-        self.stockPrices = []
+        self.stockPrices = np.zeros(33)
         self.run = 0
     
     def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = "", intervalToTrade: int= 0):
@@ -30,19 +30,19 @@ class SignalLineCalculator:
                 for stock in portfolio.stocksHeld:
                     if stock.ticker == ticker:
                         histData = yf.Ticker(ticker).history(period= "7d", interval=f"{intervalToTrade}m")
-                        selectedPrices = histData['Close'].tail(33)
-                        self.stockPrices.append(selectedPrices)
+                        selectedPricesForMacd = histData['Close'].tail(33)
+                        self.stockPrices[:] = selectedPricesForMacd
     
                 self.run += 1
             elif self. run >= 1:
                 for stock in portfolio.stocksHeld:
                     if stock.ticker == ticker:
-                        self.stockPrices.append(stock.getPrice(0))
+                        self.stockPrices = self.stockPrices[1:]
+                        self.stockPrices = np.insert(self.stockPrices, 32, stock.getPrice(0))
                         
             #schedule.every(intervalTime).minutes.do(self.job, portfolio, ticker)
             #schedule.cancel_job(self.job)
-            npPricesArray = np.stack([np.array(series) for series in self.stockPrices])
-            macd, signal, hist = talib.MACD(np.array(npPricesArray), fastperiod=12, slowperiod=26, signalperiod=9)
+            macd, signal, hist = talib.MACD(self.stockPrices, fastperiod=12, slowperiod=26, signalperiod=9)
             return macd[-1], signal[-1]
             
         elif mode == -1:    
@@ -53,6 +53,3 @@ class SignalLineCalculator:
 
             macd, signal, hist = talib.MACD(np.array(self.stockPrices), fastperiod=12, slowperiod=26, signalperiod=9)
             return macd[-1], signal[-1]
-
-    def job(self, portfolio, ticker ):
-        pass

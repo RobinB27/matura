@@ -170,8 +170,8 @@ class Bot:
                 
                 # stock decisions
                 for i in range(len(self.decisionMakerInstances)):
-                        decision = self.decisionMakerInstances[i].makeStockDecision(
-                            self.portfolio, self.portfolio.stocksHeld[i].ticker, self.mode, self.date, self.interval)
+                        decision = self.decisionMakerInstances[i].makeLiveStockDecision(
+                            self.portfolio, self.portfolio.stocksHeld[i].ticker, self.mode, self.interval)
                     
                         # decision execution / logging 
                         if decision == 1:

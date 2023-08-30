@@ -4,6 +4,8 @@
 # it will give the decision to buy or sell a stock. If no crossing has occured it will return the decison to ignor the stock.
 # The decisioon is then given to the bot itself (see Bot.py) to execute
 
+import datetime as dt
+
 from TradingBot.Portfolio import Portfolio
 from TradingBot.FinancialCalculators.SignalLineCalculator import SignalLineCalculator
 
@@ -22,6 +24,9 @@ class MACDDecisionMaking:
         self.curveComparison = {}
         self.MACDValuesDict = {}
         self.SignalLineValuesDict = {}
+        
+        self.currentTimes = []
+        self.timeInstancesElapsed = 0
 
         self.iterations = 0
 
@@ -47,6 +52,7 @@ class MACDDecisionMaking:
         """
 
         # Get placeholder date
+        
         placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateToCalculate, interval)
         
 
@@ -106,7 +112,7 @@ class MACDDecisionMaking:
             else:
                 return None
 
-        elif self.iterations < 2:
+        elif self.iterations > 2:
             # Special actions for 3rd iteration and upwards
 
             # checks for weekend, exceptions & crossover
@@ -138,6 +144,124 @@ class MACDDecisionMaking:
                 if Config.debug():
                     print(
                         f"MACDDecisionMaking:\t Bearish Crossover on {dateToCalculate}")
+                return -1
+            else:
+                return None
+            
+    def liveUpdate(self, portfolio, ticker, mode, interval) -> None:
+        """Utility function to update all value dicts. Only intended for use in class MACDDecisionMaking
+            Intended for live mode use only.
+
+        Args:
+            dateToCalculate (str): date in use for the current iteration
+            placeholderResult (tuple): place holder result gained from SignalLineCalculator class
+        Returns:
+            None, updates the object's curveComparison dict
+        """
+
+        # Get placeholder date
+        
+        placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, interval)
+        
+        timeForKey = dt.datetime.now()
+        timeForKey = timeForKey.strftime("%Y-%m-%d-%H-%M")
+        key = ticker + "_" + timeForKey
+        
+        self.timeInstancesElapsed += 1
+        
+        
+
+        # Update MACD & Signal line
+        self.MACDValuesDict[key] = placeholderResult[0]
+        self.SignalLineValuesDict[key] = placeholderResult[1]
+
+        # Update curveComparison
+        if self.SignalLineValuesDict[key] > self.MACDValuesDict[key]:
+            if Config.debug():
+                print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[key]} > signalLine: {self.SignalLineValuesDict[key]}")
+            self.curveComparison[key] = 1
+
+        elif self.SignalLineValuesDict[key] < self.MACDValuesDict[key]:
+            if Config.debug():
+                print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[key]} < signalLine: {self.SignalLineValuesDict[key]}")
+            self.curveComparison[key] = -1
+
+        else:
+            self.curveComparison[key] = 0
+            
+
+    def makeLiveStockDecision(self, portfolio, ticker, mode, interval) -> int:
+        """Makes a decision on whether to buy a stock in live mode
+
+        Args:
+            portfolio (Portfolio): Portfolio to be modified
+            ticker (str): Stock ticker for which a decision should be made
+            mode (int, optional): Mode of the bot. Defaults to 0. (past mode)
+
+        Returns:
+            decision in a binary format where 0 is no and 1 is yes, other response means stock is held
+        """
+        # Value update happens regardless of iteration
+        
+        self.liveUpdate(portfolio, ticker, mode, interval)
+        self.iterations += 1;
+        
+
+        if self.iterations == 2:
+            # Special actions for second iteration only
+            value = self.currentTimes[self.timeInstancesElapsed]
+
+            # checks for weekend and exceptions
+            previousValue = self.currentTimes[self.timeInstancesElapsed -1]
+            
+            
+            
+
+            # Final decision making, reduced for 2nd iteration
+            if self.curveComparison[previousValue] == -1 and self.curveComparison[value] == 1:
+                if Config.debug():
+                    print(
+                        f"MACDDecisionMaking:\t Bullish Crossover on {value}")
+                return 1
+            elif self.curveComparison[previousValue] == 1 and self.curveComparison[value] == -1:
+                if Config.debug():
+                    print(
+                        f"MACDDecisionMaking:\t Bearish Crossover on {value}")
+                return -1
+            else:
+                return None
+
+        elif self.iterations > 2:
+            # Special actions for 3rd iteration and upwards
+            value = self.currentTimes[self.timeInstancesElapsed]
+
+            # checks for weekend, exceptions & crossover
+            previousValue = self.currentTimes[self.timeInstancesElapsed -1]
+
+            # NOTE: Doesn't this calculate the same thing as previousDate?
+            ValueBeforePreviousValue = self.currentTimes[self.timeInstancesElapsed -2]
+
+
+            # Final general decision making
+            if self.curveComparison[previousValue] == -1 and self.curveComparison[value] == 1:
+                if Config.debug():
+                    print(
+                        f"MACDDecisionMaking:\t Bullish Crossover on {value}")
+                return 1
+            elif self.curveComparison[ValueBeforePreviousValue] == -1 and self.curveComparison[previousValue] == 0 and self.curveComparison[value] == 1:
+                if Config.debug():
+                    print(
+                        f"MACDDecisionMaking:\t Bullish Crossover on {value}")
+                return 1
+            elif self.curveComparison[previousValue] == 1 and self.curveComparison[value] == -1:
+                if Config.debug():
+                    print(
+                        f"MACDDecisionMaking:\t Bearish Crossover on {value}")
+                return -1
+            elif self.curveComparison[ValueBeforePreviousValue] == 1 and self.curveComparison[previousValue] == 0 and self.curveComparison[value] == -1:
+                if Config.debug():
+                    print(
+                        f"MACDDecisionMaking:\t Bearish Crossover on {value}")
                 return -1
             else:
                 return None
