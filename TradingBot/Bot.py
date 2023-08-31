@@ -47,17 +47,18 @@ class Bot:
             startDate (str, optional): start date for trading in "YYYY-MM-DD" format: Defaults to an empty string.
             mode (int, optional):  trading mode: 0 for live, -1 for past. Defaults to 0.
         """
-
+        # NOTE: is this property necessary or used anywhere? Would like to remove
         self.name = "trading bot"
         self.mode = mode
 
         self.startDate = startDate
         self.date = startDate
 
-        self.portfolio = None
-        self.timePeriod = 0
-        self.interval = 0 # in minutes
-        self.amountOfIntervals = 0
+        # Keep these at None so testing if they're unassigned is straightforward
+        self.portfolio: Portfolio = None
+        self.timePeriod: int = None
+        self.interval: int = None # in minutes
+        self.amountOfIntervals: int = None
 
         self.decisionMaker = decisionMaking
         self.decisionMakerInstances = []
@@ -179,7 +180,7 @@ class Bot:
         
         """
         for i in range(len(self.decisionMakerInstances)):
-            decision = self.decisionMakerInstances[i].makeStockDecision(self.portfolio, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
+            decision = self.decisionMakerInstances[i].makeStockDecision(self.portfolio, self.portfolio.stocksHeld[i].ticker, self.mode, self.date, self.interval)
 
             if decision == 1:
                 print(f"Bot:\t Buying stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
