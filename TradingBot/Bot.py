@@ -6,10 +6,8 @@
 # The results can then be viewed by the graphing class (see graphing.py).
 
 from datetime import datetime
-import pytz
 import time
 
-from TradingBot.Stock import Stock
 from TradingBot.Portfolio import Portfolio
 from TradingBot.FileLoggers.FileLoggerJSON import FileLoggerJSON
 from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
@@ -58,15 +56,46 @@ class Bot:
 
         self.portfolio = None
         self.timePeriod = 0
-        self.interval = 0 #given in minutes
+        self.interval = 0 # in minutes
         self.amountOfIntervals = 0
 
         self.decisionMaker = decisionMaking
+        self.decisionMakerInstances = []
         self.fileLoggerTxt = FileLoggertxt()
         self.fileLoggerJSON = FileLoggerJSON()
 
-        # NOTE: we also need a way later on to create bots with code instead of command line, for automated tests
-    def initialiseCLI(self):
+    def initialise(self, funds: int, stocks: list[str], period: int, interval: int = None) -> None:
+        """This method initializes the trading bot's portfolio, stock holdings
+        and trading parameters.
+        Prepares the bots decision-making and creates Log files
+
+        Side Effects:
+            - Initializes the bot's portfolio
+            - Adds stocks to the portfolio
+            - Sets the trading time period OR interval & repetions (depending on mode)
+            - Creates a log file for text-based logging
+            - Prepares decision-making strategies based on the selected mode and portfolio holdings
+
+        Note:
+            An initialisation method (this one or the non-CLI version) needs to be called before the startBot method
+        """
+        self.portfolio = Portfolio(funds)
+        for stock in stocks: self.portfolio.addStock(stock)
+        
+        # Setup depending on mode
+        if interval is None: self.timePeriod = period
+        else: 
+            self.interval = interval 
+            self.amountOfIntervals = period
+
+        # Check class type and populate Instances list
+        decisionMakingType = self.decisionMaker.__class__
+        for i in range(len(self.portfolio.stocksHeld)):
+            self.decisionMakerInstances.append(decisionMakingType(self.mode))
+        
+        self.fileLoggerTxt.createLogFile()
+
+    def initialiseCLI(self) -> None:
         """This method initializes the trading bot's portfolio, stock holdings
         and trading parameters. Prompts the user for input regarding funds, stocks, and the trading period
         Prepares the bots decision-making and creates Log files
@@ -79,21 +108,21 @@ class Bot:
             - Prepares decision-making strategies based on the selected mode and portfolio holdings
 
         Note:
-            This method needs to be called before the startBot method
+            An initialisation method (this one or the non-CLI version) needs to be called before the startBot method
         """
-        fundsForPortfolio = input("How many funds $$$ does the portfolio have? ")
-        fundsForPortfolio = int(fundsForPortfolio)
+        funds = input("How many funds $$$ does the portfolio have? ")
+        funds = int(funds)
 
-        self.portfolio = Portfolio(fundsForPortfolio)
+        self.portfolio = Portfolio(funds)
 
         # NOTE: Maybe instead of giving a fixed number, let user add stocks until he types "EXIT" or something similar
-        amountOfStocks = input("Number of stock to add to Portfolio: ")
-        amountOfStocks = int(amountOfStocks)
+        stockAmount = input("Number of stock to add to Portfolio: ")
+        stockAmount = int(stockAmount)
 
-        for i in range(amountOfStocks):
-            nameOfTickerToAdd = input("Ticker: ")
+        for i in range(stockAmount):
+            newTicker = input("Ticker: ")
 
-            self.portfolio.addStock(nameOfTickerToAdd)
+            self.portfolio.addStock(newTicker)
         if self.mode == -1:
             timePeriod = input("For how many days should the Bot trade? ")
             timePeriod = int(timePeriod)
@@ -101,16 +130,14 @@ class Bot:
 
         self.fileLoggerTxt.createLogFile()
 
-        self.decisionMakerInstances = []
-
         # Check class type and populate Instances list
         decisionMakingType = self.decisionMaker.__class__
         for i in range(len(self.portfolio.stocksHeld)):
             self.decisionMakerInstances.append(decisionMakingType(self.mode))
             
         if self.mode == 0:
-            self.interval = int(input("What interval will the bot be trading (in minutes): "))
-            self.amountOfIntervals = int(input("What amount of interval will the bot be trading: "))
+            self.interval = int(input("What interval will the bot be trading at (in minutes): "))
+            self.amountOfIntervals = int(input("How often should the bot trade: "))
 
     def isExceptionDate(self) -> bool:
         """Utility function to check whether a date is either weekend or exception Date.
@@ -118,7 +145,7 @@ class Bot:
         Returns:
             bool: True if exception date else False
         """
-        if Config.debug():
+        if Config.debug(): 
             print(f"Bot:\t Trading day: {self.date}")
 
         weekendCheckDatetime = datetime.strptime(self.date, "%Y-%m-%d")
@@ -144,6 +171,31 @@ class Bot:
                 return True
         else:
             return False
+    
+    def updatePortfolio(self) -> None:
+        """
+        Utility function to get Buy/sell/hold decisions from the DecisionMaking instances for all stocks and apply them to the portfolio.\n
+        This is used on every iteration of the bot. Automatically updates FileLoggers.
+        
+        """
+        for i in range(len(self.decisionMakerInstances)):
+            decision = self.decisionMakerInstances[i].makeStockDecision(self.portfolio, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
+
+            if decision == 1:
+                print(f"Bot:\t Buying stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
+                self.portfolio.buyStock(1, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
+                self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
+
+            elif decision == -1:
+                print(f"Bot:\t Selling stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
+                self.portfolio.sellStock(1, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
+                self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
+
+            else:
+                if Config.debug(): print(f"Bot:\t Ignoring stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
+            
+            # Always update JSON log file, regardless of decision
+            self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date)
 
     def start(self) -> None:
         """Start the trading activities of the bot based on the specified mode and strategy
@@ -153,89 +205,40 @@ class Bot:
         logs trading actions in JSON and TXT format, creates a value over time Graph and saves to output.
         """
 
+        # Real time
         if self.mode == 0:
-            # Main trading loop
+            # Main trading loop, custom interval
             for i in range(self.amountOfIntervals):
+                # Exception date check
                 while True:
-                    self.date = datetime.now()
-                    self.date = self.date.strftime("%Y-%m-%d")
+                    self.date: str = datetime.now().strftime("%Y-%m-%d")
                     
                     if self.isExceptionDate():
-                        print("exception date/stock market not open yet, going to sleep for 10 minutes before trying agian")
-                        time.sleep(600) # time in minutes for
+                        print("Bot\t Exception date/stock market not open yet, retry in 10m")
+                        time.sleep(600) # time in seconds
                         continue
                     else:
-                        print("valid trading hours")
+                        print("Bot:\t Currently valid trading hours, beginning trading.")
                         break        
                 
-                # stock decisions
-                for i in range(len(self.decisionMakerInstances)):
-                        decision = self.decisionMakerInstances[i].makeLiveStockDecision(
-                            self.portfolio, self.portfolio.stocksHeld[i].ticker, self.mode, self.interval)
-                    
-                        # decision execution / logging 
-                        if decision == 1:
-                            print(f"Bot:\t Buying stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
-                            self.portfolio.buyStock(
-                                1, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
-                            self.fileLoggerTxt.snapshot(
-                                self.portfolio, self.mode, self.date)
-
-                        elif decision == -1:
-                            print(f"Bot:\t Selling stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
-                            self.portfolio.sellStock(
-                                1, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
-                            self.fileLoggerTxt.snapshot(
-                            self.portfolio, self.mode, self.date)
-
-                        else:
-                            if Config.debug():
-                                print(f"Bot:\t Ignoring stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
-                
+                self.updatePortfolio()
                 #   waiting until next schedueled interval
                 time.sleep(self.interval * 60)
                 
-                         
-                
+        # Historical data      
         elif self.mode == -1:
-
-            # Main trading loop
+            # Main trading loop, fixed interval at 1d
             for i in range(self.timePeriod):
-
-                if self.isExceptionDate():
-                    continue
-
-                # Seperate Decision Making instance for each stock in portfolio
-                for i in range(len(self.decisionMakerInstances)):
-                    decision = self.decisionMakerInstances[i].makeStockDecision(
-                        self.portfolio, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
-
-                    if decision == 1:
-                        print(f"Bot:\t Buying stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
-                        self.portfolio.buyStock(
-                            1, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
-                        self.fileLoggerTxt.snapshot(
-                            self.portfolio, self.mode, self.date)
-
-                    elif decision == -1:
-                        print(f"Bot:\t Selling stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
-                        self.portfolio.sellStock(
-                            1, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
-                        self.fileLoggerTxt.snapshot(
-                            self.portfolio, self.mode, self.date)
-
-                    else:
-                        if Config.debug():
-                            print(f"Bot:\t Ignoring stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
-
-                self.fileLoggerJSON.snapshot(
-                    self.portfolio, self.mode, self.date)
+                # Exception date check
+                if self.isExceptionDate(): continue
+                else: self.updatePortfolio()
 
                 # NOTE: datetimes
                 self.date = self.portfolio.addDayToDate(self.date)
                 if Config.debug():
                     print(f"Bot:\t Date updated to: {self.date}")
 
+        # Output handling
         if Config.getParam("displayGraph"):
             if Config.debug():
                 print("Bot:\t Creating graph")
