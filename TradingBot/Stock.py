@@ -47,7 +47,7 @@ class Stock:
             #always ensured that not used when market closed
             placeholder = yf.Ticker(self.ticker).info
             try:
-                stockPrice = placeholder.get("regularMarketPrice")
+                stockPrice = placeholder.get("currentPrice")
                 if Config.debug():
                     print(f"Stock:\t Current stock price of {self.ticker} is {stockPrice}")
             except KeyError:

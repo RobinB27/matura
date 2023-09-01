@@ -27,7 +27,7 @@ class MACDDecisionMaking:
         self.SignalLineValuesDict = {}
         
         self.currentTimes = []
-        self.timeInstancesElapsed = 0
+        self.timeInstancesElapsed = -1 # starts at -1 so first call of update method doesnt destroy accesses to the dict self.currentTimes
 
         self.iterations = 0
 
@@ -52,7 +52,7 @@ class MACDDecisionMaking:
             None, updates the object's curveComparison dict
         """
 
-        placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, key, interval)
+        placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateToCalculate, interval)
 
         # define key based on mode
         if mode == 0 and interval is not None:
@@ -60,6 +60,8 @@ class MACDDecisionMaking:
             timeForKey = dt.datetime.now()
             timeForKey = timeForKey.strftime("%Y-%m-%d-%H-%M")
             key = ticker + "_" + timeForKey
+            
+            self.currentTimes.append(key)
             
             self.timeInstancesElapsed += 1
         elif mode == -1:

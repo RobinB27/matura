@@ -224,6 +224,8 @@ class Bot:
                 
                 self.updatePortfolio()
                 #   waiting until next schedueled interval
+                if Config.debug():
+                    print("going to sleep")
                 time.sleep(self.interval * 60)
                 
         # Historical data      
