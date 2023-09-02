@@ -3,188 +3,133 @@
 # Furthermore, the class has the ability to buy/sell stocks. This decreases/increases the funds inside the portfolio and decreases the amount of stock owned (Stock class attribute)
 # It ties into the bot as the medium through which stock decisions are implemented
 
-from TradingBot.Stock import Stock
-from datetime import datetime, timedelta, date
-import pandas as pd
+from datetime import datetime, timedelta
 
+from TradingBot.Stock import Stock
+
+from Util.DateHelper import DateHelper
 from Util.Config import Config
 
 
 class Portfolio:
     """
-    defines  portfolio class, holds stocks, buy/sell stocks, keeps track of funds
-    params: fundsAmount
+    Class representing a Portfolio of stocks.\n
+    Keeps track of all stocks held and provides methods for buying and selling.
     """
-    def __init__(self, fundsAmount):
-        """constructor of portfolio class
+    
+    def __init__(self, funds):
+        """Creates a new instance of the Portfolio class.
+        
         Args:
-            fundsAmount (int): starting funds of portfolio
+            funds (int): starting funds of portfolio
         """
         
-        self.funds = fundsAmount
-        self.stocksHeld = [] #could be optimised with a dict
-        self.startingFunds = fundsAmount
+        self.funds = funds
+        self.stocksHeld = {}
+        self.startingFunds = funds
+    
+    def getStocks(self) -> list:
+        """Shorthand to get stocksHeld in list form
+
+        Returns:
+            list[Stock]: Contains all stocks held.
+        """
+        return list(self.stocksHeld.values())
         
+    def getStock(self, ticker:str) -> Stock:
+        """Utility function to retrieve Stock class from Portfolio.
+
+        Args:
+            ticker (str): Stock ticker
+            
+        Returns:
+            Stock: searched Stock instance
+
+        Raises:
+            KeyError: Stock is not included in the Portfolio.
+        """
+        if ticker in self.stocksHeld: return self.stocksHeld[ticker]
+        else: raise KeyError("Portfolio\t Error: Tried to buy Stock not included in the Portfolio.")
        
     def addStock(self, ticker: str):
-        """
-        appends the self.stocksHeld list with Stock object using ticker given
+        """Adds a stock to the porfolio
         args:
             params (str): name of stockticker
         """
-        try:
-            self.stocksHeld.append(Stock(ticker))           
-        except KeyError:
-            raise ValueError("Unrecongnised ticker")
-                
+        if ticker not in self.stocksHeld:
+            self.stocksHeld[ticker] = Stock(ticker)
+        else: raise KeyError("Portfolio\t Error: Tried to add Stock to portfolio that is already included")
     
-    #try except clause could be optimised by putting it outside the mode checks
-    def buyStock(self, amount: int, nameOfTicker: str, mode: int, date: str = None):
-        """buys the stock if funds available, default mode live prices,
-        past mode buys stock with historical price data on date given
+    def buyStock(self, amount: int, ticker: str, mode: int, date: datetime = None):
+        """Buys a stock and adds it to the Portfolio.\n
+        either at historical or current price depending on mode.\n
         Args:
             amount (int): amount of stock to buy
-            nameOfTicker (str): name of stock ticker
-            mode (int): live(0) or past mode (-1).
-            date (str, optional): date for past mode. Defaults to '0'.
+            ticker (str): name of stock ticker
+            mode (int): realtime (0) or historical data (-1).
+            date (str, optional): date, required for historical data mode (-1). Defaults to None.
 
         Raises:
-            ValueError: invalid ticker name
-            ValueError: invalid ticker name
+            KeyError: Raised when trying to buy a stock not in the portfolio
         """
-        if mode == 0:
-            try:
-                for stock in self.stocksHeld:
-                #checks if the given stock is a stock held by the portfolio
-                    if stock.ticker == nameOfTicker:
-                        # Ignores date given, gets current price
-                        currentPrice = stock.getPrice()
-                        totalCost = currentPrice * amount
-                
-                    #checks if there are enough funds to buy the stock & buys it
-                        if totalCost <= self.funds:
-                            self.funds -= totalCost
-                            stock.increase(amount)
-                            if Config.debug():  
-                                print(f"Bought {amount} shares of {nameOfTicker} at ${currentPrice} per share.")
-                        else:
-                            if Config.debug():  
-                                print("Portfolio: Insufficient funds to buy the stock.")
             
-            except KeyError:
-                raise ValueError("Unrecongnised ticker")
-        
-        elif mode == -1:
-            if date is None: raise TypeError("Error\t buyStock function requires date when running in past mode")
-            try:
-                #gets historical price if ticker in portfolio
-                for stock in self.stocksHeld:
-                    if stock.ticker == nameOfTicker:
-                        
-                        #Returns Open, High, Low, Close, Adj Close, Volume to the
-                        historicalStockPrice = stock.getPrice(-1, date)
-                        totalCost = historicalStockPrice * amount
-                        
-                        #sells the amount of shares given if enough funds are available
-                        if totalCost <= self.funds:
-                            self.funds -= totalCost
-                            stock.increase(amount)
-                            if Config.debug():  
-                                print(f"Bought {amount} shares of {nameOfTicker} at ${historicalStockPrice} per share on {date}.")
-                        else:
-                            if Config.debug():  
-                                print("Portfolio: Insufficient funds to buy the stock.")
+        # selects either current or historical price depending on mode
+        stock: Stock = self.getStock(ticker)
+        currentPrice = stock.getPrice(mode, date)
                 
-            except KeyError:
-                raise ValueError("Unrecongnised ticker")
+        #checks if there are enough funds to buy the stock & buys it
+        cost = currentPrice * amount
+        if cost <= self.funds:
+            self.funds -= cost
+            stock.increase(amount)
+            if Config.debug() and mode == 0:
+                print(f"Portfolio:\t Bought {amount} shares of {ticker} at ${currentPrice} per share.")
+            elif Config.debug() and mode == -1:
+                print(f"Portfolio:\t Bought {amount} shares of {ticker} at ${currentPrice} per share on {DateHelper.format(date)}.")
+        else:
+            if Config.debug():  
+                print("Portfolio:\t Error: Insufficient funds to buy the stock.")
         
         
-    def sellStock(self, amount: int, nameOfTicker: str, mode: int = 0, date='0'):
-        """sells the stock if stock class attribute amountOfStock sufficent, default mode live prices,
-        past mode sells stock with historical price data on date given
+    def sellStock(self, amount: int, ticker: str, mode: int,  date: datetime = None):
+        """Sells a stock in the Portfolio.\n
+        either at historical or at current price depending on mode.\n
 
         Args:
             amount (int): amount to sell
-            nameOfTicker (str): name of ticker to sell
-            mode (int, optional): live(0) or past (-1) mode. Defaults to 0.
-            date (str, optional): date for past mode. Defaults to '0'.
+            ticker (str): name of ticker to sell
+            mode (int): realtime (0) or historical data (-1).
+            date (str, optional): date, required for historical data mode. Defaults to None.
 
         Raises:
-            ValueError: invalid ticker name
-            ValueError: invalid ticker name
+            KeyError: Raised when trying to sell a stock not in the portfolio
         """
-        if mode == 0:
-            try:
-                for stock in self.stocksHeld:
-                    #gets current price of ticker if in portfolio
-                    if stock.ticker == nameOfTicker:
-                        currentPrice = stock.getPrice()
-                        totalPrice = currentPrice * amount
+
+        #gets current price of ticker if in portfolio
+        stock: Stock = self.getStock(ticker)
+        currentPrice = stock.getPrice(mode, date)
                     
-                    #checks if there is enough of a given stock to sell & sells it
-                        if stock.amount >= amount:
-                            self.funds += totalPrice
-                            stock.decrease(amount)
-                            print(f"Sold {amount} shares of {nameOfTicker} at ${currentPrice} per share.")
-                        else:
-                            print("Insufficient shares to sell the stock.")
-            
-            except KeyError:
-                raise ValueError("Unrecongnised ticker")
-        elif mode == -1:
-            try:
-                #gets historical price of ticker if in portfolio
-                for stock in self.stocksHeld:
-                    if stock.ticker == nameOfTicker:
-                        
-                        #Returns historical closing price 
-                        historicalStockPrice = stock.getPrice(-1, date)
-                        totalPrice = historicalStockPrice * amount
-                        
-                        #sells the amount of shares given
-                        if stock.amount >= amount:
-                            self.funds += totalPrice
-                            stock.decrease(amount)
-                            print(f"Sold {amount} shares of {nameOfTicker} at ${historicalStockPrice} per share on {date}.")
-                        else:
-                            print("Insufficient shares to sell the stock.")
-                
-            except KeyError:
-                raise ValueError("Unrecongnised ticker")
+        #checks if there is enough of a given stock to sell & sells it
+        price = currentPrice * amount
+        if stock.amount >= amount:
+            self.funds += price
+            stock.decrease(amount)
+            if Config.debug() and mode == 0:
+                print(f"Portfolio:\t Sold {amount} shares of {ticker} at ${currentPrice} per share.")
+            elif Config.debug() and mode == -1:
+                print(f"Portfolio:\t Sold {amount} shares of {ticker} at ${currentPrice} per share on {DateHelper.format(date)}.")
+        else:
+            if Config.debug():
+                print("Portfolio\t Error: Insufficient shares to sell the stock.")
             
     
+    # NOTE: is this method used / needed? Would like to remove
     def showStocksHeld(self):
-        """until method to display all stocks held in portfolio
-        """
+        """until method to display all stocks held in portfolio"""
         for stock in self.stocksHeld:
             print(stock.ticker)
-            
+    
+    # NOTE is this method used / needed? Would like to remove
     def showFundsAvailable(self):
         print(f"Funds inside portfolio: \"{self.name}\" are ${self.funds}")
-        
-    
-    def addDayToDate(self, date: str) -> str:
-        """
-        adds one day to any given date
-        Args: date(str)
-        returns: date(str)
-        """
-        
-        date = datetime.strptime(date, "%Y-%m-%d")
-        placeholderEndDate = date + timedelta(days=1)
-        placeholderEndDate = placeholderEndDate.strftime("%Y-%m-%d")
 
-        return placeholderEndDate
-    
-    def subtractDayFromDate(self, date: str) -> str:
-        """
-        subtracts one day from any given date
-        Args: date(str)
-        returns: date(str)
-        """
-        
-        date = datetime.strptime(date, "%Y-%m-%d")
-        placeholderEndDate = date - timedelta(days=1)
-        placeholderEndDate = placeholderEndDate.strftime("%Y-%m-%d")
-
-        return placeholderEndDate

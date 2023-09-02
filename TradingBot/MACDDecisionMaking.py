@@ -4,12 +4,13 @@
 # it will give the decision to buy or sell a stock. If no crossing has occured it will return the decison to ignor the stock.
 # The decisioon is then given to the bot itself (see Bot.py) to execute
 
-import datetime as dt
+from datetime import datetime, timedelta
 
 from TradingBot.Portfolio import Portfolio
 from TradingBot.FinancialCalculators.SignalLineCalculator import SignalLineCalculator
 
 from Util.Config import Config
+from Util.DateHelper import DateHelper
 
 
 class MACDDecisionMaking:
@@ -31,18 +32,17 @@ class MACDDecisionMaking:
 
         self.iterations = 0
 
-    def getPreviousDate(self, portfolio: Portfolio, dateToCalculate: str) -> str:
-        # NOTE: Refactor things like subtractDayFromDate into class functions instead of object functions, also rework using dateTimes
+    def getPreviousDate(self, date: datetime) -> datetime:
         # checks for weekend and exceptions
-        previousDate = portfolio.subtractDayFromDate(dateToCalculate)
+        previousDate = date - timedelta(days=1)
 
         # checks for crossovers
-        while previousDate not in self.curveComparison:
-            previousDate = portfolio.subtractDayFromDate(previousDate)
+        while DateHelper.format(previousDate) not in self.curveComparison:
+            previousDate = previousDate - timedelta(days=1)
 
         return previousDate
 
-    def update(self, portfolio: Portfolio, ticker: str, mode: int, dateToCalculate: str, interval: int = None) -> None:
+    def update(self, portfolio: Portfolio, ticker: str, mode: int, date: datetime, interval: int = None) -> None:
         """Utility function to update all value dicts. Only intended for use in class MACDDecisionMaking
 
         Args:
@@ -52,12 +52,12 @@ class MACDDecisionMaking:
             None, updates the object's curveComparison dict
         """
 
-        placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, dateToCalculate, interval)
+        placeholderResult = self.SignalLineCalculator.signalLineCalculation(portfolio, ticker, mode, date, interval)
 
         # define key based on mode
         if mode == 0 and interval is not None:
             # realtime mode
-            timeForKey = dt.datetime.now()
+            timeForKey = datetime.now()
             timeForKey = timeForKey.strftime("%Y-%m-%d-%H-%M")
             key = ticker + "_" + timeForKey
             
@@ -66,7 +66,7 @@ class MACDDecisionMaking:
             self.timeInstancesElapsed += 1
         elif mode == -1:
             # historical data
-            key = dateToCalculate
+            key = DateHelper.format(date)
 
         # Update MACD & Signal line
         self.MACDValuesDict[key] = placeholderResult[0]
@@ -86,21 +86,21 @@ class MACDDecisionMaking:
         else:
             self.curveComparison[key] = 0
 
-    def makeStockDecision(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = "0", interval: int = 0) -> int:
+    def makeStockDecision(self, portfolio: Portfolio, ticker: str, mode: int = 0, date: datetime = None, interval: int = 0) -> int:
         """Makes a decision on whether to buy a stock or not on a given date.
 
         Args:
             portfolio (Portfolio): Portfolio to be modified
             ticker (str): Stock ticker for which a decision should be made
-            mode (int, optional): Mode of the bot. Defaults to 0. (past mode)
-            dateToCalculate (str, optional): Date for which the decision should be made. Defaults to "0". NOTE: Change this to use datetimes and make it non-optional
+            mode (int): Mode of the bot.
+            date (str, optional): Date for the decision, required in historical data mode.
 
         Returns:
             decision in a binary format where 0 is no and 1 is yes, other response means stock is held
         """
         # Value update happens regardless of iteration
         
-        self.update(portfolio, ticker, mode, dateToCalculate, interval)
+        self.update(portfolio, ticker, mode, date, interval)
         self.iterations += 1;
 
         if self.iterations == 2:
@@ -108,20 +108,21 @@ class MACDDecisionMaking:
 
             if mode == -1:
                 # Historical data
-                value = dateToCalculate
-                prevValue = self.getPreviousDate(portfolio, value)
+                value = date
+                prevValue = self.getPreviousDate(value)
+                value = DateHelper.format(value)
             elif mode == 0:
                 # realtime mode
                 value = self.currentTimes[self.timeInstancesElapsed]
                 prevValue = self.currentTimes[self.timeInstancesElapsed -1]
 
             # Final decision making, reduced for 2nd iteration
-            if self.curveComparison[prevValue] == -1 and self.curveComparison[value] == 1:
+            if self.curveComparison[DateHelper.format(prevValue)] == -1 and self.curveComparison[value] == 1:
                 if Config.debug():
                     print(
                         f"MACDDecisionMaking:\t Bullish Crossover on {value}")
                 return 1
-            elif self.curveComparison[prevValue] == 1 and self.curveComparison[value] == -1:
+            elif self.curveComparison[DateHelper.format(prevValue)] == 1 and self.curveComparison[value] == -1:
                 if Config.debug():
                     print(
                         f"MACDDecisionMaking:\t Bearish Crossover on {value}")
@@ -134,17 +135,22 @@ class MACDDecisionMaking:
 
             if mode == -1:
                 # Historical data
-                value = dateToCalculate
-                prevValue = self.getPreviousDate(portfolio, value)
-                valueBeforePreviousValue = portfolio.subtractDayFromDate(value)
+                value = date
+                prevValue = self.getPreviousDate(value)
+                valueBeforePreviousValue = value - timedelta(days=1)
             elif mode == 0:
                 # realtime mode
                 value = self.currentTimes[self.timeInstancesElapsed]
                 prevValue = self.currentTimes[self.timeInstancesElapsed -1]
                 valueBeforePreviousValue = self.currentTimes[self.timeInstancesElapsed -2]
+            
 
-            while valueBeforePreviousValue not in self.curveComparison:
-                valueBeforePreviousValue = portfolio.subtractDayFromDate(valueBeforePreviousValue)
+            while DateHelper.format(valueBeforePreviousValue) not in self.curveComparison:
+                valueBeforePreviousValue = valueBeforePreviousValue - timedelta(days=1)
+                
+            value = DateHelper.format(value)
+            prevValue = DateHelper.format(prevValue)
+            valueBeforePreviousValue = DateHelper.format(valueBeforePreviousValue)
 
             # Final general decision making
             if self.curveComparison[prevValue] == -1 and self.curveComparison[value] == 1:

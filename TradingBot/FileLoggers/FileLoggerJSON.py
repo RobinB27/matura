@@ -3,8 +3,11 @@
 # that the bot has created. The files produced by this logger are used by the
 # class Graphing to produce the visualisations which are shown at the end of every bot run.
 
+import json, os
+from datetime import datetime
+
 from TradingBot.Portfolio import Portfolio
-import json, os, datetime
+from Util.DateHelper import DateHelper
 
 # Add error handling for file handling, best practice
 # Add parser
@@ -20,9 +23,9 @@ class FileLoggerJSON:
     
     def __init__(self, prefix:str = "run" ,path: str = "logs") -> None:
         self.dirPath = path
-        self.fileName = prefix + "_" + datetime.datetime.now().strftime(FileLoggerJSON.saveFormat) + ".json"
+        self.fileName = prefix + "_" + datetime.now().strftime(FileLoggerJSON.saveFormat) + ".json"
     
-    def snapshot(self, portfolio: Portfolio, mode:int, date:str, interval: int = None) -> None:
+    def snapshot(self, portfolio: Portfolio, mode: int, date: datetime, interval: int = None) -> None:
         """Updates the JSON file log associated with this instance of the FileLoggerJSON class.
 
         Args:
@@ -52,12 +55,12 @@ class FileLoggerJSON:
         
         # Date has different meaning depending on mode
         if mode == -1:
-            pObject["date"] = date
+            pObject["date"] = DateHelper.format(date)
         elif mode == 0:
-            pObject["timeStamp"] = date
+            pObject["timeStamp"] = date.strftime(FileLoggerJSON.timeStampFormat)
             pObject["interval"] = interval # NOTE: could be saved in content instead of snapshot as the interval is constant
         
-        for stock in portfolio.stocksHeld:
+        for stock in portfolio.getStocks():
             sObject = {
                     "name": stock.ticker,
                     "amount": stock.amount,

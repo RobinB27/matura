@@ -4,7 +4,7 @@
 # different features required for any Sentiment Analysis based strategy work without error.
 # (Specifically the Sentiment Classifier itself and the Historical Dataset)
 
-import yfinance as fy
+from datetime import datetime
 
 from TradingBot.Portfolio import Portfolio
 from Util.Config import Config
@@ -29,7 +29,7 @@ class SimpleSentimentDM:
         self.mode = mode
         self.previousScore = None
         
-    def makeStockDecision(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = "0") -> int:
+    def makeStockDecision(self, portfolio: Portfolio, ticker: str, mode: int, date: datetime) -> int:
         """makes a decision whether to buy a stock or not on a given date
 
         Args:
@@ -43,7 +43,7 @@ class SimpleSentimentDM:
         """
         
         # YYYY-MM-DD Format or refactor to using Datetime
-        headlines = HistData.getHeadlinesSTR(dateToCalculate, ticker)
+        headlines = HistData.getHeadlinesDT(date, ticker)
         
         score = 0
         for headline in headlines:

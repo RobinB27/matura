@@ -1,10 +1,6 @@
-import numpy as np
-import yfinance as yf
+dict1 = {
+    "a": 1,
+    "b": 2
+}
 
-from TradingBot.Stock import Stock
-
-
-a = Stock("TSLA")
-
-b = a.getPrice()
-print(b)
+print(list(dict1.keys()))

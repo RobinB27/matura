@@ -2,8 +2,11 @@
 # The FileLoggerTXT class generates a FileLoggerTXT file representation of a portfolio
 # that the bot has created. The files produced by this logger are used to gain an insight 
 # into the bots trading activity and for debugging
-from TradingBot.Portfolio import Portfolio
+
 import datetime, os
+
+from TradingBot.Portfolio import Portfolio
+from Util.DateHelper import DateHelper
 
 # Potential issue: see comment l37
 
@@ -28,17 +31,24 @@ class FileLoggertxt:
             self.fileName = self.prefix + "_" + datetime.datetime.now().strftime("%d_%b_%y_%I_%M_%p") + ".txt"
             self.log_file_created = True
 
-    def snapshot(self, portfolio: Portfolio,  mode = 0, date: str = "0") -> None:
+    def snapshot(self, portfolio: Portfolio, mode: int, date: datetime = None) -> None:
+        """Updates the TXT file log associated with this instance of the FileLoggerTXT
+
+        Args:
+            portfolio (Portfolio): Portfolio to write the log for
+            mode (int, optional): Bot mode
+            date (datetime): date to use for logging.
+        """
         filePath = os.path.join(self.dirPath, self.fileName)
         
         self.stockValueOnDate = 0
         
         with open(filePath, mode="a") as log:
-            log.write(f"date: {date}\n")
+            log.write(f"date: {DateHelper.format(date)}\n")
             log.write(f"funds in portfolio: ${portfolio.funds}\n\n")
             log.write("stocks held in portfolio: \n")
         
-            for stock in portfolio.stocksHeld:
+            for stock in portfolio.getStocks():
                 log.write(f"{stock.ticker} ")
                 log.write(f"amount of stock: {stock.amount}\n")
                 

@@ -5,7 +5,7 @@
 # At the end of a trading day the bot logs the information (see FileLoggerTXT.py and FileLoggerJSON.py), where the results of a given run are stored
 # The results can then be viewed by the graphing class (see graphing.py).
 
-from datetime import datetime
+from datetime import datetime, timedelta
 import time
 
 from TradingBot.Portfolio import Portfolio
@@ -14,6 +14,7 @@ from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
 
 from Util.Graphing import Graphing
 from Util.Config import Config
+from Util.DateHelper import DateHelper
 
 
 class Bot:
@@ -39,7 +40,7 @@ class Bot:
         The bot operates in two modes: live (0) and past (-1). 
     """
 
-    def __init__(self, decisionMaking, startDate: str = "", mode: int = 0) -> None:
+    def __init__(self, decisionMaking, startDate: datetime, mode: int) -> None:
         """ Initializes a trading bot with a decision-making strategy, start date, trading mode
 
         Args:
@@ -49,8 +50,8 @@ class Bot:
         """
         self.mode: int = mode
 
-        self.startDate: str = startDate
-        self.date: str = startDate
+        self.startDate: datetime = startDate
+        self.date: datetime = startDate
         # Timestamp used for logging in realtime mode
         self.timeStamp: datetime = None
 
@@ -64,6 +65,14 @@ class Bot:
         self.decisionMakerInstances = []
         self.fileLoggerTxt = FileLoggertxt()
         self.fileLoggerJSON = FileLoggerJSON()
+
+    def initDM(self) -> None:
+        """Utility function to populate decisionMakerInstances. Used in both Bot initialiser functions. """
+        # Check class type and populate Instances list
+        decisionMakingType = self.decisionMaker.__class__
+        stockList = self.portfolio.getStocks()
+        for i in range(len(stockList)):
+            self.decisionMakerInstances.append(decisionMakingType(self.mode))
 
     def initialise(self, funds: int, stocks: list[str], period: int, interval: int = None) -> None:
         """This method initializes the trading bot's portfolio, stock holdings
@@ -89,11 +98,7 @@ class Bot:
             self.interval = interval 
             self.amountOfIntervals = period
 
-        # Check class type and populate Instances list
-        decisionMakingType = self.decisionMaker.__class__
-        for i in range(len(self.portfolio.stocksHeld)):
-            self.decisionMakerInstances.append(decisionMakingType(self.mode))
-        
+        self.initDM()
         self.fileLoggerTxt.createLogFile()
 
     def initialiseCLI(self) -> None:
@@ -129,12 +134,8 @@ class Bot:
             timePeriod = int(timePeriod)
             self.timePeriod = timePeriod
 
+        self.initDM()
         self.fileLoggerTxt.createLogFile()
-
-        # Check class type and populate Instances list
-        decisionMakingType = self.decisionMaker.__class__
-        for i in range(len(self.portfolio.stocksHeld)):
-            self.decisionMakerInstances.append(decisionMakingType(self.mode))
             
         if self.mode == 0:
             self.interval = int(input("What interval will the bot be trading at (in minutes): "))
@@ -148,23 +149,22 @@ class Bot:
             bool: True if exception date else False
         """
         if Config.debug(): 
-            print(f"Bot:\t Trading day: {self.date}")
-
-        weekendCheckDatetime = datetime.strptime(self.date, "%Y-%m-%d")
+            print(f"Bot:\t Trading day: {DateHelper.format(self.date)}")
         
         # NOTE: Does the check below this one also check for what this one is doing? I.e. is it unnecessar?
         # Check for weekends
-        if weekendCheckDatetime.isoweekday() > 5:
+        if self.date.isoweekday() > 5:
             if Config.debug():
-                print(f"Bot:\t weekend: {self.date}")
-            self.date = self.portfolio.addDayToDate(self.date)
+                print(f"Bot:\t weekend: {DateHelper.format(self.date)}")
+            self.date = self.date + timedelta(days=1)
             return True
 
         # check for other exceptions
-        if self.portfolio.stocksHeld[0].getPrice(self.mode, self.date) is None:
+        
+        if self.portfolio.getStocks()[0].getPrice(self.mode, self.date) is None:
             if Config.debug():
-                print(f"Bot:\t exception date: {self.date}")
-            self.date = self.portfolio.addDayToDate(self.date)
+                print(f"Bot:\t exception date: {DateHelper.format(self.date)}")
+            self.date = self.date + timedelta(days=1)
             return True
 
         return False
@@ -175,21 +175,23 @@ class Bot:
         This is used on every iteration of the bot. Automatically updates FileLoggers.
         
         """
+        stocks = self.portfolio.getStocks()
         for i in range(len(self.decisionMakerInstances)):
-            decision = self.decisionMakerInstances[i].makeStockDecision(self.portfolio, self.portfolio.stocksHeld[i].ticker, self.mode, self.date, self.interval)
+            ticker = stocks[i].ticker
+            decision = self.decisionMakerInstances[i].makeStockDecision(self.portfolio, ticker, self.mode, self.date, self.interval)
 
             if decision == 1:
-                print(f"Bot:\t Buying stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
-                self.portfolio.buyStock(1, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
+                print(f"Bot:\t Buying stock: {ticker} on {DateHelper.format(self.date)}")
+                self.portfolio.buyStock(1, ticker, self.mode, self.date)
                 self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
 
             elif decision == -1:
-                print(f"Bot:\t Selling stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
-                self.portfolio.sellStock(1, self.portfolio.stocksHeld[i].ticker, self.mode, self.date)
+                print(f"Bot:\t Selling stock: {ticker} on {DateHelper.format(self.date)}")
+                self.portfolio.sellStock(1, ticker, self.mode, self.date)
                 self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
 
             else:
-                if Config.debug(): print(f"Bot:\t Ignoring stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
+                if Config.debug(): print(f"Bot:\t Ignoring stock: {ticker} on {DateHelper.format(self.date)}")
             
             # Always update JSON log file, regardless of decision
             if self.mode == -1:
@@ -212,7 +214,7 @@ class Bot:
             for i in range(self.amountOfIntervals):
                 # Exception date check
                 while True:
-                    self.date: str = datetime.now().strftime("%Y-%m-%d-%M")
+                    self.date = datetime.now()
                     self.timeStamp = datetime.now()
                     
                     if self.isExceptionDate():
@@ -238,9 +240,9 @@ class Bot:
                 else: self.updatePortfolio()
 
                 # NOTE: datetimes
-                self.date = self.portfolio.addDayToDate(self.date)
+                self.date = self.date + timedelta(days=1)
                 if Config.debug():
-                    print(f"Bot:\t Date updated to: {self.date}")
+                    print(f"Bot:\t Date updated to: {DateHelper.format(self.date)}")
 
         # Output handling
         if Config.getParam("displayGraph"):
