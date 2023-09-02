@@ -39,13 +39,13 @@ class Portfolio:
                 
     
     #try except clause could be optimised by putting it outside the mode checks
-    def buyStock(self, amount: int, nameOfTicker: str, mode: int = 0, date='0'):
+    def buyStock(self, amount: int, nameOfTicker: str, mode: int, date: str = None):
         """buys the stock if funds available, default mode live prices,
         past mode buys stock with historical price data on date given
         Args:
             amount (int): amount of stock to buy
             nameOfTicker (str): name of stock ticker
-            mode (int, optional): live(0) or past mode (-1). Defaults to 0.
+            mode (int): live(0) or past mode (-1).
             date (str, optional): date for past mode. Defaults to '0'.
 
         Raises:
@@ -57,6 +57,7 @@ class Portfolio:
                 for stock in self.stocksHeld:
                 #checks if the given stock is a stock held by the portfolio
                     if stock.ticker == nameOfTicker:
+                        # Ignores date given, gets current price
                         currentPrice = stock.getPrice()
                         totalCost = currentPrice * amount
                 
@@ -74,6 +75,7 @@ class Portfolio:
                 raise ValueError("Unrecongnised ticker")
         
         elif mode == -1:
+            if date is None: raise TypeError("Error\t buyStock function requires date when running in past mode")
             try:
                 #gets historical price if ticker in portfolio
                 for stock in self.stocksHeld:

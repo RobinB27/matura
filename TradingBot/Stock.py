@@ -33,12 +33,12 @@ class Stock:
         except KeyError:
             raise ValueError("Unrecongnised ticker")
 
-    def getPrice(self, mode: int = 0, date: str = '0') -> int:
+    def getPrice(self, mode, date: str = '0') -> int:
         """Fetches stock prices for a specific date.
 
         Args:
             mode (int, optional): live (0) or past mode (-1). Defaults to 0.
-            dateStart (str, optional): date to fetch prices.
+            date (str, optional): date to fetch prices. Only needed in past mode.
 
         Returns:
             int: stock price

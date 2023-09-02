@@ -14,6 +14,16 @@ class Graphing:
         Provides tools to visualise JSON logs produced by Bot runs using matplotlib.
     """
     dateFormat = "%Y-%m-%d"
+    saveFormat = "%d_%b_%y_%I_%M_%f_%p"
+    timeStampFormat = "%d-%m-%y-%H-%M"
+    
+    def finish(displayWindow: bool, savePath: str, name: str) -> None:
+        """Utility function used to display and save all Graphs regardless of plot type."""
+        fig = plt.gcf()
+        if savePath is not None: 
+            fig.savefig(fname=savePath + name + ".png", bbox_inches='tight', dpi=300)
+        if displayWindow: plt.show()
+        plt.clf()
         
     def plotComposition(path: str, displayWindow: bool = False, savePath: str = "output/") -> None:
         """Generates a plot visualising portfolio compositon changes over time.
@@ -22,8 +32,9 @@ class Graphing:
             path (str): path to the JSON log file
         """
         x, y = Graphing.parseForComp(path)
-        name = "Portfolio over Time" + "_" + datetime.datetime.now().strftime("%d_%b_%y_%I_%M_%p")
+        name = "Portfolio over Time" + "_" + datetime.datetime.now().strftime(Graphing.saveFormat)
         
+        plt.clf()
         plt.title(name)
         plt.xlabel("Days")
         plt.ylabel("Stocks held")
@@ -34,8 +45,7 @@ class Graphing:
         
         plt.legend()
         
-        if displayWindow: plt.show()
-        if savePath is not None: plt.savefig(savePath + name + ".png", dpi=300)
+        Graphing.finish(displayWindow, savePath, name)
     
     def parseForComp(path: str) -> tuple[list, dict]:
         """Utility funcion for getting x & y values for a time/composition graph from a log file.
@@ -81,16 +91,17 @@ class Graphing:
             path (str): path to the JSON log file
         """
         x, y = Graphing.parseForValue(path)
-        name = "Value over Time" + "_" + datetime.datetime.now().strftime("%d_%b_%y_%I_%M_%p")
+        name = "Value over Time" + "_" + datetime.datetime.now().strftime(Graphing.saveFormat)
         
         # Plot config
+        plt.clf()
         plt.title(name)
+        print(x)
         plt.plot(x, y)
         plt.xlabel("Days")
         plt.ylabel("Portfolio value")
         
-        if displayWindow: plt.show()
-        if savePath is not None: plt.savefig(savePath + name + ".png", dpi=300)
+        Graphing.finish(displayWindow, savePath, name)
         
     def fetchLog(path: str) -> dict:
         """Utility function for file handling
@@ -120,8 +131,12 @@ class Graphing:
         dates = []
         values =[]
         
-        prevDate = None
-        daysPassed = 0
+        prevIteration = None
+        iterationsPassed = 0
+        # Define mode based on whether date or timestamps are used in the log
+        mode = -1 if "date" in data["snapshots"][0] else 0
+        # Define interval, if it exists
+        interval = data["snapshots"][0]["interval"] if "interval" in data["snapshots"][0] else None
         for snapshot in data["snapshots"]:
             # Getting y values (value of portfolio)
             portfolioValue = snapshot["funds"]
@@ -129,27 +144,38 @@ class Graphing:
             for stock in snapshot["stocksHeld"]: portfolioValue += stock["value"]
             values.append(portfolioValue)
             
-            # Getting x values (time)
-            if prevDate is None:
+            # Getting x values (time), mode dependant
+
+            # Work with dates
+            if prevIteration is None:
                 dates.append(0)
-                prevDate = Graphing.strToDate(snapshot["date"])
+                prevIteration = Graphing.strToDate(snapshot["date"], mode)
             else:
-                currentDate = Graphing.strToDate(snapshot["date"])
-                difference = currentDate - prevDate
-                difference = difference.days
-                daysPassed += difference
-                dates.append(daysPassed)
-                prevDate = currentDate
+                currentDate = Graphing.strToDate(snapshot["date"], mode)
+                    
+                difference = currentDate - prevIteration
+                
+                # Handle difference differently depending on mode (-1 => dates, 0 => timeStamps)
+                if mode == -1:
+                    difference = difference.days
+                    iterationsPassed += difference
+                elif mode == 0:
+                    difference = difference.min
+                    iterationsPassed += difference // interval
+                    
+                dates.append(iterationsPassed)
+                prevIteration = currentDate
         
         return dates, values
         
-    def strToDate(dateStr:str) -> datetime.date: 
+    def strToDate(date:str, mode: int) -> datetime.datetime: 
         """Shorthand for string to date conversion used often in this module. 
 
         Args:
             string (str): String in format descirbed in Graphing.dateFormat
+            mode (int): -1 converts to date, 0 converts to timeStamp
         Returns:
-            datetime.date: converted date
+            datetime.datetime: converted date
         """
         # Courtesy of https://stackoverflow.com/questions/2803852/python-date-string-to-date-object
-        return datetime.datetime.strptime(dateStr, Graphing.dateFormat).date()
+        return datetime.datetime.strptime(date, Graphing.dateFormat).date() if mode == -1 else datetime.datetime.strptime(date, Graphing.timeStampFormat)

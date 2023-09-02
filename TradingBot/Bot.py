@@ -47,12 +47,12 @@ class Bot:
             startDate (str, optional): start date for trading in "YYYY-MM-DD" format: Defaults to an empty string.
             mode (int, optional):  trading mode: 0 for live, -1 for past. Defaults to 0.
         """
-        # NOTE: is this property necessary or used anywhere? Would like to remove
-        self.name = "trading bot"
-        self.mode = mode
+        self.mode: int = mode
 
-        self.startDate = startDate
-        self.date = startDate
+        self.startDate: str = startDate
+        self.date: str = startDate
+        # Timestamp used for logging in realtime mode
+        self.timeStamp: datetime = None
 
         # Keep these at None so testing if they're unassigned is straightforward
         self.portfolio: Portfolio = None
@@ -141,7 +141,8 @@ class Bot:
             self.amountOfIntervals = int(input("How often should the bot trade: "))
 
     def isExceptionDate(self) -> bool:
-        """Utility function to check whether a date is either weekend or exception Date.
+        """Utility function to check whether a date is either weekend or exception Date.\n
+        Automatically increments date by one if an exception date is found.
 
         Returns:
             bool: True if exception date else False
@@ -151,27 +152,22 @@ class Bot:
 
         weekendCheckDatetime = datetime.strptime(self.date, "%Y-%m-%d")
         
+        # NOTE: Does the check below this one also check for what this one is doing? I.e. is it unnecessar?
+        # Check for weekends
         if weekendCheckDatetime.isoweekday() > 5:
             if Config.debug():
                 print(f"Bot:\t weekend: {self.date}")
             self.date = self.portfolio.addDayToDate(self.date)
             return True
-        # NOTE: removed a console message here to improve code legibility, re-add if you think it's necessary
-        if self.mode == 0:
-            if self.portfolio.stocksHeld[0].getPrice() is None:
-                if Config.debug():
-                    print(f"Bot:\t exception date: {self.date}")
-                self.date = self.portfolio.addDayToDate(self.date)
-                return True
-        if self.mode == -1:
-            
-            if self.portfolio.stocksHeld[0].getPrice(-1, self.date) is None:
-                if Config.debug():
-                    print(f"Bot:\t exception date: {self.date}")
-                self.date = self.portfolio.addDayToDate(self.date)
-                return True
-        else:
-            return False
+
+        # check for other exceptions
+        if self.portfolio.stocksHeld[0].getPrice(self.mode, self.date) is None:
+            if Config.debug():
+                print(f"Bot:\t exception date: {self.date}")
+            self.date = self.portfolio.addDayToDate(self.date)
+            return True
+
+        return False
     
     def updatePortfolio(self) -> None:
         """
@@ -196,7 +192,11 @@ class Bot:
                 if Config.debug(): print(f"Bot:\t Ignoring stock: {self.portfolio.stocksHeld[i].ticker} on {self.date}")
             
             # Always update JSON log file, regardless of decision
-            self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date)
+            if self.mode == -1:
+                self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date)
+            elif self.mode == 0:
+                strTimeStamp = self.timeStamp.strftime(FileLoggerJSON.timeStampFormat)
+                self.fileLoggerJSON.snapshot(self.portfolio, self.mode, strTimeStamp, self.interval)
 
     def start(self) -> None:
         """Start the trading activities of the bot based on the specified mode and strategy
@@ -213,6 +213,7 @@ class Bot:
                 # Exception date check
                 while True:
                     self.date: str = datetime.now().strftime("%Y-%m-%d-%M")
+                    self.timeStamp = datetime.now()
                     
                     if self.isExceptionDate():
                         print("Bot\t Exception date/stock market not open yet, retry in 10m")
