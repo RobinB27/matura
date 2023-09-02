@@ -212,7 +212,7 @@ class Bot:
             for i in range(self.amountOfIntervals):
                 # Exception date check
                 while True:
-                    self.date: str = datetime.now().strftime("%Y-%m-%d")
+                    self.date: str = datetime.now().strftime("%Y-%m-%d-%M")
                     
                     if self.isExceptionDate():
                         print("Bot\t Exception date/stock market not open yet, retry in 10m")
