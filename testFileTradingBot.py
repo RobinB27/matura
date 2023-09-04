@@ -22,8 +22,8 @@ p = Portfolio(1000)
 p.addStock("TSLA")
 
 #stockPrice = t1.getStockPrice(-1, "2020-04-12", "2020-04-13")
-#stockPrice = t1.getPrice()
-#print(stockPrice)
+stockPrice = t1.getPrice(0)
+print(stockPrice)
 
 
 #print(stockPrice)
@@ -36,5 +36,5 @@ p.addStock("TSLA")
 
 #print(s.signalLineCalculation(p, "TSLA", -1, "2022-05-22"))
 
-a.initialise(1000, ["TSLA"], 40)
-a.start()
+#a.initialise(1000, ["AAPL", "TSLA", "KO"], 300)
+#a.start()

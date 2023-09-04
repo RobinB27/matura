@@ -48,7 +48,7 @@ class Stock:
             # Ticker info must be fetched anew on each function call to ensure the data is current
             currentInfo = yf.Ticker(self.ticker).info
             try:
-                stockPrice = currentInfo.get("currentPrice")
+                stockPrice = currentInfo.get("regularMarketPrice") # NOTE might cause a mystery issue
                 if Config.debug():
                     print(f"Stock:\t Current stock price of {self.ticker} is {stockPrice}")
                 return stockPrice
@@ -84,23 +84,12 @@ class Stock:
             _type_: list -> int
         """
         date = DateHelper.format(date)
-        try:
-            historical_data = self.tickerObject.history(period="max")
-            # Removes NaN rows
-            historical_data = historical_data.dropna()
-            historical_data = historical_data[historical_data.index <= date]
-            prices = historical_data['Close'].to_list()
-            return prices
-
-        except KeyError:
-            if Config.debug():
-                print(f"Stock:\t exception date: {date}")
-            return {}  # NOTE: does returning this on an error make sense? Shouldn't the programme cancel?
-
-    # NOTE: Is this used / needed? Would like to remove
-    def displayAmount(self) -> None:
-        """displays the stock class attribute amountOfStock for debugging purposes"""
-        print(f"Stock:\t Number of {self.ticker} owned: {self.amount}")
+        historical_data = self.tickerObject.history(period="max")
+        # Removes NaN rows
+        historical_data = historical_data.dropna()
+        historical_data = historical_data[historical_data.index <= date]
+        prices = historical_data['Close'].to_list()
+        return prices
 
     def increase(self, amount: int) -> None:
         """Increase the amount of this stock.

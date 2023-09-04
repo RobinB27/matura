@@ -22,12 +22,11 @@ class Bot:
     The bot operates within a given time period, trading stocks in a portfolio and logging its actions.
 
     Attributes:
-        name (str): name of trading bot NOTE: is this needed? Remove if not
         mode (int): live mode 0, past mode -1
-        startDate (str): start date for trading: format "YYYY-MM-DD" NOTE: change to dateTime
-        date (str): current trading date: format "YYYY-MM-DD".
+        startDate (datetime): start date for trading: format "YYYY-MM-DD" 
+        date (datetime): current trading date: format "YYYY-MM-DD".
         portfolio (Portfolio): instance of Portfolio class containing stocks and funds
-        timePeriod (int): trading period in days, including weekends where no trades happen. NOTE: Needs to be updated to allow for intraday timeperiods later
+        timePeriod (int): trading period in days, including weekends where no trades happen.
         decisionMaker (DecisionMakingStrategy): instance of a decision-making used by the bot.
         fileLoggerTxt (FileLoggertxt): instance of the FileLoggertxt class for text-based logging
         fileLoggerJSON (FileLoggerJSON): instance of the FileLoggerJSON class for JSON-based logging
@@ -151,17 +150,8 @@ class Bot:
         if Config.debug(): 
             print(f"Bot:\t Trading day: {DateHelper.format(self.date)}")
         
-        # NOTE: Does the check below this one also check for what this one is doing? I.e. is it unnecessar?
-        # Check for weekends
-        if self.date.isoweekday() > 5:
-            if Config.debug():
-                print(f"Bot:\t weekend: {DateHelper.format(self.date)}")
-            self.date = self.date + timedelta(days=1)
-            return True
-
-        # check for other exceptions
-        
         if self.portfolio.getStocks()[0].getPrice(self.mode, self.date) is None:
+            # live mode on current prices does not 
             if Config.debug():
                 print(f"Bot:\t exception date: {DateHelper.format(self.date)}")
             self.date = self.date + timedelta(days=1)
@@ -239,7 +229,6 @@ class Bot:
                 if self.isExceptionDate(): continue
                 else: self.updatePortfolio()
 
-                # NOTE: datetimes
                 self.date = self.date + timedelta(days=1)
                 if Config.debug():
                     print(f"Bot:\t Date updated to: {DateHelper.format(self.date)}")
