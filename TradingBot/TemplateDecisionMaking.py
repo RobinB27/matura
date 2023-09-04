@@ -4,6 +4,7 @@
 # to interact seamlessly with the rest of the bot. All other DecisionMaking implementations are based on this template
 
 import yfinance as fy
+from datetime import datetime
 
 from TradingBot.Portfolio import Portfolio
 from Util.Config import Config
@@ -15,7 +16,7 @@ class TemplateDecisionMaking:
         
         self.mode = mode
         
-    def makeStockDecision(self, portfolio: Portfolio, ticker: str, mode: int = 0, dateToCalculate: str = "0") -> int:
+    def makeStockDecision(self, portfolio: Portfolio, ticker: str, mode: int, date: datetime = None, interval: int = 0) -> int:
         """makes a decision whether to buy a stock or not on a given date
 
         Args:

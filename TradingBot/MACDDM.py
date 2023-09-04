@@ -13,7 +13,7 @@ from Util.Config import Config
 from Util.DateHelper import DateHelper
 
 
-class MACDDecisionMaking:
+class MACDDM:
     """Class that implements a trading strategy based on the MACD indicator. Can be passed to the bot to be used as a trading strategy."""
 
     def __init__(self, mode: int = 0):

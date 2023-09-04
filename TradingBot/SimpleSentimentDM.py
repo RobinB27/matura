@@ -24,35 +24,44 @@ class SimpleSentimentDM:
         'negative': -1
     }
     
-    def __init__(self, mode: int = 0):
+    def __init__(self, mode: int):
         
         self.mode = mode
         self.previousScore = None
         
-    def makeStockDecision(self, portfolio: Portfolio, ticker: str, mode: int, date: datetime) -> int:
+    def makeStockDecision(self, portfolio: Portfolio, ticker: str, mode: int, date: datetime, interval: int = None) -> int:
         """makes a decision whether to buy a stock or not on a given date
 
         Args:
-            portfolio (Portfolio): Portfolio to cultivate
-            ticker (str): 
-            mode (int, optional): Realtime or past mode. Defaults to 0. (past)
-            dateStart (str, optional): Starting datestring for past mode. Defaults to "0".
+            portfolio (Portfolio): Portfolio
+            ticker (str): Stock ticker for which decision should be made
+            mode (int): Realtime (0) or historical data (-1) mode.
+            date (datetime): Date for when the decision should be made
+            interval (int, optional): interval at which trading happens in realtime mode. Default to None, not required for historical data mode
 
         Returns:
             int: 1 = buy, None = hold, -1 = sell
         """
         
+        if mode == 0: raise Exception("Not implemented")
+        
         # YYYY-MM-DD Format or refactor to using Datetime
         headlines = HistData.getHeadlinesDT(date, ticker)
         
         score = 0
-        for headline in headlines:
-            sentiment = getSentiment(headline["text"])
-            score += SimpleSentimentDM.scoreTable[sentiment]
+        
+        # Process headlines, if headlines are there
+        if headlines is not None:
+            for headline in headlines:
+                sentiment = getSentiment(headline["text"])
+                score += SimpleSentimentDM.scoreTable[sentiment]
+        
+        if self.previousScore is None: self.previousScore = score
         
         if score > self.previousScore:
             self.previousScore = score
             return 1
+
         elif score < self.previousScore:
             self.previousScore = score
             return -1

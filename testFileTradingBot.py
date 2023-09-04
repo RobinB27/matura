@@ -1,15 +1,9 @@
-import yfinance as yf
 from datetime import datetime
 
 from TradingBot.Stock import Stock
 from TradingBot.Portfolio import Portfolio
 from TradingBot.Bot import Bot
-
-from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
-from TradingBot.MACDDecisionMaking import MACDDecisionMaking
-from TradingBot.SimpleSentimentDM import SimpleSentimentDM
-
-from TradingBot.FinancialCalculators.SignalLineCalculator import SignalLineCalculator
+from TradingBot.MACDDM import MACDDM
 
 #to implement some form of
 
@@ -22,7 +16,7 @@ from TradingBot.FinancialCalculators.SignalLineCalculator import SignalLineCalcu
 #bot settings need date format like this: "2023-04-13"
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #a = Bot(MACDDecisionMaking(-1), "2022-01-07", -1)
-a = Bot(MACDDecisionMaking(-1), datetime(2022, 7, 1), -1)
+a = Bot(MACDDM(-1), datetime(2022, 8, 1), -1)
 t1 = Stock("TSLA")
 p = Portfolio(1000)
 p.addStock("TSLA")

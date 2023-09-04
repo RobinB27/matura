@@ -39,7 +39,7 @@ class HistData():
             ticker (str, optional): Stock ticker as string if filtering by Ticker is desired. Defaults to None
 
         Returns:
-            list[dict]: List of all headlines, each in dict form ("text", "date" & "ticker" attributes). Returns -1 if no headlines were found.
+            list[dict]: List of all headlines, each in dict form ("text", "date" & "ticker" attributes). Returns None if no headlines were found.
         """
         date = date.strftime("%Y-%m-%d")
         return HistData.getHeadlinesSTR(date, ticker)
@@ -52,7 +52,7 @@ class HistData():
             ticker (str, optional): Stock ticker as string if filtering by Ticker is desired. Defaults to None
 
         Returns:
-            list[dict]: List of all headlines, each in dict form ("text", "date" & "ticker" attributes). Returns -1 if no headlines were found.
+            list[dict]: List of all headlines, each in dict form ("text", "date" & "ticker" attributes). Returns None if no headlines were found.
         """
         data = HistData.getData()
         
@@ -60,10 +60,11 @@ class HistData():
             return data[date]
         elif date in data and ticker is not None:
             headlines: list = data[date]
-            for i, headline in enumerate(headlines):
-                if headline.ticker != ticker: headlines.pop(i)
-            return headlines if len(headlines) > 0 else -1 
-        else: return -1
+            validHeadlines: list = []
+            for headline in headlines:
+                if headline["ticker"] == ticker: validHeadlines.append(headline)
+            return validHeadlines if len(validHeadlines) > 0 else None
+        else: return None
     
     
     def getHeadlinesRange(date1: datetime.date, date2: datetime.date, ticker: str = None) -> list[dict]:

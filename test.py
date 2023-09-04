@@ -1,6 +1,8 @@
-dict1 = {
-    "a": 1,
-    "b": 2
-}
+from HistoricalData.HistData import HistData
+from datetime import datetime, timedelta
 
-print(list(dict1.keys()))
+date = datetime(2019, 1, 1)
+
+for i in range(300):
+    print(HistData.getHeadlinesDT(date, "TSLA"))
+    date += timedelta(days=1)
