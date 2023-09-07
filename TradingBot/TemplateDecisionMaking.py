@@ -21,9 +21,10 @@ class TemplateDecisionMaking:
 
         Args:
             portfolio (Portfolio): Portfolio to cultivate
-            ticker (str): 
-            mode (int, optional): Realtime or past mode. Defaults to 0. (past)
-            dateStart (str, optional): Starting datestring for past mode. Defaults to "0".
+            ticker (str): stock ticker name
+            mode (int, optional): Realtime or historical data mode.
+            date (datetime, optional): date required for historical data mode. Defaults to None.
+            interval (int, optional): interval required for realtime mode. Defaults to 0
 
         Returns:
             int: 1 = buy, -1 = sell, any other value = ignore stock 

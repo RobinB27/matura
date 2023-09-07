@@ -7,3 +7,6 @@ debug = true
 # Settings for bot usage
 [parameters]
 displayGraph = true
+SentimentScoreWeighted = true
+SentimentScoreThreshold = 20
+WebScraperMaxElements = 20

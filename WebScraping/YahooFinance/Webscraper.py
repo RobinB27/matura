@@ -10,14 +10,16 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from WebScraping.YahooFinance.Parser import parseHTML
+from WebScraping.YahooFinance.Parser import HTMLParser
 from WebScraping.YahooFinance.Headline import Headline
+
+from Util.Config import Config
 
 
 class YahooWebScraper:
     """ Module to retrieve headlines from YahooFinance using Selenium & BeautifulSoup. """
     driver = None
-    minElements = 20
+    maxElements = Config.getParam("WebScraperMaxElements")
 
     def getDriver():
         """ Returns webdriver, will launch the driver if it hasn't been launched yet."""
@@ -29,7 +31,7 @@ class YahooWebScraper:
         """ Used in site loading. Checks whether enough relevant elements have been loaded on a site."""
 
         # Pages contain one additional similar element that needs to be accounted for
-        minElements = YahooWebScraper.minElements + 1
+        minElements = YahooWebScraper.maxElements + 1
 
         driver.execute_script("window.scrollTo(0, 10000)")
         elems = driver.find_elements(
@@ -53,8 +55,6 @@ class YahooWebScraper:
 
         YahooWebScraper.driver = driver
 
-    def closeDriver(): YahooWebScraper.driver.quit()
-
     def getHeadlines(ticker: str) -> list[Headline]:
         """ Returns a list of the most recent headlines on any valid stock ticker listed on YahooFinance. """
         driver = YahooWebScraper.getDriver()
@@ -66,4 +66,4 @@ class YahooWebScraper:
         WebDriverWait(driver=driver, timeout=5).until(
             YahooWebScraper.checkIfLoaded)
 
-        return parseHTML(driver.page_source)
+        return HTMLParser.parse(driver.page_source, YahooWebScraper.maxElements)
