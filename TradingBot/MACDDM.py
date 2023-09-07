@@ -7,7 +7,7 @@
 from datetime import datetime, timedelta
 
 from TradingBot.Portfolio import Portfolio
-from TradingBot.FinancialCalculators.SignalLineCalculator import SignalLineCalculator
+from TradingBot.SignalLineCalculator import SignalLineCalculator
 
 from Util.Config import Config
 from Util.DateHelper import DateHelper

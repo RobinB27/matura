@@ -121,15 +121,4 @@ class Portfolio:
         else:
             if Config.debug():
                 print("Portfolio\t Error: Insufficient shares to sell the stock.")
-            
-    
-    # NOTE: is this method used / needed? Would like to remove
-    def showStocksHeld(self):
-        """until method to display all stocks held in portfolio"""
-        for stock in self.stocksHeld:
-            print(stock.ticker)
-    
-    # NOTE is this method used / needed? Would like to remove
-    def showFundsAvailable(self):
-        print(f"Funds inside portfolio: \"{self.name}\" are ${self.funds}")
 

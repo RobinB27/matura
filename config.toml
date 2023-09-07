@@ -2,7 +2,7 @@
 
 # Settings used for active development
 [development]
-debug = true
+debug = false
 
 # Settings for bot usage
 [parameters]
