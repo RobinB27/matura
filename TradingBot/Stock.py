@@ -4,7 +4,9 @@
 # This file is important for the overarching project because it is the fundamental building block for all trading activities and since it gets all stock prices
 
 from datetime import datetime
+from diskcache import Cache
 import yfinance as yf
+
 
 from Util.Config import Config
 from Util.DateHelper import DateHelper
@@ -25,14 +27,17 @@ class Stock:
         Raises:
             ValueError: Raised if ticker input is invalid
         """
+        self.cache = Cache(f"./TradingBot/Stock_Caches/Cache{ticker.capitalize()}")
+        
         self.ticker = ticker
         self.amount = 0
         self.tickerObject = yf.Ticker(ticker)
-        self.stockHist = self.tickerObject.history(period="max")
-
+        
         # Check ticker validity
         try:self.tickerInfo = self.tickerObject.info
         except KeyError: raise ValueError("Stock:\t Error: Unrecongnised ticker")
+        
+        self.stockHist = self.tickerObject.history(period="max")
 
     def getPrice(self, mode: int, date: datetime = None) -> int:
         """Fetches stock prices for a specific date.
@@ -59,12 +64,18 @@ class Stock:
 
         elif mode == -1 and date is not None:
             date = DateHelper.format(date)
+            
+            if len(self.cache) == 0:
+                
+                self.stockHist = self.tickerObject.history(period="max")
+                
+                for index in self.stockHist.index:
+                    key = index.strftime("%Y-%m-%d") # NOTE key is the same format as date
+                    self.cache[key] = self.stockHist.loc[index, "Close"]
+             
             try:
-                closing_price = self.stockHist.loc[date, "Close"]
-                if Config.debug():
-                    print(f"Stock:\t Stock price of {self.ticker} is {closing_price} on {date}")
+                closing_price = self.cache[date] # NOTE date is equivalent to key above
                 return closing_price
-
             except KeyError:
                 if Config.debug():
                     print(f"Stock:\t Exception date caught: {date}")
@@ -109,3 +120,8 @@ class Stock:
         else: 
             if Config.debug():
                 print("Stock:\t Insufficient amount of stock to sell.")
+                
+    def clearCache(self) -> None:
+        """clears the stocks cache
+        """
+        self.cache.clear()

@@ -22,7 +22,7 @@ p = Portfolio(1000)
 p.addStock("TSLA")
 
 #stockPrice = t1.getStockPrice(-1, "2020-04-12", "2020-04-13")
-stockPrice = t1.getPrice(0)
+stockPrice = t1.getPrice(-1, datetime(2023, 1, 20))
 print(stockPrice)
 
 
