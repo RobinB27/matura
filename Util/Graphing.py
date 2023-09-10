@@ -96,7 +96,6 @@ class Graphing:
         # Plot config
         plt.clf()
         plt.title(name)
-        print(x)
         plt.plot(x, y)
         plt.xlabel("Days")
         plt.ylabel("Portfolio value")

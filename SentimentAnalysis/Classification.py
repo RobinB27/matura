@@ -11,7 +11,7 @@ from nltk.tokenize import word_tokenize
 try:
     classifier = loadClassifier()
 except:
-    print("Classifier could not be loaded")
+    raise Exception("Classifier could not be loaded")
     
 def getSentiment(text: str) -> str:
     """Returns the sentiment for a given String. Uses the Naive Bayes Classifier trained on the Kaggle Dataset, if saved.

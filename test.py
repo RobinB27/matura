@@ -1,8 +1,7 @@
-from HistoricalData.HistData import HistData
-from datetime import datetime, timedelta
+from DataGen.Testing import Testing
 
-date = datetime(2019, 1, 1)
+from TradingBot.MACDDM import MACDDM
+from TradingBot.SimpleSentimentDM import SimpleSentimentDM
 
-for i in range(300):
-    print(HistData.getHeadlinesDT(date, "TSLA"))
-    date += timedelta(days=1)
+# Rarely crashes because getPrice yields None, also slow: needs optimisation
+Testing.compareDMs(5, SimpleSentimentDM, MACDDM)

@@ -171,17 +171,17 @@ class Bot:
             decision = self.decisionMakerInstances[i].makeStockDecision(self.portfolio, ticker, self.mode, self.date, self.interval)
 
             if decision == 1:
-                print(f"Bot:\t Buying stock: {ticker} on {DateHelper.format(self.date)}")
+                print(f"Bot:\t Buy\t {ticker}\t {DateHelper.format(self.date)}")
                 self.portfolio.buyStock(1, ticker, self.mode, self.date)
                 self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
 
             elif decision == -1:
-                print(f"Bot:\t Selling stock: {ticker} on {DateHelper.format(self.date)}")
+                print(f"Bot:\t Sell\t {ticker}\t {DateHelper.format(self.date)}")
                 self.portfolio.sellStock(1, ticker, self.mode, self.date)
                 self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
 
             else:
-                if Config.debug(): print(f"Bot:\t Ignoring stock: {ticker} on {DateHelper.format(self.date)}")
+                print(f"Bot:\t Ignore\t {ticker}\t {DateHelper.format(self.date)}")
             
             # Always update JSON log file, regardless of decision
             if self.mode == -1:
@@ -234,11 +234,13 @@ class Bot:
                     print(f"Bot:\t Date updated to: {DateHelper.format(self.date)}")
 
         # Output handling
+        print("Bot:\t Creating graph")
+        
+        displayWindow = False
         if Config.getParam("displayGraph"):
-            if Config.debug():
-                print("Bot:\t Creating graph")
-            Graphing.plotValue(
-                "logs/" + self.fileLoggerJSON.fileName, displayWindow=True)
+            displayWindow = True
+            print("Bot:\t Displaying Graph")
+        
+        Graphing.plotValue("logs/" + self.fileLoggerJSON.fileName, displayWindow)
 
-        if Config.debug():
-            print("Bot:\t closing cache")
+        print(f"Bot:\t End\t\t {DateHelper.format(self.date - timedelta(days=1))}")

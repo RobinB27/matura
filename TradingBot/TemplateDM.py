@@ -9,7 +9,7 @@ from datetime import datetime
 from TradingBot.Portfolio import Portfolio
 from Util.Config import Config
 
-class TemplateDecisionMaking:
+class TemplateDM:
     
     
     def __init__(self, mode: int = 0):

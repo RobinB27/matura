@@ -2,11 +2,11 @@
 
 # Settings used for active development
 [development]
-debug = false
+debug = true
 
 # Settings for bot usage
 [parameters]
-displayGraph = true
+displayGraph = false
 SentimentScoreWeighted = true
-SentimentScoreThreshold = 20
+SentimentScoreThreshold = 0
 WebScraperMaxElements = 20
