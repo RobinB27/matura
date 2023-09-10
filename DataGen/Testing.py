@@ -155,6 +155,8 @@ class Testing:
         periodLimits: tuple[int, int] = (10, 50)
         ) -> None:
         
+        
+        
         data: tuple[list, list] = Testing.testMultiple(iterations, Strategy, Strategy2, funds, startDate, stockList, periodLimits)
         
         # evaluate data generated from comparison runs
