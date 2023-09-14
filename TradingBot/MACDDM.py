@@ -137,7 +137,7 @@ class MACDDM:
                 # Historical data
                 value = date
                 prevValue = self.getPreviousDate(value)
-                valueBeforePreviousValue = value - timedelta(days=1)
+                valueBeforePreviousValue = prevValue - timedelta(days=1)
             elif mode == 0:
                 # realtime mode
                 value = self.currentTimes[self.timeInstancesElapsed]
