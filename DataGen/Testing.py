@@ -15,14 +15,14 @@ class DateException(Exception): pass
 
 class Testing:
     
-    maxDate = datetime(2011, 9, 8)
+    maxDate = datetime(2020, 6, 11)
     # Technically goes back to 14 Feb 2009, but data amount stabilises at 2011
-    minDate = datetime(2011, 5, 6)
+    minDate = datetime(2011, 1, 1)
     dateDelta = maxDate - minDate
     
     # As seen on 10/09/2023
     # from: https://www.nasdaq.com/market-activity/stocks/screener
-    Nasdaq200B = [ "META", "AAPL", "MSFT",]
+    Nasdaq200B = ["AAPL", "MSFT", "GOOG", "GOOGL", "AMZN", "NVDA", "TSLA", "META", "AVGO", "ADBE", "ASML", "COST", "PEP", "CSCO"]
     
     # single run
     def testSingle(Strategy: TemplateDM, funds: int, startDate: datetime, stockList: list[Stock], period: int) -> dict:
@@ -63,7 +63,7 @@ class Testing:
         funds:int = 1000,
         startDate: datetime = None,
         stockList: list[Stock] = None,
-        periodLimits: tuple[int, int] = (5, 10)
+        periodLimits: tuple[int, int] = (10, 50)
         ) -> list:
         
         """Performs multiple tests with randomized values and returns a dict containing generated data.
