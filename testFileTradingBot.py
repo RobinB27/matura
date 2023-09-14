@@ -1,4 +1,6 @@
 from datetime import datetime
+from diskcache import Cache
+
 
 from TradingBot.Stock import Stock
 from TradingBot.Portfolio import Portfolio
@@ -16,16 +18,14 @@ from TradingBot.MACDDM import MACDDM
 #bot settings need date format like this: "2023-04-13"
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #a = Bot(MACDDecisionMaking(-1), "2022-01-07", -1)
-a = Bot(MACDDM(-1), datetime(2022, 8, 1), -1)
-t1 = Stock("TSLA")
+a = Bot(MACDDM(-1), datetime(2022, 7, 1), -1)
+t1 = Stock("META")
 p = Portfolio(1000)
-p.addStock("TSLA")
+p.addStock("META")
 
 #stockPrice = t1.getStockPrice(-1, "2020-04-12", "2020-04-13")
-stockPrice = t1.getPrice(-1, datetime(2023, 1, 20))
-print(stockPrice)
-
-
+price = t1.getPrice(-1, datetime(2011, 7, 11))
+print(price)
 #print(stockPrice)
 
 #s = SignalLineCalculator()
