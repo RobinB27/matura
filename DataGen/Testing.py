@@ -177,16 +177,16 @@ class Testing:
         # format results
         result = ""
         if wins[0] > wins[1]:
-            result += f"Strategy {type(Strategy).__name__} has outperformed Strategy {type(Strategy2).__name__}.\n"
-            result += f"Strategy {type(Strategy).__name__} won in {wins[0] - wins[1]} runs out of {wins[0] + wins[1]}.\n"
+            result += f"Strategy {Strategy.__class__.__name__} has outperformed Strategy {type(Strategy2).__name__}.\n"
+            result += f"Strategy {Strategy.__class__.__name__} won in {wins[0] - wins[1]} runs out of {wins[0] + wins[1]}.\n"
         else:
-            result += f"Strategy {type(Strategy2).__name__} has outperformed Strategy {type(Strategy).__name__}.\n"
-            result += f"Strategy {type(Strategy2).__name__} won in {wins[1] - wins[0]} runs out of {wins[0] + wins[1]}.\n"
+            result += f"Strategy {Strategy2.__class__.__name__} has outperformed Strategy {type(Strategy).__name__}.\n"
+            result += f"Strategy {Strategy2.__class__.__name__} won in {wins[1] - wins[0]} runs out of {wins[0] + wins[1]}.\n"
         
         result += "\n"
         
-        result += f"Strategy {type(Strategy).__name__} average profit:\t {averageProfit[0]}\n"
-        result += f"Strategy {type(Strategy2).__name__} average profit:\t {averageProfit[1]}\n"
+        result += f"Strategy {Strategy.__class__.__name__} average profit:\t {averageProfit[0]}\n"
+        result += f"Strategy {Strategy2.__class__.__name__} average profit:\t {averageProfit[1]}\n"
         
         # save to output
         fileName = "TestResults" + "_" + datetime.now().strftime(FileLoggerJSON.saveFormat) + ".txt"
