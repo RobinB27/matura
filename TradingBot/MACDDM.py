@@ -2,7 +2,7 @@
 # To that effect it compares the values of the so called signal line against the macd line (see SignalLineCalculator.py) to determine if to buy or sell.
 # On a more technical level it compares the two to determine if the signal line has corssed over the macd line. Depending on the type of crossing (from above or below) 
 # it will give the decision to buy or sell a stock. If no crossing has occured it will return the decison to ignor the stock.
-# The decisioon is then given to the bot itself (see Bot.py) to execute
+# The decision is then given to the bot itself (see Bot.py) to execute
 
 from datetime import datetime, timedelta
 

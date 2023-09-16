@@ -71,7 +71,7 @@ class FileLoggerJSON:
                 value = stock.amount * stock.getPrice() 
             elif mode == -1:
                 value = stock.amount * stock.getPrice(-1, date)
-            
+                
             sObject["value"] = value
             pObject["stocksHeld"].append(sObject)
         

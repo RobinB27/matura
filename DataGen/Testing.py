@@ -16,7 +16,7 @@ class DateException(Exception): pass
 class Testing:
     
     maxDate = datetime(2020, 6, 11)
-    # Technically goes back to 14 Feb 2009, but data amount stabilises at 2011
+    # Technically goes back to 14 Feb 2009, but data amount stabilises in 2011
     minDate = datetime(2011, 1, 1)
     dateDelta = maxDate - minDate
     
@@ -155,8 +155,6 @@ class Testing:
         periodLimits: tuple[int, int] = (10, 50)
         ) -> None:
         
-        
-        
         data: tuple[list, list] = Testing.testMultiple(iterations, Strategy, Strategy2, funds, startDate, stockList, periodLimits)
         
         # evaluate data generated from comparison runs
@@ -177,16 +175,16 @@ class Testing:
         # format results
         result = ""
         if wins[0] > wins[1]:
-            result += f"Strategy {Strategy.__class__.__name__} has outperformed Strategy {type(Strategy2).__name__}.\n"
-            result += f"Strategy {Strategy.__class__.__name__} won in {wins[0] - wins[1]} runs out of {wins[0] + wins[1]}.\n"
+            result += f"Strategy {Strategy.__name__} has outperformed Strategy {Strategy2.__name__}.\n"
+            result += f"Strategy {Strategy.__name__} won in {wins[0] - wins[1]} runs out of {wins[0] + wins[1]}.\n"
         else:
-            result += f"Strategy {Strategy2.__class__.__name__} has outperformed Strategy {type(Strategy).__name__}.\n"
-            result += f"Strategy {Strategy2.__class__.__name__} won in {wins[1] - wins[0]} runs out of {wins[0] + wins[1]}.\n"
+            result += f"Strategy {Strategy2.__name__} has outperformed Strategy {Strategy.__name__}.\n"
+            result += f"Strategy {Strategy2.__name__} won in {wins[1] - wins[0]} runs out of {wins[0] + wins[1]}.\n"
         
         result += "\n"
         
-        result += f"Strategy {Strategy.__class__.__name__} average profit:\t {averageProfit[0]}\n"
-        result += f"Strategy {Strategy2.__class__.__name__} average profit:\t {averageProfit[1]}\n"
+        result += f"Strategy {Strategy.__name__} average profit:\t {averageProfit[0]}\n"
+        result += f"Strategy {Strategy2.__name__} average profit:\t {averageProfit[1]}\n"
         
         # save to output
         fileName = "TestResults" + "_" + datetime.now().strftime(FileLoggerJSON.saveFormat) + ".txt"
