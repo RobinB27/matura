@@ -1,0 +1,1 @@
+(refactor MACD pseudocode into this)

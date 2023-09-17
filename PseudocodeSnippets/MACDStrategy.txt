@@ -1,0 +1,5 @@
+algorithm MACD Trading strategy
+
+    for every iteration:
+        for every stock in Portfolio:
+            
