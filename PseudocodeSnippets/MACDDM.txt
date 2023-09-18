@@ -6,7 +6,7 @@ algorithm MACDDecisionMaking strategy:
 
         makeStockDecision:
 
-            curveComparison = dictionaire past curveComparisons
+            curveComparison = dictionaire of past curveComparisons
             update curveComparison
 
             if value of curveComparison == 1 and value of previous iterations curveComparison == -1:
@@ -30,3 +30,16 @@ update curve comparioson:
             curveComparison = 0
 
         return curveComparison
+
+calculate SignalLineCalculator and MACDValue:
+
+    listOfStockPrices = list of 34 most recent prices of stock given
+
+    discard oldest price from listOfStockPrices
+    append listOfStockPrices with most recent price
+
+    MACDValue, SignalLineValue = talib.MACD() with listOfStockPrices as the argument
+
+    return MACDValue, SignalLineValue
+
+
