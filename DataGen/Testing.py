@@ -160,14 +160,18 @@ class Testing:
         # evaluate data generated from comparison runs
         wins = [0 , 0]
         averageProfit = [0, 0]
+        profits = [[], []]
         
         runs = len(data[0])
         for i in range(runs):
-            values = [data[0][i], data[1][i]]
+            finalValues = [data[0][i], data[1][i]]
             
-            for i in range(2): averageProfit[i] += (values[i] - funds)
+            for i in range(2): 
+                profit = finalValues[i] - funds
+                profits[i].append(profit)
+                averageProfit[i] += (profit)
             
-            if values[0] > values[1]: wins[0] += 1
+            if finalValues[0] > finalValues[1]: wins[0] += 1
             else: wins[1] += 1
         
         for i in range(2): averageProfit[i] = averageProfit[i] / runs
@@ -193,4 +197,7 @@ class Testing:
         print(result)
         with open(filePath, mode="a") as file: file.write(result)
         print(f"Tests:\n Saved result to {filePath}")
+        
+        print("Tests\n Creating Graph")
+        Graphing.plotProfits(profits, [Strategy, Strategy2])
         
