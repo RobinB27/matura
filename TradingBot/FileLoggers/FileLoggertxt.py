@@ -56,7 +56,10 @@ class FileLoggertxt:
                     stockValue = stock.amount * stock.getPrice()
                 
                 elif mode == -1:
-                    stockValue = stock.amount * stock.getPrice(-1, date)
+                    #check to ensure no None prices cause an error
+                    stockValue = stock.getPrice(-1, date)
+                    if stockValue is None: stockValue = 0
+                    stockValue = stock.amount * stockValue
                     self.stockValueOnDate += stockValue
                 
                 log.write(f"value of stock: ${stockValue}\n \n")

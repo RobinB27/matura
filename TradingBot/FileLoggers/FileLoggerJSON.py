@@ -70,7 +70,10 @@ class FileLoggerJSON:
             if mode == 0:
                 value = stock.amount * stock.getPrice() 
             elif mode == -1:
-                value = stock.amount * stock.getPrice(-1, date)
+                #check to ensure no None prices cause an error
+                stockValue = stock.getPrice(-1, date)
+                if stockValue is None: stockValue = 0
+                value = stock.amount * stockValue
                 
             sObject["value"] = value
             pObject["stocksHeld"].append(sObject)
