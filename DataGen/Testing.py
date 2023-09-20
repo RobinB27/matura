@@ -145,6 +145,16 @@ class Testing:
         return value
     
     # Comparse two DMs, uses multiple tests
+    def testTimeFrame(Strategy: TemplateDM, funds:int = 1000, startDate: datetime = "min", endDate: datetime = "max", ) -> None:
+        # Can't set Class properties as standard parameters for some reason, therefore using strings
+        if startDate == "min": startDate = Testing.minDate
+        if endDate == "max": endDate = Testing.maxDate
+        
+        period: timedelta = endDate - startDate
+        period: int = period.days
+        
+        return Testing.testMultiple(1, Strategy, Strategy2=None, funds=funds, startDate=startDate, stockList=Testing.Nasdaq200B.copy(), periodLimits=period)
+    
     def compareDMs(
         iterations: int,
         Strategy: TemplateDM,

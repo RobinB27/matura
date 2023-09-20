@@ -121,6 +121,7 @@ class Graphing:
         bins = 20
         name = "Testing results" + "_" + datetime.datetime.now().strftime(Graphing.saveFormat)
         
+        plt.clf()
         fig, axs = plt.subplots(1, 2, sharey=True, tight_layout=True)
         axs[0].hist(data[0], color="blue", bins=bins)
         axs[1].hist(data[1], color="black", bins=bins)
