@@ -146,6 +146,16 @@ class Testing:
     
     # Comparse two DMs, uses multiple tests
     def testTimeFrame(Strategy: TemplateDM, funds:int = 1000, startDate: datetime = "min", endDate: datetime = "max", ) -> None:
+        """Testing function to test a Strategy during a specified timeframe. Used for debugging. Defaults to maximum time period.
+
+        Args:
+            Strategy (TemplateDM): Strategy to be tested
+            funds (int, optional): Portfolio starting funds. Defaults to 1000.
+            startDate (datetime, optional): Starting date of the run. Defaults to "min".
+            endDate (datetime, optional): Date on which the run should end. Defaults to "max".
+
+        """
+        
         # Can't set Class properties as standard parameters for some reason, therefore using strings
         if startDate == "min": startDate = Testing.minDate
         if endDate == "max": endDate = Testing.maxDate
@@ -153,7 +163,7 @@ class Testing:
         period: timedelta = endDate - startDate
         period: int = period.days
         
-        return Testing.testMultiple(1, Strategy, Strategy2=None, funds=funds, startDate=startDate, stockList=Testing.Nasdaq200B.copy(), periodLimits=period)
+        return Testing.testSingle(Strategy, funds, startDate, Testing.Nasdaq200B.copy(), period)
     
     def compareDMs(
         iterations: int,
