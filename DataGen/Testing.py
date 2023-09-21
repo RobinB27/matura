@@ -15,7 +15,7 @@ class DateException(Exception): pass
 
 class Testing:
     
-    maxDate = datetime(2020, 6, 11)
+    maxDate = datetime(2013, 6, 11)
     # Technically goes back to 14 Feb 2009, but data amount stabilises in 2011
     minDate = datetime(2011, 1, 1)
     dateDelta = maxDate - minDate
