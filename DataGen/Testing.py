@@ -101,8 +101,11 @@ class Testing:
             # define portfolio
             if stockList is None:
                 # As seen in: https://stackoverflow.com/questions/2612802/how-do-i-clone-a-list-so-that-it-doesnt-change-unexpectedly-after-assignment
+                
+                # Generate randomised stock list
                 availableStocks = Testing.Nasdaq200B.copy()
                 length = random.randint(2, len(availableStocks))
+                
                 runStocks = []
                 for i in range(length):
                     # len() needs to be recalled as list length changes
@@ -110,26 +113,37 @@ class Testing:
                     index = random.randint(0, len(availableStocks) - 1)
                     runStocks.append(availableStocks[index])
                     availableStocks.pop(index)
-                    #removes stock from testrun if it didn't exist in the time period
-
-                    for stock in stockList:
-
-                        consecutiveNoneCount = 0
-
-                        testDate = startDate
-
-                        for i in range(4):
-
-                            stockValue = stock.getStockPrice(-1, testDate)
-
-                            if stockValue == None: consecutiveNoneCount += 1
-
-                            testDate = testDate - timedelta(1)
-
-                        if consecutiveNoneCount == 4:
-
-                            stockList.remove(stock.name)
+                        
             else: runStocks = stockList
+            
+            # removes nonexistent stocks from the stock list (E.g. if stock didn't exist yet at timeline start)
+            if Config.debug(): print(f"Testing:\t Checking Stock validities")
+            for stockName in runStocks:
+                
+                if Config.debug(): print(f"Testing:\t Checking validity of {stockName}")
+                
+                stockObj = Stock(stockName)
+                consecutiveNoneCount = 0
+                        
+                testDate = datetime(runDate.year, runDate.month, runDate.day)
+                
+                # 4 dates in a row being exceptions is impossible if stock exists, stock must be invalid
+                for i in range(4):
+                    stockValue = stockObj.getPrice(-1, testDate)
+                    if stockValue is None: consecutiveNoneCount += 1
+
+                    testDate = testDate - timedelta(days=1)
+            
+                if consecutiveNoneCount == 4: 
+                    runStocks.remove(stockName)
+                    if Config.debug(): print(f"Testing:\t {stockName} is invalid and has been removed")
+                elif Config.debug(): print(f"Testing:\t {stockName} is valid")
+                
+            # very rare but possible
+            if len(runStocks) == 0:
+                if Config.debug(): print(f"Testing:\t No valid stocks in portfolio. Skipping run.")  
+                continue
+            elif Config.debug(): print(f"Testing:\t Validity check finished, starting testing")
             
             # run tests, gather final value
             log = Testing.testSingle(Strategy, funds, runDate, runStocks, runPeriod)
