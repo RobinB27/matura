@@ -110,6 +110,25 @@ class Testing:
                     index = random.randint(0, len(availableStocks) - 1)
                     runStocks.append(availableStocks[index])
                     availableStocks.pop(index)
+                    #removes stock from testrun if it didn't exist in the time period
+
+                    for stock in stockList:
+
+                        consecutiveNoneCount = 0
+
+                        testDate = startDate
+
+                        for i in range(4):
+
+                            stockValue = stock.getStockPrice(-1, testDate)
+
+                            if stockValue == None: consecutiveNoneCount += 1
+
+                            testDate = testDate - timedelta(1)
+
+                        if consecutiveNoneCount == 4:
+
+                            stockList.remove(stock.name)
             else: runStocks = stockList
             
             # run tests, gather final value
