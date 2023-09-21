@@ -14,7 +14,7 @@ from Util.Config import Config
 class SignalLineCalculator:
     
     def __init__(self) -> None:
-        self.arrayLen = 34 # amount determined experimentally
+        self.arrayLen = 34 # amount needed determined experimentally
         self.stockPrices = np.zeros(self.arrayLen)
         self.firstRun = True
     
