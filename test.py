@@ -8,4 +8,8 @@ from TradingBot.SimpleSentimentDM import SimpleSentimentDM
 # Rarely crashes because getPrice yields None, also slow: needs optimisation
 #Testing.compareDMs(100, SimpleSentimentDM, MACDDM, periodLimits=100, funds=10000)
 
-Testing.testTimeFrame(SimpleSentimentDM, 1000, datetime(2011, 1, 1), datetime(2020, 6, 11))
+now = datetime.now()
+Testing.compareDMs(100, SimpleSentimentDM, MACDDM, 10000, startDate=None, stockList=None, periodLimits=100)
+then = datetime.now()
+
+print(then, now, then - now)
