@@ -24,6 +24,8 @@ class Testing:
     # from: https://www.nasdaq.com/market-activity/stocks/screener
     Nasdaq200B = ["AAPL", "MSFT", "GOOG", "GOOGL", "AMZN", "NVDA", "TSLA", "META", "AVGO", "ADBE", "ASML", "COST", "PEP", "CSCO"]
     
+    StockObjs = {}
+    
     # single run
     def testSingle(Strategy: TemplateDM, funds: int, startDate: datetime, stockList: list[Stock], period: int) -> dict:
         """Does a single test run with the specified parameters and returns the path to the produced log
@@ -55,6 +57,10 @@ class Testing:
         log: dict = Graphing.fetchLog(path)
         return log
     
+    def populateStockObjs(stockList: list[str]) -> None:
+        for stockName in stockList:
+            Testing.StockObjs[stockName] = Stock(stockName)
+    
     # Multiple test runs
     def testMultiple(
         iterations: int,
@@ -83,6 +89,11 @@ class Testing:
         # Definitions based on parameters
         constantPeriod = True if type(periodLimits) is int else False
         results = [] if Strategy2 is None else [[], []]
+        
+        # pregenerate run-independent Stock objects for optimising price calls during validation
+        if stockList is None:
+            Testing.populateStockObjs(Testing.Nasdaq200B)
+        else: Testing.populateStockObjs(stockList)
         
         # test loop
         for i in range(iterations):
@@ -122,14 +133,13 @@ class Testing:
                 
                 if Config.debug(): print(f"Testing:\t Checking validity of {stockName}")
                 
-                stockObj = Stock(stockName)
                 consecutiveNoneCount = 0
                         
                 testDate = datetime(runDate.year, runDate.month, runDate.day)
                 
                 # 4 dates in a row being exceptions is impossible if stock exists, stock must be invalid
                 for i in range(4):
-                    stockValue = stockObj.getPrice(-1, testDate)
+                    stockValue = Testing.StockObjs[stockName].getPrice(-1, testDate)
                     if stockValue is None: consecutiveNoneCount += 1
 
                     testDate = testDate - timedelta(days=1)
