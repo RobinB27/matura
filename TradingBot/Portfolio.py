@@ -1,5 +1,5 @@
 # This file contains the Portfolio class. It is a virtual representation of a stock portfolio that holds a number of user given stocks (see Stock.py file).
-# The portfolio class keeps track of all stocks owned and the amount of funds inside of it for later refference.
+# The portfolio class keeps track of all stocks owned and the amount of funds inside of it for later reference.
 # Furthermore, the class has the ability to buy/sell stocks. This decreases/increases the funds inside the portfolio and decreases the amount of stock owned (Stock class attribute)
 # It ties into the bot as the medium through which stock decisions are implemented
 
