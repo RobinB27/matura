@@ -122,6 +122,6 @@ class Stock:
                 print("Stock:\t Insufficient amount of stock to sell.")
                 
     def clearCache(self) -> None:
-        """clears the stocks cache
+        """utility method that clears the stocks cache
         """
         self.cache.clear()
