@@ -101,13 +101,17 @@ class Testing:
             # define period
             if not constantPeriod:
                 runPeriod = random.randint(periodLimits[0], periodLimits[1])
-            else: runPeriod = periodLimits
+            else: 
+                runPeriod = periodLimits
             
             # define date
             if startDate is None:
                 # select random date between max and min
-                runDate = Testing.maxDate - timedelta(days=random.randint(0, Testing.dateDelta.days))
-            else: runDate = startDate
+                maxDatePossible = Testing.maxDate - timedelta(days=runPeriod)
+                dateDelta = maxDatePossible - Testing.minDate
+                runDate = maxDatePossible- timedelta(days=random.randint(0, dateDelta.days))
+            else: 
+                runDate = startDate
             
             # define portfolio
             if stockList is None:
