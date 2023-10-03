@@ -7,34 +7,18 @@ from TradingBot.Portfolio import Portfolio
 from TradingBot.Bot import Bot
 from TradingBot.MACDDM import MACDDM
 
-#to implement some form of
-
-
-# Use datetime dates instead of date strings as function, eliminates your problem
 
 #1h intervals are the highest granularity of data allowed for live mode at present
 
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#bot settings need date format like this: "2023-04-13"
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#a = Bot(MACDDecisionMaking(-1), "2022-01-07", -1)
-a = Bot(MACDDM(-1), datetime(2022, 7, 1), -1)
-t1 = Stock("META")
-p = Portfolio(1000)
-p.addStock("META")
+a = Stock("ADBE")
 
-#stockPrice = t1.getStockPrice(-1, "2020-04-12", "2020-04-13")
-price = t1.getPrice(-1, datetime(2011, 7, 11))
-print(price)
-#print(stockPrice)
+runNumber = 0
 
-#s = SignalLineCalculator()
-
-
-#print(t1.getStockPrice(-1, "2023-05-29"))
-# , "2023-04-19"))
-
-#print(s.signalLineCalculation(p, "TSLA", -1, "2022-05-22"))
-
-#a.initialise(1000, ["AAPL", "TSLA", "KO"], 300)
-#a.start()
+while True:
+    price = a.getPricesUntilDate(datetime(2019, 10, 31))
+    
+    if price is None or price == 0 or len(price) == 0:
+        print("error in price getting")
+        break
+    print(runNumber)
+    runNumber += 1
