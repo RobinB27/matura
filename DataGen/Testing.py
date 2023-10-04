@@ -6,6 +6,9 @@ from TradingBot.Bot import Bot
 from TradingBot.Stock import Stock
 from TradingBot.TemplateDM import TemplateDM
 from TradingBot.FileLoggers.FileLoggerJSON import FileLoggerJSON
+from TradingBot.SimpleSentimentDM import SimpleSentimentDM
+from TradingBot.AvgSentimentDM import AvgSentimentDM
+from TradingBot.MACDDM import MACDDM
 
 from Util.Graphing import Graphing
 from Util.Config import Config
@@ -25,6 +28,83 @@ class Testing:
     Nasdaq200B = ["AAPL", "MSFT", "GOOG", "GOOGL", "AMZN", "NVDA", "TSLA", "META", "AVGO", "ADBE", "ASML", "COST", "PEP", "CSCO"]
     
     StockObjs = {}
+    
+    def CLI() -> None:
+        """
+        The CLI method to use the testing tool from the command line.\n
+        This is used in the main function of the programme.
+        """
+        
+        stratTable = {
+            "0": None,
+            "1": SimpleSentimentDM,
+            "2": AvgSentimentDM,
+            "3": MACDDM
+        }
+        
+        # Get iterations
+        print("Please select the amount of bot runs for the testing cycle")
+        iterations = int(input("Runs:\t"))
+        if iterations < 1: raise SyntaxError("Bot run count can't be below 0.")
+        
+        # Get starting funds
+        print("Please select the bots starting funds.")
+        funds = int(input("Funds: "))
+        if funds < 0: raise SyntaxError("Funds can't be negative.")
+        
+        # Get first strategy
+        print("Please select a trading strategy: Simple Sentiment Strategy (1), Average Sentiment Strategy (2) or MACD Strategy (3)")
+        strat1: int = int(input("Strategy: "))
+        if strat1 < 1 or strat1 > 3: raise SyntaxError("Invalid argument passed. Please enter either 1, 2 or 3")
+        strat1: object = stratTable[str(strat1)]
+        
+        # Get second strategy or disable
+        print("Please select a second trading strategy: no second strategy (0), Simple Sentiment Strategy (1), Average Sentiment Strategy (2) or MACD Strategy (3)")
+        strat2: int = int(input("Strategy: "))
+        if strat2 < 0 or strat2 > 3: raise SyntaxError("Invalid argument passed. Please enter either 0, 1, 2 or 3")
+        strat2: object = stratTable[str(strat2)]
+        
+        # Get start date
+        print("Please select a starting date in format DD-MM-YYYY")
+        print("\tMaximum date: 11-06-2020\n\tMinimum date: 01-01-2011")
+        startDate: str = str(input("Date:\t"))
+        # Raises error if format is incorrect
+        startDate: datetime = datetime.strptime(startDate, "%d-%m-%Y")
+        
+        # Get period
+        print("Please enter the minimum trading duration (in days) for the test runs.")
+        minDur = int(input("Min:\t"))
+        if minDur < 1: raise SyntaxError("Minimum trading duration can't be below 1 day.")
+        
+        print("Please enter the maximum trading duration (in days) for the test runs.")
+        maxDur = int(input("Max\t"))
+        if maxDur < minDur: raise SyntaxError("Maximum trading duration can't be below minimum duration.")
+        if maxDur == minDur: print("Minimum and maximum are equal, trading duration set as constant.")
+        
+        # Define stock list
+        print("Please enter the Number of stocks for the porfolio. Enter 0 to randomize.")
+        stockLen: int = int(input("Length: "))
+        if stockLen < 0: raise SyntaxError("Stock list length can't be smaller than 0.")
+        
+        stockList = None
+        if stockLen != 0:
+            stockList = []
+            for i in range(stockLen):
+                print("Please enter a stock ticker (e.g. TSLA) to add to the portfolio")
+                ticker = str(input("Ticker: "))
+                stockList.append(ticker)
+        
+        periodLimits: tuple = (minDur, maxDur)
+        if maxDur == minDur: periodLimits = maxDur
+        
+        print("Setup complete")
+        
+        # Select optimal testing function depending on input
+        if strat2 == None:
+            Testing.testMultiple(iterations, strat1, strat2, funds, startDate, stockList, periodLimits)
+        else:
+            Testing.compareDMs(iterations, strat1, strat2, funds, startDate, stockList, periodLimits)
+                
     
     # single run
     def testSingle(Strategy: TemplateDM, funds: int, startDate: datetime, stockList: list[Stock], period: int) -> dict:

@@ -10,7 +10,7 @@ from TradingBot.SimpleSentimentDM import SimpleSentimentDM
 
 now = datetime.now()
 
-Testing.compareDMs(100, SimpleSentimentDM, MACDDM, 10000, periodLimits=(10, 50))
+Testing.compareDMs(100, SimpleSentimentDM, MACDDM, 10000, startDate=None, stockList=None, periodLimits=100)
 
 then = datetime.now()
 

@@ -45,7 +45,7 @@ class Bot:
         Args:
             decisionMaking (DecisionMakingStrategy): instance of the decision-making strategy used by the bot
             startDate (str, optional): start date for trading in "YYYY-MM-DD" format: Defaults to an empty string.
-            mode (int, optional):  trading mode: 0 for live, -1 for past. Defaults to 0.
+            mode (int):  trading mode: 0 for live, -1 for past. Defaults to 0.
         """
         self.mode: int = mode
 
