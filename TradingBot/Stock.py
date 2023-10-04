@@ -66,9 +66,7 @@ class Stock:
             date = DateHelper.format(date)
             
             if len(self.cache) == 0:
-                
-                self.stockHist = self.tickerObject.history(period="max")
-                
+                                
                 for index in self.stockHist.index:
                     key = index.strftime("%Y-%m-%d") # NOTE key is the same format as date
                     self.cache[key] = self.stockHist.loc[index, "Close"]
@@ -95,7 +93,7 @@ class Stock:
             _type_: list -> int
         """
         date = DateHelper.format(date)
-        historical_data = self.tickerObject.history(period="max")
+        historical_data = self.stockHist
         # Removes NaN rows
         historical_data = historical_data.dropna()
         historical_data = historical_data[historical_data.index <= date]

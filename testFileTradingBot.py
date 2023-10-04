@@ -12,6 +12,8 @@ from TradingBot.MACDDM import MACDDM
 
 a = Stock("ADBE")
 
+
+
 runNumber = 0
 
 while True:
