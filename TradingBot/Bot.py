@@ -185,10 +185,10 @@ class Bot:
             
             # Always update JSON log file, regardless of decision
             if self.mode == -1:
-                self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date)
+                self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date, strategy=self.decisionMaker)
             elif self.mode == 0:
                 strTimeStamp = self.timeStamp.strftime(FileLoggerJSON.timeStampFormat)
-                self.fileLoggerJSON.snapshot(self.portfolio, self.mode, strTimeStamp, self.interval)
+                self.fileLoggerJSON.snapshot(self.portfolio, self.mode, strTimeStamp, self.interval, self.decisionMaker)
 
     def start(self) -> None:
         """Start the trading activities of the bot based on the specified mode and strategy

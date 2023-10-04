@@ -31,11 +31,12 @@ class Graphing:
         Args:
             path (str): path to the JSON log file
         """
-        x, y = Graphing.parseForComp(path)
+        x, y, strategy = Graphing.parseForComp(path)
         name = "Portfolio over Time" + "_" + datetime.datetime.now().strftime(Graphing.saveFormat)
+        title = "Portfolio / Time for " + strategy + " on " + datetime.datetime.now().strftime("%-d. %b %Y")
         
         plt.clf()
-        plt.title(name)
+        plt.title(title)
         plt.xlabel("Days")
         plt.ylabel("Stocks held")
         
@@ -60,6 +61,7 @@ class Graphing:
         # x & y for plot
         dates = []
         amounts ={} # dict containing lists of y-values for all stocks
+        strategy = data["strategyName"]
         
         # extract stock names from first snapshot
         for stock in data["snapshots"][0]["stocksHeld"]: amounts[stock["name"]] = []
@@ -82,7 +84,7 @@ class Graphing:
                 dates.append(daysPassed)
                 prevDate = currentDate
         
-        return dates, amounts
+        return dates, amounts, strategy
 
     def plotValue(path: str, displayWindow: bool = False, savePath: str = "output/") -> None:
         """Generates a plot visualising portfolio value development over time.\n
@@ -90,12 +92,13 @@ class Graphing:
         Args:
             path (str): path to the JSON log file
         """
-        x, y = Graphing.parseForValue(path)
-        name = "Value over Time" + "_" + datetime.datetime.now().strftime(Graphing.saveFormat)
+        x, y, strategy = Graphing.parseForValue(path)
+        name = "Value over Time" + "_" + strategy + "_" + datetime.datetime.now().strftime(Graphing.saveFormat)
+        title = "Value / Time for " + strategy + " on " + datetime.datetime.now().strftime("%-d. %b %Y")
         
         # Plot config
         plt.clf()
-        plt.title(name)
+        plt.title(title)
         plt.plot(x, y)
         plt.xlabel("Days")
         plt.ylabel("Portfolio value")
@@ -148,6 +151,7 @@ class Graphing:
         # x & y for plot
         dates = []
         values =[]
+        strategy = data["strategyName"]
         
         prevIteration = None
         iterationsPassed = 0
@@ -184,7 +188,7 @@ class Graphing:
                 dates.append(iterationsPassed)
                 prevIteration = currentDate
         
-        return dates, values
+        return dates, values, strategy
         
     def strToDate(date:str, mode: int) -> datetime.datetime: 
         """Shorthand for string to date conversion used often in this module. 

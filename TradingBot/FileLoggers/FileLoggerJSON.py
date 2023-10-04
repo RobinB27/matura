@@ -25,7 +25,7 @@ class FileLoggerJSON:
         self.dirPath = path
         self.fileName = prefix + "_" + datetime.now().strftime(FileLoggerJSON.saveFormat) + ".json"
     
-    def snapshot(self, portfolio: Portfolio, mode: int, date: datetime, interval: int = None) -> None:
+    def snapshot(self, portfolio: Portfolio, mode: int, date: datetime, interval: int = None, strategy = None) -> None:
         """Updates the JSON file log associated with this instance of the FileLoggerJSON class.
 
         Args:
@@ -44,6 +44,7 @@ class FileLoggerJSON:
             with open(filePath, 'r') as log: content = log.read().replace('\n', '')
         except FileNotFoundError:
             content = '{"snapshots": []}'
+            content["strategyName"] = strategy.__name__
             
         # Update file content based on data in Portfolio
         content = json.loads(content);
