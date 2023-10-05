@@ -44,7 +44,9 @@ class FileLoggerJSON:
             with open(filePath, 'r') as log: content = log.read().replace('\n', '')
         except FileNotFoundError:
             content = '{"snapshots": []}'
+            content = json.loads(content)
             content["strategyName"] = strategy.__name__
+            content = json.dumps(content)
             
         # Update file content based on data in Portfolio
         content = json.loads(content);

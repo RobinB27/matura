@@ -33,7 +33,7 @@ class Graphing:
         """
         x, y, strategy = Graphing.parseForComp(path)
         name = "Portfolio over Time" + "_" + datetime.datetime.now().strftime(Graphing.saveFormat)
-        title = "Portfolio / Time for " + strategy + " on " + datetime.datetime.now().strftime("%-d. %b %Y")
+        title = "Portfolio / Time for " + strategy + " on " + datetime.datetime.now().strftime("%d. %b %Y")
         
         plt.clf()
         plt.title(title)
@@ -94,7 +94,7 @@ class Graphing:
         """
         x, y, strategy = Graphing.parseForValue(path)
         name = "Value over Time" + "_" + strategy + "_" + datetime.datetime.now().strftime(Graphing.saveFormat)
-        title = "Value / Time for " + strategy + " on " + datetime.datetime.now().strftime("%-d. %b %Y")
+        title = "Value / Time for " + strategy + " on " + datetime.datetime.now().strftime("%d. %b %Y")
         
         # Plot config
         plt.clf()
