@@ -6,6 +6,7 @@ from TradingBot.Bot import Bot
 from TradingBot.Stock import Stock
 from TradingBot.TemplateDM import TemplateDM
 from TradingBot.FileLoggers.FileLoggerJSON import FileLoggerJSON
+from TradingBot.BuyAndHoldDM import BuyAndHoldDM
 from TradingBot.SimpleSentimentDM import SimpleSentimentDM
 from TradingBot.AvgSentimentDM import AvgSentimentDM
 from TradingBot.MACDDM import MACDDM
@@ -39,7 +40,8 @@ class Testing:
             "0": None,
             "1": SimpleSentimentDM,
             "2": AvgSentimentDM,
-            "3": MACDDM
+            "3": MACDDM,
+            "4": BuyAndHoldDM
         }
         
         # Get iterations
@@ -53,15 +55,15 @@ class Testing:
         if funds < 0: raise SyntaxError("Funds can't be negative.")
         
         # Get first strategy
-        print("Please select a trading strategy: Simple Sentiment Strategy (1), Average Sentiment Strategy (2) or MACD Strategy (3)")
+        print("Please select a trading strategy:\n(1) Simple Sentiment Strategy\n(2) Average Sentiment Strategy\n(3) MACD Strategy\n(4) Buy and Hold Strategy")
         strat1: int = int(input("Strategy: "))
-        if strat1 < 1 or strat1 > 3: raise SyntaxError("Invalid argument passed. Please enter either 1, 2 or 3")
+        if strat1 < 1 or strat1 > 4: raise SyntaxError("Invalid argument passed. Please enter either 1, 2 or 3")
         strat1: object = stratTable[str(strat1)]
         
         # Get second strategy or disable
-        print("Please select a second trading strategy: no second strategy (0), Simple Sentiment Strategy (1), Average Sentiment Strategy (2) or MACD Strategy (3)")
+        print("Please select a second trading strategy:\n(0) No second strategy\n(1) Simple Sentiment Strategy\n(2) Average Sentiment Strategy\n(3) MACD Strategy\n(4) Buy and Hold Strategy")
         strat2: int = int(input("Strategy: "))
-        if strat2 < 0 or strat2 > 3: raise SyntaxError("Invalid argument passed. Please enter either 0, 1, 2 or 3")
+        if strat2 < 0 or strat2 > 4: raise SyntaxError("Invalid argument passed. Please enter either 0, 1, 2 or 3")
         strat2: object = stratTable[str(strat2)]
         
         # Get start date
@@ -133,7 +135,7 @@ class Testing:
         testBot.initialise(funds, stockList, period)
         testBot.start()
         
-        path: str = "logs/" + testBot.fileLoggerJSON.fileName
+        path: str = "logs/past/" + testBot.fileLoggerJSON.fileName
         log: dict = Graphing.fetchLog(path)
         return log
     
@@ -144,8 +146,7 @@ class Testing:
     # Multiple test runs
     def testMultiple(
         iterations: int,
-        Strategy: TemplateDM,
-        Strategy2: TemplateDM = None,
+        strategies: list[TemplateDM] = [],
         funds:int = 1000,
         startDate: datetime = None,
         stockList: list[Stock] = None,
@@ -156,8 +157,7 @@ class Testing:
 
         Args:
             iterations (int): Amount of test runs
-            Strategy (TemplateDM): Valid DecisionMaking class which should be used
-            Strategy2 (TemplateDM): Second DecisionMaking class which should be used on identical data. Defaults to None.
+            Strategies (list[DM]): Strategies which should be tested. Has to be filled with classes deriving from TemplateDM.
             funds (int, optional): Initial portfolio funds. Defaults to 1000.
             startDate (datetime, optional): Date at which trading should start. Defaults None, which uses a randomiser selecting random valid dates.
             stockList (list[Stock], optional): List of stocks to add to Portfolio. Defaults to None, which uses a randomiser selecting random top 20 NASDAQ stocks.
@@ -168,7 +168,9 @@ class Testing:
         """
         # Definitions based on parameters
         constantPeriod = True if type(periodLimits) is int else False
-        results = [] if Strategy2 is None else [[], []]
+        results = []
+        for strategy in strategies:
+            results.append([])
         
         # pregenerate run-independent Stock objects for optimising price calls during validation
         if stockList is None:
@@ -212,10 +214,10 @@ class Testing:
             else: runStocks = stockList
             
             # removes nonexistent stocks from the stock list (E.g. if stock didn't exist yet at timeline start)
-            if Config.debug(): print(f"Testing:\t Checking Stock validities")
+            if Config.debug(): print(f"Tests:\t Checking Stock validities")
             for stockName in runStocks:
                 
-                if Config.debug(): print(f"Testing:\t Checking validity of {stockName}")
+                if Config.debug(): print(f"Tests:\t Checking validity of {stockName}")
                 
                 consecutiveNoneCount = 0
                         
@@ -230,27 +232,20 @@ class Testing:
             
                 if consecutiveNoneCount == 4: 
                     runStocks.remove(stockName)
-                    if Config.debug(): print(f"Testing:\t {stockName} is invalid and has been removed")
-                elif Config.debug(): print(f"Testing:\t {stockName} is valid")
+                    if Config.debug(): print(f"Tests:\t {stockName} is invalid and has been removed")
+                elif Config.debug(): print(f"Tests:\t {stockName} is valid")
                 
             # very rare but possible
             if len(runStocks) == 0:
-                if Config.debug(): print(f"Testing:\t No valid stocks in portfolio. Skipping run.")  
+                if Config.debug(): print(f"Tests:\t No valid stocks in portfolio. Skipping run.")  
                 continue
-            elif Config.debug(): print(f"Testing:\t Validity check finished, starting testing")
+            elif Config.debug(): print(f"Tests:\t Validity check finished, starting testing")
             
-            # run tests, gather final value
-            log = Testing.testSingle(Strategy, funds, runDate, runStocks, runPeriod)
-            value = Testing.sumValue(log)
-            if Strategy2 is not None:
-                # Do second run, assume results has 2 lists
-                log2 = Testing.testSingle(Strategy2, funds, runDate, runStocks, runPeriod)
-                value2 = Testing.sumValue(log2)
-                
-                results[0].append(value)
-                results[1].append(value2)
-            else:
-                results.append(value)
+            # run tests, update values
+            for i in range(len(strategies)):
+                log = Testing.testSingle(strategies[i], funds, runDate, runStocks, runPeriod)
+                value = Testing.sumValue(log)
+                results[i].append(value)
         
         return results
             
@@ -294,57 +289,83 @@ class Testing:
     
     def compareDMs(
         iterations: int,
-        Strategy: TemplateDM,
-        Strategy2: TemplateDM,
+        Strategies: [],
         funds:int = 1000,
         startDate: datetime = None,
         stockList: list[Stock] = None,
         periodLimits: tuple[int, int] = (10, 50)
         ) -> None:
+        print("Tests:\t Starting Test run, this might take a few seconds")
+        # Get start time for runtime display at the end of the testing process
+        then = datetime.now()
         
-        data: tuple[list, list] = Testing.testMultiple(iterations, Strategy, Strategy2, funds, startDate, stockList, periodLimits)
+        data: tuple[list] = Testing.testMultiple(iterations, Strategies, funds, startDate, stockList, periodLimits)
         
         # evaluate data generated from comparison runs
-        wins = [0 , 0]
-        averageProfit = [0, 0]
-        profits = [[], []]
         
-        runs = len(data[0])
-        for i in range(runs):
-            finalValues = [data[0][i], data[1][i]]
+        # Dynamically define start arrays
+        wins, averageProfit, profits = [], [], []
+        for i in range(len(data)):
+            wins.append(0)
+            averageProfit.append(0)
+            profits.append([])
+        
+        runAmount = len(data[0])
+        for i in range(runAmount):
+            # j represents a strategy, i represents the run (in this block)
             
-            for i in range(2): 
-                profit = finalValues[i] - funds
-                profits[i].append(profit)
-                averageProfit[i] += (profit)
+            # Populate finalValues
+            finalValues = []
+            for j in range(len(data)):
+                finalValues.append(data[j][i])
             
-            if finalValues[0] > finalValues[1]: wins[0] += 1
-            else: wins[1] += 1
+            # Determine average profits
+            for j in range(len(data)): 
+                profit = finalValues[j] - funds
+                profits[j].append(profit)
+                averageProfit[j] += (profit)
+            
+            # Determine winning strategy
+            winnerIndex = 0
+            for j in range(len(data) - 1):
+                if finalValues[j + 1] > finalValues[winnerIndex]:
+                    winnerIndex = j + 1
+            wins[winnerIndex] += 1
         
-        for i in range(2): averageProfit[i] = averageProfit[i] / runs
+
+        for i in range(len(data)): averageProfit[i] = averageProfit[i] / runAmount
         
-        # format results
         result = ""
-        if wins[0] > wins[1]:
-            result += f"Strategy {Strategy.__name__} has outperformed Strategy {Strategy2.__name__}.\n"
-            result += f"Strategy {Strategy.__name__} won in {wins[0] - wins[1]} runs out of {wins[0] + wins[1]}.\n"
-        else:
-            result += f"Strategy {Strategy2.__name__} has outperformed Strategy {Strategy.__name__}.\n"
-            result += f"Strategy {Strategy2.__name__} won in {wins[1] - wins[0]} runs out of {wins[0] + wins[1]}.\n"
         
-        result += "\n"
+        result += "Test results:"
+        # format results
         
-        result += f"Strategy {Strategy.__name__} average profit:\t {averageProfit[0]}\n"
-        result += f"Strategy {Strategy2.__name__} average profit:\t {averageProfit[1]}\n"
+        winIndex = 0
+        for i in range(len(wins) - 1):
+            if wins[i + 1] > wins[winIndex]:
+                winIndex = i + 1
+        winStrategy = Strategies[winIndex].__name__
+        result += f"\nStrategy {winStrategy} was the superior Strategy."
         
+        for i in range(len(Strategies)):
+            result += f"\nStrategy {Strategies[i].__name__} has won in {str(wins[i])} / {str(runAmount)} runs"
+            result += f"\nAverage profit: {averageProfit[i]}"
+        
+        print(result)
         # save to output
         fileName = "TestResults" + "_" + datetime.now().strftime(FileLoggerJSON.saveFormat) + ".txt"
         filePath = "output/" + fileName
         
-        print(result)
         with open(filePath, mode="a") as file: file.write(result)
-        print(f"Tests:\n Saved result to {filePath}")
+        print(f"Tests:\t Saved result to {filePath}")
         
-        print("Tests\n Creating Graph")
-        Graphing.plotProfits(profits, [Strategy, Strategy2])
+        print("Tests:\t Creating comparison graph")
+        Graphing.plotProfits(profits, Strategies)
+
+        # Print runtime information
+        now = datetime.now()
+        runtime = now - then
+        dateFormat = '%d. %m %Y %M:%H'
+        print("Tests:\t Runtime information:")
+        print(f"Start:\t {then.strftime(dateFormat)}\nEnd:\t {now.strftime(dateFormat)}\nTime:\t {runtime}")
         

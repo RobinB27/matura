@@ -125,16 +125,22 @@ class Graphing:
         name = "Testing results" + "_" + datetime.datetime.now().strftime(Graphing.saveFormat)
         
         plt.clf()
-        fig, axs = plt.subplots(1, 2, sharey=True, tight_layout=True)
-        axs[0].hist(data[0], color="blue", bins=bins)
-        axs[1].hist(data[1], color="black", bins=bins)
-
-        axs[0].set_title(strategies[0].__name__)
-        axs[1].set_title(strategies[1].__name__)
-
-        for i in range(2):
-            axs[i].set_xlabel("Net profit")
-            axs[i].set_ylabel("runs")
+        if len(strategies) > 1:
+            fig, axs = plt.subplots(1, len(strategies), sharey=True, tight_layout=True)
+            
+            for i in range(len(strategies)):
+                axs[i].hist(data[i], bins=bins)
+                axs[i].set_title(strategies[i].__name__)
+                axs[i].set_xlabel("Net profit")
+                axs[i].set_ylabel("Runs")
+        else:
+            try:
+                plt.title(strategies[0].__name__)
+                plt.hist(data[0], bins=bins)
+                plt.xlabel("Net profit")
+                plt.ylabel("Runs")
+            except:
+                raise SyntaxError("Fatal error in single strategy profit graphing, probably invalid syntax")
             
         Graphing.finish(displayWindow, savePath, name)
         

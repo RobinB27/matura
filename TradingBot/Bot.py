@@ -98,7 +98,8 @@ class Bot:
             self.amountOfIntervals = period
 
         self.initDM()
-        self.fileLoggerTxt.createLogFile()
+        if Config.get()["development"]["txtLogs"]:
+            self.fileLoggerTxt.createLogFile()
 
     def initialiseCLI(self) -> None:
         """This method initializes the trading bot's portfolio, stock holdings
@@ -134,7 +135,8 @@ class Bot:
             self.timePeriod = timePeriod
 
         self.initDM()
-        self.fileLoggerTxt.createLogFile()
+        if Config.get()["development"]["txtLogs"]:
+            self.fileLoggerTxt.createLogFile()
             
         if self.mode == 0:
             self.interval = int(input("What interval will the bot be trading at (in minutes): "))
@@ -173,12 +175,14 @@ class Bot:
             if decision == 1:
                 print(f"Bot:\t Buy\t {ticker}\t {DateHelper.format(self.date)}")
                 self.portfolio.buyStock(1, ticker, self.mode, self.date)
-                self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
+                if Config.get()["development"]["txtLogs"]:
+                    self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
 
             elif decision == -1:
                 print(f"Bot:\t Sell\t {ticker}\t {DateHelper.format(self.date)}")
                 self.portfolio.sellStock(1, ticker, self.mode, self.date)
-                self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
+                if Config.get()["development"]["txtLogs"]:
+                    self.fileLoggerTxt.snapshot(self.portfolio, self.mode, self.date)
 
             else:
                 print(f"Bot:\t Ignore\t {ticker}\t {DateHelper.format(self.date)}")
@@ -236,11 +240,18 @@ class Bot:
         # Output handling
         print("Bot:\t Creating graph")
         
-        displayWindow = False
-        if Config.getParam("displayGraph"):
-            displayWindow = True
-            print("Bot:\t Displaying Graph")
-        
-        Graphing.plotValue("logs/" + self.fileLoggerJSON.fileName, displayWindow)
+        if Config.getParam("createRunGraph"):
+            # Check whether to display
+            displayWindow = False
+            if Config.getParam("displayGraph"):
+                displayWindow = True
+                print("Bot:\t Displaying Graph")
+                
+            # Insert to correct folder
+            if self.mode == -1:
+                Graphing.plotValue("logs/past/" + self.fileLoggerJSON.fileName, displayWindow)
+            elif self.mode == 0:
+                Graphing.plotValue("logs/realtime/" + self.fileLoggerJSON.fileName, displayWindow)
+            else: raise SyntaxError("Bot received invalid mode attribute")
 
         print(f"Bot:\t End\t\t {DateHelper.format(self.date - timedelta(days=1))}")

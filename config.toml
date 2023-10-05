@@ -2,11 +2,22 @@
 
 # Settings used for active development
 [development]
+# Enables verbose console messages to help in debugging
 debug = true
+# Generates human readable txt logs next to the json logs that help in debugging
+txtLogs = false
 
 # Settings for bot usage
 [parameters]
+# Creates a time / value graph after a complete bot run and saves it to the output folder
+createRunGraph = true
+# Displays the time / value graph in a window after it is generated
 displayGraph = false
+# Enables weighted sentiment scores. 
 SentimentScoreWeighted = true
+# Defines a threshold difference the sentiment score has to reach before a buy or sell action can be performed.
 SentimentScoreThreshold = 0
+# Defines the amounf of recent headlines the realtime sentiment analysis strategy takes into account.
+SentimentMaxStocks = 1
+# Defines the maximum amount of any individual stock the sentiment based strategies can buy.
 WebScraperMaxElements = 20

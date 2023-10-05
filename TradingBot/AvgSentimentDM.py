@@ -30,11 +30,14 @@ class AvgSentimentDM:
         # Bot mode
         self.weighted = Config.getParam("SentimentScoreWeighted")
         # Uses weighted sentiment scores: score * headlinecount 
+        self.stockMax = Config.getParam("SentimentMaxStocks")
+        # Specifies the maximum amount of a stock the Strategy can buy until it stopts to send buy signals
         self.pastSentimentScores = {}
         self.pastEMA = {}
         self.pastMACD = {}
         self.pastMACDEMA = {}
         # Access all with ["date"] => value, use DateHelper
+        self.stocksOwned = 0
     
     def getSMA(self, date: datetime, period: int, ticker:str, MACD = False) -> int:
         """ Calculate the SMA value using Sentiment scores.
@@ -168,13 +171,22 @@ class AvgSentimentDM:
         crossoverHappened = previouslyBelow != nowBelow
         # evaluate type of crossover
         if crossoverHappened and previouslyBelow: 
+            # buy order
             if Config.debug(): print(f"DM:\t Positive crossover detected.")
-            return 1
+            if self.stocksOwned < self.stockMax:
+                self.stocksOwned += 1
+                return 1
+            else: 
+                if Config.debug(): print(f"DM:\t Couldn't buy {ticker} because Stock maximum {self.stockMax} was reached.")
+                return 0
         elif crossoverHappened and not previouslyBelow: 
+            # sell order
             if Config.debug(): print(f"DM:\t Negative crossover detected.")
+            if self.stocksOwned > 0: self.stocksOwned -= 1
             return -1
         else: 
-            if Config.debug(): print(f"DM\t No crossover detected.")
+            # ignore order
+            if Config.debug(): print(f"DM:\t No crossover detected.")
             return 0
     
     def getScore(self, date: datetime, ticker: str) -> int:
@@ -191,7 +203,7 @@ class AvgSentimentDM:
             # mode-dependant headline retrieval
             if self.mode == -1: headlines = HistData.getHeadlinesDT(date, ticker)
             elif self.mode == 0: headlines = WebScraper.getHeadlines(ticker)
-            else: raise Exception("Invalid mode selection for SimpleSentimentDM")
+            else: raise Exception("Invalid mode selection for AvgSentimentDM")
             
             score = 0
             

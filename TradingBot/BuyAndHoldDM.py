@@ -3,22 +3,22 @@
 # in the context of this bot. What is shown in this template is all that is needed for a DecisionMaking class
 # to interact seamlessly with the rest of the bot. All other DecisionMaking implementations are based on this template
 
-import yfinance as fy
 from datetime import datetime
 
 from TradingBot.Portfolio import Portfolio
 from Util.Config import Config
 
+
 class BuyAndHoldDM:
-    
+    """Class that implements a simple Buy and Hold strategy. Sends a buy signal on the first trading step and then ceases operation."""
     
     def __init__(self, mode: int = 0):
         
         self.mode = mode
-        self.run = 1
+        self.firstRun = True
         
     def makeStockDecision(self, portfolio: Portfolio, ticker: str, mode: int, date: datetime = None, interval: int = 0) -> int:
-        """makes a decision whether to buy a stock or not on a given date,
+        """makes a decision whether to buy a stock or not on a given date\n
         in this strategy only one of each stock is bought and nothing else
 
         Args:
@@ -31,9 +31,8 @@ class BuyAndHoldDM:
         Returns:
             int: 1 = buy, -1 = sell, any other value = ignore stock 
         """
-        if self.run == 1:
-            if Config.debug(): print("Stock Bought")
-            self.run += 1
+        if self.firstRun:
+            if Config.debug(): print(f"DM:\t Stock {ticker} bought")
+            self.firstRun = False
             return 1;
-        else:
-            return 0
+        else: return 0

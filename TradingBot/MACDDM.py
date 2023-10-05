@@ -75,12 +75,12 @@ class MACDDM:
         # Update curveComparison
         if self.SignalLineValuesDict[key] > self.MACDValuesDict[key]:
             if Config.debug():
-                print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[key]} > signalLine: {self.SignalLineValuesDict[key]}")
+                print(f"MACD:\t MACDPlaceholder: {self.MACDValuesDict[key]} > signalLine: {self.SignalLineValuesDict[key]}")
             self.curveComparison[key] = 1
 
         elif self.SignalLineValuesDict[key] < self.MACDValuesDict[key]:
             if Config.debug():
-                print(f"MACDDecisionMaking: MACDPlaceholder: {self.MACDValuesDict[key]} < signalLine: {self.SignalLineValuesDict[key]}")
+                print(f"MACD:\t MACDPlaceholder: {self.MACDValuesDict[key]} < signalLine: {self.SignalLineValuesDict[key]}")
             self.curveComparison[key] = -1
 
         else:
@@ -120,12 +120,12 @@ class MACDDM:
             if self.curveComparison[DateHelper.format(prevValue)] == -1 and self.curveComparison[value] == 1:
                 if Config.debug():
                     print(
-                        f"MACDDecisionMaking:\t Bullish Crossover on {value}")
+                        f"MACD:\t Bullish Crossover on {value}")
                 return 1
             elif self.curveComparison[DateHelper.format(prevValue)] == 1 and self.curveComparison[value] == -1:
                 if Config.debug():
                     print(
-                        f"MACDDecisionMaking:\t Bearish Crossover on {value}")
+                        f"MACD:\t Bearish Crossover on {value}")
                 return -1
             else:
                 return None
@@ -156,22 +156,22 @@ class MACDDM:
             if self.curveComparison[prevValue] == -1 and self.curveComparison[value] == 1:
                 if Config.debug():
                     print(
-                        f"MACDDecisionMaking:\t Bullish Crossover on {value}")
+                        f"MACD:\t Bullish Crossover on {value}")
                 return 1
             elif self.curveComparison[valueBeforePreviousValue] == -1 and self.curveComparison[prevValue] == 0 and self.curveComparison[value] == 1:
                 if Config.debug():
                     print(
-                        f"MACDDecisionMaking:\t Bullish Crossover on {value}")
+                        f"MACD:\t Bullish Crossover on {value}")
                 return 1
             elif self.curveComparison[prevValue] == 1 and self.curveComparison[value] == -1:
                 if Config.debug():
                     print(
-                        f"MACDDecisionMaking:\t Bearish Crossover on {value}")
+                        f"MACD:\t Bearish Crossover on {value}")
                 return -1
             elif self.curveComparison[valueBeforePreviousValue] == 1 and self.curveComparison[prevValue] == 0 and self.curveComparison[value] == -1:
                 if Config.debug():
                     print(
-                        f"MACDDecisionMaking:\t Bearish Crossover on {value}")
+                        f"MACD:\t Bearish Crossover on {value}")
                 return -1
             else:
                 return None        

@@ -34,7 +34,15 @@ class FileLoggerJSON:
             date (str): The current date or timestamp of the iteration, format depends on mode
             interval (int, optional): Interval at which the bot is trading, only needed in realtime mode. Defaults to None.
         """
-        filePath = os.path.join(self.dirPath, self.fileName)
+        
+        # Set path
+        filePath = self.dirPath
+        if mode == -1:
+            filePath = os.path.join(filePath, "past")
+        elif mode == 0:
+            filePath = os.path.join(filePath, "present")
+        else: raise SyntaxError("FileLogger given invalid mode")
+        filePath = os.path.join(filePath, self.fileName)
         
         # Retrieve file content
         content = ""

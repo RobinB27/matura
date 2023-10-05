@@ -49,7 +49,7 @@ class Portfolio:
             KeyError: Stock is not included in the Portfolio.
         """
         if ticker in self.stocksHeld: return self.stocksHeld[ticker]
-        else: raise KeyError("Portfolio\t Error: Tried to buy Stock not included in the Portfolio.")
+        else: raise KeyError("Portf\t Error: Tried to buy Stock not included in the Portfolio.")
        
     def addStock(self, ticker: str):
         """Adds a stock to the porfolio
@@ -58,7 +58,7 @@ class Portfolio:
         """
         if ticker not in self.stocksHeld:
             self.stocksHeld[ticker] = Stock(ticker)
-        else: raise KeyError("Portfolio\t Error: Tried to add Stock to portfolio that is already included")
+        else: raise KeyError("Portf\t Error: Tried to add Stock to portfolio that is already included")
     
     def buyStock(self, amount: int, ticker: str, mode: int, date: datetime = None):
         """Buys a stock and adds it to the Portfolio.\n
@@ -83,12 +83,12 @@ class Portfolio:
             self.funds -= cost
             stock.increase(amount)
             if Config.debug() and mode == 0:
-                print(f"Portfolio:\t Bought {amount} shares of {ticker} at ${currentPrice} per share.")
+                print(f"Portf:\t Bought {amount} shares of {ticker} at ${currentPrice} per share.")
             elif Config.debug() and mode == -1:
-                print(f"Portfolio:\t Bought {amount} shares of {ticker} at ${currentPrice} per share on {DateHelper.format(date)}.")
+                print(f"Portf:\t Bought {amount} shares of {ticker} at ${currentPrice} per share on {DateHelper.format(date)}.")
         else:
             if Config.debug():  
-                print("Portfolio:\t Error: Insufficient funds to buy the stock.")
+                print("Portf:\t Error: Insufficient funds to buy the stock.")
         
         
     def sellStock(self, amount: int, ticker: str, mode: int,  date: datetime = None):
@@ -115,10 +115,10 @@ class Portfolio:
             self.funds += price
             stock.decrease(amount)
             if Config.debug() and mode == 0:
-                print(f"Portfolio:\t Sold {amount} shares of {ticker} at ${currentPrice} per share.")
+                print(f"Portf:\t Sold {amount} shares of {ticker} at ${currentPrice} per share.")
             elif Config.debug() and mode == -1:
-                print(f"Portfolio:\t Sold {amount} shares of {ticker} at ${currentPrice} per share on {DateHelper.format(date)}.")
+                print(f"Portf:\t Sold {amount} shares of {ticker} at ${currentPrice} per share on {DateHelper.format(date)}.")
         else:
             if Config.debug():
-                print("Portfolio\t Error: Insufficient shares to sell the stock.")
+                print("Portf\t Error: Insufficient shares to sell the stock.")
 

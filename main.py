@@ -15,12 +15,15 @@ from TradingBot.Bot import Bot
 from TradingBot.SimpleSentimentDM import SimpleSentimentDM
 from TradingBot.AvgSentimentDM import AvgSentimentDM
 from TradingBot.MACDDM import MACDDM
+from TradingBot.BuyAndHoldDM import BuyAndHoldDM
 from DataGen.Testing import Testing
 
 stratTable = {
+    "0": None,
     "1": SimpleSentimentDM,
     "2": AvgSentimentDM,
-    "3": MACDDM
+    "3": MACDDM,
+    "4": BuyAndHoldDM
 }
 
 def main() -> None:
@@ -44,9 +47,9 @@ def main() -> None:
             mode = int(input("Mode:\t"))
             
             # Strategy selection
-            print("Please select a trading strategy: Simple Sentiment Strategy (1), Average Sentiment Strategy (2) or MACD Strategy (3)")
+            print("Please select a trading strategy:\n(1) Simple Sentiment Strategy\n(2) Average Sentiment Strategy\n(3) MACD Strategy\n(4) Buy and Hold Strategy")
             strat: int = int(input("Strategy: "))
-            if strat < 1 or strat > 3: raise SyntaxError("Invalid argument passed. Please enter either 1, 2 or 3")
+            if strat < 1 or strat > 4: raise SyntaxError("Invalid argument passed. Please enter either 1, 2 or 3")
             strat: object = stratTable[str(strat)]
             
             # Mode specific queries

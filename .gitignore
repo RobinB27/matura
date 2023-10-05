@@ -9,5 +9,7 @@
 output/*
 !output/.gitkeep
 # no log files, keep empty logs folder
-logs/*
-!logs/.gitkeep
+logs/past/*
+logs/realtime/*
+!logs/past/.gitkeep
+!logs/realtime/.gitkeep

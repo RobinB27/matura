@@ -33,11 +33,14 @@ class SimpleSentimentDM:
         # Uses weighted sentiment scores: score * headlinecount 
         self.threshold = Config.getParam("SentimentScoreThreshold")
         # Specifies a theshold difference in sentiment score required to sell / buy
+        self.stockMax = Config.getParam("SentimentMaxStocks")
+        # Specifies the maximum amount of a stock the Strategy can buy until it stopts to send buy signals
         self.previousScore = None
         # Previous score for comparison 
+        self.stocksOwned = 0
         
     def makeStockDecision(self, portfolio: Portfolio, ticker: str, mode: int, date: datetime, interval: int = None) -> int:
-        # NOTE: Make Ticker an object var for all DMs since it is a constant anyway
+        # NOTE: Could make Ticker an object var for all DMs since it is a constant anyway
         """makes a decision whether to buy a stock or not on a given date
 
         Args:
@@ -80,17 +83,27 @@ class SimpleSentimentDM:
         
         # Pos = buy, Neg = sell
         scoreDifference = score - self.previousScore
-        if abs(scoreDifference) >= self.threshold:
+        if abs(scoreDifference) > self.threshold:
             if Config.debug(): print(f"DM:\t Threshold {self.threshold} passed.")
             
             if scoreDifference > 0:
+                # Buy order
                 self.previousScore = score
-                return 1
+                if self.stocksOwned < self.stockMax:
+                    self.stocksOwned += 1
+                    return 1
+                else: 
+                    if Config.debug(): print(f"DM:\t Couldn't buy {ticker} because Stock maximum {self.stockMax} was reached.")
+                    return None
 
             elif scoreDifference < 0:
+                # Sell order
                 self.previousScore = score
+                if self.stocksOwned > 0: self.stocksOwned -= 1
                 return -1
             else: 
+                # Ignore order, threshold exactly reached but not passed
+                if Config.debug(): print(f"DM:\t Threshold {self.threshold} not passed.")
                 self.previousScore = score
                 return None
         else:
