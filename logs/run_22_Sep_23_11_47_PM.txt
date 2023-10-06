@@ -1,0 +1,792 @@
+date: 2012-10-09
+funds in portfolio: $9961.016193389893
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 1
+value of stock: $38.98380661010742
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2012-10-10
+funds in portfolio: $9999.368335723877
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 0
+value of stock: $0.0
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.6316642761230469
+
+date: 2012-10-17
+funds in portfolio: $9999.368335723877
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 0
+value of stock: $0.0
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.6316642761230469
+
+date: 2012-10-18
+funds in portfolio: $9962.516403198242
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 1
+value of stock: $36.851932525634766
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.6316642761230469
+
+date: 2012-10-19
+funds in portfolio: $9999.971294403076
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 0
+value of stock: $0.0
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.028705596923828125
+
+date: 2012-11-29
+funds in portfolio: $9999.971294403076
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 0
+value of stock: $0.0
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.028705596923828125
+
+date: 2012-11-30
+funds in portfolio: $9943.806533813477
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 1
+value of stock: $56.16476058959961
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.028705596923828125
+
+date: 2012-10-04
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 0
+value of stock: $0.0
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2012-10-08
+funds in portfolio: $9981.035034179688
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 1
+value of stock: $18.9649658203125
+ 
+ASML amount of stock: 0
+value of stock: $0.0
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2012-10-11
+funds in portfolio: $9942.962837219238
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 1
+value of stock: $18.805805206298828
+ 
+ASML amount of stock: 1
+value of stock: $38.07219696044922
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.15916061401367188
+
+date: 2012-10-24
+funds in portfolio: $9981.637985229492
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 1
+value of stock: $16.94944953918457
+ 
+ASML amount of stock: 0
+value of stock: $0.0
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-1.4125652313232422
+
+date: 2012-10-31
+funds in portfolio: $9981.637985229492
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 1
+value of stock: $17.024524688720703
+ 
+ASML amount of stock: 0
+value of stock: $0.0
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-1.3374900817871094
+
+date: 2012-11-01
+funds in portfolio: $9981.637985229492
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 1
+value of stock: $17.20695686340332
+ 
+ASML amount of stock: 0
+value of stock: $0.0
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-1.1550579071044922
+
+date: 2012-11-09
+funds in portfolio: $9909.022689819336
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 1
+value of stock: $72.61529541015625
+ 
+GOOGL amount of stock: 1
+value of stock: $16.592342376708984
+ 
+ASML amount of stock: 0
+value of stock: $0.0
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-1.7696723937988281
+
+date: 2012-11-13
+funds in portfolio: $9886.83641242981
+
+stocks held in portfolio: 
+MSFT amount of stock: 1
+value of stock: $22.186277389526367
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 1
+value of stock: $72.79026794433594
+ 
+GOOGL amount of stock: 1
+value of stock: $16.49274253845215
+ 
+ASML amount of stock: 0
+value of stock: $0.0
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-1.6942996978759766
+
+date: 2012-11-14
+funds in portfolio: $9886.83641242981
+
+stocks held in portfolio: 
+MSFT amount of stock: 1
+value of stock: $21.98152732849121
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 1
+value of stock: $72.0693359375
+ 
+GOOGL amount of stock: 1
+value of stock: $16.330080032348633
+ 
+ASML amount of stock: 0
+value of stock: $0.0
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-2.782644271850586
+
+date: 2012-11-15
+funds in portfolio: $9848.405321121216
+
+stocks held in portfolio: 
+MSFT amount of stock: 1
+value of stock: $21.834108352661133
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 1
+value of stock: $73.00769805908203
+ 
+GOOGL amount of stock: 1
+value of stock: $16.19769859313965
+ 
+ASML amount of stock: 1
+value of stock: $38.43109130859375
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-2.124082565307617
+
+date: 2012-11-16
+funds in portfolio: $9921.405366897583
+
+stocks held in portfolio: 
+MSFT amount of stock: 1
+value of stock: $21.719453811645508
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 1
+value of stock: $16.195695877075195
+ 
+ASML amount of stock: 1
+value of stock: $39.414493560791016
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-1.2649898529052734
+
+date: 2012-11-19
+funds in portfolio: $9921.405366897583
+
+stocks held in portfolio: 
+MSFT amount of stock: 1
+value of stock: $21.891433715820312
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 1
+value of stock: $16.72197151184082
+ 
+ASML amount of stock: 1
+value of stock: $39.76622009277344
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.21500778198242188
+
+date: 2012-11-20
+funds in portfolio: $9938.171382904053
+
+stocks held in portfolio: 
+MSFT amount of stock: 1
+value of stock: $21.875057220458984
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 1
+value of stock: $39.91694641113281
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.03661346435546875
+
+date: 2012-11-23
+funds in portfolio: $9979.466506958008
+
+stocks held in portfolio: 
+MSFT amount of stock: 1
+value of stock: $22.685855865478516
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 0
+value of stock: $0.0
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $2.152362823486328
+
+date: 2012-11-27
+funds in portfolio: $10001.64458656311
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 0
+value of stock: $0.0
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $1.6445865631103516
+
+date: 2012-12-03
+funds in portfolio: $9979.998846054077
+
+stocks held in portfolio: 
+MSFT amount of stock: 1
+value of stock: $21.645740509033203
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 0
+value of stock: $0.0
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $1.6445865631103516
+
+date: 2012-12-06
+funds in portfolio: $10001.890279769897
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 0
+value of stock: $0.0
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $1.890279769897461
+
+date: 2012-12-19
+funds in portfolio: $9944.3072681427
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 1
+value of stock: $57.583011627197266
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $1.890279769897461
+
+date: 2012-12-21
+funds in portfolio: $9863.038957595825
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 1
+value of stock: $81.268310546875
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 1
+value of stock: $56.94568634033203
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $1.2529544830322266
+
+date: 2012-12-24
+funds in portfolio: $9848.747443199158
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 1
+value of stock: $14.29151439666748
+ 
+COST amount of stock: 1
+value of stock: $81.22747039794922
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 1
+value of stock: $56.793094635009766
+ 
+AMZN amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $1.0595226287841797
+
+date: 2012-12-26
+funds in portfolio: $9836.315942764282
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 1
+value of stock: $14.356378555297852
+ 
+COST amount of stock: 1
+value of stock: $80.60667419433594
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 1
+value of stock: $56.57766342163086
+ 
+AMZN amount of stock: 1
+value of stock: $12.431500434875488
+ 
+Overall profit/loss: $0.2881593704223633
+
+date: 2012-12-28
+funds in portfolio: $9818.798173904419
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 1
+value of stock: $14.017643928527832
+ 
+COST amount of stock: 1
+value of stock: $79.20984649658203
+ 
+GOOGL amount of stock: 1
+value of stock: $17.51776885986328
+ 
+ASML amount of stock: 1
+value of stock: $56.66743469238281
+ 
+AMZN amount of stock: 1
+value of stock: $12.258999824523926
+ 
+Overall profit/loss: $-1.5301322937011719
+
+date: 2012-12-31
+funds in portfolio: $9796.92311668396
+
+stocks held in portfolio: 
+MSFT amount of stock: 1
+value of stock: $21.875057220458984
+ 
+CSCO amount of stock: 1
+value of stock: $14.161788940429688
+ 
+COST amount of stock: 1
+value of stock: $80.64749908447266
+ 
+GOOGL amount of stock: 1
+value of stock: $17.70220184326172
+ 
+ASML amount of stock: 1
+value of stock: $57.798439025878906
+ 
+AMZN amount of stock: 1
+value of stock: $12.543499946594238
+ 
+Overall profit/loss: $1.6516027450561523
+
+date: 2013-01-02
+funds in portfolio: $9819.543451309204
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 1
+value of stock: $14.659072875976562
+ 
+COST amount of stock: 1
+value of stock: $82.86933135986328
+ 
+GOOGL amount of stock: 1
+value of stock: $18.099348068237305
+ 
+ASML amount of stock: 1
+value of stock: $59.94377899169922
+ 
+AMZN amount of stock: 1
+value of stock: $12.865500450134277
+ 
+Overall profit/loss: $7.980483055114746
+
+date: 2013-01-02
+funds in portfolio: $9837.642799377441
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 1
+value of stock: $14.659072875976562
+ 
+COST amount of stock: 1
+value of stock: $82.86933135986328
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 1
+value of stock: $59.94377899169922
+ 
+AMZN amount of stock: 1
+value of stock: $12.865500450134277
+ 
+Overall profit/loss: $7.980483055114746
+
+date: 2013-01-03
+funds in portfolio: $9921.361686706543
+
+stocks held in portfolio: 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 1
+value of stock: $14.738351821899414
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+ASML amount of stock: 1
+value of stock: $58.687095642089844
+ 
+AMZN amount of stock: 1
+value of stock: $12.923999786376953
+ 
+Overall profit/loss: $7.71113395690918
+

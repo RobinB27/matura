@@ -1,0 +1,252 @@
+date: 2011-11-09
+funds in portfolio: $9971.920000076294
+
+stocks held in portfolio: 
+ADBE amount of stock: 1
+value of stock: $28.079999923706055
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2011-11-10
+funds in portfolio: $9943.889999389648
+
+stocks held in portfolio: 
+ADBE amount of stock: 2
+value of stock: $56.060001373291016
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.049999237060546875
+
+date: 2011-11-11
+funds in portfolio: $9972.319999694824
+
+stocks held in portfolio: 
+ADBE amount of stock: 1
+value of stock: $28.43000030517578
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.75
+
+date: 2011-12-01
+funds in portfolio: $9945.180000305176
+
+stocks held in portfolio: 
+ADBE amount of stock: 2
+value of stock: $54.279998779296875
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.5400009155273438
+
+date: 2011-12-02
+funds in portfolio: $9972.290000915527
+
+stocks held in portfolio: 
+ADBE amount of stock: 1
+value of stock: $27.110000610351562
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.5999984741210938
+
+date: 2011-12-13
+funds in portfolio: $9945.30000114441
+
+stocks held in portfolio: 
+ADBE amount of stock: 2
+value of stock: $53.97999954223633
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.7199993133544922
+
+date: 2011-12-14
+funds in portfolio: $9971.820001602173
+
+stocks held in portfolio: 
+ADBE amount of stock: 1
+value of stock: $26.520000457763672
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-1.6599979400634766
+
+date: 2011-12-15
+funds in portfolio: $9945.3600025177
+
+stocks held in portfolio: 
+ADBE amount of stock: 2
+value of stock: $52.91999816894531
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-1.7199993133544922
+
+date: 2011-12-16
+funds in portfolio: $9973.56000328064
+
+stocks held in portfolio: 
+ADBE amount of stock: 1
+value of stock: $28.200000762939453
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $1.7600040435791016
+
+date: 2011-12-27
+funds in portfolio: $10002.06000328064
+
+stocks held in portfolio: 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $2.0600032806396484
+
+date: 2011-12-28
+funds in portfolio: $9974.040002822876
+
+stocks held in portfolio: 
+ADBE amount of stock: 1
+value of stock: $28.020000457763672
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $2.0600032806396484
+
+date: 2011-11-10
+funds in portfolio: $9971.969999313354
+
+stocks held in portfolio: 
+ADBE amount of stock: 1
+value of stock: $28.030000686645508
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2011-11-21
+funds in portfolio: $9969.852666378021
+
+stocks held in portfolio: 
+ADBE amount of stock: 1
+value of stock: $26.6299991607666
+ 
+TSLA amount of stock: 1
+value of stock: $2.117332935333252
+ 
+Overall profit/loss: $-1.4000015258789062
+
+date: 2011-12-06
+funds in portfolio: $9997.812665462494
+
+stocks held in portfolio: 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $2.324666976928711
+ 
+Overall profit/loss: $0.13733243942260742
+
+date: 2011-12-06
+funds in portfolio: $10000.137332439423
+
+stocks held in portfolio: 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.13733243942260742
+
+date: 2011-12-08
+funds in portfolio: $9998.077999353409
+
+stocks held in portfolio: 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $2.059333086013794
+ 
+Overall profit/loss: $0.13733243942260742
+
+date: 2011-12-14
+funds in portfolio: $9971.557998895645
+
+stocks held in portfolio: 
+ADBE amount of stock: 1
+value of stock: $26.520000457763672
+ 
+TSLA amount of stock: 1
+value of stock: $1.9019999504089355
+ 
+Overall profit/loss: $-0.020000696182250977
+
+date: 2011-12-16
+funds in portfolio: $9999.757999658585
+
+stocks held in portfolio: 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $1.8666670322418213
+ 
+Overall profit/loss: $1.624666690826416
+
+date: 2012-01-11
+funds in portfolio: $10001.639999628067
+
+stocks held in portfolio: 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $1.6399996280670166
+
+date: 2012-01-13
+funds in portfolio: $10000.120666623116
+
+stocks held in portfolio: 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $1.519333004951477
+ 
+Overall profit/loss: $1.6399996280670166
+
+date: 2012-01-20
+funds in portfolio: $10001.893999576569
+
+stocks held in portfolio: 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $1.8939995765686035
+

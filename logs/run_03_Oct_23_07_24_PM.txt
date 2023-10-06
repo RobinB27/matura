@@ -1,0 +1,60 @@
+date: 2019-09-16
+funds in portfolio: $9879.364624023438
+
+stocks held in portfolio: 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $120.6353759765625
+ 
+Overall profit/loss: $0.0
+
+date: 2019-09-20
+funds in portfolio: $9629.2939453125
+
+stocks held in portfolio: 
+AVGO amount of stock: 1
+value of stock: $250.0706787109375
+ 
+PEP amount of stock: 1
+value of stock: $120.48330688476562
+ 
+Overall profit/loss: $-0.152069091796875
+
+date: 2019-10-04
+funds in portfolio: $9754.758987426758
+
+stocks held in portfolio: 
+AVGO amount of stock: 1
+value of stock: $247.58102416992188
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $2.3400115966796875
+
+date: 2019-10-11
+funds in portfolio: $9631.65512084961
+
+stocks held in portfolio: 
+AVGO amount of stock: 1
+value of stock: $247.12364196777344
+ 
+PEP amount of stock: 1
+value of stock: $123.10386657714844
+ 
+Overall profit/loss: $1.88262939453125
+
+date: 2019-10-14
+funds in portfolio: $9879.438491821289
+
+stocks held in portfolio: 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $122.93392944335938
+ 
+Overall profit/loss: $2.3724212646484375
+

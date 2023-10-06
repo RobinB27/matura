@@ -1,0 +1,144 @@
+date: 2019-10-08
+funds in portfolio: $9729.170013427734
+
+stocks held in portfolio: 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $270.8299865722656
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2019-10-08
+funds in portfolio: $9685.063640594482
+
+stocks held in portfolio: 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $270.8299865722656
+ 
+NVDA amount of stock: 1
+value of stock: $44.10637283325195
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2019-10-09
+funds in portfolio: $9959.333629608154
+
+stocks held in portfolio: 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 1
+value of stock: $44.9724235534668
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $4.306053161621094
+
+date: 2019-10-09
+funds in portfolio: $10004.306053161621
+
+stocks held in portfolio: 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $4.306053161621094
+
+date: 2019-10-11
+funds in portfolio: $9881.202186584473
+
+stocks held in portfolio: 
+PEP amount of stock: 1
+value of stock: $123.10386657714844
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $4.306053161621094
+
+date: 2019-10-14
+funds in portfolio: $9881.202186584473
+
+stocks held in portfolio: 
+PEP amount of stock: 1
+value of stock: $122.93392944335938
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $4.136116027832031
+
+date: 2019-10-18
+funds in portfolio: $9615.6821975708
+
+stocks held in portfolio: 
+PEP amount of stock: 1
+value of stock: $121.86068725585938
+ 
+ADBE amount of stock: 1
+value of stock: $265.5199890136719
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $3.0628738403320312
+
+date: 2019-10-28
+funds in portfolio: $9887.032203674316
+
+stocks held in portfolio: 
+PEP amount of stock: 1
+value of stock: $122.14688873291016
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $9.179092407226562
+

@@ -37,15 +37,18 @@ class Stock:
         except KeyError: raise ValueError("Stock:\t Error: Unrecongnised ticker")
         
         self.cache = Cache(f"./TradingBot/Stock_Caches/Cache{ticker.capitalize()}")
-        self.stockHist = None
+        self.stockHistCache = Cache(f"./TradingBot/Stock_Hist_Caches/CacheStockHist{ticker.capitalize()}")
+        
+        if len(self.stockHistCache) == 0:
+                self.stockHistCache[0] = self.tickerObject.history(period="max")
         
         # Cache persist over sessions. If a cache is generated in, say, October 2023, the cache will be limited to the prices generated until October 2023.
         if len(self.cache) == 0:
             # This fails if no internet is available, obviously. The error message by yfinance does not state this though.
-            self.stockHist = self.tickerObject.history(period="max")
-            for index in self.stockHist.index:
-                key = index.strftime("%Y-%m-%d") # NOTE key is the same format as date
-                self.cache[key] = self.stockHist.loc[index, "Close"]
+                for index in self.stockHistCache[0].index:
+                    key = index.strftime("%Y-%m-%d") # NOTE key is the same format as date
+                    self.cache[key] = self.stockHistCache[0].loc[index, "Close"]
+
 
 
     def getPrice(self, mode: int, date: datetime = None) -> int:
@@ -96,7 +99,7 @@ class Stock:
             _type_: list -> int
         """
         date = DateHelper.format(date)
-        historical_data = self.stockHist
+        historical_data = self.stockHistCache[0]
         # Removes NaN rows
         historical_data = historical_data.dropna()
         historical_data = historical_data[historical_data.index <= date]

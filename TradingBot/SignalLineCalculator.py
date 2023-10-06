@@ -14,7 +14,7 @@ from Util.Config import Config
 class SignalLineCalculator:
     
     def __init__(self) -> None:
-        self.arrayLen = 34 # amount needed determined experimentally
+        self.arrayLen = 34 # amount needed determined experimentally for live mode
         self.stockPrices = np.zeros(self.arrayLen)
         self.firstRun = True
     
@@ -35,6 +35,6 @@ class SignalLineCalculator:
             return macd[-1], signal[-1]
             
         elif mode == -1: 
-            self.stockPrices = stock.getPricesUntilDate(date)
+            self.stockPrices = stock.getPricesUntilDate(date) # more values improve accuracy for talib.MACD
             macd, signal, hist = talib.MACD(np.array(self.stockPrices), fastperiod=12, slowperiod=26, signalperiod=9) #hist needed bc talib.MACD returns 3 values
             return macd[-1], signal[-1]

@@ -1,0 +1,2454 @@
+date: 2015-09-23
+funds in portfolio: $9901.175109863281
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 1
+value of stock: $98.82489013671875
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2015-09-25
+funds in portfolio: $9870.576610565186
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $30.598499298095703
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 1
+value of stock: $99.76953125
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.94464111328125
+
+date: 2015-09-25
+funds in portfolio: $9838.569110870361
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $30.598499298095703
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 1
+value of stock: $32.00749969482422
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 1
+value of stock: $99.76953125
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.94464111328125
+
+date: 2015-09-29
+funds in portfolio: $9813.820484161377
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $29.74850082397461
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 1
+value of stock: $31.13050079345703
+ 
+AAPL amount of stock: 1
+value of stock: $24.748626708984375
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 1
+value of stock: $94.20404052734375
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-6.347846984863281
+
+date: 2015-09-29
+funds in portfolio: $9797.377151489258
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $29.74850082397461
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 1
+value of stock: $31.13050079345703
+ 
+AAPL amount of stock: 1
+value of stock: $24.748626708984375
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $16.44333267211914
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 1
+value of stock: $94.20404052734375
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-6.347846984863281
+
+date: 2015-10-05
+funds in portfolio: $9829.450653076172
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 1
+value of stock: $33.58399963378906
+ 
+AAPL amount of stock: 1
+value of stock: $25.13894271850586
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $16.40999984741211
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 1
+value of stock: $95.42418670654297
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.007781982421875
+
+date: 2015-10-05
+funds in portfolio: $9863.034652709961
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $25.13894271850586
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $16.40999984741211
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 1
+value of stock: $95.42418670654297
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.007781982421875
+
+date: 2015-10-08
+funds in portfolio: $9780.77465057373
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $24.848482131958008
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $15.114666938781738
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 1
+value of stock: $91.85819244384766
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $82.26000213623047
+ 
+Overall profit/loss: $-5.14400577545166
+
+date: 2015-10-09
+funds in portfolio: $9864.594650268555
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $25.44302749633789
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $14.712667465209961
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 1
+value of stock: $92.03137969970703
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-3.2182750701904297
+
+date: 2015-10-12
+funds in portfolio: $9889.91967201233
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $14.371999740600586
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 1
+value of stock: $92.63750457763672
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-3.0708236694335938
+
+date: 2015-10-16
+funds in portfolio: $9985.225770950317
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $15.133999824523926
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.3597707748413086
+
+date: 2015-10-29
+funds in portfolio: $9978.495106697083
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $14.108667373657227
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 1
+value of stock: $6.730664253234863
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.6655616760253906
+
+date: 2015-11-02
+funds in portfolio: $9955.947083473206
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 1
+value of stock: $22.548023223876953
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 1
+value of stock: $14.252667427062988
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 1
+value of stock: $6.978687286376953
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.27353858947753906
+
+date: 2015-11-02
+funds in portfolio: $9970.199750900269
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 1
+value of stock: $22.548023223876953
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 1
+value of stock: $6.978687286376953
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.27353858947753906
+
+date: 2015-11-02
+funds in portfolio: $9889.64235496521
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 1
+value of stock: $22.548023223876953
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $80.5573959350586
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 1
+value of stock: $6.978687286376953
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.27353858947753906
+
+date: 2015-11-04
+funds in portfolio: $9753.004949569702
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 1
+value of stock: $22.31290626525879
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 1
+value of stock: $136.6374053955078
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $79.93773651123047
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 1
+value of stock: $6.815769195556641
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-1.2912330627441406
+
+date: 2015-11-06
+funds in portfolio: $9760.676641464233
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 1
+value of stock: $22.297229766845703
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 1
+value of stock: $136.98519897460938
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $79.22272491455078
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-0.8182048797607422
+
+date: 2015-11-10
+funds in portfolio: $9713.34665107727
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 1
+value of stock: $21.928871154785156
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 1
+value of stock: $136.34547424316406
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $78.51567077636719
+ 
+MSFT amount of stock: 1
+value of stock: $47.32999038696289
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $-2.5333423614501953
+
+date: 2015-11-10
+funds in portfolio: $9623.066652297974
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 1
+value of stock: $21.928871154785156
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 1
+value of stock: $136.34547424316406
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $78.51567077636719
+ 
+MSFT amount of stock: 1
+value of stock: $47.32999038696289
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $90.27999877929688
+ 
+Overall profit/loss: $-2.5333423614501953
+
+date: 2015-11-11
+funds in portfolio: $9596.605405807495
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 1
+value of stock: $21.803478240966797
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $26.461246490478516
+ 
+COST amount of stock: 1
+value of stock: $136.3280487060547
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $78.99234008789062
+ 
+MSFT amount of stock: 1
+value of stock: $47.453834533691406
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $91.20999908447266
+ 
+Overall profit/loss: $-1.1456470489501953
+
+date: 2015-11-11
+funds in portfolio: $9502.180959701538
+
+stocks held in portfolio: 
+GOOG amount of stock: 0
+value of stock: $0.0
+ 
+CSCO amount of stock: 1
+value of stock: $21.803478240966797
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $26.461246490478516
+ 
+COST amount of stock: 1
+value of stock: $136.3280487060547
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $78.99234008789062
+ 
+MSFT amount of stock: 1
+value of stock: $47.453834533691406
+ 
+AVGO amount of stock: 1
+value of stock: $94.42444610595703
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $91.20999908447266
+ 
+Overall profit/loss: $-1.1456470489501953
+
+date: 2015-11-13
+funds in portfolio: $9466.330961227417
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $35.849998474121094
+ 
+CSCO amount of stock: 1
+value of stock: $20.54166603088379
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 1
+value of stock: $25.602067947387695
+ 
+COST amount of stock: 1
+value of stock: $133.95700073242188
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $77.88804626464844
+ 
+MSFT amount of stock: 1
+value of stock: $46.73739242553711
+ 
+AVGO amount of stock: 1
+value of stock: $92.52729797363281
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $89.0199966430664
+ 
+Overall profit/loss: $-11.545572280883789
+
+date: 2015-11-13
+funds in portfolio: $9429.327459335327
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $35.849998474121094
+ 
+CSCO amount of stock: 1
+value of stock: $20.54166603088379
+ 
+GOOGL amount of stock: 1
+value of stock: $37.003501892089844
+ 
+AAPL amount of stock: 1
+value of stock: $25.602067947387695
+ 
+COST amount of stock: 1
+value of stock: $133.95700073242188
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $77.88804626464844
+ 
+MSFT amount of stock: 1
+value of stock: $46.73739242553711
+ 
+AVGO amount of stock: 1
+value of stock: $92.52729797363281
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $89.0199966430664
+ 
+Overall profit/loss: $-11.545572280883789
+
+date: 2015-11-16
+funds in portfolio: $9421.935401916504
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $36.448001861572266
+ 
+CSCO amount of stock: 1
+value of stock: $20.996231079101562
+ 
+GOOGL amount of stock: 1
+value of stock: $37.520999908447266
+ 
+AAPL amount of stock: 1
+value of stock: $26.021404266357422
+ 
+COST amount of stock: 1
+value of stock: $136.38035583496094
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $79.0956039428711
+ 
+MSFT amount of stock: 1
+value of stock: $47.55998611450195
+ 
+AVGO amount of stock: 1
+value of stock: $95.62100219726562
+ 
+NVDA amount of stock: 1
+value of stock: $7.392057418823242
+ 
+ADBE amount of stock: 1
+value of stock: $89.7699966430664
+ 
+Overall profit/loss: $-1.2589588165283203
+
+date: 2015-11-18
+funds in portfolio: $9521.059425354004
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $37.0
+ 
+CSCO amount of stock: 1
+value of stock: $21.254859924316406
+ 
+GOOGL amount of stock: 1
+value of stock: $38.0004997253418
+ 
+AAPL amount of stock: 1
+value of stock: $26.73017120361328
+ 
+COST amount of stock: 1
+value of stock: $140.56459045410156
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $79.65968322753906
+ 
+MSFT amount of stock: 1
+value of stock: $47.951778411865234
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 1
+value of stock: $7.573897361755371
+ 
+ADBE amount of stock: 1
+value of stock: $91.2699966430664
+ 
+Overall profit/loss: $11.064902305603027
+
+date: 2015-11-19
+funds in portfolio: $9663.001319885254
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $36.920501708984375
+ 
+CSCO amount of stock: 1
+value of stock: $21.450796127319336
+ 
+GOOGL amount of stock: 1
+value of stock: $37.99700164794922
+ 
+AAPL amount of stock: 1
+value of stock: $27.06973648071289
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $80.18401336669922
+ 
+MSFT amount of stock: 1
+value of stock: $48.03192138671875
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 1
+value of stock: $7.595868110656738
+ 
+ADBE amount of stock: 1
+value of stock: $91.76000213623047
+ 
+Overall profit/loss: $14.011160850524902
+
+date: 2015-11-20
+funds in portfolio: $9670.66308927536
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $37.83000183105469
+ 
+CSCO amount of stock: 1
+value of stock: $21.6075439453125
+ 
+GOOGL amount of stock: 1
+value of stock: $38.849998474121094
+ 
+AAPL amount of stock: 1
+value of stock: $27.188243865966797
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $79.52461242675781
+ 
+MSFT amount of stock: 1
+value of stock: $48.25453567504883
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $91.80999755859375
+ 
+Overall profit/loss: $15.728023052215576
+
+date: 2015-11-23
+funds in portfolio: $9663.11603975296
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $37.79899978637695
+ 
+CSCO amount of stock: 1
+value of stock: $21.49782371520996
+ 
+GOOGL amount of stock: 1
+value of stock: $38.834999084472656
+ 
+AAPL amount of stock: 1
+value of stock: $26.83500099182129
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $80.12047576904297
+ 
+MSFT amount of stock: 1
+value of stock: $48.25453567504883
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 1
+value of stock: $7.547049522399902
+ 
+ADBE amount of stock: 1
+value of stock: $91.95999908447266
+ 
+Overall profit/loss: $15.96492338180542
+
+date: 2015-12-01
+funds in portfolio: $9522.51658296585
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $38.35200119018555
+ 
+CSCO amount of stock: 1
+value of stock: $21.6075439453125
+ 
+GOOGL amount of stock: 1
+value of stock: $39.18949890136719
+ 
+AAPL amount of stock: 1
+value of stock: $26.741558074951172
+ 
+COST amount of stock: 1
+value of stock: $140.59945678710938
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $80.28728485107422
+ 
+MSFT amount of stock: 1
+value of stock: $49.1717414855957
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 1
+value of stock: $7.993722438812256
+ 
+ADBE amount of stock: 1
+value of stock: $92.55000305175781
+ 
+Overall profit/loss: $19.0093936920166
+
+date: 2015-12-01
+funds in portfolio: $9530.510305404663
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $38.35200119018555
+ 
+CSCO amount of stock: 1
+value of stock: $21.6075439453125
+ 
+GOOGL amount of stock: 1
+value of stock: $39.18949890136719
+ 
+AAPL amount of stock: 1
+value of stock: $26.741558074951172
+ 
+COST amount of stock: 1
+value of stock: $140.59945678710938
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $80.28728485107422
+ 
+MSFT amount of stock: 1
+value of stock: $49.1717414855957
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $92.55000305175781
+ 
+Overall profit/loss: $19.0093936920166
+
+date: 2015-12-04
+funds in portfolio: $9675.912954330444
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $38.34049987792969
+ 
+CSCO amount of stock: 1
+value of stock: $21.53700828552246
+ 
+GOOGL amount of stock: 1
+value of stock: $38.96049880981445
+ 
+AAPL amount of stock: 1
+value of stock: $27.126707077026367
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $80.8497085571289
+ 
+MSFT amount of stock: 1
+value of stock: $49.78614044189453
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $92.58000183105469
+ 
+Overall profit/loss: $25.09351921081543
+
+date: 2015-12-04
+funds in portfolio: $9756.762662887573
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $38.34049987792969
+ 
+CSCO amount of stock: 1
+value of stock: $21.53700828552246
+ 
+GOOGL amount of stock: 1
+value of stock: $38.96049880981445
+ 
+AAPL amount of stock: 1
+value of stock: $27.126707077026367
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 1
+value of stock: $49.78614044189453
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $92.58000183105469
+ 
+Overall profit/loss: $25.09351921081543
+
+date: 2015-12-07
+funds in portfolio: $9778.307508468628
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $38.162498474121094
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 1
+value of stock: $38.64950180053711
+ 
+AAPL amount of stock: 1
+value of stock: $26.95578384399414
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 1
+value of stock: $49.697105407714844
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $89.5999984741211
+ 
+Overall profit/loss: $21.37239646911621
+
+date: 2015-12-09
+funds in portfolio: $9757.35830116272
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $37.580501556396484
+ 
+CSCO amount of stock: 1
+value of stock: $20.949207305908203
+ 
+GOOGL amount of stock: 1
+value of stock: $38.127498626708984
+ 
+AAPL amount of stock: 1
+value of stock: $26.349578857421875
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 1
+value of stock: $48.9580078125
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $89.55999755859375
+ 
+Overall profit/loss: $18.883092880249023
+
+date: 2015-12-09
+funds in portfolio: $9618.127405166626
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $37.580501556396484
+ 
+CSCO amount of stock: 1
+value of stock: $20.949207305908203
+ 
+GOOGL amount of stock: 1
+value of stock: $38.127498626708984
+ 
+AAPL amount of stock: 1
+value of stock: $26.349578857421875
+ 
+COST amount of stock: 1
+value of stock: $139.23089599609375
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 1
+value of stock: $48.9580078125
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $89.55999755859375
+ 
+Overall profit/loss: $18.883092880249023
+
+date: 2015-12-09
+funds in portfolio: $9538.821725845337
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $37.580501556396484
+ 
+CSCO amount of stock: 1
+value of stock: $20.949207305908203
+ 
+GOOGL amount of stock: 1
+value of stock: $38.127498626708984
+ 
+AAPL amount of stock: 1
+value of stock: $26.349578857421875
+ 
+COST amount of stock: 1
+value of stock: $139.23089599609375
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $79.30567932128906
+ 
+MSFT amount of stock: 1
+value of stock: $48.9580078125
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $89.55999755859375
+ 
+Overall profit/loss: $18.883092880249023
+
+date: 2015-12-10
+funds in portfolio: $9530.771862983704
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $37.472999572753906
+ 
+CSCO amount of stock: 1
+value of stock: $20.980558395385742
+ 
+GOOGL amount of stock: 1
+value of stock: $38.00199890136719
+ 
+AAPL amount of stock: 1
+value of stock: $26.474918365478516
+ 
+COST amount of stock: 1
+value of stock: $141.09634399414062
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $79.12168884277344
+ 
+MSFT amount of stock: 1
+value of stock: $49.21626281738281
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 1
+value of stock: $8.0498628616333
+ 
+ADBE amount of stock: 1
+value of stock: $88.95999908447266
+ 
+Overall profit/loss: $20.146495819091797
+
+date: 2015-12-11
+funds in portfolio: $9516.303862571716
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $36.94350051879883
+ 
+CSCO amount of stock: 1
+value of stock: $20.502479553222656
+ 
+GOOGL amount of stock: 1
+value of stock: $37.520999908447266
+ 
+AAPL amount of stock: 1
+value of stock: $25.79351234436035
+ 
+COST amount of stock: 1
+value of stock: $139.4923858642578
+ 
+TSLA amount of stock: 1
+value of stock: $14.468000411987305
+ 
+PEP amount of stock: 1
+value of stock: $78.22564697265625
+ 
+MSFT amount of stock: 1
+value of stock: $48.1387825012207
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 1
+value of stock: $7.930261611938477
+ 
+ADBE amount of stock: 1
+value of stock: $91.41999816894531
+ 
+Overall profit/loss: $16.73943042755127
+
+date: 2015-12-15
+funds in portfolio: $9610.323859214783
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $37.16999816894531
+ 
+CSCO amount of stock: 1
+value of stock: $21.043258666992188
+ 
+GOOGL amount of stock: 1
+value of stock: $38.00450134277344
+ 
+AAPL amount of stock: 1
+value of stock: $25.18045997619629
+ 
+COST amount of stock: 1
+value of stock: $140.59945678710938
+ 
+TSLA amount of stock: 1
+value of stock: $14.739333152770996
+ 
+PEP amount of stock: 1
+value of stock: $79.51371002197266
+ 
+MSFT amount of stock: 1
+value of stock: $49.1539192199707
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 1
+value of stock: $8.047419548034668
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $23.77591609954834
+
+date: 2015-12-17
+funds in portfolio: $9625.883192062378
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $37.471500396728516
+ 
+CSCO amount of stock: 1
+value of stock: $20.94137191772461
+ 
+GOOGL amount of stock: 1
+value of stock: $38.49150085449219
+ 
+AAPL amount of stock: 1
+value of stock: $24.836334228515625
+ 
+COST amount of stock: 1
+value of stock: $140.06776428222656
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $80.16167449951172
+ 
+MSFT amount of stock: 1
+value of stock: $49.599151611328125
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 1
+value of stock: $7.974196434020996
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $25.42668628692627
+
+date: 2015-12-17
+funds in portfolio: $9706.04486656189
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $37.471500396728516
+ 
+CSCO amount of stock: 1
+value of stock: $20.94137191772461
+ 
+GOOGL amount of stock: 1
+value of stock: $38.49150085449219
+ 
+AAPL amount of stock: 1
+value of stock: $24.836334228515625
+ 
+COST amount of stock: 1
+value of stock: $140.06776428222656
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 1
+value of stock: $49.599151611328125
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 1
+value of stock: $7.974196434020996
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $25.42668628692627
+
+date: 2015-12-17
+funds in portfolio: $9595.118551254272
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $37.471500396728516
+ 
+CSCO amount of stock: 1
+value of stock: $20.94137191772461
+ 
+GOOGL amount of stock: 1
+value of stock: $38.49150085449219
+ 
+AAPL amount of stock: 1
+value of stock: $24.836334228515625
+ 
+COST amount of stock: 1
+value of stock: $140.06776428222656
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 1
+value of stock: $49.599151611328125
+ 
+AVGO amount of stock: 1
+value of stock: $110.92631530761719
+ 
+NVDA amount of stock: 1
+value of stock: $7.974196434020996
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $25.42668628692627
+
+date: 2015-12-18
+funds in portfolio: $9516.796895980835
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $36.96549987792969
+ 
+CSCO amount of stock: 1
+value of stock: $20.58869171142578
+ 
+GOOGL amount of stock: 1
+value of stock: $37.842498779296875
+ 
+AAPL amount of stock: 1
+value of stock: $24.164037704467773
+ 
+COST amount of stock: 1
+value of stock: $137.47003173828125
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $78.3216552734375
+ 
+MSFT amount of stock: 1
+value of stock: $48.201107025146484
+ 
+AVGO amount of stock: 1
+value of stock: $110.7052230834961
+ 
+NVDA amount of stock: 1
+value of stock: $7.844831466674805
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $18.90047264099121
+
+date: 2015-12-21
+funds in portfolio: $9425.176893234253
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $37.38850021362305
+ 
+CSCO amount of stock: 1
+value of stock: $20.8786678314209
+ 
+GOOGL amount of stock: 1
+value of stock: $38.040000915527344
+ 
+AAPL amount of stock: 1
+value of stock: $24.460302352905273
+ 
+COST amount of stock: 1
+value of stock: $138.94322204589844
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $78.89767456054688
+ 
+MSFT amount of stock: 1
+value of stock: $48.82443618774414
+ 
+AVGO amount of stock: 1
+value of stock: $115.12711334228516
+ 
+NVDA amount of stock: 1
+value of stock: $8.030335426330566
+ 
+ADBE amount of stock: 1
+value of stock: $91.62000274658203
+ 
+Overall profit/loss: $27.3871488571167
+
+date: 2015-12-22
+funds in portfolio: $9518.996892929077
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $37.5
+ 
+CSCO amount of stock: 1
+value of stock: $21.074604034423828
+ 
+GOOGL amount of stock: 1
+value of stock: $38.35649871826172
+ 
+AAPL amount of stock: 1
+value of stock: $24.437517166137695
+ 
+COST amount of stock: 1
+value of stock: $140.54714965820312
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $79.8416976928711
+ 
+MSFT amount of stock: 1
+value of stock: $49.2874870300293
+ 
+AVGO amount of stock: 1
+value of stock: $114.5743408203125
+ 
+NVDA amount of stock: 1
+value of stock: $8.037654876708984
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $32.65384292602539
+
+date: 2015-12-23
+funds in portfolio: $9540.471199035645
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $37.515499114990234
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 1
+value of stock: $38.425498962402344
+ 
+AAPL amount of stock: 1
+value of stock: $24.752010345458984
+ 
+COST amount of stock: 1
+value of stock: $140.96559143066406
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 1
+value of stock: $80.513671875
+ 
+MSFT amount of stock: 1
+value of stock: $49.705997467041016
+ 
+AVGO amount of stock: 1
+value of stock: $115.68772888183594
+ 
+NVDA amount of stock: 1
+value of stock: $8.069387435913086
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $36.106584548950195
+
+date: 2015-12-23
+funds in portfolio: $9620.984870910645
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $37.515499114990234
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 1
+value of stock: $38.425498962402344
+ 
+AAPL amount of stock: 1
+value of stock: $24.752010345458984
+ 
+COST amount of stock: 1
+value of stock: $140.96559143066406
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 1
+value of stock: $49.705997467041016
+ 
+AVGO amount of stock: 1
+value of stock: $115.68772888183594
+ 
+NVDA amount of stock: 1
+value of stock: $8.069387435913086
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $36.106584548950195
+
+date: 2015-09-21
+funds in portfolio: $9968.22800064087
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $31.77199935913086
+ 
+CSCO amount of stock: 0
+value of stock: $0.0
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2015-09-21
+funds in portfolio: $9948.371566772461
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $31.77199935913086
+ 
+CSCO amount of stock: 1
+value of stock: $19.856433868408203
+ 
+GOOGL amount of stock: 0
+value of stock: $0.0
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2015-09-21
+funds in portfolio: $9915.022567749023
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $31.77199935913086
+ 
+CSCO amount of stock: 1
+value of stock: $19.856433868408203
+ 
+GOOGL amount of stock: 1
+value of stock: $33.3489990234375
+ 
+AAPL amount of stock: 0
+value of stock: $0.0
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2015-09-21
+funds in portfolio: $9888.878339767456
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $31.77199935913086
+ 
+CSCO amount of stock: 1
+value of stock: $19.856433868408203
+ 
+GOOGL amount of stock: 1
+value of stock: $33.3489990234375
+ 
+AAPL amount of stock: 1
+value of stock: $26.144227981567383
+ 
+COST amount of stock: 0
+value of stock: $0.0
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2015-09-21
+funds in portfolio: $9764.361371994019
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $31.77199935913086
+ 
+CSCO amount of stock: 1
+value of stock: $19.856433868408203
+ 
+GOOGL amount of stock: 1
+value of stock: $33.3489990234375
+ 
+AAPL amount of stock: 1
+value of stock: $26.144227981567383
+ 
+COST amount of stock: 1
+value of stock: $124.5169677734375
+ 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2015-09-21
+funds in portfolio: $9746.748039245605
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $31.77199935913086
+ 
+CSCO amount of stock: 1
+value of stock: $19.856433868408203
+ 
+GOOGL amount of stock: 1
+value of stock: $33.3489990234375
+ 
+AAPL amount of stock: 1
+value of stock: $26.144227981567383
+ 
+COST amount of stock: 1
+value of stock: $124.5169677734375
+ 
+TSLA amount of stock: 1
+value of stock: $17.613332748413086
+ 
+PEP amount of stock: 0
+value of stock: $0.0
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2015-09-21
+funds in portfolio: $9672.29997253418
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $31.77199935913086
+ 
+CSCO amount of stock: 1
+value of stock: $19.856433868408203
+ 
+GOOGL amount of stock: 1
+value of stock: $33.3489990234375
+ 
+AAPL amount of stock: 1
+value of stock: $26.144227981567383
+ 
+COST amount of stock: 1
+value of stock: $124.5169677734375
+ 
+TSLA amount of stock: 1
+value of stock: $17.613332748413086
+ 
+PEP amount of stock: 1
+value of stock: $74.44806671142578
+ 
+MSFT amount of stock: 0
+value of stock: $0.0
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2015-09-21
+funds in portfolio: $9633.28434753418
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $31.77199935913086
+ 
+CSCO amount of stock: 1
+value of stock: $19.856433868408203
+ 
+GOOGL amount of stock: 1
+value of stock: $33.3489990234375
+ 
+AAPL amount of stock: 1
+value of stock: $26.144227981567383
+ 
+COST amount of stock: 1
+value of stock: $124.5169677734375
+ 
+TSLA amount of stock: 1
+value of stock: $17.613332748413086
+ 
+PEP amount of stock: 1
+value of stock: $74.44806671142578
+ 
+MSFT amount of stock: 1
+value of stock: $39.015625
+ 
+AVGO amount of stock: 0
+value of stock: $0.0
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2015-09-21
+funds in portfolio: $9533.10546875
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $31.77199935913086
+ 
+CSCO amount of stock: 1
+value of stock: $19.856433868408203
+ 
+GOOGL amount of stock: 1
+value of stock: $33.3489990234375
+ 
+AAPL amount of stock: 1
+value of stock: $26.144227981567383
+ 
+COST amount of stock: 1
+value of stock: $124.5169677734375
+ 
+TSLA amount of stock: 1
+value of stock: $17.613332748413086
+ 
+PEP amount of stock: 1
+value of stock: $74.44806671142578
+ 
+MSFT amount of stock: 1
+value of stock: $39.015625
+ 
+AVGO amount of stock: 1
+value of stock: $100.17887878417969
+ 
+NVDA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2015-09-21
+funds in portfolio: $9527.383918762207
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $31.77199935913086
+ 
+CSCO amount of stock: 1
+value of stock: $19.856433868408203
+ 
+GOOGL amount of stock: 1
+value of stock: $33.3489990234375
+ 
+AAPL amount of stock: 1
+value of stock: $26.144227981567383
+ 
+COST amount of stock: 1
+value of stock: $124.5169677734375
+ 
+TSLA amount of stock: 1
+value of stock: $17.613332748413086
+ 
+PEP amount of stock: 1
+value of stock: $74.44806671142578
+ 
+MSFT amount of stock: 1
+value of stock: $39.015625
+ 
+AVGO amount of stock: 1
+value of stock: $100.17887878417969
+ 
+NVDA amount of stock: 1
+value of stock: $5.721549987792969
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2015-09-21
+funds in portfolio: $9444.063919067383
+
+stocks held in portfolio: 
+GOOG amount of stock: 1
+value of stock: $31.77199935913086
+ 
+CSCO amount of stock: 1
+value of stock: $19.856433868408203
+ 
+GOOGL amount of stock: 1
+value of stock: $33.3489990234375
+ 
+AAPL amount of stock: 1
+value of stock: $26.144227981567383
+ 
+COST amount of stock: 1
+value of stock: $124.5169677734375
+ 
+TSLA amount of stock: 1
+value of stock: $17.613332748413086
+ 
+PEP amount of stock: 1
+value of stock: $74.44806671142578
+ 
+MSFT amount of stock: 1
+value of stock: $39.015625
+ 
+AVGO amount of stock: 1
+value of stock: $100.17887878417969
+ 
+NVDA amount of stock: 1
+value of stock: $5.721549987792969
+ 
+ADBE amount of stock: 1
+value of stock: $83.31999969482422
+ 
+Overall profit/loss: $0.0
+
+date: 2018-03-13
+funds in portfolio: $10000
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2018-03-14
+funds in portfolio: $9978.224666595459
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $21.775333404541016
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2018-03-23
+funds in portfolio: $9763.204662322998
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $20.1026668548584
+ 
+ADBE amount of stock: 1
+value of stock: $215.02000427246094
+ 
+Overall profit/loss: $-1.6726665496826172
+
+date: 2018-04-06
+funds in portfolio: $9783.157995223999
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $218.61000061035156
+ 
+Overall profit/loss: $1.767995834350586
+
+date: 2018-04-12
+funds in portfolio: $10010.118001937866
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $10.118001937866211
+
+date: 2018-04-13
+funds in portfolio: $9786.058004379272
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $224.05999755859375
+ 
+Overall profit/loss: $10.118001937866211
+
+date: 2018-04-16
+funds in portfolio: $10012.578008651733
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $12.578008651733398
+
+date: 2018-04-23
+funds in portfolio: $9787.278005599976
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $225.3000030517578
+ 
+Overall profit/loss: $12.578008651733398
+
+date: 2018-05-07
+funds in portfolio: $10018.26801109314
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $18.26801109313965
+
+date: 2018-05-16
+funds in portfolio: $9999.169343948364
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $19.09866714477539
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $18.26801109313965
+
+date: 2018-05-30
+funds in portfolio: $10018.617343902588
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $18.61734390258789
+
+date: 2018-06-11
+funds in portfolio: $9767.617343902588
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $251.0
+ 
+Overall profit/loss: $18.61734390258789
+
+date: 2018-06-13
+funds in portfolio: $10023.7473487854
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $23.74734878540039
+
+date: 2018-06-15
+funds in portfolio: $9771.927341461182
+
+stocks held in portfolio: 
+TSLA amount of stock: 0
+value of stock: $0.0
+ 
+ADBE amount of stock: 1
+value of stock: $251.82000732421875
+ 
+Overall profit/loss: $23.74734878540039
+
+date: 2018-03-08
+funds in portfolio: $9978.059999465942
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $21.940000534057617
+ 
+ADBE amount of stock: 0
+value of stock: $0.0
+ 
+Overall profit/loss: $0.0
+
+date: 2018-03-08
+funds in portfolio: $9761.660005569458
+
+stocks held in portfolio: 
+TSLA amount of stock: 1
+value of stock: $21.940000534057617
+ 
+ADBE amount of stock: 1
+value of stock: $216.39999389648438
+ 
+Overall profit/loss: $0.0
+
