@@ -7,7 +7,7 @@ algorithm SimpleSentiment strategy
 
     for every iteration:
         for every stock in Portfolio:
-            currentSentimentScore = getCurrentSentimentScore()
+            input: currentSentimentScore
 
             scoreDifference = currentSentimentScore - previousSentimentScore
 
@@ -19,3 +19,4 @@ algorithm SimpleSentiment strategy
                 ignore Stock
             
             previousSentimentScore = currentSentimentScore
+    
