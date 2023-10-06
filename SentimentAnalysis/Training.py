@@ -9,98 +9,153 @@ from nltk.corpus import stopwords
 from nltk.tag import pos_tag
 from nltk.tokenize import word_tokenize
 from nltk import classify, NaiveBayesClassifier
+from nltk.metrics.confusionmatrix import ConfusionMatrix
 
-from SentimentAnalysis.FileHandling import readData
+from SentimentAnalysis.FileHandling import FileHandling
 
 import string, random, pickle
 
-def remove_noise(tokens, stop_words = ()):
-    """Removes noises from tokens: Stopwords are removed and words are converted into their lemmas
-
-    Args:
-        tokens (list): tokenised version of an example string
-        stop_words (tuple, optional): List of stop words that should be excluded. Defaults to ().
-
-    Returns:
-        list: cleaned tokens
+class Training:
     """
-    cleaned_tokens = []
+    Class providing methods for traing a Naive Bayes Classifier and saving it to the models folder.
+    """
 
-    # pos_tag returns tuple (token, tag)
-    for token, tag in pos_tag(tokens):
+    def remove_noise(tokens, stop_words = ()):
+        """Removes noises from tokens: Stopwords are removed and words are converted into their lemmas
 
-        if tag.startswith("NN"): pos = 'n'
-        elif tag.startswith('VB'): pos = 'v'
-        else: pos = 'a'
+        Args:
+            tokens (list): tokenised version of an example string
+            stop_words (tuple, optional): List of stop words that should be excluded. Defaults to ().
 
-        lemmatizer = WordNetLemmatizer()
-        token = lemmatizer.lemmatize(token, pos)
+        Returns:
+            list: cleaned tokens
+        """
+        cleaned_tokens = []
 
-        # Remove punctuation and stop words, token is converted to lowercase
-        if token not in string.punctuation and token.lower() not in stop_words:
-            cleaned_tokens.append(token.lower())
+        # pos_tag returns tuple (token, tag)
+        for token, tag in pos_tag(tokens):
+
+            if tag.startswith("NN"): pos = 'n'
+            elif tag.startswith('VB'): pos = 'v'
+            else: pos = 'a'
+
+            lemmatizer = WordNetLemmatizer()
+            token = lemmatizer.lemmatize(token, pos)
+
+            # Remove punctuation and stop words, token is converted to lowercase
+            if token not in string.punctuation and token.lower() not in stop_words:
+                cleaned_tokens.append(token.lower())
+                
+        return cleaned_tokens
+
+    def getClassifierInfo(classifier):
+        """
+        Generates a confusion matrix of a classifier using the last 30% of the dataset, which the classifier has not previously seen.\n
+        Also prints the accuracy and most relevant features of the classifier.
+        """
+        
+        test_data = Training.getSplitDataset()[1]
+        
+        # Make confusion matrix based on test data
+        # From: https://www.nltk.org/api/nltk.metrics.confusionmatrix.html
+        
+        # reference is labels from testdata
+        reference = [data[1] for data in test_data]
+        # test is labels as classified by the classifier based on testdata
+        test = [classifier.classify(data[0]) for data in test_data]
+        matrix = ConfusionMatrix(reference, test)
+        print(matrix)
+        print("Accuracy is:", classify.accuracy(classifier, test_data))
+        print(classifier.show_most_informative_features(10))
+     
+    def getDataset() -> list:
+        """Prepares the dataset for use by the naive bayes classifier.
+
+        Returns:
+            list: cleaned dataset
+        """
+        stop_words = stopwords.words('english')
+        dataset = FileHandling.readData()
+        
+        # Tokenize and prepare all data in the dataset
+        for index, data in enumerate(dataset):
+            # Extract and prepare data
+            key = list(data[0].keys())[0]
+            tokens = Training.remove_noise(word_tokenize(key), stop_words)
             
-    return cleaned_tokens
+            # Reintegrate token into dataset
+            replacement = {}
+            for token in tokens:
+                replacement[token] = True
+            
+            dataset[index][0] = replacement
 
-
-def trainClassifier():
-    """Trains a Naive Bayes Classifier using the dataset
-
-    Returns:
-        Classifier: The trained classifier
-    """
-
-    stop_words = stopwords.words('english')
-    dataset = readData()
-    
-    # Tokenize and prepare all data in the dataset
-    for index, data in enumerate(dataset):
-        # Extract and prepare data
-        key = list(data[0].keys())[0]
-        tokens = remove_noise(word_tokenize(key), stop_words)
+        random.shuffle(dataset)
         
-        # Reintegrate token into dataset
-        replacement = {}
-        for token in tokens:
-            replacement[token] = True
-        
-        dataset[index][0] = replacement
-
-    random.shuffle(dataset)
+        return dataset
     
-    # Split dataset into Training and Test sets
-    setMaxIndex = len(dataset) - 1
-    testRatio = 0.7
+    def getSplitDataset() -> tuple[list, list]:
+        """Returns training and test dataset
 
-    testAmount = int(setMaxIndex * testRatio)
-
-    train_data = dataset[:testAmount]
-    test_data = dataset[testAmount:]
-
-    # Train classifier
-    classifier = NaiveBayesClassifier.train(train_data)
-
-    # Print useful information on classifier Training
-    print("Accuracy is:", classify.accuracy(classifier, test_data))
-    print(classifier.show_most_informative_features(10))
-
-    # Manually entered headline to test the Classifier with
-    custom_Headline = "insert Headline"
-    custom_tokens = remove_noise(word_tokenize(custom_Headline))
-
-    print(custom_Headline, classifier.classify(dict([token, True] for token in custom_tokens)))
-    
-    return classifier
-
-def saveClassifier(classifier) -> None:
-    path = "SentimentAnalysis/models/classifier.txt"
-    with open(path, 'wb') as infile:
-        pickle.dump(classifier, infile)
-
-def loadClassifier():
-    path = "SentimentAnalysis/models/classifier.txt"
-    classifier = None
-    with open(path, "rb") as outfile:
-        classifier = pickle.load(outfile)
+        Returns:
+            tuple(list, list): Training dataset, test dataset
+        """
+        dataset = Training.getDataset()
         
-    return classifier
+        # Split dataset into Training and Test sets
+        setMaxIndex = len(dataset) - 1
+        testRatio = 0.7
+
+        testAmount = int(setMaxIndex * testRatio)
+
+        train_data = dataset[:testAmount]
+        test_data = dataset[testAmount:]
+        
+        return train_data, test_data
+           
+
+    def trainClassifier():
+        """Trains a Naive Bayes Classifier using the dataset
+
+        Returns:
+            Classifier: The trained classifier
+        """
+        train_data, test_data = Training.getSplitDataset()
+
+        # Train classifier
+        classifier = NaiveBayesClassifier.train(train_data)
+
+        # Print useful information on classifier Training
+        print("Accuracy is:", classify.accuracy(classifier, test_data))
+        print(classifier.show_most_informative_features(10))
+
+        # Manually entered fictional headline to test the Classifier with
+        custom_Headline = "TSLA drops heavily after car crash in California"
+        custom_tokens = Training.remove_noise(word_tokenize(custom_Headline))
+
+        print(custom_Headline + "\n" + classifier.classify(dict([token, True] for token in custom_tokens)))
+        
+        return classifier
+
+    def saveClassifier(classifier) -> None:
+        """Saves a classifier to the models folder using pickle.dump()
+
+        Args:
+            classifier (classifier): Trained naive bayes classifier
+        """
+        path = "SentimentAnalysis/models/classifier.txt"
+        with open(path, 'wb') as infile:
+            pickle.dump(classifier, infile)
+
+    def loadClassifier():
+        """Returns the classifier currently saved in the models folder.
+
+        Returns:
+            classifier: Trained naive bayes classifier
+        """
+        path = "SentimentAnalysis/models/classifier.txt"
+        classifier = None
+        with open(path, "rb") as outfile:
+            classifier = pickle.load(outfile)
+            
+        return classifier
