@@ -30,24 +30,26 @@ class Stock:
         
         self.ticker = ticker
         self.amount = 0
-        self.tickerObject = yf.Ticker(ticker)
-        
-        # Check ticker validity
-        try:self.tickerInfo = self.tickerObject.info
-        except KeyError: raise ValueError("Stock:\t Error: Unrecongnised ticker")
-        
         self.cache = Cache(f"./TradingBot/Stock_Caches/Cache{ticker.capitalize()}")
         self.stockHistCache = Cache(f"./TradingBot/Stock_Hist_Caches/CacheStockHist{ticker.capitalize()}")
         
-        if len(self.stockHistCache) == 0:
-                self.stockHistCache[0] = self.tickerObject.history(period="max")
+        try:
+            if len(self.stockHistCache) == 0:
+                # Check ticker validity           
+                try:self.tickerInfo = yf.Ticker(ticker).info
+                except KeyError: raise ValueError("Stock:\t Error: Unrecongnised ticker")
+                except ConnectionError: raise ConnectionError("No wifi connection")
+                
+                self.stockHistCache[0] = yf.Ticker(ticker).history(period="max")
+        except ConnectionError: raise ConnectionError("No wifi connection")
+            
         
         # Cache persist over sessions. If a cache is generated in, say, October 2023, the cache will be limited to the prices generated until October 2023.
         if len(self.cache) == 0:
-            # This fails if no internet is available, obviously. The error message by yfinance does not state this though.
-                for index in self.stockHistCache[0].index:
-                    key = index.strftime("%Y-%m-%d") # NOTE key is the same format as date
-                    self.cache[key] = self.stockHistCache[0].loc[index, "Close"]
+            # uses self.stockHistCache to not need wifi for self.cache population
+            for index in self.stockHistCache[0].index:
+                key = index.strftime("%Y-%m-%d") # NOTE key is the same format as date
+                self.cache[key] = self.stockHistCache[0].loc[index, "Close"]
 
 
 
