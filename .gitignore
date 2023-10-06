@@ -2,9 +2,14 @@
 *.pyc 
 *.DS_Store
 # no cache from financial calculators
+TradingBot/Stock_Caches/*
+!TradingBot/Stock_Caches/.gitkeep
+TradingBot/Stock_Hist_Caches/*
+!TradingBot/Stock_Hist_Caches/.gitkeep
 *.db
 *.db-shm
 *.db-wal
+*.val
 # no graph outputs, keep empty outputs folder
 output/*
 !output/.gitkeep
