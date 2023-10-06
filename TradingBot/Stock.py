@@ -36,16 +36,13 @@ class Stock:
         try:self.tickerInfo = self.tickerObject.info
         except KeyError: raise ValueError("Stock:\t Error: Unrecongnised ticker")
         
-        # This fails if no internet is available, obviously. The error message by yfinance does not state this though.
-        try:
-            self.stockHist = self.tickerObject.history(period="max")
-        except:
-            raise ConnectionRefusedError("Stock history could not be downloaded. Please check your internet connection.")
-        
         self.cache = Cache(f"./TradingBot/Stock_Caches/Cache{ticker.capitalize()}")
+        self.stockHist = None
         
         # Cache persist over sessions. If a cache is generated in, say, October 2023, the cache will be limited to the prices generated until October 2023.
         if len(self.cache) == 0:
+            # This fails if no internet is available, obviously. The error message by yfinance does not state this though.
+            self.stockHist = self.tickerObject.history(period="max")
             for index in self.stockHist.index:
                 key = index.strftime("%Y-%m-%d") # NOTE key is the same format as date
                 self.cache[key] = self.stockHist.loc[index, "Close"]
