@@ -50,7 +50,7 @@ class Stock:
             # uses self.stockHistCache to not need wifi for self.cache population
             for index in self.stockHistCache["stockHist"].index:
                 key = index.strftime("%Y-%m-%d") # NOTE key is the same format as date
-                self.cache[key] = self.stockHistCache["0"].loc[index, "Close"]
+                self.cache[key] = self.stockHistCache["stockHist"].loc[index, "Close"]
 
 
 
