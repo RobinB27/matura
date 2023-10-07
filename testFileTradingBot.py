@@ -17,8 +17,9 @@ s = SignalLineCalculator
 
 
 
-a = Stock("ADBE")
+a = Stock("TSLA")
+print(a.stockHistCache["stockHist"])
 #a.clearCache()
 #print(a.getPricesUntilDate(datetime(2020, 2, 6)))
 
-print(s.signalLineCalculation(s, p, "ADBE", -1, datetime(2020, 2, 6)))
+#print(s.signalLineCalculation(s, p, "ADBE", -1, datetime(2020, 2, 6)))
