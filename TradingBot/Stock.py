@@ -35,21 +35,22 @@ class Stock:
         
         try:
             if len(self.stockHistCache) == 0:
+                
                 # Check ticker validity           
                 try:self.tickerInfo = yf.Ticker(ticker).info
                 except KeyError: raise ValueError("Stock:\t Error: Unrecongnised ticker")
                 except ConnectionError: raise ConnectionError("No wifi connection")
                 
-                self.stockHistCache[0] = yf.Ticker(ticker).history(period="max")
+                self.stockHistCache["stockHist"] = yf.Ticker(ticker).history(period="max")
         except ConnectionError: raise ConnectionError("No wifi connection")
             
         
         # Cache persist over sessions. If a cache is generated in, say, October 2023, the cache will be limited to the prices generated until October 2023.
         if len(self.cache) == 0:
             # uses self.stockHistCache to not need wifi for self.cache population
-            for index in self.stockHistCache[0].index:
+            for index in self.stockHistCache["stockHist"].index:
                 key = index.strftime("%Y-%m-%d") # NOTE key is the same format as date
-                self.cache[key] = self.stockHistCache[0].loc[index, "Close"]
+                self.cache[key] = self.stockHistCache["0"].loc[index, "Close"]
 
 
 
@@ -101,7 +102,7 @@ class Stock:
             _type_: list -> int
         """
         date = DateHelper.format(date)
-        historical_data = self.stockHistCache[0]
+        historical_data = self.stockHistCache["stockHist"]
         # Removes NaN rows
         historical_data = historical_data.dropna()
         historical_data = historical_data[historical_data.index <= date]
