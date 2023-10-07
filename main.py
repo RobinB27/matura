@@ -8,7 +8,7 @@
 # Similarly, the DataGen module can be accessed by simply importing DataGen.Testing and calling
 # any of the desired testing functions included in it.
 
-import sys
+import sys, ast
 from datetime import datetime
 
 from TradingBot.Bot import Bot
@@ -78,6 +78,31 @@ def main() -> None:
     else:
         # Parse args
         args = sys.argv
-        raise NotImplementedError("Console arg parsing not implemented.")
+        tool = args[1]
+        params = args[2:]
+        
+        if len(params) % 2 != 0: raise SyntaxError("Invalid number of parameters")
+        params = [[params[2*i], params[2*i+1]] for i in range(len(params) / 2)]
+        
+        if tool == "run":
+            # bot run
+            # Syntax: fileName run -m <mode> -s <strategyDM> -d <startDate DDMMYYYY> -f <funds> -l <stockList> -p <timePeriod> -i <interval> -a <intervalAmount>
+            
+            # collect input
+            settings = {}
+            for param in params:
+                if param[0] == "-m": settings["mode"] = int(param[1])
+                elif param[0] == "-s": settings["DM"] = param[1] # converted to class using dict[str] -> class
+                elif param[0] == "-d": settings["startDate"] = datetime.strptime(param[1], "%d%m%Y")
+                elif param[0] == "-f": settings["funds"] = int(param[1])
+                elif param[0] == "-l": settings["stockList"] = ast.literal_eval(param[1]) # String -> List conversion
+                elif param[0] == "-p": settings["timePeriod"] = int()
+            
+            
+                     
+        elif tool == "test":
+            pass
+            # test run
+        else: raise SyntaxError("Invalid first console argument, must either be 'run' or 'test'.")
 
 if __name__ == '__main__': main()
