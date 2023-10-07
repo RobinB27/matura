@@ -127,7 +127,8 @@ class Stock:
             if Config.debug():
                 print("Stock:\t Insufficient amount of stock to sell.")
                 
-    def clearCache(self) -> None:
-        """utility method that clears the stocks cache
+    def clearCaches(self) -> None:
+        """utility method that clears all the stocks caches
         """
         self.cache.clear()
+        self.stockHistCache.clear()
