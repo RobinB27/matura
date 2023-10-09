@@ -190,7 +190,7 @@ class Graphing:
                     difference = difference.days
                     iterationsPassed += difference
                 elif mode == 0:
-                    difference = difference.min
+                    difference = difference.total_seconds() / 60
                     iterationsPassed += difference // interval
                     
                 dates.append(iterationsPassed)
