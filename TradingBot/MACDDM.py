@@ -148,9 +148,9 @@ class MACDDM:
                 while DateHelper.format(valueBeforePreviousValue) not in self.curveComparison:
                     valueBeforePreviousValue = valueBeforePreviousValue - timedelta(days=1)
                 
-                value = DateHelper.format(value)
-                prevValue = DateHelper.format(prevValue)
-                valueBeforePreviousValue = DateHelper.format(valueBeforePreviousValue)
+            value = DateHelper.format(value)
+            prevValue = DateHelper.format(prevValue)
+            valueBeforePreviousValue = DateHelper.format(valueBeforePreviousValue)
 
             # Final general decision making
             if self.curveComparison[prevValue] == -1 and self.curveComparison[value] == 1:
