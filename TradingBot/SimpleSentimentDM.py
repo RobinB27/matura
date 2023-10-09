@@ -69,7 +69,10 @@ class SimpleSentimentDM:
             # calculate sentiment score
             # headline is a Headline object
             for headline in headlines:
-                sentiment = getSentiment(headline.text)
+                # in past mode headline is a dict
+                # in realtime mode headline is a Headline object
+                if mode == -1:sentiment = getSentiment(headline["text"])
+                else:sentiment = getSentiment(headline.text)
                 score += SimpleSentimentDM.scoreTable[sentiment]
             if self.weighted: score = score * count
             
