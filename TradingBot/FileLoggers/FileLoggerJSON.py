@@ -40,7 +40,7 @@ class FileLoggerJSON:
         if mode == -1:
             filePath = os.path.join(filePath, "past")
         elif mode == 0:
-            filePath = os.path.join(filePath, "present")
+            filePath = os.path.join(filePath, "realtime")
         else: raise SyntaxError("FileLogger given invalid mode")
         filePath = os.path.join(filePath, self.fileName)
         
@@ -79,7 +79,7 @@ class FileLoggerJSON:
                 }
             
             if mode == 0:
-                value = stock.amount * stock.getPrice() 
+                value = stock.amount * stock.getPrice(0) 
             elif mode == -1:
                 #check to ensure no None prices cause an error
                 stockValue = stock.getPrice(-1, date)

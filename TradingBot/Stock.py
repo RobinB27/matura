@@ -68,7 +68,7 @@ class Stock:
             # Ticker info must be fetched anew on each function call to ensure the data is current
             currentInfo = yf.Ticker(self.ticker).info
             try:
-                stockPrice = currentInfo.get("currentPrice") # NOTE might cause a mystery issue
+                stockPrice = currentInfo.get("currentPrice") # NOTE might cause a mystery issue -> should be fixed Mon 9th Oct 2023
                 if Config.debug():
                     print(f"Stock:\t Current stock price of {self.ticker} is {stockPrice}")
                 return stockPrice

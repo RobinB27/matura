@@ -12,8 +12,3 @@ from TradingBot.MACDDM import MACDDM
 
 #1h intervals are the highest granularity of data allowed for live mode at present
 
-stock = yf.Ticker("TSLA")
-print(stock.info)
-
-tesla = Stock("TSLA")
-print(tesla.getPrice(0))

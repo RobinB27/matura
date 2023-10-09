@@ -136,10 +136,13 @@ class Bot:
 
         self.initDM()
         if Config.get()["development"]["txtLogs"]:
-            self.fileLoggerTxt.createLogFile()
+            self.fileLoggerTxt.createLogFile() 
             
         if self.mode == 0:
-            self.interval = int(input("What interval will the bot be trading at (in minutes): "))
+            validIntervals= [1, 2, 5, 15, 30, 60, 240, 3600] #standard trading intervals derived from yahoo finance's intervals
+            print(f"Valid trading intervals (in minutes): {validIntervals}")
+            while self.interval not in validIntervals:
+                self.interval = int(input("What interval will the bot be trading at (in minutes): "))
             self.amountOfIntervals = int(input("How often should the bot trade: "))
 
     def isExceptionDate(self) -> bool:
@@ -191,8 +194,7 @@ class Bot:
             if self.mode == -1:
                 self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date, strategy=self.decisionMaker.__class__)
             elif self.mode == 0:
-                strTimeStamp = self.timeStamp.strftime(FileLoggerJSON.timeStampFormat)
-                self.fileLoggerJSON.snapshot(self.portfolio, self.mode, strTimeStamp, self.interval, self.decisionMaker.__class__)
+                self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date, self.interval, self.decisionMaker.__class__)
 
     def start(self) -> None:
         """Start the trading activities of the bot based on the specified mode and strategy
@@ -222,7 +224,7 @@ class Bot:
                 self.updatePortfolio()
                 #   waiting until next schedueled interval
                 if Config.debug():
-                    print("going to sleep")
+                    print("current interval finished, pausing until next one")
                 time.sleep(self.interval * 60)
                 
         # Historical data      
