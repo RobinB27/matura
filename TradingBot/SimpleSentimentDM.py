@@ -67,8 +67,9 @@ class SimpleSentimentDM:
             if Config.debug(): print(f"DM:\t Found {count} relevant headlines")
             
             # calculate sentiment score
+            # headline is a Headline object
             for headline in headlines:
-                sentiment = getSentiment(headline["text"])
+                sentiment = getSentiment(headline.text)
                 score += SimpleSentimentDM.scoreTable[sentiment]
             if self.weighted: score = score * count
             

@@ -40,7 +40,7 @@ class FileLoggerJSON:
         if mode == -1:
             filePath = os.path.join(filePath, "past")
         elif mode == 0:
-            filePath = os.path.join(filePath, "present")
+            filePath = os.path.join(filePath, "realtime")
         else: raise SyntaxError("FileLogger given invalid mode")
         filePath = os.path.join(filePath, self.fileName)
         

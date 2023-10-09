@@ -177,9 +177,11 @@ class Graphing:
             # Work with dates
             if prevIteration is None:
                 dates.append(0)
-                prevIteration = Graphing.strToDate(snapshot["date"], mode)
+                if mode == -1: prevIteration = Graphing.strToDate(snapshot["date"], mode)
+                else: prevIteration = Graphing.strToDate(snapshot["timeStamp"], mode)
             else:
-                currentDate = Graphing.strToDate(snapshot["date"], mode)
+                if mode == -1: currentDate = Graphing.strToDate(snapshot["date"], mode)
+                else: currentDate = Graphing.strToDate(snapshot["timeStamp"], mode)
                     
                 difference = currentDate - prevIteration
                 

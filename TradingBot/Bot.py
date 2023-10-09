@@ -191,8 +191,7 @@ class Bot:
             if self.mode == -1:
                 self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date, strategy=self.decisionMaker.__class__)
             elif self.mode == 0:
-                strTimeStamp = self.timeStamp.strftime(FileLoggerJSON.timeStampFormat)
-                self.fileLoggerJSON.snapshot(self.portfolio, self.mode, strTimeStamp, self.interval, self.decisionMaker.__class__)
+                self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date, self.interval, self.decisionMaker.__class__)
 
     def start(self) -> None:
         """Start the trading activities of the bot based on the specified mode and strategy

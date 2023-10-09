@@ -13,24 +13,26 @@ class TemplateDM:
     """
     Replace this docstring with a description of the implemented strategy
     """
-    def __init__(self, mode: int = 0):
 
+    def __init__(self, mode: int = 0):
         self.mode = mode
 
     def makeStockDecision(self, portfolio: Portfolio, ticker: str, mode: int, date: datetime = None, interval: int = 0) -> int:
-        """makes a decision whether to buy a stock or not on a given date
+        """makes a decision whether to buy a stock or not on a given date, must be implemented for a strategy to work.
 
         Args:
-            portfolio (Portfolio): Portfolio to cultivate
+            portfolio (Portfolio): Associated portfolio class
             ticker (str): stock ticker name
-            mode (int, optional): Realtime or historical data mode.
+            mode (int): Realtime or historical data mode. (0, -1)
             date (datetime, optional): date required for historical data mode. Defaults to None.
             interval (int, optional): interval required for realtime mode. Defaults to 0
 
         Returns:
-            int: 1 = buy, -1 = sell, any other value = ignore stock 
+            int: The signal produced by the trading strategy. Format: 1 = buy, -1 = sell, None or any other value = ignore stock 
         """
 
+        # sample code
         # Please follow this console format and the return types states in the docstring.
-        if Config.debug(): print(f"DM:\t Stock {ticker} Bought")
+        if Config.debug():
+            print(f"DM:\t Stock {ticker} Bought")
         return 1
