@@ -93,10 +93,13 @@ def main() -> None:
         # Parse args
         args = sys.argv
         tool = args[1]
+        # Check tool validity
+        if tool != "run" and tool != "test" and tool != "help":
+            raise SyntaxError("Invalid tool selected, first argument must either be 'run', 'test' or 'help'.")
         params = args[2:]
         
         if len(params) % 2 != 0: raise SyntaxError("Invalid number of parameters")
-        params = [[params[2*i], params[2*i+1]] for i in range(len(params) / 2)]
+        params = [[params[2*i], params[2*i+1]] for i in range(len(params) // 2)]
         
         # Syntax: fileName run -m <mode> -s <strategyDM> -d <startDate DDMMYYYY> -f <funds> -l <stockList> -p <timePeriod> -i <interval> -a <intervalAmount>
         # collect input
@@ -104,7 +107,7 @@ def main() -> None:
             "mode": None,
             "DMs": [],
             "funds": None,
-            "stockList": None,
+            "stockList": [],
             "timePeriod": None,
             "startDate": None,
             "interval": None,
@@ -124,44 +127,48 @@ def main() -> None:
                 
             elif param[0] == "-s" or param[0] == "--strategy": 
                 # converted to class using dict[str] -> class
-                strat = param[1]
-                if strat in stratTableStr: 
-                    strat == stratTableStr[strat]
-                    options["DMs"].append(strat) 
-                else: raise SyntaxError(f"Strategy {strat} is not a valid strategy. Please use SimpleSentiment, AverageSentiment, MACD or BuyAndHold")
+                options["DMs"].append(param[1])
            
             elif param[0] == "-f" or param[0] == "--funds": 
                 # Check validity
-                if param[1] < 0: raise SyntaxError("Funds can't be below 0")
                 options["funds"] = int(param[1])
+                if options["funds"] < 0: raise SyntaxError("Funds can't be below 0")
                 
             elif param[0] == "-l" or param[0] == "--list": 
-                try:
-                    options["stockList"] = ast.literal_eval(param[1]) # String -> List conversion
-                except: raise SyntaxError("Conversion of the stockList option to a python list failed, likely a syntax error.")
-            
+                options["stockList"].append(param[1])
+
             elif param[0] == "-p" or param[0] == "--period": 
-                if param[1] < 0: raise SyntaxError("Period can't be below 0")
                 options["timePeriod"] = int(param[1])
+                if options["timePeriod"] < 0: raise SyntaxError("Period can't be below 0")
                 
             # Historical mode bot params
             elif param[0] == "-d" or param[0] == "--date": options["startDate"] = datetime.strptime(param[1], "%d%m%Y")
             
             # Realtime mode bot params
             elif param[0] == "-i" or param[0] == "--interval": 
-                if param[1] < 0: raise SyntaxError("interval can't be below 0")
                 options["interval"] = int(param[1])
+                if options["interval"] < 0: raise SyntaxError("interval can't be below 0")
 
             elif param[0] == "-c" or param[0] == "--intervalCount": 
-                if param[1] < 0: raise SyntaxError("intervalCount can't be below 0")
                 options["intervalCount"] = int(param[1])
+                if options["intervalCount"] < 0: raise SyntaxError("intervalCount can't be below 0")
                 
             # testing specific params
             elif param[0] == "r" or param[0] == "--runs": 
-                if param[1] < 0: raise SyntaxError("runs count can't be below 0")
                 options["runs"] = int(param[1])
+                if options["runs"] < 0: raise SyntaxError("runs count can't be below 0")
+        
+        # Initiatie all strategies
+        if tool == "test": options["mode"] = -1
+        for i in range(len(options["DMs"])):
+            strat = options["DMs"][i]
+            if strat in stratTableStr: 
+                strat = stratTableStr[strat](options["mode"])
+                options["DMs"][i] = strat 
+            else: raise SyntaxError(f"Strategy {strat} is not a valid strategy. Please use SimpleSentiment, AverageSentiment, MACD or BuyAndHold")
         
         if tool == "run":
+            print(options)
             # run tool specific validity check
             
             # Check if all required params are present
@@ -185,7 +192,7 @@ def main() -> None:
             # Bot mode is valid, already tested
             # Needs seperate initialise syntax
             if options["mode"] == -1:
-                bot.initialise(options["funds"], options["stockList"], options["period"])
+                bot.initialise(options["funds"], options["stockList"], options["timePeriod"])
             else:
                 bot.initialise(options["funds"], options["stockList"], options["intervalCount"], options["interval"])
             bot.start()
@@ -199,14 +206,14 @@ def main() -> None:
             if options["funds"] is None: print("funds set to default value: 1000")
             if options["startDate"] is None: print("startDate set to default: Randomized")
             if options["timePeriod"] is None: print("period set to default constraints: (10, 50)")
-            if options["stockList"] is None: print("stockList set to default: Randomized")
+            if options["stockList"] == []: print("stockList set to default: Randomized")
             
             # launch Test run
             Testing.compareDMs(options["runs"], options["DMs"], options["funds"], options["startDate"], options["stockList"], options["timePeriod"])
           
         elif tool == "help":
-            raise NotImplementedError("Help not yet implemented")
             # print command list
-        else: raise SyntaxError("Invalid tool selected, first argument must either be 'run', 'test' or 'help'.")
+            with open("Util/mainHelp.txt") as file: print(file.read())
 
+# main idiom
 if __name__ == '__main__': main()

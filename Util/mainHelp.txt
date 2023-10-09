@@ -1,0 +1,32 @@
+The main file provides access to the bot in two ways. The main file must be run using a valid python installation.
+
+Tools:
+    The 'run' tool is used to perform single bot runs in historical data or realtime mode.
+    The 'test' tool is used to perfom a testing cycle of multiple bot runs in historical mode.
+    The 'help' tool prints this list.
+
+Options may be entered in any order.
+Long and short flags may be used interchangeably.
+Required options differ depending on tool and mode selected.
+The program will throw syntax errors for invalid entries, but nor for unreasonable ones.
+
+Example:
+    main.py run -m 1 -s SimpleSentiment -f 1000 -l ["TSLA] -p 100 -d 23102018
+    main.py test -r 100 -s SimpleSentiment -s MACD -f 10000 -p 100
+
+Usage:
+    main.py run <option> <argument>
+    main.py test <option> <argument>
+    main.py help
+
+Options:
+    -m --mode               Selects the bot mode. (1) historical data, (2) realtime. Required for run.
+    -s --strategy           Adds a strategy. At least one required. Valid strategies:
+        SimpleSentiment, AverageSentiment, MACD, BuyAndHold
+    -f --funds              Defines starting funds. Required for run.
+    -l --list               Adds a stock ticker to the stock list. Required for run.
+    -p --period\            Defines the trading period. Required for run. format: DDMMYYYY
+    -d --date               Defines the starting date. Required for run, historical data mode.
+    -i --interval           Defines the trading interval. Required for run, realtime mode.
+    -c --intervalcount      Defines the amount of intervals. Required for run, realtime mode.
+    -r --runs               Defines the amount of test runs. Required for test.
