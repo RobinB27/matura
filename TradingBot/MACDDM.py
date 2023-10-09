@@ -42,7 +42,7 @@ class MACDDM:
 
         return previousDate
 
-    def update(self, portfolio: Portfolio, ticker: str, mode: int, date: datetime, interval: int = None) -> None:
+    def update(self, portfolio: Portfolio, ticker: str, mode: int, date: datetime = None, interval: int = None) -> None:
         """Utility function to update all value dicts. Only intended for use in class MACDDecisionMaking
 
         Args:
@@ -101,7 +101,7 @@ class MACDDM:
         # Value update happens regardless of iteration
         
         self.update(portfolio, ticker, mode, date, interval)
-        self.iterations += 1;
+        self.iterations += 1
 
         if self.iterations == 2:
             # Special actions for second iteration only
@@ -117,12 +117,12 @@ class MACDDM:
                 prevValue = self.currentTimes[self.timeInstancesElapsed -1]
 
             # Final decision making, reduced for 2nd iteration
-            if self.curveComparison[DateHelper.format(prevValue)] == -1 and self.curveComparison[value] == 1:
+            if self.curveComparison[prevValue] == -1 and self.curveComparison[value] == 1:
                 if Config.debug():
                     print(
                         f"MACD:\t Bullish Crossover on {value}")
                 return 1
-            elif self.curveComparison[DateHelper.format(prevValue)] == 1 and self.curveComparison[value] == -1:
+            elif self.curveComparison[prevValue] == 1 and self.curveComparison[value] == -1:
                 if Config.debug():
                     print(
                         f"MACD:\t Bearish Crossover on {value}")
@@ -144,13 +144,13 @@ class MACDDM:
                 prevValue = self.currentTimes[self.timeInstancesElapsed -1]
                 valueBeforePreviousValue = self.currentTimes[self.timeInstancesElapsed -2]
             
-
-            while DateHelper.format(valueBeforePreviousValue) not in self.curveComparison:
-                valueBeforePreviousValue = valueBeforePreviousValue - timedelta(days=1)
+            if mode == -1: # only needed in past mode
+                while DateHelper.format(valueBeforePreviousValue) not in self.curveComparison:
+                    valueBeforePreviousValue = valueBeforePreviousValue - timedelta(days=1)
                 
-            value = DateHelper.format(value)
-            prevValue = DateHelper.format(prevValue)
-            valueBeforePreviousValue = DateHelper.format(valueBeforePreviousValue)
+                value = DateHelper.format(value)
+                prevValue = DateHelper.format(prevValue)
+                valueBeforePreviousValue = DateHelper.format(valueBeforePreviousValue)
 
             # Final general decision making
             if self.curveComparison[prevValue] == -1 and self.curveComparison[value] == 1:

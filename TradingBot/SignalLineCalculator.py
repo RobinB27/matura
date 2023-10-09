@@ -21,18 +21,18 @@ class SignalLineCalculator:
         self.period = "0"
 
     
-    def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int, date: datetime=datetime(1,1,1), intervalToTrade: int= 0) -> tuple:
+    def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int, date: datetime, intervalToTrade: int = None) -> tuple:
         stock = portfolio.getStock(ticker)   
         if mode == 0:
             if self.firstRun:
-                period= "7d"
+                
                 # determines self.period based on interval given
-                validIntervals= [1, 2, 5, 15, 30, 60, 240, 3600]
                 
-                
+                if 1 <= intervalToTrade < 3600: self.period, intervalToTrade = "5d", f"{intervalToTrade}m"
+                else: self.period, intervalToTrade = "3mo", "1d"
                 
                 # populates self.stockPrices with recent prices
-                histData = yf.Ticker(ticker).history(self.period, interval=f"{intervalToTrade}m")
+                histData = yf.Ticker(ticker).history(self.period, interval=intervalToTrade)
                 selectedPricesForMacd = histData['Close'].tail(self.arrayLen)
                 self.stockPrices[:] = selectedPricesForMacd
     
