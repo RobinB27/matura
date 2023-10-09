@@ -79,7 +79,7 @@ class FileLoggerJSON:
                 }
             
             if mode == 0:
-                value = stock.amount * stock.getPrice() 
+                value = stock.amount * stock.getPrice(0) 
             elif mode == -1:
                 #check to ensure no None prices cause an error
                 stockValue = stock.getPrice(-1, date)

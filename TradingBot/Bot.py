@@ -136,10 +136,13 @@ class Bot:
 
         self.initDM()
         if Config.get()["development"]["txtLogs"]:
-            self.fileLoggerTxt.createLogFile()
+            self.fileLoggerTxt.createLogFile() 
             
         if self.mode == 0:
+            validIntervals= [1, 2, 5, 15, 30, 60, 240, 3600] #standard trading intervals derived from yahoo finance's intervals
+            print(f"Valid trading intervals (in minutes): {validIntervals}")
             self.interval = int(input("What interval will the bot be trading at (in minutes): "))
+            if self.interval not in validIntervals: raise SyntaxError(f"Not a valid trading interval, valid intervals: {validIntervals}")
             self.amountOfIntervals = int(input("How often should the bot trade: "))
 
     def isExceptionDate(self) -> bool:
@@ -221,7 +224,7 @@ class Bot:
                 self.updatePortfolio()
                 #   waiting until next schedueled interval
                 if Config.debug():
-                    print("going to sleep")
+                    print("current interval finished, pausing until next one")
                 time.sleep(self.interval * 60)
                 
         # Historical data      

@@ -63,7 +63,7 @@ class YahooWebScraper:
         url = urlbase + ticker
 
         driver.get(url)
-        WebDriverWait(driver=driver, timeout=5).until(
+        WebDriverWait(driver=driver, timeout=20).until(
             YahooWebScraper.checkIfLoaded)
 
         return HTMLParser.parse(driver.page_source, YahooWebScraper.maxElements)
