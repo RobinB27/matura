@@ -12,3 +12,8 @@ from TradingBot.MACDDM import MACDDM
 
 #1h intervals are the highest granularity of data allowed for live mode at present
 
+p= Portfolio(1000)
+p.addStock("TSLA")
+sig = SignalLineCalculator()
+
+line = sig.signalLineCalculation(p, "TSLA", 0, )

@@ -98,7 +98,6 @@ def main() -> None:
                 elif param[0] == "-l": settings["stockList"] = ast.literal_eval(param[1]) # String -> List conversion
                 elif param[0] == "-p": settings["timePeriod"] = int()
             
-            
                      
         elif tool == "test":
             pass

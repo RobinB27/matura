@@ -14,15 +14,25 @@ from Util.Config import Config
 class SignalLineCalculator:
     
     def __init__(self) -> None:
-        self.arrayLen = 34 # amount needed determined experimentally for live mode
+        self.arrayLen = 34 # amount needed determined experimentally for live mode to work
         self.stockPrices = np.zeros(self.arrayLen)
         self.firstRun = True
+        
+        self.period = "0"
+
     
-    def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int, date: datetime, intervalToTrade: int= 0) -> tuple:
+    def signalLineCalculation(self, portfolio: Portfolio, ticker: str, mode: int, date: datetime=datetime(1,1,1), intervalToTrade: int= 0) -> tuple:
         stock = portfolio.getStock(ticker)   
         if mode == 0:
             if self.firstRun:
-                histData = yf.Ticker(ticker).history(period= "7d", interval=f"{intervalToTrade}m")
+                period= "7d"
+                # determines self.period based on interval given
+                validIntervals= [1, 2, 5, 15, 30, 60, 240, 3600]
+                
+                
+                
+                # populates self.stockPrices with recent prices
+                histData = yf.Ticker(ticker).history(self.period, interval=f"{intervalToTrade}m")
                 selectedPricesForMacd = histData['Close'].tail(self.arrayLen)
                 self.stockPrices[:] = selectedPricesForMacd
     

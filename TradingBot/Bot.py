@@ -141,8 +141,8 @@ class Bot:
         if self.mode == 0:
             validIntervals= [1, 2, 5, 15, 30, 60, 240, 3600] #standard trading intervals derived from yahoo finance's intervals
             print(f"Valid trading intervals (in minutes): {validIntervals}")
-            while self.interval not in validIntervals:
-                self.interval = int(input("What interval will the bot be trading at (in minutes): "))
+            self.interval = int(input("What interval will the bot be trading at (in minutes): "))
+            if self.interval not in validIntervals: raise SyntaxError(f"Not a valid trading interval, valid intervals: {validIntervals}")
             self.amountOfIntervals = int(input("How often should the bot trade: "))
 
     def isExceptionDate(self) -> bool:
