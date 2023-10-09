@@ -1,5 +1,6 @@
 from datetime import datetime
 from diskcache import Cache
+import yfinance as yf
 
 
 from TradingBot.Stock import Stock
@@ -11,15 +12,8 @@ from TradingBot.MACDDM import MACDDM
 
 #1h intervals are the highest granularity of data allowed for live mode at present
 
-p = Portfolio(10000)
-p.addStock("ADBE")
-s = SignalLineCalculator
+stock = yf.Ticker("TSLA")
+print(stock.info)
 
-
-
-a = Stock("TSLA")
-print(a.stockHistCache["stockHist"])
-#a.clearCache()
-#print(a.getPricesUntilDate(datetime(2020, 2, 6)))
-
-#print(s.signalLineCalculation(s, p, "ADBE", -1, datetime(2020, 2, 6)))
+tesla = Stock("TSLA")
+print(tesla.getPrice(0))
