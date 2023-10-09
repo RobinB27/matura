@@ -139,7 +139,7 @@ class Bot:
             self.fileLoggerTxt.createLogFile() 
             
         if self.mode == 0:
-            validIntervals= [1, 2, 5, 15, 30, 60, 240, 3600] #standard trading intervals derived from yahoo finance's intervals
+            validIntervals= [1, 2, 5, 15, 30, 60, 3600] # trading intervals from yfinance API
             print(f"Valid trading intervals (in minutes): {validIntervals}")
             self.interval = int(input("What interval will the bot be trading at (in minutes): "))
             if self.interval not in validIntervals: raise SyntaxError(f"Not a valid trading interval, valid intervals: {validIntervals}")

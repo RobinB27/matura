@@ -16,4 +16,6 @@ p= Portfolio(1000)
 p.addStock("TSLA")
 sig = SignalLineCalculator()
 
-line = sig.signalLineCalculation(p, "TSLA", 0, )
+line = sig.signalLineCalculation(p, "TSLA", 0, datetime(2023, 8, 10), 2)
+
+print(line)
