@@ -11,7 +11,7 @@ Required options differ depending on tool and mode selected.
 The program will throw syntax errors for invalid entries, but nor for unreasonable ones.
 
 Example:
-    main.py run -m 1 -s SimpleSentiment -f 1000 -l ["TSLA] -p 100 -d 23102018
+    main.py run -m 1 -s SimpleSentiment -f 1000 -l TSLA,AAPL,ADBE -p 100 -d 23102018
     main.py test -r 100 -s SimpleSentiment -s MACD -f 10000 -p 100
 
 Usage:
@@ -24,8 +24,8 @@ Options:
     -s --strategy           Adds a strategy. At least one required. Valid strategies:
         SimpleSentiment, AverageSentiment, MACD, BuyAndHold
     -f --funds              Defines starting funds. Required for run.
-    -l --list               Adds a stock ticker to the stock list. Required for run.
-    -p --period\            Defines the trading period. Required for run. format: DDMMYYYY
+    -l --list               Defines the stock list. Seperate Tickers by commas Required for run.
+    -p --period             Defines the trading period. Required for run. format: DDMMYYYY
     -d --date               Defines the starting date. Required for run, historical data mode.
     -i --interval           Defines the trading interval. Required for run, realtime mode.
     -c --intervalcount      Defines the amount of intervals. Required for run, realtime mode.

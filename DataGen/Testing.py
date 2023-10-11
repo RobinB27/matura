@@ -1,6 +1,6 @@
 # This class implements several methods used for evaluating the viability of a trading strategy and for comparing strategies
 from datetime import datetime, timedelta
-import random
+import random, pathlib, os
 
 from TradingBot.Bot import Bot
 from TradingBot.Stock import Stock
@@ -109,8 +109,8 @@ class Testing:
                 
     
     # single run
-    def testSingle(Strategy: TemplateDM, funds: int, startDate: datetime, stockList: list[Stock], period: int) -> dict:
-        """Does a single test run with the specified parameters and returns the path to the produced log
+    def testSingle(Strategy: TemplateDM, funds: int, startDate: datetime, stockList: list[Stock], period: int, customPrefix: str = None, customFolder: str = None) -> dict:
+        """Does a single test run with the specified parameters and returns the produced log
 
         Args:
             Strategy (TemplateDM): Valid DecisionMaking class which should be used
@@ -118,6 +118,8 @@ class Testing:
             funds (int): Initial portfolio funds
             stockList (list[Stock]): List of stocks to add to Portfolio
             period (int): Amount of days for which bot should trade. Must end before 11th June 2020.
+            customPrefix (str, optional): Sets a custom prefix for the generated log file. Defaults to None.
+            customFolder (str, optional): Selects a folder within the logs folder to insert the log file into.
         
         Raises:
             DateException: Starting or end date selected don't respect maximum or minimum required
@@ -132,10 +134,12 @@ class Testing:
             raise DateException("Period is too long. Please select a period ending before 11th June 2020.")
         
         testBot = Bot(Strategy(-1), startDate, -1)
+        if customPrefix is not None: testBot.fileLoggerJSON.prefix = customPrefix
+        if customFolder is not None: testBot.fileLoggerJSON.customFolder = customFolder
         testBot.initialise(funds, stockList, period)
         testBot.start()
         
-        path: str = "logs/past/" + testBot.fileLoggerJSON.fileName
+        path: str = "logs/past/" + customFolder + "/" + testBot.fileLoggerJSON.getFileName()
         log: dict = Graphing.fetchLog(path)
         return log
     
@@ -150,7 +154,8 @@ class Testing:
         funds:int = 1000,
         startDate: datetime = None,
         stockList: list[Stock] = None,
-        periodLimits: tuple[int, int] = (10, 50)
+        periodLimits: tuple[int, int] = (10, 50),
+        customFolder = None
         ) -> list:
         
         """Performs multiple tests with randomized values and returns a dict containing generated data.
@@ -162,20 +167,30 @@ class Testing:
             startDate (datetime, optional): Date at which trading should start. Defaults None, which uses a randomiser selecting random valid dates.
             stockList (list[Stock], optional): List of stocks to add to Portfolio. Defaults to None, which uses a randomiser selecting random top 20 NASDAQ stocks.
             periodLimits (tuple[int, int], optional): Sets the maximum and minimum limits for the trading period. For constant period pass single integer. Defaults to (20, 50).
+            customFolder: name of the folder in which all logs / graphs should be saved
         
         Returns:
-            list: Final portfolio valus of all tests, list contains two seperate lists if two strategies were used
+            list: Final portfolio values of all tests, list length is defined by the amount of strategies used
         """
         # Definitions based on parameters
         constantPeriod = True if type(periodLimits) is int else False
+        
         results = []
-        for strategy in strategies:
-            results.append([])
+        for strategy in strategies: results.append([])
         
         # pregenerate run-independent Stock objects for optimising price calls during validation
         if stockList is None:
             Testing.populateStockObjs(Testing.Nasdaq200B)
         else: Testing.populateStockObjs(stockList)
+        
+        # create subfolders for all associated logs and graphs associated
+        # this is valid OS-safe pathlib syntax, very cool (https://stackoverflow.com/questions/61321503/is-there-a-pathlib-alternate-for-os-path-join)
+        # also: https://stackoverflow.com/questions/3430372/how-do-i-get-the-full-path-of-the-current-files-directory
+        if customFolder is None: customFolder = "Test_" + datetime.now().strftime(FileLoggerJSON.saveFormat)
+        absPath = pathlib.Path().resolve()
+        os.makedirs(absPath / "logs" / "past" / customFolder)
+        os.makedirs(absPath / "output" / customFolder)
+        for strategy in strategies: os.makedirs(absPath / "output" / customFolder / strategy.__name__)
         
         # test loop
         for i in range(iterations):
@@ -183,8 +198,7 @@ class Testing:
             # define period
             if not constantPeriod:
                 runPeriod = random.randint(periodLimits[0], periodLimits[1])
-            else: 
-                runPeriod = periodLimits
+            else: runPeriod = periodLimits
             
             # define date
             if startDate is None:
@@ -192,19 +206,17 @@ class Testing:
                 maxDatePossible = Testing.maxDate - timedelta(days=runPeriod)
                 dateDelta = maxDatePossible - Testing.minDate
                 runDate = maxDatePossible- timedelta(days=random.randint(0, dateDelta.days))
-            else: 
-                runDate = startDate
+            else: runDate = startDate
             
             # define portfolio
             if stockList is None:
+                # Generate randomised stock list based on Nasdaq 200B+ companies list
                 # As seen in: https://stackoverflow.com/questions/2612802/how-do-i-clone-a-list-so-that-it-doesnt-change-unexpectedly-after-assignment
-                
-                # Generate randomised stock list
                 availableStocks = Testing.Nasdaq200B.copy()
                 length = random.randint(2, len(availableStocks))
                 
                 runStocks = []
-                for i in range(length):
+                for j in range(length):
                     # len() needs to be recalled as list length changes
                     # Since same stock can't be added twice
                     index = random.randint(0, len(availableStocks) - 1)
@@ -213,18 +225,16 @@ class Testing:
                         
             else: runStocks = stockList
             
-            # removes nonexistent stocks from the stock list (E.g. if stock didn't exist yet at timeline start)
+            # removes nonexistent stocks from the stock list (E.g. if company didn't exist yet at timeline start)
             if Config.debug(): print(f"Tests:\t Checking Stock validities")
             for stockName in runStocks:
-                
                 if Config.debug(): print(f"Tests:\t Checking validity of {stockName}")
                 
-                consecutiveNoneCount = 0
-                        
+                consecutiveNoneCount = 0    
                 testDate = datetime(runDate.year, runDate.month, runDate.day)
                 
                 # 4 dates in a row being exceptions is impossible if stock exists, stock must be invalid
-                for i in range(4):
+                for j in range(4):
                     stockValue = Testing.StockObjs[stockName].getPrice(-1, testDate)
                     if stockValue is None: consecutiveNoneCount += 1
 
@@ -233,23 +243,28 @@ class Testing:
                 if consecutiveNoneCount == 4: 
                     runStocks.remove(stockName)
                     if Config.debug(): print(f"Tests:\t {stockName} is invalid and has been removed")
+                    
                 elif Config.debug(): print(f"Tests:\t {stockName} is valid")
                 
-            # very rare but possible
+            # very rare but possible edgecase
             if len(runStocks) == 0:
-                if Config.debug(): print(f"Tests:\t No valid stocks in portfolio. Skipping run.")  
+                if Config.debug(): print(f"Tests:\t No valid stocks in portfolio. Skipping run.") 
+                # has to be added else the runCount breaks in evaluation 
+                for j in range(len(strategies)): results[j].append(funds)
                 continue
             elif Config.debug(): print(f"Tests:\t Validity check finished, starting testing")
             
             # run tests, update values
-            for i in range(len(strategies)):
-                log = Testing.testSingle(strategies[i], funds, runDate, runStocks, runPeriod)
-                value = Testing.sumValue(log)
-                results[i].append(value)
+            for j in range(len(strategies)):
+                customPrefix = f"Run#{i+1}_{strategies[j].__name__}"
+                log = Testing.testSingle(strategies[j], funds, runDate, runStocks, runPeriod, customPrefix, customFolder)
+                value = Testing.getFinalValues(log)
+                results[j].append(value)
         
+        # Results contains lists with final portf values for each strat tested
         return results
             
-    def sumValue(log: dict):
+    def getFinalValues(log: dict):
         """Utility function for getting the final portfolio value from a log file
 
         Args:
@@ -258,13 +273,13 @@ class Testing:
         Returns:
             float: Final value at end of run
         """
-        lastIndex = len(log["snapshots"]) - 1
-        
-        value = log["snapshots"][lastIndex]["funds"]
-        for stock in log["snapshots"][lastIndex]["stocksHeld"]:
-            value += stock["value"] * stock["amount"]
+        # index -1 is last element in container
+        totalValue = log["snapshots"][-1]["funds"]
+        for stock in log["snapshots"][-1]["stocksHeld"]:
+            stockValue = stock["value"] * stock["amount"]
+            totalValue += stockValue
             
-        return value
+        return totalValue
     
     # Comparse two DMs, uses multiple tests
     def testTimeFrame(Strategy: TemplateDM, funds:int = 1000, startDate: datetime = "min", endDate: datetime = "max", ) -> None:
@@ -295,72 +310,89 @@ class Testing:
         stockList: list[Stock] = None,
         periodLimits: tuple[int, int] = (10, 50)
         ) -> None:
+        """Does multiple test runs using the settings given in the parameters.\n
+        Evaluates these runs to find average profit, win count and create a histogram of all runs perfomed.
+
+        Args:
+            iterations (int): Amount of runs that should be done for each strategy
+            Strategies (any valid DM): Strategies which should be compared
+            funds (int, optional): Starting portfolio funds. Defaults to 1000.
+            startDate (datetime, optional): Start date for each run. Leave at None for randomized start dates.
+            stockList (list[Stock], optional): List of stocks used for each run. Leave at None for a randomized portfolio on each run.
+            periodLimits (tuple[int, int], optional): Sets the trading period constraints. Defaults to (10, 50). Set to a single integer for constant period.
+        """
+        
+        # The initial validation check tends to take a few seconds
         print("Tests:\t Starting Test run, this might take a few seconds")
+        
         # Get start time for runtime display at the end of the testing process
         then = datetime.now()
         
-        data: tuple[list] = Testing.testMultiple(iterations, Strategies, funds, startDate, stockList, periodLimits)
+        # Executes all comparison runs
+        customFolder = "logs_" + datetime.now().strftime(FileLoggerJSON.saveFormat)
+        data: tuple[list, list] = Testing.testMultiple(iterations, Strategies, funds, startDate, stockList, periodLimits, customFolder)
         
         # evaluate data generated from comparison runs
-        
+        runCount = len(data[0])
+        stratCount = len(data)
+    
         # Dynamically define start arrays
         wins, averageProfit, profits = [], [], []
-        for i in range(len(data)):
+        for j in range(stratCount):
             wins.append(0)
             averageProfit.append(0)
             profits.append([])
         
-        runAmount = len(data[0])
-        for i in range(runAmount):
-            # j represents a strategy, i represents the run (in this block)
-            
-            # Populate finalValues
+        # Populate arrays
+        # For readablitiy, j always references strategies and i always refers to runs
+        for i in range(runCount):
+            # finalValues[j] = final value of jth strategy
             finalValues = []
-            for j in range(len(data)):
+            for j in range(stratCount):
                 finalValues.append(data[j][i])
             
             # Determine average profits
-            for j in range(len(data)): 
+            for j in range(stratCount): 
                 profit = finalValues[j] - funds
                 profits[j].append(profit)
-                averageProfit[j] += (profit)
+                averageProfit[j] += profit
             
-            # Determine winning strategy
-            winnerIndex = 0
-            for j in range(len(data) - 1):
-                if finalValues[j + 1] > finalValues[winnerIndex]:
-                    winnerIndex = j + 1
-            wins[winnerIndex] += 1
+            # Determine winning strategy, add up wins
+            winStratIndex = 0
+            for j in range(stratCount - 1):
+                if finalValues[j + 1] > finalValues[winStratIndex]:
+                    winStratIndex = j + 1
+            wins[winStratIndex] += 1
         
-
-        for i in range(len(data)): averageProfit[i] = averageProfit[i] / runAmount
+        for j in range(stratCount): averageProfit[j] = averageProfit[j] / runCount
         
-        result = ""
-        
-        result += "Test results:"
         # format results
+        result = "Test results:"
         
-        winIndex = 0
+        # Determine overall winning strategy
+        totalWinStratIndex = 0
         for i in range(len(wins) - 1):
-            if wins[i + 1] > wins[winIndex]:
-                winIndex = i + 1
-        winStrategy = Strategies[winIndex].__name__
+            if wins[i + 1] > wins[totalWinStratIndex]:
+                totalWinStratIndex = i + 1
+        
+        winStrategy = Strategies[totalWinStratIndex].__name__
         result += f"\nStrategy {winStrategy} was the superior Strategy."
         
-        for i in range(len(Strategies)):
-            result += f"\nStrategy {Strategies[i].__name__} has won in {str(wins[i])} / {str(runAmount)} runs"
-            result += f"\nAverage profit: {averageProfit[i]}"
+        for j in range(len(Strategies)):
+            result += f"\nStrategy {Strategies[j].__name__} has won in {str(wins[j])} / {str(runCount)} runs"
+            result += f"\nAverage profit: {averageProfit[j]}"
         
         print(result)
+        
         # save to output
         fileName = "TestResults" + "_" + datetime.now().strftime(FileLoggerJSON.saveFormat) + ".txt"
-        filePath = "output/" + fileName
-        
+        filePath = f"output/{customFolder}/" + fileName
         with open(filePath, mode="a") as file: file.write(result)
         print(f"Tests:\t Saved result to {filePath}")
         
+        # Create graph
         print("Tests:\t Creating comparison graph")
-        Graphing.plotProfits(profits, Strategies)
+        Graphing.plotProfits(profits, Strategies, savePath=f"output/{customFolder}/")
 
         # Print runtime information
         now = datetime.now()

@@ -9,15 +9,19 @@ txtLogs = false
 
 # Settings for bot usage
 [parameters]
-# Creates a time / value graph after a complete bot run and saves it to the output folder
+# Creates a time / value graph after a complete bot run and saves it to the output folder.
+# Test cycles are slightly faster with this turned off but individual runs can then only be inspected using the logs.
 createRunGraph = true
 # Displays the time / value graph in a window after it is generated
+# Warning: This pauses the testing cycle after every individual run until the window is closed. Therefore not recommended for test cycles.
 displayGraph = false
-# Enables weighted sentiment scores. 
+# Enables weighted sentiment scores. (Sum of all sentiment scores is multiplied with amount of sentiment scores)
 SentimentScoreWeighted = true
 # Defines a threshold difference the sentiment score has to reach before a buy or sell action can be performed.
+# When set to 0 any change in sentiment scores causes a sell / buy action.
 SentimentScoreThreshold = 0
-# Defines the amounf of recent headlines the realtime sentiment analysis strategy takes into account.
-SentimentMaxStocks = 1
 # Defines the maximum amount of any individual stock the sentiment based strategies can buy.
+SentimentMaxStocks = 1000
+# Defines the amounf of recent headlines the realtime sentiment analysis strategy takes into account.
+# Larger amounts are slower.
 WebScraperMaxElements = 20

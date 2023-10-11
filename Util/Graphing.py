@@ -86,14 +86,18 @@ class Graphing:
         
         return dates, amounts, strategy
 
-    def plotValue(path: str, displayWindow: bool = False, savePath: str = "output/") -> None:
+    def plotValue(path: str, displayWindow: bool = False, savePath: str = "output/", customPrefix = None) -> None:
         """Generates a plot visualising portfolio value development over time.\n
 
         Args:
             path (str): path to the JSON log file
+            displayWindow (bool): whether the graph should be displayed in a window
+            savePath (str): file path for saving the graph
+            customPrefix: Adds a custom prefix to the file name.
         """
-        x, y, strategy = Graphing.parseForValue(path)
-        name = "Value over Time" + "_" + strategy + "_" + datetime.datetime.now().strftime(Graphing.saveFormat)
+        x, y, strategy = Graphing.parseForValue(path)    
+        name = "Value over Time" + "_"  + datetime.datetime.now().strftime(Graphing.saveFormat)
+        if customPrefix is not None: name = customPrefix + "_" + name
         title = "Value / Time for " + strategy + " on " + datetime.datetime.now().strftime("%d. %b %Y")
         
         # Plot config

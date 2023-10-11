@@ -251,9 +251,9 @@ class Bot:
                 
             # Insert to correct folder
             if self.mode == -1:
-                Graphing.plotValue("logs/past/" + self.fileLoggerJSON.fileName, displayWindow)
+                Graphing.plotValue("logs/past/" + self.fileLoggerJSON.getRelFilePath(), displayWindow, f"output/{self.fileLoggerJSON.customFolder}/{self.decisionMaker.__class__.__name__}/", self.fileLoggerJSON.prefix)
             elif self.mode == 0:
-                Graphing.plotValue("logs/realtime/" + self.fileLoggerJSON.fileName, displayWindow)
+                Graphing.plotValue("logs/realtime/" + self.file + self.fileLoggerJSON.getRelFilePath(), displayWindow, f"output/{self.fileLoggerJSON.customFolder}/{self.decisionMaker.__class__.__name__}/", self.fileLoggerJSON.prefix)
             else: raise SyntaxError("Bot received invalid mode attribute")
 
         print(f"Bot:\t End\t\t {DateHelper.format(self.date - timedelta(days=1))}")

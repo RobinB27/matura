@@ -8,7 +8,7 @@
 # Similarly, the DataGen module can be accessed by simply importing DataGen.Testing and calling
 # any of the desired testing functions included in it.
 
-import sys, ast
+import sys
 from datetime import datetime
 
 from TradingBot.Bot import Bot
@@ -55,6 +55,7 @@ def CLI() -> None:
         print("Please select a trading strategy:\n(1) Simple Sentiment Strategy\n(2) Average Sentiment Strategy\n(3) MACD Strategy\n(4) Buy and Hold Strategy")
         strat: int = int(input("Strategy: "))
         if strat < 1 or strat > 4: raise SyntaxError("Invalid argument passed. Please enter either 1, 2 or 3")
+        if strat == 2 and mode == 2: raise SyntaxError("Average Sentiment Strategy cannot be used in realtime mode.")
         strat: object = stratTable[str(strat)]
             
         # Mode specific queries
@@ -94,7 +95,7 @@ def main() -> None:
         args = sys.argv
         tool = args[1]
         # Check tool validity
-        if tool != "run" and tool != "test" and tool != "help":
+        if tool != "run" and tool != "test" and tool != "help" and tool != "--help" and tool != "-help":
             raise SyntaxError("Invalid tool selected, first argument must either be 'run', 'test' or 'help'.")
         params = args[2:]
         
@@ -135,7 +136,12 @@ def main() -> None:
                 if options["funds"] < 0: raise SyntaxError("Funds can't be below 0")
                 
             elif param[0] == "-l" or param[0] == "--list": 
-                options["stockList"].append(param[1])
+                # Convert comma seperated string to valid python list
+                options["stockList"] = param[1]
+                options["stockList"] = options["stockList"].split(',')
+                # convert all to uppercase and remove whitespace
+                for i in range(len(options["stockList"])):
+                    options["stockList"][i] = options["stockList"][i].strip().upper()
 
             elif param[0] == "-p" or param[0] == "--period": 
                 options["timePeriod"] = int(param[1])
@@ -211,8 +217,8 @@ def main() -> None:
             # launch Test run
             Testing.compareDMs(options["runs"], options["DMs"], options["funds"], options["startDate"], options["stockList"], options["timePeriod"])
           
-        elif tool == "help":
-            # print command list
+        else:
+            # print command list, tool validity way checked earlier so can only be this
             with open("Util/mainHelp.txt") as file: print(file.read())
 
 # main idiom
