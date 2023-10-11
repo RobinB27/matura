@@ -11,6 +11,7 @@ import time
 from TradingBot.Portfolio import Portfolio
 from TradingBot.FileLoggers.FileLoggerJSON import FileLoggerJSON
 from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
+from TradingBot.SimpleSentimentDM import SimpleSentimentDM
 
 from Util.Graphing import Graphing
 from Util.Config import Config
@@ -250,10 +251,18 @@ class Bot:
                 print("Bot:\t Displaying Graph")
                 
             # Insert to correct folder
-            if self.mode == -1:
-                Graphing.plotValue("logs/past/" + self.fileLoggerJSON.getRelFilePath(), displayWindow, f"output/{self.fileLoggerJSON.customFolder}/{self.decisionMaker.__class__.__name__}/", self.fileLoggerJSON.prefix)
-            elif self.mode == 0:
-                Graphing.plotValue("logs/realtime/" + self.file + self.fileLoggerJSON.getRelFilePath(), displayWindow, f"output/{self.fileLoggerJSON.customFolder}/{self.decisionMaker.__class__.__name__}/", self.fileLoggerJSON.prefix)
+            filePath = ""
+            if self.mode == -1: filePath = "logs/past/"
+            elif self.mode == 0: filePath = "logs/realtime/"
             else: raise SyntaxError("Bot received invalid mode attribute")
+            
+            if self.fileLoggerJSON.customFolder is not None:
+                if self.decisionMaker.__class__ == SimpleSentimentDM: 
+                    Graphing.plotComposition(filePath + self.fileLoggerJSON.getRelFilePath(), displayWindow,f"output/{self.fileLoggerJSON.customFolder}/{self.decisionMaker.__class__.__name__}/", self.fileLoggerJSON.prefix)
+                Graphing.plotValue(filePath + self.fileLoggerJSON.getRelFilePath(), displayWindow, f"output/{self.fileLoggerJSON.customFolder}/{self.decisionMaker.__class__.__name__}/", self.fileLoggerJSON.prefix)
+            else:
+                if self.decisionMaker.__class__ == SimpleSentimentDM: 
+                    Graphing.plotComposition(filePath + self.fileLoggerJSON.getRelFilePath(), displayWindow,f"output/", self.fileLoggerJSON.prefix)
+                Graphing.plotValue(filePath + self.fileLoggerJSON.getRelFilePath(), displayWindow, f"output/", self.fileLoggerJSON.prefix)
 
         print(f"Bot:\t End\t\t {DateHelper.format(self.date - timedelta(days=1))}")

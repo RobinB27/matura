@@ -21,11 +21,12 @@ class FileLoggerJSON:
     saveFormat = "%d_%b_%y_%I_%M_%f_%p"
     timeStampFormat = "%d-%m-%y-%H-%M" # can be in minutes as intervals are always at least one minute
     
-    def __init__(self, prefix:str = "run" ,path: str = "logs", customFolder = None) -> None:
+    def __init__(self, prefix:str = "run", path: str = "logs", customFolder = None) -> None:
         # dirPath and prefix should not be changed after first snapshot, else file location fails
         self.dirPath = path
         self.customFolder = customFolder
         self.prefix = prefix
+        self.strategy = None
         self.timeStamp: str = datetime.now().strftime(FileLoggerJSON.saveFormat)
         
     def getFileName(self) -> str:
@@ -34,7 +35,8 @@ class FileLoggerJSON:
         Returns:
             str: file name of the JSON log file associated with this fileLoggerJSON instance
         """
-        return self.prefix + "_" + self.timeStamp + ".json"
+        if self.prefix is None: return self.timeStamp + ".json"
+        else: return self.prefix + "_" + self.timeStamp + ".json"
     
     def getRelFilePath(self) -> str:
         """Generates the relative filepath based on given parameters
@@ -42,7 +44,8 @@ class FileLoggerJSON:
         Returns:
             str: file location of the JSON file associated with this fileLoggerJSON instance in the mode logs folder selected
         """
-        return self.customFolder + "/" + self.getFileName()
+        if self.customFolder is None: return self.getFileName()
+        else: return f"{self.customFolder}/{self.strategy.__name__}/" + self.getFileName()
     
     def snapshot(self, portfolio: Portfolio, mode: int, date: datetime, interval: int = None, strategy = None) -> None:
         """Updates the JSON file log associated with this instance of the FileLoggerJSON class.
@@ -62,7 +65,9 @@ class FileLoggerJSON:
             filePath = os.path.join(filePath, "realtime")
         else: raise SyntaxError("FileLogger given invalid mode")
         
-        if self.customFolder is not None: filePath = os.path.join(filePath, self.customFolder)
+        if self.customFolder is not None: 
+            filePath = os.path.join(filePath, self.customFolder)
+            filePath = os.path.join(filePath, strategy.__name__)
         
         filePath = os.path.join(filePath, self.getFileName())
         

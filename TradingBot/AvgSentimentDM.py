@@ -214,7 +214,10 @@ class AvgSentimentDM:
                 
                 # calculate sentiment score
                 for headline in headlines:
-                    sentiment = getSentiment(headline.text)
+                    if self.mode == 0:
+                        sentiment = getSentiment(headline.text)
+                    else:
+                        sentiment = getSentiment(headline["text"])
                     score += AvgSentimentDM.scoreTable[sentiment]
                 if self.weighted: score = score * count
                 

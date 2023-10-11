@@ -135,11 +135,15 @@ class Testing:
         
         testBot = Bot(Strategy(-1), startDate, -1)
         if customPrefix is not None: testBot.fileLoggerJSON.prefix = customPrefix
-        if customFolder is not None: testBot.fileLoggerJSON.customFolder = customFolder
+        if customFolder is not None: 
+            testBot.fileLoggerJSON.strategy = Strategy
+            testBot.fileLoggerJSON.customFolder = customFolder
         testBot.initialise(funds, stockList, period)
         testBot.start()
         
-        path: str = "logs/past/" + customFolder + "/" + testBot.fileLoggerJSON.getFileName()
+        path: str = ""
+        if customFolder is None: path = "logs/past/" +  testBot.fileLoggerJSON.getFileName()
+        else: path = f"logs/past/{customFolder}/{Strategy.__name__}/" +  testBot.fileLoggerJSON.getFileName()
         log: dict = Graphing.fetchLog(path)
         return log
     
@@ -190,7 +194,9 @@ class Testing:
         absPath = pathlib.Path().resolve()
         os.makedirs(absPath / "logs" / "past" / customFolder)
         os.makedirs(absPath / "output" / customFolder)
-        for strategy in strategies: os.makedirs(absPath / "output" / customFolder / strategy.__name__)
+        for strategy in strategies: 
+            os.makedirs(absPath / "logs" / "past" / customFolder / strategy.__name__)
+            os.makedirs(absPath / "output" / customFolder / strategy.__name__)
         
         # test loop
         for i in range(iterations):
@@ -275,9 +281,9 @@ class Testing:
         """
         # index -1 is last element in container
         totalValue = log["snapshots"][-1]["funds"]
+        # stockvalue is already multiplied with stock amount
         for stock in log["snapshots"][-1]["stocksHeld"]:
-            stockValue = stock["value"] * stock["amount"]
-            totalValue += stockValue
+            totalValue += stock["value"] 
             
         return totalValue
     
@@ -367,7 +373,7 @@ class Testing:
         for j in range(stratCount): averageProfit[j] = averageProfit[j] / runCount
         
         # format results
-        result = "Test results:"
+        result = "Test results:\n"
         
         # Determine overall winning strategy
         totalWinStratIndex = 0
@@ -379,16 +385,32 @@ class Testing:
         result += f"\nStrategy {winStrategy} was the superior Strategy."
         
         for j in range(len(Strategies)):
-            result += f"\nStrategy {Strategies[j].__name__} has won in {str(wins[j])} / {str(runCount)} runs"
-            result += f"\nAverage profit: {averageProfit[j]}"
+            result += f"\n\tStrategy {Strategies[j].__name__} has won in {str(wins[j])} / {str(runCount)} runs"
+            result += f"\n\tAverage profit: {averageProfit[j]}"
         
         print(result)
+        
+        # Add entire run data for completeness
+        result += "\n\nRun data\n\n"
+        
+        # Add the run settings
+        resDate = startDate.strftime("%d. %m %Y") if startDate is not None else "Random"
+        resStocks = " ".join(stockList) if stockList is not None else "Random"
+        resPeriod = ""
+        if type(periodLimits) is int: resPeriod = str(periodLimits)
+        else: " ".join(periodLimits)
+        result += f"Settings used\n\tfunds: {funds}\n\tstartDate: {resDate}\n\tstockList: {resStocks}\n\tperiod constraints: {resPeriod}\n"
+        
+        for i in range(runCount):
+            result += f"\nRun #{i+1}\n"
+            for j in range(stratCount):
+                result += f"\t{Strategies[j].__name__}: {data[j][i]}\n"
         
         # save to output
         fileName = "TestResults" + "_" + datetime.now().strftime(FileLoggerJSON.saveFormat) + ".txt"
         filePath = f"output/{customFolder}/" + fileName
         with open(filePath, mode="a") as file: file.write(result)
-        print(f"Tests:\t Saved result to {filePath}")
+        print(f"Tests:\t Saved full result to {filePath}")
         
         # Create graph
         print("Tests:\t Creating comparison graph")

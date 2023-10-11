@@ -25,7 +25,7 @@ class Graphing:
         if displayWindow: plt.show()
         plt.clf()
         
-    def plotComposition(path: str, displayWindow: bool = False, savePath: str = "output/") -> None:
+    def plotComposition(path: str, displayWindow: bool = False, savePath: str = "output/", customPrefix: str = None) -> None:
         """Generates a plot visualising portfolio compositon changes over time.
 
         Args:
@@ -33,6 +33,7 @@ class Graphing:
         """
         x, y, strategy = Graphing.parseForComp(path)
         name = "Portfolio over Time" + "_" + datetime.datetime.now().strftime(Graphing.saveFormat)
+        if customPrefix is not None: name = customPrefix + "_" + name
         title = "Portfolio / Time for " + strategy + " on " + datetime.datetime.now().strftime("%d. %b %Y")
         
         plt.clf()
@@ -63,26 +64,39 @@ class Graphing:
         amounts ={} # dict containing lists of y-values for all stocks
         strategy = data["strategyName"]
         
+        mode = -1 if "date" in data["snapshots"][0] else 0
+        interval = data["snapshots"][0]["interval"] if "interval" in data["snapshots"][0] else None
+        
         # extract stock names from first snapshot
         for stock in data["snapshots"][0]["stocksHeld"]: amounts[stock["name"]] = []
         
-        prevDate = None
-        daysPassed = 0
+        prevIteration = None
+        iterationsPassed = 0
         for snapshot in data["snapshots"]:
             # Getting y values (stocks held)
             for stock in snapshot["stocksHeld"]: amounts[stock["name"]].append(stock["amount"])
             
             # Getting x values (time)
-            if prevDate is None:
+            if prevIteration is None:
                 dates.append(0)
-                prevDate = Graphing.strToDate(snapshot["date"])
+                if mode == -1: prevIteration = Graphing.strToDate(snapshot["date"], mode)
+                else: prevIteration = Graphing.strToDate(snapshot["timeStamp"], mode)
             else:
-                currentDate = Graphing.strToDate(snapshot["date"])
-                difference = currentDate - prevDate
-                difference = difference.days
-                daysPassed += difference
-                dates.append(daysPassed)
-                prevDate = currentDate
+                if mode == -1: currentDate = Graphing.strToDate(snapshot["date"], mode)
+                else: currentDate = Graphing.strToDate(snapshot["timeStamp"], mode)
+                    
+                difference = currentDate - prevIteration
+                
+                # Handle difference differently depending on mode (-1 => dates, 0 => timeStamps)
+                if mode == -1:
+                    difference = difference.days
+                    iterationsPassed += difference
+                elif mode == 0:
+                    difference = difference.total_seconds() / 60
+                    iterationsPassed += difference // interval
+                    
+                dates.append(iterationsPassed)
+                prevIteration = currentDate
         
         return dates, amounts, strategy
 

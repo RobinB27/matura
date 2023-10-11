@@ -174,7 +174,6 @@ def main() -> None:
             else: raise SyntaxError(f"Strategy {strat} is not a valid strategy. Please use SimpleSentiment, AverageSentiment, MACD or BuyAndHold")
         
         if tool == "run":
-            print(options)
             # run tool specific validity check
             
             # Check if all required params are present
