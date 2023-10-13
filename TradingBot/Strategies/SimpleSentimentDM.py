@@ -20,6 +20,8 @@ class SimpleSentimentDM:
     all systems required for sentiment analysis instead of actual trading data generation.
     """
     
+    abbreviation = "SSDM"
+    
     scoreTable = {
         'positive': 1,
         'neutral': 0,

@@ -12,6 +12,8 @@ from Util.Config import Config
 class BuyAndHoldDM:
     """Class that implements a simple Buy and Hold strategy. Sends a buy signal on the first trading step and then ceases operation."""
     
+    abbreviation = "B&HDM"
+    
     def __init__(self, mode: int = 0):
         
         self.mode = mode

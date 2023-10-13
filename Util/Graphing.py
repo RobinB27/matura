@@ -8,7 +8,6 @@
 import json, datetime
 import matplotlib.pyplot as plt
 
-
 class Graphing:
     """
         Provides tools to visualise JSON logs produced by Bot runs using matplotlib.
@@ -148,7 +147,10 @@ class Graphing:
             
             for i in range(len(strategies)):
                 axs[i].hist(data[i], bins=bins)
-                axs[i].set_title(strategies[i].__name__)
+                if len(strategies) > 2 and hasattr(strategies[i], "abbreviation"):
+                    axs[i].set_title(strategies[i].abbreviation)
+                else:
+                    axs[i].set_title(strategies[i].__name__)
                 axs[i].set_xlabel("Net profit")
                 axs[i].set_ylabel("Runs")
         else:

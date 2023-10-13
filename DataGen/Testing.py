@@ -1,15 +1,19 @@
-# This class implements several methods used for evaluating the viability of a trading strategy and for comparing strategies
+# This file implements the Testing class, which is the testing utility
+# used for conducting multiple bot runs at once and comparing
+# different strategies with eachother.
+
+
 from datetime import datetime, timedelta
 import random, pathlib, os
 
 from TradingBot.Bot import Bot
 from TradingBot.Stock import Stock
-from TradingBot.TemplateDM import TemplateDM
+from TradingBot.Strategies.TemplateDM import TemplateDM
 from TradingBot.FileLoggers.FileLoggerJSON import FileLoggerJSON
-from TradingBot.BuyAndHoldDM import BuyAndHoldDM
-from TradingBot.SimpleSentimentDM import SimpleSentimentDM
-from TradingBot.AvgSentimentDM import AvgSentimentDM
-from TradingBot.MACDDM import MACDDM
+from TradingBot.Strategies.BuyAndHoldDM import BuyAndHoldDM
+from TradingBot.Strategies.SimpleSentimentDM import SimpleSentimentDM
+from TradingBot.Strategies.AvgSentimentDM import AvgSentimentDM
+from TradingBot.Strategies.MACDDM import MACDDM
 
 from Util.Graphing import Graphing
 from Util.Config import Config
@@ -390,6 +394,12 @@ class Testing:
         
         print(result)
         
+        # Add config parameters
+        result += "\n\nConfig parameters\n\n"
+        result += f"\tWeighted sentiment scores: {str(Config.getParam('SentimentScoreWeighted'))}\n"
+        result += f"\tSentiment score threshold: {str(Config.getParam('SentimentScoreThreshold'))}\n"
+        result += f"\tMaximum stocks for SimpleSentiment: {str(Config.getParam('SentimentMaxStocks'))}"
+        
         # Add entire run data for completeness
         result += "\n\nRun data\n\n"
         
@@ -399,6 +409,7 @@ class Testing:
         resPeriod = ""
         if type(periodLimits) is int: resPeriod = str(periodLimits)
         else: " ".join(periodLimits)
+        
         result += f"Settings used\n\tfunds: {funds}\n\tstartDate: {resDate}\n\tstockList: {resStocks}\n\tperiod constraints: {resPeriod}\n"
         
         for i in range(runCount):

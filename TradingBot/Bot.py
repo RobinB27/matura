@@ -11,7 +11,7 @@ import time
 from TradingBot.Portfolio import Portfolio
 from TradingBot.FileLoggers.FileLoggerJSON import FileLoggerJSON
 from TradingBot.FileLoggers.FileLoggertxt import FileLoggertxt
-from TradingBot.SimpleSentimentDM import SimpleSentimentDM
+from TradingBot.Strategies.SimpleSentimentDM import SimpleSentimentDM
 
 from Util.Graphing import Graphing
 from Util.Config import Config

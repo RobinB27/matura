@@ -1,0 +1,7 @@
+yfinance
+toml==0.10.2
+selenium==4.8.3
+nltk==3.8.1
+matplotlib==3.7.1
+beautifulsoup4==4.11.2
+TA-Lib==0.4.28
