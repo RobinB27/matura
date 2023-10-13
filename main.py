@@ -12,10 +12,10 @@ import sys
 from datetime import datetime
 
 from TradingBot.Bot import Bot
-from TradingBot.SimpleSentimentDM import SimpleSentimentDM
-from TradingBot.AvgSentimentDM import AvgSentimentDM
-from TradingBot.MACDDM import MACDDM
-from TradingBot.BuyAndHoldDM import BuyAndHoldDM
+from TradingBot.Strategies.SimpleSentimentDM import SimpleSentimentDM
+from TradingBot.Strategies.AvgSentimentDM import AvgSentimentDM
+from TradingBot.Strategies.MACDDM import MACDDM
+from TradingBot.Strategies.BuyAndHoldDM import BuyAndHoldDM
 from DataGen.Testing import Testing
 
 stratTable = {
