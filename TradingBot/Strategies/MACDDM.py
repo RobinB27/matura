@@ -111,6 +111,7 @@ class MACDDM:
                 value = date
                 prevValue = self.getPreviousDate(value)
                 value = DateHelper.format(value)
+                prevValue = DateHelper.format(prevValue)
             elif mode == 0:
                 # realtime mode
                 value = self.currentTimes[self.timeInstancesElapsed]
