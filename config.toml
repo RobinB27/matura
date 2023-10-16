@@ -21,7 +21,7 @@ SentimentScoreWeighted = true
 # When set to 0 any change in sentiment scores causes a sell / buy action.
 SentimentScoreThreshold = 0
 # Defines the maximum amount of any individual stock the sentiment based strategies can buy.
-SentimentMaxStocks = 1
+SentimentMaxStocks = 1000
 # Defines the amounf of recent headlines the realtime sentiment analysis strategy takes into account.
 # Larger amounts are slower.
 WebScraperMaxElements = 20
