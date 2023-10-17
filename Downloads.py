@@ -1,3 +1,7 @@
+# Copyright (C) 2022 Robin Bacher and Lucien Gees
+# This file is part of the "Automated Stock Trading Using News Headlines" matura project.
+# Last edited on 17/10/2023
+
 # This file contains a list of commands which need to be run to install
 # the necessarry features of the NLTK library that are needed for training
 # the Sentiment Classifier. These downloads are also required for simply running

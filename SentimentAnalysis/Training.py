@@ -1,3 +1,7 @@
+# Copyright (C) 2022 Robin Bacher and Lucien Gees
+# This file is part of the "Automated Stock Trading Using News Headlines" matura project.
+# Last edited on 17/10/2023
+
 # This script implements functions used for training the Naive Bayes Classifier which is used for classifiying Head lines.
 # This Script is a modified version of the script used in the tutorial linked here, which originally categorised Tweets binarily
 # This modified version uses the Kaggle dataset 'FinancialPhraseBank' found in the same directory as this file and sorts News Headlines into 3 categories: Positive, Negative & Neutral

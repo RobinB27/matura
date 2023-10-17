@@ -1,3 +1,7 @@
+# Copyright (C) 2022 Robin Bacher and Lucien Gees
+# This file is part of the "Automated Stock Trading Using News Headlines" matura project.
+# Last edited on 17/10/2023
+
 # This file contains the SignalLineCalculator class. The signal line is part of the so called MACD indicator, a tool to help with trend trading strategies.
 # The filee calculates the signal line as well as the MACD itself. To make calculations quicker a chaching system has been used.
 # The results of these calculations are the basis with which stock buy/sell decisions are decided (see MACDDecisionmaking.py) according to a MACD indicator trading strategy

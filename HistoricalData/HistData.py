@@ -1,3 +1,7 @@
+# Copyright (C) 2022 Robin Bacher and Lucien Gees
+# This file is part of the "Automated Stock Trading Using News Headlines" matura project.
+# Last edited on 17/10/2023
+
 # This file implements the HistData class (Historical Dataset)
 # This class is needed to allow the bot to interact with a large dataset of headlines from the past ~10 years.
 # The dataset used can be found here: https://www.kaggle.com/datasets/miguelaenlle/massive-stock-news-analysis-db-for-nlpbacktests

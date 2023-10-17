@@ -1,3 +1,7 @@
+# Copyright (C) 2022 Robin Bacher and Lucien Gees
+# This file is part of the "Automated Stock Trading Using News Headlines" matura project.
+# Last edited on 17/10/2023
+
 # This file implements the getSentiment function which is used
 # to access the pretrained Sentiment Classifier. The function takes a head line text
 # and outputs the classification into the categories 'positive', 'negative' or 'neutral'

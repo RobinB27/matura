@@ -1,3 +1,7 @@
+# Copyright (C) 2022 Robin Bacher and Lucien Gees
+# This file is part of the "Automated Stock Trading Using News Headlines" matura project.
+# Last edited on 17/10/2023
+
 # This file implements the FileLoggerTXT class.
 # The FileLoggerTXT class generates a FileLoggerTXT file representation of a portfolio
 # that the bot has created. The files produced by this logger are used to gain an insight 

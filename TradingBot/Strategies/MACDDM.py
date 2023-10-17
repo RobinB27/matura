@@ -1,3 +1,7 @@
+# Copyright (C) 2022 Robin Bacher and Lucien Gees
+# This file is part of the "Automated Stock Trading Using News Headlines" matura project.
+# Last edited on 17/10/2023
+
 # This file contains the MACDDecisionMaking class. It decides if a given stock (see Stock.py) should be bought or sold on any given day or timestamp.
 # To that effect it compares the values of the so called signal line against the macd line (see SignalLineCalculator.py) to determine if to buy or sell.
 # On a more technical level it compares the two to determine if the signal line has corssed over the macd line. Depending on the type of crossing (from above or below) 

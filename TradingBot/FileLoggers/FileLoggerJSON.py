@@ -1,3 +1,7 @@
+# Copyright (C) 2022 Robin Bacher and Lucien Gees
+# This file is part of the "Automated Stock Trading Using News Headlines" matura project.
+# Last edited on 17/10/2023
+
 # This file implements the FileLoggerJSON class.
 # The FileLoggerJSON class generates a JSON file representation of a portfolio
 # that the bot has created. The files produced by this logger are used by the

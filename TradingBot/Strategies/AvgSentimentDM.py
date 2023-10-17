@@ -1,3 +1,7 @@
+# Copyright (C) 2022 Robin Bacher and Lucien Gees
+# This file is part of the "Automated Stock Trading Using News Headlines" matura project.
+# Last edited on 17/10/2023
+
 # This file implements the AverageSentimentDM (DecisionMaking)
 # This DecisionMaking class implements a trading strategy based on Sentiment Analysis.
 # The Strategy is the main Sentiment Analysis based trading strategy that this project is testing.

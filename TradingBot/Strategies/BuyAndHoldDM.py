@@ -1,3 +1,7 @@
+# Copyright (C) 2022 Robin Bacher and Lucien Gees
+# This file is part of the "Automated Stock Trading Using News Headlines" matura project.
+# Last edited on 17/10/2023
+
 # This file implements the TemplateDecisionMaking class.
 # This class represents a template of a DecisionMaking, which is an implementation of a trading strategy
 # in the context of this bot. What is shown in this template is all that is needed for a DecisionMaking class

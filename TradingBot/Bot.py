@@ -1,3 +1,7 @@
+# Copyright (C) 2022 Robin Bacher and Lucien Gees
+# This file is part of the "Automated Stock Trading Using News Headlines" matura project.
+# Last edited on 17/10/2023
+
 # This file contains the Bot class. This is where all other components come together into one whole (see other files). 
 # The bot uses a specified trading strategy to trade over a time period given by the user.
 # The users decides which stocks (see Stock.py) should be added to the bot's portfolio (see Portfolio.py). 

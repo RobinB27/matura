@@ -1,3 +1,7 @@
+# Copyright (C) 2022 Robin Bacher and Lucien Gees
+# This file is part of the "Automated Stock Trading Using News Headlines" matura project.
+# Last edited on 17/10/2023
+
 # This file acts as the main entrance point for the entire programme
 #
 # It allows both running individual bot runs and test cycles using command line arguments.

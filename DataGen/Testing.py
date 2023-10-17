@@ -6,6 +6,10 @@
 from datetime import datetime, timedelta
 import random, pathlib, os
 
+# Copyright (C) 2022 Robin Bacher and Lucien Gees
+# This file is part of the "Automated Stock Trading Using News Headlines" matura project.
+# Last edited on 17/10/2023
+
 from TradingBot.Bot import Bot
 from TradingBot.Stock import Stock
 from TradingBot.Strategies.TemplateDM import TemplateDM

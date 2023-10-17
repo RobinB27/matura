@@ -1,3 +1,7 @@
+# Copyright (C) 2022 Robin Bacher and Lucien Gees
+# This file is part of the "Automated Stock Trading Using News Headlines" matura project.
+# Last edited on 17/10/2023
+
 # This file implements the SimpleSentimentDM (DecisionMaking)
 # This DecisionMaking class implements a trading strategy based on Sentiment Analysis.
 # The Strategy is very simple and primarily used as a testing device to see whether the

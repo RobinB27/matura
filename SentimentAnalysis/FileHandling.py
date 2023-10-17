@@ -1,3 +1,7 @@
+# Copyright (C) 2022 Robin Bacher and Lucien Gees
+# This file is part of the "Automated Stock Trading Using News Headlines" matura project.
+# Last edited on 17/10/2023
+
 # This file implements several utiltiy functions which are needed for interacting
 # with the FinancialPhraseBank dataset. This dataset is used to train the Naive Bayes Classifier
 # which provides the Sentiment Classification of news Head lines for the bot.
