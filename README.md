@@ -2,6 +2,8 @@
 This repository contains the source code for the matura project "Automated Stock Trading using News Headlines" developed by Robin Bacher & Lucien Gees during 2023. 
 The "resultsData" folder also contains all the log data and graphs shown in the paper written for this matura project.
 
+As is commonly done, [Stack Overflow](https://stackoverflow.com/) was consulted often during development.
+
 # Requirements
 To install all the necessary dependencies, the following steps must be completed in the order shown. The program was developed using Python version 3.10.4, but newer versions should work too.
 1. First, the *TA-Lib* library must be installed manually. Please refer to the operating system specific instructions listed under dependencies [here.](https://pypi.org/project/TA-Lib/)
