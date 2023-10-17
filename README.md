@@ -5,7 +5,7 @@ The "resultsData" folder also contains all the log data and graphs shown in the 
 # Requirements
 To install all the necessary dependencies, the following steps must be completed in the order shown. The program was developed using Python version 3.10.4, but newer versions should work too.
 1. First, the *TA-Lib* library must be installed manually. Please refer to the operating system specific instructions listed under dependencies [here.](https://pypi.org/project/TA-Lib/)
-2. Next, all other depencies can be installed using `pip install -r requirements.txt`.
+2. Next, all other dependencies can be installed using `pip install -r requirements.txt`.
 3. Finally, the specific NLTK modules required can be installed by running `py Downloads.py`.
 
 # Usage
