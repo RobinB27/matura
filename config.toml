@@ -3,7 +3,7 @@
 # Settings used for active development
 [development]
 # Enables verbose console messages to help in debugging
-debug = true
+debug = false
 # Generates human readable txt logs next to the json logs that help in debugging
 txtLogs = false
 

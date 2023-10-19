@@ -17,3 +17,6 @@ The bot and the testing tool can be used in multiple ways.
 2.	When running the main.py file from the terminal, the above process can be skipped by providing the necessary arguments for either a bot run or a testing cycle using command line arguments.
    A list of all command line arguments and examples can also be accessed using `py main.py --help`
 3. Bot runs and testing cycles can also be perfomed from within a script by importing *TradingBot.bot* or *DataGen.Testing*.
+
+# Aknowledgements
+Two external datasets are included in this repository and required for the program to work.

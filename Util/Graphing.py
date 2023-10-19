@@ -98,6 +98,32 @@ class Graphing:
                 prevIteration = currentDate
         
         return dates, amounts, strategy
+    
+    def getMode(path: str) -> int:
+        """Gets the mode of a log file using its path
+
+        Args:
+            path (str): path to the file
+
+        Returns:
+            int: the bot mode used when generating that log
+        """
+        data = Graphing.fetchLog(path)
+        return -1 if "date" in data["snapshots"][0] else 0
+    
+    def getInterval(path: str) -> int:
+        """Gets the interval of a log file using its path
+
+        Args:
+            path (str): path to the file
+
+        Returns:
+            int: the interval used when generating that log, -1 if no interval found in log (log is likely in past mode)
+        """
+        data = Graphing.fetchLog(path)
+        if "interval" in data["snapshots"][0]:
+            return data["snapshots"][0]["interval"]
+        else: return -1
 
     def plotValue(path: str, displayWindow: bool = False, savePath: str = "output/", customPrefix = None) -> None:
         """Generates a plot visualising portfolio value development over time.\n
@@ -117,7 +143,11 @@ class Graphing:
         plt.clf()
         plt.title(title)
         plt.plot(x, y)
-        plt.xlabel("Days")
+        if Graphing.getMode(path) == -1:
+            plt.xlabel("Days")
+        else:
+            interval = Graphing.getInterval(path)
+            plt.xlabel(f"Intervals, 1 interval = {interval}m")
         plt.ylabel("Portfolio value")
         
         Graphing.finish(displayWindow, savePath, name)
@@ -211,10 +241,15 @@ class Graphing:
                     iterationsPassed += difference
                 elif mode == 0:
                     difference = difference.total_seconds() / 60
-                    iterationsPassed += difference // interval
+                    print(difference)
+                    difference = interval * round(difference / interval)
+                    print(difference)
+                    iterationsPassed += difference
                     
                 dates.append(iterationsPassed)
                 prevIteration = currentDate
+                print(dates)
+                print(values)
         
         return dates, values, strategy
         

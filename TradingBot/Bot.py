@@ -99,7 +99,10 @@ class Bot:
         # Setup depending on mode
         if interval is None: self.timePeriod = period
         else: 
-            self.interval = interval 
+            validIntervals= [1, 2, 5, 15, 30, 60, 3600] # trading intervals from yfinance API
+            if interval in validIntervals:
+                self.interval = interval
+            else: raise SyntaxError(f"Not a valid trading interval, valid intervals: {validIntervals}")
             self.amountOfIntervals = period
 
         self.initDM()
@@ -195,11 +198,11 @@ class Bot:
             else:
                 print(f"Bot:\t Ignore\t {ticker}\t {DateHelper.format(self.date)}")
             
-            # Always update JSON log file, regardless of decision
-            if self.mode == -1:
-                self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date, strategy=self.decisionMaker.__class__)
-            elif self.mode == 0:
-                self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date, self.interval, self.decisionMaker.__class__)
+        # Always update JSON log file, regardless of decision
+        if self.mode == -1:
+            self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date, strategy=self.decisionMaker.__class__)
+        elif self.mode == 0:
+            self.fileLoggerJSON.snapshot(self.portfolio, self.mode, self.date, self.interval, self.decisionMaker.__class__)
 
     def start(self) -> None:
         """Start the trading activities of the bot based on the specified mode and strategy
@@ -219,8 +222,8 @@ class Bot:
                     self.timeStamp = datetime.now()
                     
                     if self.isExceptionDate():
-                        print("Bot\t Exception date/stock market not open yet, retry in 10m")
-                        time.sleep(600) # time in seconds
+                        print("Bot\t Exception date/stock market not open yet, retry next interval")
+                        time.sleep(self.interval * 60) # time in seconds
                         continue
                     else:
                         print("Bot:\t Currently valid trading hours, beginning trading.")
